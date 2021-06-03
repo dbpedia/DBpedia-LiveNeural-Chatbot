@@ -1,0 +1,1200 @@
+<A> has architected in how many cities?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:architect <A> . ?x dbp:locationTown ?uri . ?uri a dbo:City }
+<A> has created how many comics character ?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:creators <A> . ?uri a dbo:ComicsCharacter }
+<B> is a work of <A>?;ASK where { <B> dbo:previousWork <A> }
+By what style was <A> made?;SELECT DISTINCT ?uri where { <A> dbp:style ?uri }
+Count the number of judges who've come on <A> shows.;SELECT DISTINCT COUNT(?uri) where { ?x dbo:network <A> . ?x dbp:judges ?uri }
+Did <A> create <B>?;ASK where { <B> dbp:creators <A> }
+Did <B> create <A>?;ASK where { <A> dbp:creators <B> }
+Did <B> create the <A>?;ASK where { <A> dbp:creators <B> }
+Did <B> design <A>?;ASK where { <A> dbo:designCompany <B> }
+Did <B> originate in <A>?;ASK where { <B> dbp:stylisticOrigins <A> }
+Did <B> originate in <A>?;ASK where { <B> dbo:stylisticOrigin <A> }
+Does <B> belong to the genre <A>?;ASK where { <B> dbo:literaryGenre <A> }
+Does <B> follow the architectural style of <A>?;ASK where { <B> dbp:architecture <A> }
+Does the stylistic origins of <A> lie in the <B>?;ASK where { <A> dbp:stylisticOrigins <B> }
+Give me a count of everything owned by the network whose sister name is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:sisterNames <A> . ?uri dbp:network ?x }
+Give me everything owned by networks which is lead by <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:keyPerson <A> . ?uri dbo:network ?x }
+Give me the total number of architect of the buildings whose one of the  architect was <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:architect <A> . ?x dbp:architect ?uri }
+How many architects are there who have made something used by <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:tenant <A> . ?x dbp:architect ?uri }
+How many important things has the painter <A> done?;SELECT DISTINCT COUNT(?uri) where { <A> dbp:creator ?x . ?x dbo:notableWork ?uri }
+How many important works have been done by <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbo:notableWork ?uri }
+How many items belong to the <A> genre?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:genre <A> }
+How many other architect are there of the historic places whose architect is also <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:architect <A> . ?x dbo:architect ?uri }
+How many people have parterned with the person choroegraphed by <A> in the past?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:formerChoreographer <A> . ?x dbo:formerPartner ?uri . ?uri a dbo:Person }
+How many things are aired on <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:network <A> }
+In how many different places can I fnd <A> buildings?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:architecturalStyle <A> . ?x dbp:address ?uri }
+In how many languages did <A> sing?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:artist <A> . ?x dbp:language ?uri }
+In which city are buildings by <A> found?;SELECT DISTINCT ?uri where { ?x dbo:architect <A> . ?x dbp:locationTown ?uri . ?x a dbo:Building }
+Is <A> in <B>?;ASK where { <A> dbp:museum <B> }
+Is <A> inspired from <B>?;ASK where { <A> dbo:stylisticOrigin <B> }
+Is <A> the illustration by of <B>?;ASK where { <B> dbp:illustrator <A> }
+Is <A> the museum of <B>?;ASK where { <B> dbp:museum <A> }
+Is <A> the painter of <B>?;ASK where { <B> dbo:illustrator <A> }
+Is <A> the previous work of <B>?;ASK where { <B> dbo:previousWork <A> }
+Is <B> a kind of <A>?;ASK where { <B> dbp:design <A> }
+Is <B> in the <A>?;ASK where { <B> dbp:museum <A> }
+Is the <A> has the <B> architecture?;ASK where { <A> dbo:architecturalStyle <B> }
+Is the <B> made in <A> style of architecture?;ASK where { <B> dbp:style <A> }
+Is the <B> made in the <A> architectural style?;ASK where { <B> dbp:architecture <A> }
+Is the <B> of the <A> style?;ASK where { <B> dbo:architecturalStyle <A> }
+List the architect of the buildings whose one of the  architect is <A>?;SELECT DISTINCT ?uri where { ?x dbp:architect <A> . ?x dbp:architect ?uri . ?x a dbo:Building }
+List the notable work of <A>?;SELECT DISTINCT ?uri where { <A> dbo:notableWork ?uri }
+List the significant building of the architect who also designed  <A>?;SELECT DISTINCT ?uri where { ?x dbo:significantBuilding <A> . ?x dbo:significantBuilding ?uri . ?x a dbo:Architect }
+List the significant buildings of the arch. whose one of the important work is <A> ?;SELECT DISTINCT ?uri where { ?x dbo:significantBuilding <A> . ?x dbo:significantBuilding ?uri . ?x a dbo:Architect }
+List the work  edited by  <A> and directed by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:editing <A> . ?uri dbo:director <B> . ?uri a dbo:Work }
+Name the architect of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:architect ?uri }
+Name the common architecture of the <B> and <A> ?;SELECT DISTINCT ?uri where { <B> dbo:architecturalStyle ?uri . <A> dbo:architecturalStyle ?uri }
+Name the fictional character painted by <B> and portrayed in <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:creator <B> . ?uri dbo:portrayer <A> . ?uri a dbo:FictionalCharacter }
+Name the fictional character who was in <A> and portrayer is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:series <A> . ?uri dbo:portrayer <B> . ?uri a dbo:FictionalCharacter }
+Was <A> animated by <B>?;ASK where { <A> dbo:animator <B> }
+Was <A> animated by <B>?;ASK where { <A> dbo:animator <B> }
+Was <A> covered by <B>?;ASK where { <A> dbp:coverArtist <B> }
+Was <A> famous for playing the <B>?;ASK where { <A> dbp:notableInstruments <B> }
+Was <B> illustrated by <A>?;ASK where { <B> dbp:illustrator <A> }
+Was <B> released before <A>?;ASK where { <B> dbo:previousWork <A> }
+was the <A> architectured by <B>?;ASK where { <A> dbo:architecturalStyle <B> }
+Was the <A> drawn <B>?;ASK where { <A> dbp:illustrator <B> }
+Was the cover of <A> designed by <B>?;ASK where { <A> dbo:coverArtist <B> }
+What all has been created by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:creators <A> }
+What are some important works of <A> citizens?;SELECT DISTINCT ?uri where { ?x dbp:nationality <A> . ?x dbo:notableWork ?uri }
+What are the important buildings of the architect whose one of the significant building is <A>?;SELECT DISTINCT ?uri where { ?x dbo:significantBuilding <A> . ?x dbo:significantBuilding ?uri . ?x a dbo:Architect }
+What is common between genre of <A> and purpose of <B>;SELECT DISTINCT ?uri where { <A> dbp:genre ?uri . <B> dbp:purpose ?uri }
+What is the architecture of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:architecturalStyle ?uri }
+What is the city nearest to the historic place whose architect is <A>?;SELECT DISTINCT ?uri where { ?x dbp:architect <A> . ?x dbo:nearestCity ?uri . ?x a dbo:HistoricPlace }
+What is the game whose genre is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:genre <A> . ?uri a dbo:Game }
+What is the purpose of the <B> which is genere of <A>?;SELECT DISTINCT ?uri where { <B> dbp:purpose ?uri . <A> dbo:genre ?uri }
+What is the resting place of the engineer who was the architect of <A>?;SELECT DISTINCT ?uri where { <A> dbo:architect ?x . ?x dbo:restingPlace ?uri }
+What is the second track list of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?uri }
+What is the style of architecture of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:architecturalStyle ?uri }
+What is the style of architecture of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:architecturalStyle ?uri }
+What is the style of architecture of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:architecturalStyle ?uri }
+What is the stylistic origin of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:stylisticOrigin ?uri }
+What kind of buildings were designed by <A>?;SELECT DISTINCT ?uri where { ?x dbo:architect <A> . ?x dbo:type ?uri . ?x a dbo:Building }
+What kind of games are made by <A>?;SELECT DISTINCT ?uri where { ?x dbo:publisher <A> . ?x dbp:genre ?uri . ?x a dbo:VideoGame }
+What kind of games does <A> games develop?;SELECT DISTINCT ?uri where { ?x dbo:developer <A> . ?x dbo:genre ?uri . ?x a dbo:VideoGame }
+What subjects does the subsequent work of <A> deals with  ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbp:subject ?uri }
+What was created by <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbo:creator <A> . ?uri dbo:creator <B> }
+What work has been directed by <A> and distributed by  <B>?;SELECT DISTINCT ?uri where { ?uri dbp:director <A> . ?uri dbp:distributor <B> . ?uri a dbo:Work }
+What would be the most important creation which involved both <B> and <A> ?;SELECT DISTINCT ?uri where { <B> dbo:notableWork ?uri . <A> dbo:notableWork ?uri }
+Whcih creator of <A> also created subsequent work of <B> ?;SELECT DISTINCT ?uri where { <B> dbo:subsequentWork ?uri . <A> dbp:creator ?uri }
+Where can I find some buildings of <A>?;SELECT DISTINCT ?uri where { ?x dbp:architecturalStyle <A> . ?x dbp:address ?uri . ?x a dbo:Building }
+Where did the genres originate which can found in <A>?;SELECT DISTINCT ?uri where { <A> dbp:genre ?x . ?x dbo:stylisticOrigin ?uri }
+Where does the network cofounded by <A> air its shows?;SELECT DISTINCT ?uri where { ?x dbp:founder <A> . ?x dbp:broadcastArea ?uri . ?x a dbo:BroadcastNetwork }
+Which <A> can be said as a <B>?;SELECT DISTINCT ?uri where { ?uri dbo:genre <A> . ?uri dbo:genre <B> }
+Which architect of <A> was also tenant of <B> /';SELECT DISTINCT ?uri where { <A> dbp:architect ?uri . <B> dbo:tenant ?uri }
+Which architect of the <B> is the branch of the <A>?;SELECT DISTINCT ?uri where { <B> dbp:architect ?uri . <A> dbp:branch ?uri }
+Which are the comics characters painted by <B> and created by  <A>?;SELECT DISTINCT ?uri where { ?uri dbo:creator <B> . ?uri dbp:creators <A> . ?uri a dbo:ComicsCharacter }
+Which awards did the creator of <A> won ?;SELECT DISTINCT ?uri where { <A> dbo:author ?x . ?x dbo:award ?uri . ?x a dbo:ComicsCreator }
+Which comic characters are painted by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:creator <A> . ?uri a dbo:ComicsCharacter }
+Which comic characters were created by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:creators <A> . ?uri a dbo:ComicsCharacter }
+Which creation of <A> was portrayed in <B>;SELECT DISTINCT ?uri where { ?uri dbo:portrayer <B> . ?uri dbp:creator <A> }
+Which director of <A> also released <B> ?;SELECT DISTINCT ?uri where { <B> dbp:artist ?uri . <A> dbp:director ?uri }
+Which fictional character is portrayed by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:portrayer <A> . ?uri a dbo:FictionalCharacter }
+Which fictional character portrayed by <A> has <B> as family member ?;SELECT DISTINCT ?uri where { ?uri dbp:family <B> . ?uri dbp:portrayer <A> . ?uri a dbo:FictionalCharacter }
+Which fictional character portrayed by <B> has <A> as family ?;SELECT DISTINCT ?uri where { ?uri dbp:portrayer <B> . ?uri dbp:family <A> . ?uri a dbo:FictionalCharacter }
+Which fictional character portrayed in <B> is painted by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:portrayer <B> . ?uri dbo:creator <A> . ?uri a dbo:FictionalCharacter }
+Which fictional character sculpted by <B>n was portrayed in <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:creator <B> . ?uri dbo:portrayer <A> . ?uri a dbo:FictionalCharacter }
+Which fictional character's portrayer was edited by <A>?;SELECT DISTINCT ?uri where { ?x dbp:editing <A> . ?uri dbo:portrayer ?x . ?uri a dbo:FictionalCharacter }
+Which fictional character's relative is <B> and belongs to <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:relatives <B> . ?uri dbo:species <A> . ?uri a dbo:FictionalCharacter }
+Which fictional character's relatives were made by <A>?;SELECT DISTINCT ?uri where { ?x dbo:creator <A> . ?uri dbp:relatives ?x . ?uri a dbo:FictionalCharacter }
+which person created the <A>?;SELECT DISTINCT ?uri where { <A> dbp:artist ?uri }
+Which sport of <B> is also the genre of <A>;SELECT DISTINCT ?uri where { <A> dbp:genre ?uri . <B> dbo:sport ?uri }
+Which work is both <B> and <A> both known for ?;SELECT DISTINCT ?uri where { <B> dbo:notableWork ?uri . <A> dbo:notableWork ?uri }
+Who are the animator of <A>?;SELECT DISTINCT ?uri where { <A> dbo:animator ?uri }
+Who are the relatives of the character after which <A> was made?;SELECT DISTINCT ?uri where { ?x dbo:subsequentWork <A> . ?uri dbo:relative ?x }
+Who created the <B> and also the <A> ?;SELECT DISTINCT ?uri where { <B> dbp:artist ?uri . <A> dbp:artist ?uri }
+Who designed <A>?;SELECT DISTINCT ?uri where { <A> dbp:designer ?uri }
+Who designed the <A>?;SELECT DISTINCT ?uri where { <A> dbo:designer ?uri }
+Who is the architect of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:architect ?uri }
+Who is the designer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:designer ?uri }
+Who is the performer of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:artist ?uri }
+Who maintains the stuff designed by the <A>?;SELECT DISTINCT ?uri where { ?x dbp:designer <A> . ?x dbo:maintainedBy ?uri }
+Who was the designer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:designer ?uri }
+Who was the director of photography of <A> and the animator of <B>?;SELECT DISTINCT ?uri where { <A> dbp:cinematography ?uri . <B> dbp:animator ?uri }
+Whose artworks are in <A>?;SELECT DISTINCT ?uri where { ?x dbp:museum <A> . ?x dbp:artist ?uri . ?x a dbo:Artwork }
+Whose creators are <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbo:creator <B> . ?uri dbo:creator <A> }
+Whose famous works have been illustrated by <A>?;SELECT DISTINCT ?uri where { ?x dbp:illustrator <A> . ?uri dbo:notableWork ?x }
+Whose work is in the <A>?;SELECT DISTINCT ?uri where { ?x dbp:museum <A> . ?x dbp:artist ?uri . ?x a dbo:Artwork }
+<A> and <B> is produced by which company?;SELECT DISTINCT ?uri where { <A> dbp:manufacturer ?uri . <B> dbp:manufacturer ?uri }
+<A> broadcasted in what area, which also has the <B>?;SELECT DISTINCT ?uri where { <B> dbp:location ?uri . <A> dbo:broadcastArea ?uri }
+<A> cinematographed how many things?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:cinematography <A> }
+<A> did a guest appearance on which series?;SELECT DISTINCT ?uri where { ?x dbp:guests <A> . ?x dbo:series ?uri }
+<A> has acted in which movie ?;SELECT DISTINCT ?uri where { ?uri dbo:starring <A> . ?uri a dbo:Film }
+<A> has acted in which movies ?;SELECT DISTINCT ?uri where { ?uri dbp:starring <A> . ?uri a dbo:Film }
+<A> has been the presenter of how many things?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:presenter <A> }
+<A> has hosted how many guests?;SELECT DISTINCT COUNT(?uri) where { <A> dbp:guests ?uri }
+<A> has narrated in which movie?;SELECT DISTINCT ?uri where { ?uri dbp:narrator <A> . ?uri a dbo:Film }
+<A> is the executive producer of the series having how many fictional characters?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:executiveProducer <A> . ?uri dbo:series ?x . ?uri a dbo:FictionalCharacter }
+<A> is the presenter of what TV show?;SELECT DISTINCT ?uri where { ?uri dbp:presenter <A> . ?uri a dbo:TelevisionShow }
+<A> is the publisher of which series?;SELECT DISTINCT ?uri where { ?x dbp:publisher <A> . ?x dbo:series ?uri }
+<A> is the sister channel of networks having which shows?;SELECT DISTINCT ?uri where { ?x dbp:sisterNames <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+<A> is the writer of which television show?;SELECT DISTINCT ?uri where { ?uri dbp:writer <A> . ?uri a dbo:TelevisionShow }
+<A> is writer and <B> tone is company of which TV show ?;SELECT DISTINCT ?uri where { ?uri dbp:writer <A> . ?uri dbp:company <B> . ?uri a dbo:TelevisionShow }
+<A> people have edited which movies?;SELECT DISTINCT ?uri where { ?x dbo:birthPlace <A> . ?uri dbp:editing ?x . ?uri a dbo:Film }
+<A> produce how many movies?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:producer <A> }
+<A> the theme album of which show ?;SELECT DISTINCT ?uri where { <A> dbo:album ?uri }
+<A> wrote how many screenplays?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:screenplay <A> }
+<A>'s work can be divided into how many series?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:author <A> . ?x dbo:series ?uri }
+<B> from, and is produced by <A>?;SELECT DISTINCT ?uri where { <A> dbo:product ?uri . <B> dbo:series ?uri }
+By whom is the broadcaster network <A> founded?;SELECT DISTINCT ?uri where { <A> dbo:foundedBy ?uri }
+Count the movies edited by  <A> and were directed by <B>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:editing <A> . ?uri dbo:director <B> }
+Count the movies in <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:language <A> . ?uri a dbo:Film }
+Count the number of actors in <A>.;SELECT DISTINCT COUNT(?uri) where { <A> dbp:starring ?uri }
+Count the number of broadcast area of the TV stations which serves in <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:broadcastArea <A> . ?x dbp:broadcastArea ?uri }
+Count the number of characters in <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbp:characters ?uri . ?uri a dbo:ComicsCharacter }
+Count the number of characters of the play whose one of the character is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:characters <A> . ?x dbp:characters ?uri }
+Count the number of movies whose distributor is <B> and director of photography is <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:distributor <B> . ?uri dbo:cinematography <A> }
+Count the number of movies whose editors were born in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:birthPlace <A> . ?uri dbp:editing ?x . ?uri a dbo:Film }
+Count the number of shows whose creators are <B> and <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:creator <B> . ?uri dbo:creator <A> }
+Count the total number of cast member of the television shows whose actress is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:starring <A> . ?x dbp:starring ?uri }
+Did <A> edit <B>?;ASK where { <B> dbp:editing <A> }
+Did <A> guest in <B>?;ASK where { <B> dbp:guests <A> }
+Did <A> narrate <B> tv show?;ASK where { <B> dbo:narrator <A> }
+Directors of which movies are buried in <A>?;SELECT DISTINCT ?uri where { ?x dbo:restingPlace <A> . ?uri dbp:director ?x }
+Does <A> play <B>?;ASK where { <A> dbo:programmeFormat <B> }
+Give me a count of all the producers of all the movies whose music was done by <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:music <A> . ?x dbp:producer ?uri }
+Give me a count of movies distributed by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:distributor <A> }
+Give me a count of movies whose editor is <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:editing <A> . ?uri a dbo:Film }
+Give me a count of movies whose film editor is <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:editing <A> . ?uri a dbo:Film }
+Give me a count of movies whose producer is <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:producer <A> . ?uri a dbo:Film }
+Give me all tv shows which are based in <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbo:location <A> . ?uri dbo:location <B> . ?uri a dbo:TelevisionShow }
+Give me some series related to the one which had <A> in them.;SELECT DISTINCT ?uri where { ?x dbp:starring <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+Give me some series whose network's owning company is <A>?;SELECT DISTINCT ?uri where { ?x dbo:owningCompany <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+Give me some shows owned by <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbo:network <A> . ?uri dbo:network <B> . ?uri a dbo:TelevisionShow }
+Give me some shows related to the ones created by <A>;SELECT DISTINCT ?uri where { ?x dbp:creator <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+Give me some TV stations whose network's main language is <A>?;SELECT DISTINCT ?uri where { ?x dbo:language <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionStation }
+Give me the characters who last appeared in <A>;SELECT DISTINCT ?uri where { ?uri dbp:last <A> }
+Give me the count of all the names of characters created by <A>;SELECT DISTINCT COUNT(?uri) where { ?x dbp:creators <A> . ?x dbp:characterName ?uri }
+Give me the sitcoms where <B> and <A> gave voice?;SELECT DISTINCT ?uri where { ?uri dbp:voices <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+Give me the total number of Guests of the television episodes whose one of the  Guests is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:guests <A> . ?x dbp:guests ?uri }
+How many  TV shows were made by someone who was associated with <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:associatedBand <A> . ?uri dbp:creator ?x . ?uri a dbo:TelevisionShow }
+How many broadcast area of the television stations exists whose broadcast area is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:broadcastArea <A> . ?x dbp:broadcastArea ?uri }
+How many characters are there in <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:series <A> . ?uri a dbo:FictionalCharacter }
+How many characters were made by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:creators <A> }
+How many fictional characters are there in a series in which <A> acted?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:starring <A> . ?uri dbo:series ?x . ?uri a dbo:FictionalCharacter }
+How many fictional characters were <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:species <A> . ?uri a dbo:FictionalCharacter }
+How many guests have been there <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbp:guests ?uri }
+How many movies are directed by the spouse of <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:partner <A> . ?uri dbp:director ?x . ?uri a dbo:Film }
+How many movies are distributed by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:distributor <A> . ?uri a dbo:Film }
+How many movies did <A> direct?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:director <A> . ?uri a dbo:Film }
+How many movies did <A> direct?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:director <A> }
+How many movies did <A> produce?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:producer <A> . ?uri a dbo:Film }
+How many movies have a screenplay located in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:birthPlace <A> . ?uri dbp:screenplay ?x . ?uri a dbo:Film }
+How many movies have been cinematographed by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:cinematography <A> . ?uri a dbo:Film }
+How many movies have been directed by <A> ?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:director <A> . ?uri a dbo:Film }
+How many movies have been directed by almunies of <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:education <A> . ?uri dbo:director ?x . ?uri a dbo:Film }
+How many movies have had a cinematographer who died in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:deathPlace <A> . ?uri dbp:cinematography ?x . ?uri a dbo:Film }
+How many movies were cinematographed by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:cinematography <A> . ?uri a dbo:Film }
+How many movies were directed by the graduate of <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:education <A> . ?uri dbp:director ?x . ?uri a dbo:Film }
+How many other characters are there of the plays which has a  characters name <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:characters <A> . ?x dbp:characters ?uri }
+How many other Guests are there of the television episodes whose Guests is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:guests <A> . ?x dbp:guests ?uri }
+How many other race are there of the adult (pornographic) actors whose ethnicity is <A> ?;SELECT  COUNT(DISTINCT(?uri)) WHERE { ?x dbo:ethnicity <A>. ?x a dbo:AdultActor. ?x dbo:ethnicity ?uri}
+How many people have been presenters for <A> shows?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:channel <A> . ?x dbp:presenter ?uri . ?uri a dbo:Person }
+How many people have voiced characters sculpted by <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:creator <A> . ?x dbo:voice ?uri }
+How many people have written stuff broadcasted on the <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:network <A> . ?x dbp:writer ?uri . ?uri a dbo:Person }
+How many producers have casted <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:starring <A> . ?x dbp:producer ?uri }
+How many producers have worked for <A> productions?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:company <A> . ?x dbo:producer ?uri }
+How many shows are aired on <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:network <A> . ?uri a dbo:TelevisionShow }
+How many shows are made by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:creator <A> . ?uri a dbo:TelevisionShow }
+How many shows are made by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:company <A> . ?uri a dbo:TelevisionShow }
+How many shows are made by the channel whose predecessor was <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:predecessor <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+How many shows belong to the network one of whose sister station is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:sisterStation <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+How many shows belong to the networks one of whose sister station is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:sisterNames <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+How many shows does <A> have?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:company <A> . ?uri a dbo:TelevisionShow }
+How many shows is <A> known for?;SELECT DISTINCT COUNT(?uri) where { <A> dbp:notableworks ?uri . ?uri a dbo:TelevisionShow }
+How many sitcoms were produced by the company whose predecessor was the <A>;SELECT DISTINCT COUNT(?uri) where { ?x dbp:predecessor <A> . ?uri dbp:company ?x . ?uri a dbo:TelevisionShow }
+How many television shows are broadcasted on <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:channel <A> . ?uri a dbo:TelevisionShow }
+How many television shows have  <A> as their channel?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:channel <A> . ?uri a dbo:TelevisionShow }
+How many times has <A> been casted?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:starring <A> }
+How many TV show has distributor located in <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:locationCity <A> . ?uri dbp:distributor ?x . ?uri a dbo:TelevisionShow }
+How many TV shows are of the company which are of company which is a subsidiary of <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:subsidiary <A> . ?uri dbp:company ?x . ?uri a dbo:TelevisionShow }
+How many TV shows are similar to the ones belonging to <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:genre <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+How many TV shows have been created by <A> ?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:creator <A> . ?uri a dbo:TelevisionShow }
+How many TV shows have executive producer as <A> ?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:executiveProducer <A> . ?uri a dbo:TelevisionShow }
+How many TV shows' networks are headquarterd in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:headquarters <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+In how many areas do the networks broadcast, which also broadcasts in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:broadcastArea <A> . ?x dbp:area ?uri . ?uri a dbo:Place }
+In what tv shows did <A> act?;SELECT DISTINCT ?uri where { ?uri dbo:starring <A> . ?uri a dbo:TelevisionShow }
+In which areas is the radio station broadcasted which is a sister station of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:sisterStations ?x . ?x dbp:area ?uri . ?x a dbo:RadioStation }
+In which broadcast area does the sister station of <A> air ?;SELECT DISTINCT ?uri where { <A> dbo:sisterStation ?x . ?x dbo:broadcastNetwork ?uri }
+In which cities are there stations of <A>?;SELECT DISTINCT ?uri where { ?x dbo:broadcastNetwork <A> . ?x dbp:city ?uri . ?x a dbo:TelevisionStation }
+In which city was the film star of <A> born ?;SELECT DISTINCT ?uri where { <A> dbo:starring ?x . ?x dbp:birthPlace ?uri }
+In which countries can i find broadcasted TV in <A>?;SELECT DISTINCT ?uri where { ?x dbp:broadcastArea <A> . ?x dbp:country ?uri . ?x a dbo:TelevisionStation }
+in which movies have <A> acted;SELECT DISTINCT ?uri where { ?uri dbp:starring <A> }
+In which series do I find <A> species' characters?;SELECT DISTINCT ?uri where { ?x dbp:species <A> . ?x dbo:series ?uri . ?x a dbo:FictionalCharacter }
+In which series has <A> portrayed someone?;SELECT DISTINCT ?uri where { ?x dbo:portrayer <A> . ?x dbo:series ?uri }
+In which sitcom did <B> acted and had <A> as its network ?;SELECT DISTINCT ?uri where { ?uri dbp:network <A> . ?uri dbo:starring <B> . ?uri a dbo:TelevisionShow }
+In which television shows has <A> given her voice?;SELECT DISTINCT ?uri where { ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+In which television shows have <A> served as an executive producer?;SELECT DISTINCT ?uri where { ?uri dbo:executiveProducer <A> . ?uri a dbo:TelevisionShow }
+Is <A> a character of <B>?;ASK where { <B> dbp:characters <A> }
+Is <A> an editor of <B>?;ASK where { <B> dbp:editing <A> }
+Is <A> the cinematographer of <B>?;ASK where { <B> dbp:cinematography <A> }
+Is <A> the cinematographer of <B>?;ASK where { <B> dbp:cinematography <A> }
+Is <B> the editor of <A>?;ASK where { <A> dbo:editing <B> }
+Is <B> the narrator of <A>?;ASK where { <A> dbo:narrator <B> }
+list  the producer of the movies in which <A> in the star cast?;SELECT DISTINCT ?uri where { ?x dbp:starring <A> . ?x dbp:producer ?uri . ?x a dbo:Film }
+List all the developers of the <A> series?;SELECT DISTINCT ?uri where { ?x dbo:series <A> . ?x dbo:developer ?uri }
+List all the former broadcast network of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:formerBroadcastNetwork ?uri }
+List all the movies whose directors were born in <A>?;SELECT DISTINCT ?uri where { ?x dbo:birthPlace <A> . ?uri dbp:director ?x }
+List all the notable work of the screen writer who produced <A> ?;SELECT DISTINCT ?uri where { ?x dbo:notableWork <A> . ?x dbo:notableWork ?uri . ?x a dbo:ScreenWriter }
+List down all the cast members of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:starring ?uri }
+List down the cinematographers of <A>?;SELECT DISTINCT ?uri where { <A> dbp:cinematography ?uri }
+List down the TV shows whose producer is <A> and writer is <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:producer <A> . ?uri dbp:writer <B> . ?uri a dbo:TelevisionShow }
+List few <A> movies ?;SELECT DISTINCT ?uri where { ?uri dbp:language <A> . ?uri a dbo:Film }
+List the <B> shows broadcasted on <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:genre <B> . ?uri dbo:network <A> . ?uri a dbo:TelevisionShow }
+List the actors of  <A>?;SELECT DISTINCT ?uri where { <A> dbp:starring ?uri }
+List the awards won by the cinematographer of <A>?;SELECT DISTINCT ?uri where { <A> dbp:cinematography ?x . ?x dbo:award ?uri }
+List the awards won by the film director of <A>?;SELECT DISTINCT ?uri where { <A> dbp:director ?x . ?x dbo:award ?uri }
+List the broadcast area of the TV stations which also serves in <A> ?;SELECT DISTINCT ?uri where { ?x dbo:broadcastArea <A> . ?x dbp:broadcastArea ?uri }
+List the cast member of the movies whose producer is <A>.;SELECT DISTINCT ?uri where { ?x dbo:producer <A> . ?x dbo:starring ?uri . ?x a dbo:Film }
+List the characters of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:characters ?uri }
+List the comic characters created by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:creators <A> . ?uri a dbo:ComicsCharacter }
+List the film starring of the movies whose editor is <A> ?;SELECT DISTINCT ?uri where { ?x dbo:editing <A> . ?x dbp:starring ?uri . ?x a dbo:Film }
+List the guest of the show <A>?;SELECT DISTINCT ?uri where { <A> dbp:guests ?uri }
+List the guests of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:guests ?uri }
+List the judge of the TV show whose one of the judge is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:judges <A> . ?x dbp:judges ?uri . ?x a dbo:TelevisionShow }
+List the movies directed by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:director <A> . ?uri a dbo:Film }
+List the movies produced by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:producer <A> . ?uri a dbo:Film }
+List the movies whose cast member were born in <A>.;SELECT DISTINCT ?uri where { ?x dbo:birthPlace <A> . ?uri dbo:starring ?x . ?uri a dbo:Film }
+List the movies whose editors are born in <A>.;SELECT DISTINCT ?uri where { ?x dbp:placeOfBirth <A> . ?uri dbo:editing ?x . ?uri a dbo:Film }
+List the music played in television episode which came after <A> ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbp:music ?uri }
+List the people casted in <A> and <B>?;SELECT DISTINCT ?uri where { <A> dbo:starring ?uri . <B> dbp:starring ?uri . ?uri a dbo:Person }
+List the people who influenced the comedian who acted in <A> ?;SELECT DISTINCT ?uri where { <A> dbp:starring ?x . ?x dbo:influencedBy ?uri . ?x a dbo:Comedian }
+List the producer of the television shows distributed by <A>.;SELECT DISTINCT ?uri where { ?x dbp:distributor <A> . ?x dbo:producer ?uri . ?x a dbo:TelevisionShow }
+List the producer of the TV shows whose company is <A>.;SELECT DISTINCT ?uri where { ?x dbo:company <A> . ?x dbo:producer ?uri . ?x a dbo:TelevisionShow }
+List the producers who produced movies starring <A>.;SELECT DISTINCT ?uri where { ?x dbp:starring <A> . ?x dbp:producer ?uri . ?x a dbo:Film }
+List the show related to the which was followed by <A>?;SELECT DISTINCT ?uri where { ?x dbo:subsequentWork <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+List the shows whose network is run by <A>.;SELECT DISTINCT ?uri where { ?x dbo:owningCompany <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+List the starring of the movies whose label is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?x dbp:starring ?uri . ?x a dbo:Film }
+List the television shows one of whose distributor's divisions is <A>.;SELECT DISTINCT ?uri where { ?x dbp:divisions <A> . ?uri dbp:distributor ?x . ?uri a dbo:TelevisionShow }
+List the television shows whose Composers are associated with <A> ?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?uri dbp:composer ?x . ?uri a dbo:TelevisionShow }
+List the television shows whose distributors are located at <A>.;SELECT DISTINCT ?uri where { ?x dbp:locationCity <A> . ?uri dbp:distributor ?x . ?uri a dbo:TelevisionShow }
+List the television shows whose network's executive officer is <A>.;SELECT DISTINCT ?uri where { ?x dbo:keyPerson <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+List the television shows whose network's owning company is <A>?;SELECT DISTINCT ?uri where { ?x dbo:owningCompany <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+List the television shows whose network's sister names is <A>.;SELECT DISTINCT ?uri where { ?x dbp:sisterNames <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+List the total number of executive producer of TV show which have one of the executiive producer as <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:executiveProducer <A> . ?x dbp:executiveProducer ?uri }
+List TV shows with producer as <A> and company is <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:company <B> . ?uri dbo:producer <A> . ?uri a dbo:TelevisionShow }
+Movie's produced by <B> has <A> as director of photography;SELECT DISTINCT ?uri where { ?uri dbo:producer <B> . ?uri dbo:cinematography <A> . ?uri a dbo:Film }
+Name a company with one of the key person as <B> and produces <A>?;SELECT DISTINCT ?uri where { ?uri dbo:keyPerson <B> . ?uri dbp:products <A> . ?uri a dbo:Company }
+Name a fictional character whose relative is <B> and species is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:relative <B> . ?uri dbo:species <A> . ?uri a dbo:FictionalCharacter }
+Name a movie with actor as <A> and music by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:starring <A> . ?uri dbp:music <B> . ?uri a dbo:Film }
+Name a show hosted by <A> and judged by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:presenter <A> . ?uri dbp:judges <B> . ?uri a dbo:TelevisionShow }
+Name a TV show judged by <B> and presented by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:judges <B> . ?uri dbp:presenter <A> . ?uri a dbo:TelevisionShow }
+Name all the broadcast area of the TV stations which has <A> as one of the broadcast area ?;SELECT DISTINCT ?uri where { ?x dbp:broadcastArea <A> . ?x dbp:broadcastArea ?uri . ?x a dbo:TelevisionStation }
+Name all the products produced by the producer of <A> ?;SELECT DISTINCT ?uri where { ?x dbo:product <A> . ?x dbo:product ?uri }
+Name few movies directed by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:director <A> . ?uri a dbo:Film }
+Name few television shows's anchored by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:presenter <A> . ?uri a dbo:TelevisionShow }
+Name few TV shows aired by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:network <A> . ?uri a dbo:TelevisionShow }
+Name some comic characters created by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:creator <A> }
+Name some TV shows whose theme is made by a band associated with <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Name the  former broadcast network of the television station which is the sister stations of <A>?;SELECT DISTINCT ?uri where { <A> dbp:sisterStations ?x . ?x dbo:formerBroadcastNetwork ?uri }
+Name the <A> TV show written by <B>  ?;SELECT DISTINCT ?uri where { ?uri dbo:company <A> . ?uri dbp:writer <B> . ?uri a dbo:TelevisionShow }
+Name the <B> TV show judged by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:judges <A> . ?uri dbp:channel <B> . ?uri a dbo:TelevisionShow }
+Name the actor of <A> to which <B> is married ?;SELECT DISTINCT ?uri where { <B> dbp:spouse ?uri . <A> dbo:starring ?uri }
+Name the actors of the TV show which has an episode named <A> ?;SELECT DISTINCT ?uri where { <A> dbp:series ?x . ?x dbp:starring ?uri . ?x a dbo:TelevisionShow }
+Name the broadcast area of  <A> ?;SELECT DISTINCT ?uri where { <A> dbp:area ?uri }
+Name the broadcast area of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:broadcastArea ?uri }
+Name the children of the person who is the star of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:starring ?x . ?x dbp:children ?uri . ?x a dbo:Person }
+Name the common editor of <B> and <A>?;SELECT DISTINCT ?uri where { <B> dbo:editing ?uri . <A> dbo:editing ?uri }
+Name the directors of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:director ?uri }
+Name the fictional character whose relative are <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbo:relative <B> . ?uri dbp:relatives <A> . ?uri a dbo:FictionalCharacter }
+Name the fictional character whose relatives are <A> and belongs to <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> . ?uri dbo:relative <B> . ?uri a dbo:FictionalCharacter }
+Name the fictional character whose relatives are <A> and is of species <B>?;SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> . ?uri dbo:species <B> . ?uri a dbo:FictionalCharacter }
+Name the fictional character whose species is <A> and has relatives named <B>?;SELECT DISTINCT ?uri where { ?uri dbo:species <A> . ?uri dbp:relatives <B> . ?uri a dbo:FictionalCharacter }
+Name the fictional character whose voice's animator is <A>?;SELECT DISTINCT ?uri where { ?x dbp:animator <A> . ?uri dbo:voice ?x . ?uri a dbo:FictionalCharacter }
+Name the licensee of the TV station whose one of the licensee is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:licensee <A> . ?x dbp:licensee ?uri . ?x a dbo:TelevisionStation }
+Name the movie who has screenplay by <B> and is edited by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:screenplay <B> . ?uri dbp:editing <A> . ?uri a dbo:Film }
+Name the movie whose director is <A> and editor is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:editing <B> . ?uri dbo:director <A> . ?uri a dbo:Film }
+Name the movie whose producer is <B> and music is given by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:producer <B> . ?uri dbp:music <A> . ?uri a dbo:Film }
+Name the movie whose screenplay is by <B> and directed by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:screenplay <B> . ?uri dbo:director <A> . ?uri a dbo:Film }
+Name the movie written by <A> and distributed by <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:distributor <B> . ?uri dbp:writer <A> . ?uri a dbo:Film }
+Name the movies directed by <A> and edited by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:director <A> . ?uri dbp:editing <B> . ?uri a dbo:Film }
+Name the movies distributed by <A> and directed by <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <A> . ?uri dbp:director <B> . ?uri a dbo:Film }
+Name the movies distributed by <B> and edited by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <B> . ?uri dbp:editing <A> . ?uri a dbo:Film }
+Name the movies writtten by the group <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:writer <A> . ?uri a dbo:Film }
+Name the notable work by <A> which is also the series of <B> ?;SELECT DISTINCT ?uri where { <A> dbp:notableworks ?uri . <B> dbo:series ?uri }
+Name the presenter of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:presenter ?uri }
+Name the series of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:series ?uri }
+Name the show formed by <A> and had network as <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:developer <A> . ?uri dbp:network <B> . ?uri a dbo:TelevisionShow }
+Name the show whose jury consist of <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:judges <B> . ?uri dbp:judges <A> . ?uri a dbo:TelevisionShow }
+Name the show whose theme composing band previously also had <A>?;SELECT DISTINCT ?uri where { ?x dbo:formerBandMember <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Name the shows whose theme was composed by a band in which <A> used to be?;SELECT DISTINCT ?uri where { ?x dbo:formerBandMember <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Name the sitcoms whose network's owning company is <A>?;SELECT DISTINCT ?uri where { ?x dbo:owningCompany <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+Name the television program voiced by <A> and aired on <B>?;SELECT DISTINCT ?uri where { ?uri dbp:voices <A> . ?uri dbp:network <B> . ?uri a dbo:TelevisionShow }
+Name the television show created by <A> and also has actor named <B>?;SELECT DISTINCT ?uri where { ?uri dbo:starring <B> . ?uri dbo:creator <A> . ?uri a dbo:TelevisionShow }
+Name the television show developed by <A> and distributed by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:developer <A> . ?uri dbp:distributor <B> . ?uri a dbo:TelevisionShow }
+Name the television show directed by <A> and judged by <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:creator <A> . ?uri dbp:judges <B> . ?uri a dbo:TelevisionShow }
+Name the television show distributed by <B> and voiced by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:distributor <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+Name the television show voiced by <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:voices <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+Name the television show where <A> has given voice and is distributed by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:voices <A> . ?uri dbp:distributor <B> . ?uri a dbo:TelevisionShow }
+Name the television show which was developed by <A> and distributed by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:developer <A> . ?uri dbp:distributor <B> . ?uri a dbo:TelevisionShow }
+Name the television show whose company is <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbo:company <A> . ?uri dbp:company <B> . ?uri a dbo:TelevisionShow }
+Name the television show whose creator is <A> and presented by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:creator <A> . ?uri dbo:presenter <B> . ?uri a dbo:TelevisionShow }
+Name the television show whose distributor is <B> and  the character voice is given by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+Name the television show whose network is <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:network <B> . ?uri dbo:network <A> . ?uri a dbo:TelevisionShow }
+Name the television show whose subsequent work is <B> and Composer is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:subsequentWork <B> . ?uri dbp:composer <A> . ?uri a dbo:TelevisionShow }
+Name the television show whose subsequent work is <B> and opening theme is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:subsequentWork <B> . ?uri dbo:openingTheme <A> . ?uri a dbo:TelevisionShow }
+Name the television show whose voice is given by <B> and it's distributor is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:voices <B> . ?uri dbo:distributor <A> . ?uri a dbo:TelevisionShow }
+Name the television show with opening theme as <A> and is composed by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:openingTheme <A> . ?uri dbp:themeMusicComposer <B> . ?uri a dbo:TelevisionShow }
+Name the tv series produced by <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbo:producer <A> . ?uri dbo:producer <B> . ?uri a dbo:TelevisionShow }
+Name the TV show broadcasted by <A> and presented by <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:presenter <B> . ?uri dbo:channel <A> . ?uri a dbo:TelevisionShow }
+Name the TV show distributed by <B> and is broadcasted by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:distributor <B> . ?uri dbp:network <A> . ?uri a dbo:TelevisionShow }
+Name the TV show which has judge as <B> is broadcasted on <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:channel <A> . ?uri dbp:judges <B> . ?uri a dbo:TelevisionShow }
+Name the TV show whose cast member is <B> and is related to <A>?;SELECT DISTINCT ?uri where { ?uri dbo:starring <B> . ?uri dbo:related <A> . ?uri a dbo:TelevisionShow }
+Name the TV show whose company is <A> and written by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:company <A> . ?uri dbp:writer <B> . ?uri a dbo:TelevisionShow }
+Name the TV show whose composer is <A> and company as <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:composer <A> . ?uri dbp:company <B> . ?uri a dbo:TelevisionShow }
+Name the TV show whose network is <B> and is the subsequent work of <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:network <B> . ?uri dbo:subsequentWork <A> . ?uri a dbo:TelevisionShow }
+Name the TV show whose opening theme is <A> and the subsequent work is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:openingTheme <A> . ?uri dbo:subsequentWork <B> . ?uri a dbo:TelevisionShow }
+Name the TV show whose producer is <A> and company is <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:producer <A> . ?uri dbo:company <B> . ?uri a dbo:TelevisionShow }
+Name the TV show with <A> as artist and <B> as the channel ?;SELECT DISTINCT ?uri where { ?uri dbp:creator <A> . ?uri dbp:channel <B> . ?uri a dbo:TelevisionShow }
+Name the TV show with artist <B> and cast member <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:artist <B> . ?uri dbo:starring <A> . ?uri a dbo:TelevisionShow }
+Name the TV show with distributor as <B> and has theme music composed by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:distributor <B> . ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+Name the tv show with judges <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbp:judges <A> . ?uri dbp:judges <B> . ?uri a dbo:TelevisionShow }
+Name the TV show with theme music by <A> and broadcasted on <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:network <B> . ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+Name the TV shows owned by divisions of <A>?;SELECT DISTINCT ?uri where { ?x dbp:parent <A> . ?uri dbp:company ?x . ?uri a dbo:TelevisionShow }
+Name the TV shows related to <B> and is aired on <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:related <B> . ?uri dbo:network <A> . ?uri a dbo:TelevisionShow }
+Name the TV shows whose developer is <A> and executive producer is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:developer <A> . ?uri dbo:executiveProducer <B> . ?uri a dbo:TelevisionShow }
+Name the TV shows with network as <B> and company as <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:network <B> . ?uri dbp:company <A> . ?uri a dbo:TelevisionShow }
+Over how many cities did the <A>, Season 11 take place?;SELECT DISTINCT COUNT(?uri) where { <A> dbp:city ?uri }
+Some movies whose screenplay is done by <A> born people?;SELECT DISTINCT ?uri where { ?x dbo:birthPlace <A> . ?uri dbp:screenplay ?x }
+Through which label did <A> produce his movie?;SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?x dbp:label ?uri . ?x a dbo:Film }
+To which series <A> belong to ?;SELECT DISTINCT ?uri where { <A> dbp:series ?uri }
+To which series does the character of <A> belong?;SELECT DISTINCT ?uri where { <A> dbo:series ?uri }
+Was <A> cinematographed by <B>Cronenweth?;ASK where { <A> dbo:cinematography <B> }
+Was <A> edited by <B>?;ASK where { <A> dbo:editing <B> }
+Was <A> edited by <B>?;ASK where { <A> dbo:editing <B> }
+Was <A> edited by <B>?;ASK where { <A> dbo:editing <B> }
+Was <A> the director of the <B>?;ASK where { <B> dbo:cinematography <A> }
+Was <B> a character of <A>?;ASK where { <A> dbp:characters <B> }
+Was <B> a guest on <A>?;ASK where { <A> dbp:guests <B> }
+Was <B> cinematographed by <A>?;ASK where { <B> dbp:cinematography <A> }
+Was <B> the cinematographer of <A>?;ASK where { <A> dbp:cinematography <B> }
+Was <B> the cinematographer of <A>?;ASK where { <A> dbo:cinematography <B> }
+Was the <A> narrated by <B>?;ASK where { <A> dbp:narrator <B> }
+What  awards did the cast members of <A> win?;SELECT DISTINCT ?uri where { <A> dbo:starring ?x . ?x dbp:awards ?uri }
+What <A> directed movie has  photography director as <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:cinematography <B> . ?uri dbp:director <A> . ?uri a dbo:Film }
+What actor of <B> of <A>?;SELECT DISTINCT ?uri where { <B> dbp:starring ?uri . <A> dbo:relation ?uri }
+What actor starred in <B> and is married to <A>?;SELECT DISTINCT ?uri where { <B> dbp:starring ?uri . <A> dbp:spouse ?uri }
+What are all the TV shows which are related to the ones produced by <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:executiveProducer <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+What are some characters of series produced by <A>?;SELECT DISTINCT ?uri where { ?x dbo:executiveProducer <A> . ?uri dbo:series ?x }
+What are some fictional characters whose voice is in <A>?;SELECT DISTINCT ?uri where { ?uri dbo:voice <A> }
+What are some movies whose distributer's CEO is <A>?;SELECT DISTINCT ?uri where { ?x dbp:keyPeople <A> . ?uri dbp:distributor ?x . ?uri a dbo:Film }
+What are some movies whose distributors are led by <A>?;SELECT DISTINCT ?uri where { ?x dbo:keyPerson <A> . ?uri dbp:distributor ?x . ?uri a dbo:Film }
+What are some movies whose score is composed by relatives of <A>?;SELECT DISTINCT ?uri where { ?x dbp:relatives <A> . ?uri dbp:music ?x . ?uri a dbo:Film }
+What are some movies written by British <A>?;SELECT DISTINCT ?uri where { ?x dbo:nationality <A> . ?uri dbo:writer ?x . ?uri a dbo:Film }
+What are some other great things by the person who produced <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbo:producer ?x . ?x dbp:notableworks ?uri . ?x a dbo:Person }
+What are some shows by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:network <A> . ?uri a dbo:TelevisionShow }
+What are some shows whose voice actors play the <A>?;SELECT DISTINCT ?uri where { ?x dbo:instrument <A> . ?uri dbp:voices ?x . ?uri a dbo:TelevisionShow }
+What are some tv shows created by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:creator <A> . ?uri a dbo:TelevisionShow }
+What are some TV shows similar to the one produced by <A>?;SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+What are some TV shows whose voice actors are from <A>, US?;SELECT DISTINCT ?uri where { ?x dbp:birthPlace <A> . ?uri dbp:voices ?x . ?uri a dbo:TelevisionShow }
+What are the awards won by the film director of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:director ?x . ?x dbp:awards ?uri }
+What are the awards won by the film editor of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:editing ?x . ?x dbo:award ?uri }
+What are the awards won by the film editor of <A>?;SELECT DISTINCT ?uri where { <A> dbo:editing ?x . ?x dbp:awards ?uri }
+What are the awards won by the producer of <A>;SELECT DISTINCT ?uri where { <A> dbp:producer ?x . ?x dbp:awards ?uri }
+What are the awards won by the producer of <A> (film)?;SELECT DISTINCT ?uri where { <A> dbo:producer ?x . ?x dbo:award ?uri }
+What are the birth place of the people who are the star of <A>?;SELECT DISTINCT ?uri where { <A> dbo:starring ?x . ?x dbo:birthPlace ?uri . ?x a dbo:Person }
+What are the broadcast areas of <A>?;SELECT DISTINCT ?uri where { <A> dbp:broadcastArea ?uri }
+What are the central characters in <A> series?;SELECT DISTINCT ?uri where { ?uri dbo:series <A> }
+What are the films whose atleast one cast member died due to <A>?;SELECT DISTINCT ?uri where { ?x dbo:deathCause <A> . ?uri dbp:starring ?x . ?uri a dbo:Film }
+What are the movies directed by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:director <A> . ?uri a dbo:Film }
+What are the movies produced by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:producer <A> . ?uri a dbo:Film }
+What are the movies whose cast members are signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?uri dbp:starring ?x . ?uri a dbo:Film }
+What are the movies whose cinematographer is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:cinematography <A> . ?uri a dbo:Film }
+What are the movies whose director is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:director <A> . ?uri a dbo:Film }
+What are the movies whose director of photography is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:cinematography <A> . ?uri a dbo:Film }
+What are the movies whose director's daughter is <A>?;SELECT DISTINCT ?uri where { ?x dbo:child <A> . ?uri dbp:director ?x . ?uri a dbo:Film }
+What are the movies whose distributor's headquarters is <A>?;SELECT DISTINCT ?uri where { ?x dbp:headquarters <A> . ?uri dbp:distributor ?x . ?uri a dbo:Film }
+What are the movies whose editor died in <A>?;SELECT DISTINCT ?uri where { ?x dbo:deathPlace <A> . ?uri dbo:editing ?x }
+What are the movies whose editor is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:editing <A> . ?uri a dbo:Film }
+What are the movies whose screenplay is done by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:screenplay <A> . ?uri a dbo:Film }
+What are the movies with <A> as screenwriter?;SELECT DISTINCT ?uri where { ?uri dbp:screenplay <A> . ?uri a dbo:Film }
+What are the movies written by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:writer <A> . ?uri a dbo:Film }
+What are the nicknames given to the characters of <A>?;SELECT DISTINCT ?uri where { <A> dbp:nickname ?uri }
+What are the notable works of the person who produced <A>?;SELECT DISTINCT ?uri where { <A> dbo:producer ?x . ?x dbp:notableworks ?uri . ?x a dbo:Person }
+What are the other notable work of the executive producer of <A>?;SELECT DISTINCT ?uri where { <A> dbo:executiveProducer ?x . ?x dbp:notableworks ?uri }
+What are the prizes won by the animator of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:animator ?x . ?x dbo:award ?uri }
+What are the shows whose creator has worked as a <A>?;SELECT DISTINCT ?uri where { ?x dbo:occupation <A> . ?uri dbo:creator ?x . ?uri a dbo:TelevisionShow }
+What are the television shows of a company headquartered in <A>?;SELECT DISTINCT ?uri where { ?x dbp:headquarters <A> . ?uri dbp:company ?x . ?uri a dbo:TelevisionShow }
+What are the television shows telecasted on the network which has headquarters at <A>?;SELECT DISTINCT ?uri where { ?x dbp:headquarters <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+What are the television shows which are in <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbo:format <B> . ?uri dbo:format <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose company is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:company <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose company is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:company <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose company is owned by <A>;SELECT DISTINCT ?uri where { ?x dbo:owningCompany <A> . ?uri dbp:company ?x . ?uri a dbo:TelevisionShow }
+What are the television shows whose company's predecessor is <A>?;SELECT DISTINCT ?uri where { ?x dbp:predecessor <A> . ?uri dbp:company ?x . ?uri a dbo:TelevisionShow }
+What are the television shows whose Composer is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:composer <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose distributer is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose distributor is a division of <A>?;SELECT DISTINCT ?uri where { ?x dbp:divisions <A> . ?uri dbp:distributor ?x . ?uri a dbo:TelevisionShow }
+What are the television shows whose network is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:network <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose network is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:network <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose network's sister station is <A>?;SELECT DISTINCT ?uri where { ?x dbo:sisterStation <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+What are the television shows whose network's stockholder is <A>?;SELECT DISTINCT ?uri where { ?x dbp:owner <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+What are the television shows whose network's successor is <A>?;SELECT DISTINCT ?uri where { ?x dbo:successor <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+What are the television shows whose voices is given by  <A>?;SELECT DISTINCT ?uri where { ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+What are the television shows whose writers did notable work for <A> ?;SELECT DISTINCT ?uri where { ?x dbo:notableWork <A> . ?uri dbp:writer ?x . ?uri a dbo:TelevisionShow }
+What are the things whose director of photography died in <A>?;SELECT DISTINCT ?uri where { ?x dbp:deathPlace <A> . ?uri dbp:cinematography ?x }
+What are the TV shows whose network is also known as <A>?;SELECT DISTINCT ?uri where { ?x dbp:sisterNames <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+What award was won by executive producer of <A>?;SELECT DISTINCT ?uri where { <A> dbo:executiveProducer ?x . ?x dbo:award ?uri }
+What awards are won by the screenwriter of <A>?;SELECT DISTINCT ?uri where { <A> dbp:screenplay ?x . ?x dbo:award ?uri }
+What awards did the film director of <A> win ?;SELECT DISTINCT ?uri where { <A> dbo:director ?x . ?x dbo:award ?uri }
+What awards have been won by the executive producer of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:executiveProducer ?x . ?x dbo:award ?uri }
+What awards were given to the producer of <A>?;SELECT DISTINCT ?uri where { <A> dbo:producer ?x . ?x dbo:award ?uri }
+What awards were given to the screenplayer of <A>?;SELECT DISTINCT ?uri where { <A> dbp:screenplay ?x . ?x dbp:awards ?uri }
+What awards were presented to the person who produced <A>?;SELECT DISTINCT ?uri where { <A> dbp:producer ?x . ?x dbp:awards ?uri . ?x a dbo:Person }
+What fictional character's species is <A>;SELECT DISTINCT ?uri where { ?uri dbo:species <A> }
+What is telecasted on the network where <A> holds important position?;SELECT DISTINCT ?uri where { ?x dbo:keyPerson <A> . ?uri dbo:network ?x }
+What is that show whose theme was composed by <A>?;SELECT DISTINCT ?uri where { ?x dbp:themeMusicComposer <A> . ?x dbp:showName ?uri . ?x a dbo:TelevisionShow }
+What is the  name of the television show whose developer is <A> and actor is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:developer <A> . ?uri dbo:starring <B> . ?uri a dbo:TelevisionShow }
+What is the alma mater of the actors of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:starring ?x . ?x dbp:almaMater ?uri }
+What is the area of the broadcast network which has the affiliation with <A>?;SELECT DISTINCT ?uri where { <A> dbp:affiliation ?x . ?x dbp:area ?uri . ?x a dbo:BroadcastNetwork }
+What is the awards won by the producer of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:producer ?x . ?x dbp:awards ?uri }
+What is the birth place of the cast of <A>?;SELECT DISTINCT ?uri where { <A> dbp:starring ?x . ?x dbp:placeOfBirth ?uri }
+What is the broadcast area of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:area ?uri }
+What is the broadcast area of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:broadcastArea ?uri }
+What is the casting of the movie directed by <A> ?;SELECT DISTINCT ?uri where { ?x dbo:director <A> . ?x dbp:starring ?uri . ?x a dbo:Film }
+What is the city  of the television station whose affiliations is <A>?;SELECT DISTINCT ?uri where { ?x dbp:affiliations <A> . ?x dbp:city ?uri . ?x a dbo:TelevisionStation }
+What is the common region of the braod cast area of <A> and nationality of <B> ?;SELECT DISTINCT ?uri where { <A> dbp:broadcastArea ?uri . <B> dbo:nationality ?uri }
+What is the fictional character which belongs to families of <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:family <B> . ?uri dbp:family <A> . ?uri a dbo:FictionalCharacter }
+What is the fictional character which has <A> and <B>n as relatives?;SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> . ?uri dbp:relatives <B> . ?uri a dbo:FictionalCharacter }
+What is the fictional character whose voice over is done by the animator of <A> ?;SELECT DISTINCT ?uri where { ?x dbp:animator <A> . ?uri dbo:voice ?x . ?uri a dbo:FictionalCharacter }
+What is the movie whose producer is <B> and directed by  <A>?;SELECT DISTINCT ?uri where { ?uri dbp:producer <B> . ?uri dbp:director <A> . ?uri a dbo:Film }
+What is the name of the characters created by <A>?;SELECT DISTINCT ?uri where { ?x dbp:creators <A> . ?x dbp:characterName ?uri . ?x a dbo:FictionalCharacter }
+What is the person known for who is the movie director of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:director ?x . ?x dbo:knownFor ?uri . ?x a dbo:Person }
+What is the place of birth of the stars of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:starring ?x . ?x dbo:birthPlace ?uri }
+What is the producer of the television shows whose channel is <A>?;SELECT DISTINCT ?uri where { ?x dbp:channel <A> . ?x dbo:producer ?uri . ?x a dbo:TelevisionShow }
+What is the products of the <A> and series of the <B>;SELECT DISTINCT ?uri where { <A> dbp:products ?uri . <B> dbo:series ?uri }
+What is the show which opens with <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbo:openingTheme <A> . ?uri dbo:openingTheme <B> . ?uri a dbo:TelevisionShow }
+What is the television show which has cast member as <A> and network is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:starring <A> . ?uri dbp:network <B> . ?uri a dbo:TelevisionShow }
+What is the television show whose cast members are <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbo:starring <B> . ?uri dbo:starring <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose channel's parent organisation is <A>?;SELECT DISTINCT ?uri where { ?x dbo:parentOrganisation <A> . ?uri dbo:channel ?x . ?uri a dbo:TelevisionShow }
+What is the television show whose company is <A> and written by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:company <A> . ?uri dbp:writer <B> . ?uri a dbo:TelevisionShow }
+What is the television show whose developer is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:developer <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose executive producer is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:executiveProducer <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose executive producer is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:executiveProducer <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose judges is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:judges <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose opening theme is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:openingTheme <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose opening theme is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:openingTheme <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose previous work is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:previousWork <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose producer is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:producer <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose related with  <A>?;SELECT DISTINCT ?uri where { ?uri dbo:related <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose sculptor is <A> and composed by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:creator <A> . ?uri dbo:composer <B> . ?uri a dbo:TelevisionShow }
+What is the television show whose subsequent work is <B> and developed by  <A>?;SELECT DISTINCT ?uri where { ?uri dbo:subsequentWork <B> . ?uri dbo:developer <A> . ?uri a dbo:TelevisionShow }
+What is the television show whose vocals are performed by  <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:voices <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+What is the total number of fictional characters whose created by  <B> and series is <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:creator <B> . ?uri dbo:series <A> }
+What is the total number of other characters of the plays whose characters is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:characters <A> . ?x dbp:characters ?uri }
+What is the TV Show whose theme is composed by someone signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordLabel <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+What movies have been produced by the production house owned by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:producer <A> }
+What movies have been written by authors of <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:writer <A> . ?uri a dbo:Film }
+What religion are the characters of <A> from?;SELECT DISTINCT ?uri where { ?x dbp:series <A> . ?x dbo:religion ?uri . ?x a dbo:FictionalCharacter }
+What show has  judge as <A> sculptors as <B>?;SELECT DISTINCT ?uri where { ?uri dbp:judges <A> . ?uri dbp:creator <B> . ?uri a dbo:TelevisionShow }
+What show has <B> and <A> as channels ?;SELECT DISTINCT ?uri where { ?uri dbo:channel <B> . ?uri dbo:channel <A> . ?uri a dbo:TelevisionShow }
+What shows are aired on sister channels of <A>;SELECT DISTINCT ?uri where { ?x dbp:sisterNames <A> . ?uri dbo:network ?x . ?uri a dbo:TelevisionShow }
+What shows are on the networks which are from <A>?;SELECT DISTINCT ?uri where { ?x dbo:locationCountry <A> . ?uri dbp:network ?x . ?uri a dbo:TelevisionShow }
+"What shows used to air on the channel which was earlier known as ""<A>""?";SELECT DISTINCT ?uri where { ?x dbo:predecessor <A> . ?uri dbp:distributor ?x . ?uri a dbo:TelevisionShow }
+What television show are distributed by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:distributor <A> . ?uri a dbo:TelevisionShow }
+What television show is aired on channel <A>?;SELECT DISTINCT ?uri where { ?uri dbo:channel <A> . ?uri a dbo:TelevisionShow }
+What television show is magistrated by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:judges <A> . ?uri a dbo:TelevisionShow }
+What television shows's distributor is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:distributor <A> . ?uri a dbo:TelevisionShow }
+What tv series can be said to be related to <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbo:related <B> . ?uri dbo:related <A> }
+What tv show is created by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:developer <A> . ?uri a dbo:TelevisionShow }
+What tv shows were born out of a collaboration of <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbo:company <A> . ?uri dbo:company <B> . ?uri a dbo:TelevisionShow }
+Where are the movies directed by <A> recorded?;SELECT DISTINCT ?uri where { ?x dbo:director <A> . ?x dbp:recorded ?uri }
+where are the sister stations of <A> broadcasted?;SELECT DISTINCT ?uri where { ?x dbp:sisterStations <A> . ?x dbo:broadcastArea ?uri }
+Where did the film director of <A> die?;SELECT DISTINCT ?uri where { <A> dbo:director ?x . ?x dbo:deathPlace ?uri }
+Where do networks affiliated with <A> broadcast?;SELECT DISTINCT ?uri where { ?x dbp:affiliation <A> . ?x dbp:area ?uri . ?x a dbo:BroadcastNetwork }
+Where is the fictional character from, whose last appearance was in <A>?;SELECT DISTINCT ?uri where { ?x dbp:last <A> . ?x dbp:nationality ?uri . ?x a dbo:FictionalCharacter }
+Where is the radio broadcasted in, whose sister station is <A>?;SELECT DISTINCT ?uri where { ?x dbo:sisterStation <A> . ?x dbo:broadcastArea ?uri . ?x a dbo:RadioStation }
+Where is the station whose sister channel is the <A>?;SELECT DISTINCT ?uri where { ?x dbp:sisterStations <A> . ?x dbp:city ?uri . ?x a dbo:TelevisionStation }
+Where was <A> recorded ?;SELECT DISTINCT ?uri where { <A> dbp:recorded ?uri }
+Where was the <A> recorded?;SELECT DISTINCT ?uri where { <A> dbo:recordedIn ?uri }
+Where was the movie after <A> recorded?;SELECT DISTINCT ?uri where { <A> dbp:nextAlbum ?x . ?x dbp:recorded ?uri . ?x a dbo:Film }
+Where was the narrator of <A> born?;SELECT DISTINCT ?uri where { <A> dbo:narrator ?x . ?x dbp:birthPlace ?uri }
+Which  <B> show has <A> as executive producer ?;SELECT DISTINCT ?uri where { ?uri dbo:executiveProducer <A> . ?uri dbp:genre <B> . ?uri a dbo:TelevisionShow }
+Which <A>  show is presented by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:presenter <B> . ?uri dbp:channel <A> . ?uri a dbo:TelevisionShow }
+Which <A>'s movie is distributed by <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:writer <A> . ?uri dbp:distributor <B> . ?uri a dbo:Film }
+Which <B> show was produced by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:executiveProducer <A> . ?uri dbp:company <B> . ?uri a dbo:TelevisionShow }
+Which <B> TV show is related with <A>?;SELECT DISTINCT ?uri where { ?uri dbo:network <B> . ?uri dbo:related <A> . ?uri a dbo:TelevisionShow }
+Which <B>'s movie has a screenplay by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:screenplay <A> . ?uri dbp:director <B> }
+Which <B>'s television series was produced by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <B> . ?uri dbo:producer <A> . ?uri a dbo:TelevisionShow }
+Which <B>'s TV show has opening theme as <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:company <B> . ?uri dbo:openingTheme <A> . ?uri a dbo:TelevisionShow }
+Which actors have performed in plays performed in <A>?;SELECT DISTINCT ?uri where { ?x dbp:place <A> . ?x dbp:starring ?uri . ?x a dbo:Play }
+Which animator of <A> is also the director of <B> ?;SELECT DISTINCT ?uri where { <A> dbp:animator ?uri . <B> dbo:director ?uri }
+Which animator of <A> is also the film director of <B> ?;SELECT DISTINCT ?uri where { <B> dbo:director ?uri . <A> dbp:animator ?uri }
+Which animator of <B> is also the animator of the <A> ?;SELECT DISTINCT ?uri where { <B> dbo:animator ?uri . <A> dbp:animator ?uri }
+Which animator of the <B> is also the  cinematographer of the <A>?;SELECT DISTINCT ?uri where { <B> dbo:animator ?uri . <A> dbp:cinematography ?uri }
+Which are the previous broadcast networks of sister channels of <A>?;SELECT DISTINCT ?uri where { <A> dbp:sisterStations ?x . ?x dbo:formerBroadcastNetwork ?uri }
+Which are the television show which have been created by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:creator <A> . ?uri a dbo:TelevisionShow }
+Which awards did the narrator of <A> win?;SELECT DISTINCT ?uri where { <A> dbo:narrator ?x . ?x dbp:awards ?uri }
+Which broad cast area od <A> is the country of <B> ?;SELECT DISTINCT ?uri where { <A> dbo:broadcastArea ?uri . <B> dbo:country ?uri }
+Which broadcast area of <A> is also the nationality of <B> ?;SELECT DISTINCT ?uri where { <A> dbp:broadcastArea ?uri . <B> dbo:nationality ?uri }
+Which broadcast area of <A> is also the palce of birth of <B>;SELECT DISTINCT ?uri where { <A> dbo:broadcastArea ?uri . <B> dbp:placeOfBirth ?uri }
+Which cities were in the TV Show which came after <A>?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbp:city ?uri . ?x a dbo:TelevisionShow }
+Which executive producer of <A> also produced <B> ?;SELECT DISTINCT ?uri where { <A> dbp:executiveProducer ?uri . <B> dbo:producer ?uri }
+Which executive producer of <A> is also an important person at <B>?;SELECT DISTINCT ?uri where { <A> dbo:executiveProducer ?uri . <B> dbo:keyPerson ?uri }
+Which label released the movie written by <A>?;SELECT DISTINCT ?uri where { ?x dbp:writer <A> . ?x dbp:label ?uri . ?x a dbo:Film }
+Which movie produced by <B> was distributed by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <A> . ?uri dbp:producer <B> . ?uri a dbo:Film }
+Which movies did <A> edit?;SELECT DISTINCT ?uri where { ?uri dbp:editing <A> . ?uri a dbo:Film }
+which movies have been published by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:distributor <A> }
+Which movies have someone on their cast from <A> in Tennessee?;SELECT DISTINCT ?uri where { ?x dbo:hometown <A> . ?uri dbp:starring ?x . ?uri a dbo:Film }
+Which movies' composers have won a <A>?;SELECT DISTINCT ?uri where { ?x dbo:award <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+Which movies's screenplay is written by <A>;SELECT DISTINCT ?uri where { ?uri dbp:screenplay <A> . ?uri a dbo:Film }
+Which notable series of <A> is also the series of <B> ?;SELECT DISTINCT ?uri where { <B> dbo:series ?uri . <A> dbo:notableWork ?uri }
+Which parent organization of <B> TV also owns <A> ?;SELECT DISTINCT ?uri where { <B> dbo:parentOrganisation ?uri . <A> dbo:owner ?uri }
+Which parent organization of <B> TV is also the label provider of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:label ?uri . <B> dbo:parentOrganisation ?uri }
+Which people are known for appearing on the television show <A>?;SELECT DISTINCT ?uri where { ?uri dbo:knownFor <A> . ?uri a dbo:Person }
+Which producer of <A> is also the notable work of <B> ?;SELECT DISTINCT ?uri where { <A> dbo:producer ?uri . <B> dbo:notableWork ?uri }
+Which program was on <B> network with executive producer as <A>?;SELECT DISTINCT ?uri where { ?uri dbo:network <B> . ?uri dbo:executiveProducer <A> . ?uri a dbo:TelevisionShow }
+Which series are <A> and <B> both from?;SELECT DISTINCT ?uri where { <A> dbo:series ?uri . <B> dbo:series ?uri }
+Which series has an episode called <B> and also a character named <A> ?;SELECT DISTINCT ?uri where { <B> dbp:series ?uri . <A> dbp:characters ?uri }
+Which series was written by <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbp:writer <A> . ?uri dbp:writer <B> . ?uri a dbo:TelevisionShow }
+Which show's network is <A> has <B> as executive producer ?;SELECT DISTINCT ?uri where { ?uri dbp:network <A> . ?uri dbo:executiveProducer <B> . ?uri a dbo:TelevisionShow }
+Which shows are similar to the ones produced by <A>?;SELECT DISTINCT ?uri where { ?x dbo:executiveProducer <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+Which shows are voiced be <A> citizens?;SELECT DISTINCT ?uri where { ?x dbo:stateOfOrigin <A> . ?uri dbp:voices ?x . ?uri a dbo:TelevisionShow }
+Which shows have voices from people signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?uri dbp:voices ?x . ?uri a dbo:TelevisionShow }
+Which shows' opening themes was used to make <A>?;SELECT DISTINCT ?uri where { ?x dbo:subsequentWork <A> . ?uri dbo:openingTheme ?x . ?uri a dbo:TelevisionShow }
+Which sitcom is broadcasted by <B> and presented by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:channel <B> . ?uri dbp:presenter <A> . ?uri a dbo:TelevisionShow }
+Which sitcom's company is <A> and is located in <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:company <A> . ?uri dbp:location <B> . ?uri a dbo:TelevisionShow }
+Which sitcoms are made by a company headquartered in <A>?;SELECT DISTINCT ?uri where { ?x dbo:headquarter <A> . ?uri dbo:company ?x . ?uri a dbo:TelevisionShow }
+Which televion show's theme music was given by <A> and is broadcasted by <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <A> . ?uri dbo:network <B> . ?uri a dbo:TelevisionShow }
+Which television show 's producer is <A> and written by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:producer <A> . ?uri dbp:writer <B> . ?uri a dbo:TelevisionShow }
+"Which television show is based in <A> and has opening theme as ""<B>"" ?";SELECT DISTINCT ?uri where { ?uri dbo:openingTheme <B> . ?uri dbo:location <A> . ?uri a dbo:TelevisionShow }
+Which television show is the subsequent work of <B> and the opening theme is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:subsequentWork <B> . ?uri dbo:openingTheme <A> . ?uri a dbo:TelevisionShow }
+Which television show's company is <B> and is located in <A>?;SELECT DISTINCT ?uri where { ?uri dbp:company <B> . ?uri dbo:location <A> . ?uri a dbo:TelevisionShow }
+Which television show's developer is <B> and voices to the character is by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:developer <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+Which television show's network  is <B> and is related to <A>?;SELECT DISTINCT ?uri where { ?uri dbo:network <B> . ?uri dbo:related <A> . ?uri a dbo:TelevisionShow }
+Which television shows has sound format as <A>;SELECT DISTINCT ?uri where { ?uri dbo:format <A> . ?uri a dbo:TelevisionShow }
+Which television shows have been produced by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:producer <A> . ?uri a dbo:TelevisionShow }
+Which televison shows have location as <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:location <A> . ?uri a dbo:TelevisionShow }
+Which tv series have a score composed by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:composer <A> . ?uri a dbo:TelevisionShow }
+Which Tv series led to <A>?;SELECT DISTINCT ?uri where { ?uri dbo:subsequentWork <A> . ?uri a dbo:TelevisionShow }
+Which TV show developed by <A> has artist as <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:artist <B> . ?uri dbo:developer <A> . ?uri a dbo:TelevisionShow }
+Which TV show distributed by <A> <B> as one of the artist ?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <A> . ?uri dbp:artist <B> . ?uri a dbo:TelevisionShow }
+Which TV show had a judge named <B> and was presented by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:judges <B> . ?uri dbo:presenter <A> . ?uri a dbo:TelevisionShow }
+Which TV show is related to <A> and theme music is composed by  <B>?;SELECT DISTINCT ?uri where { ?uri dbo:related <A> . ?uri dbp:themeMusicComposer <B> . ?uri a dbo:TelevisionShow }
+Which TV show produced by <B> and is located in <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:company <B> . ?uri dbo:location <A> . ?uri a dbo:TelevisionShow }
+Which tv show was preceded by <B> and voice to the character was given by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:previousWork <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+Which TV show whose theme is composed by someone signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordLabel <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Which TV show's  opening theme is <A> and executive producer is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:openingTheme <A> . ?uri dbp:executiveProducer <B> . ?uri a dbo:TelevisionShow }
+Which TV show's company is <B> and is produced by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:company <B> . ?uri dbp:producer <A> . ?uri a dbo:TelevisionShow }
+Which TV show's composer is <B> and executive producer as <A>?;SELECT DISTINCT ?uri where { ?uri dbo:composer <B> . ?uri dbo:executiveProducer <A> . ?uri a dbo:TelevisionShow }
+Which TV show's executive producer is <B> and composed by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:executiveProducer <B> . ?uri dbp:composer <A> . ?uri a dbo:TelevisionShow }
+Which TV show's producer is <A> and company is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:producer <A> . ?uri dbo:company <B> . ?uri a dbo:TelevisionShow }
+Which TV show's setting is in <A> and is the subsequent work of <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:subsequentWork <B> . ?uri dbo:location <A> . ?uri a dbo:TelevisionShow }
+Which TV show's theme was composed by a band in which <A> used to perform?;SELECT DISTINCT ?uri where { ?x dbo:formerBandMember <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Which TV show's writer is <A> and distributor is <B>?;SELECT DISTINCT ?uri where { ?uri dbp:writer <A> . ?uri dbp:distributor <B> . ?uri a dbo:TelevisionShow }
+Which TV shows distributor is <B> and developed by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:developer <A> . ?uri dbo:distributor <B> . ?uri a dbo:TelevisionShow }
+Who all are starring in the  movies where director of photography is <A> ?;SELECT DISTINCT ?uri where { ?x dbo:cinematography <A> . ?x dbp:starring ?uri . ?x a dbo:Film }
+Who all have been judges on <A>'s shows?;SELECT DISTINCT ?uri where { ?x dbo:network <A> . ?x dbp:judges ?uri . ?x a dbo:TelevisionShow }
+Who all have been presenters on shows by the <A>?;SELECT DISTINCT ?uri where { ?x dbo:channel <A> . ?x dbp:presenter ?uri . ?x a dbo:TelevisionShow }
+who are starring in the movies written by <A> ?;SELECT DISTINCT ?uri where { ?x dbo:writer <A> . ?x dbo:starring ?uri . ?x a dbo:Film }
+Who are the  judges of the television show whose anchor is <A>?;SELECT DISTINCT ?uri where { ?x dbp:presenter <A> . ?x dbp:judges ?uri . ?x a dbo:TelevisionShow }
+Who are the cast members of <A>?;SELECT DISTINCT ?uri where { <A> dbp:starring ?uri }
+Who are the characters of <A>?;SELECT DISTINCT ?uri where { <A> dbp:characters ?uri }
+Who are the people which <A> has employed?;SELECT DISTINCT ?uri where { ?uri dbp:employer <A> }
+Who are the shareholder of the broadcast networks whose owning company is <A>?;SELECT DISTINCT ?uri where { ?x dbo:owningCompany <A> . ?x dbp:owner ?uri . ?x a dbo:BroadcastNetwork }
+Who are the spouse of the actors of <A>?;SELECT DISTINCT ?uri where { <A> dbo:starring ?x . ?x dbo:spouse ?uri }
+Who are the stars of the movies which are distributed by <A> ?;SELECT DISTINCT ?uri where { ?x dbp:distributor <A> . ?x dbo:starring ?uri . ?x a dbo:Film }
+Who edited  <A> ?;SELECT DISTINCT ?uri where { <A> dbp:editor ?uri }
+Who edited <A> ?;SELECT DISTINCT ?uri where { <A> dbo:editing ?uri }
+Who gave guest appearances on the show which is the next episode after the <A> one?;SELECT DISTINCT ?uri where { ?x dbo:previousWork <A> . ?x dbp:guests ?uri . ?x a dbo:TelevisionEpisode }
+Who gave the voice for <A> ?;SELECT DISTINCT ?uri where { <A> dbo:voice ?uri }
+Who gave the voice to the characters sculpted by <A>?;SELECT DISTINCT ?uri where { ?x dbp:creator <A> . ?x dbo:voice ?uri . ?x a dbo:FictionalCharacter }
+Who has produced movies that have a <A> score?;SELECT DISTINCT ?uri where { ?x dbp:music <A> . ?x dbp:producer ?uri . ?x a dbo:Film }
+Who have become famous by movies produced by <A>?;SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?uri dbo:knownFor ?x }
+Who is the animator of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:animator ?uri }
+Who is the Artist of the singles whose film genre is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:genre <A> . ?x dbp:artist ?uri . ?x a dbo:Single }
+Who is the executive producer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:executiveProducer ?uri }
+Who is the fictional character who portrayed in <A>?;SELECT DISTINCT ?uri where { ?uri dbo:portrayer <A> . ?uri a dbo:FictionalCharacter }
+Who is the fictional character who starred in <A>?;SELECT DISTINCT ?uri where { ?uri dbo:voice <A> . ?uri a dbo:FictionalCharacter }
+Who is the fictional character whose family member is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:family <A> . ?uri a dbo:FictionalCharacter }
+Who is the fictional character whose relative is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:relative <A> . ?uri a dbo:FictionalCharacter }
+Who is the film director of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:director ?uri }
+Who is the film star of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:starring ?uri }
+Who is the producer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:producer ?uri }
+Who owns the broadcast network founded by <A>?;SELECT DISTINCT ?uri where { ?x dbo:foundedBy <A> . ?x dbp:owner ?uri . ?x a dbo:BroadcastNetwork }
+Who produced <A>?;SELECT DISTINCT ?uri where { <A> dbo:producer ?uri }
+Who produced the <A>?;SELECT DISTINCT ?uri where { ?uri dbo:product <A> }
+Who produced the TV shows for <A>?;SELECT DISTINCT ?uri where { ?x dbp:company <A> . ?x dbo:producer ?uri . ?x a dbo:TelevisionShow }
+Who produces the tv series which made <A> famous?;SELECT DISTINCT ?uri where { <A> dbo:knownFor ?x . ?x dbo:producer ?uri }
+Who starred in <A> and produced <B>?;SELECT DISTINCT ?uri where { <B> dbo:executiveProducer ?uri . <A> dbp:starring ?uri }
+Who was the animator of both <A> <B>?;SELECT DISTINCT ?uri where { <A> dbp:animator ?uri . <B> dbo:animator ?uri }
+Who was the voice actor of <A> also gave voice to <B>?;SELECT DISTINCT ?uri where { <A> dbo:voice ?uri . <B> dbo:voice ?uri }
+Who were the producers of <A>?;SELECT DISTINCT ?uri where { <A> dbo:producer ?uri }
+Who wrote the mangas produced by <A>?;SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?x dbo:author ?uri . ?x a dbo:Manga }
+Whose wife is a presenter at <A>?;SELECT DISTINCT ?uri where { ?x dbp:presenter <A> . ?uri dbo:spouse ?x }
+<A> and <B> is the notable work of which author?;SELECT DISTINCT ?uri where { ?uri dbp:notableworks <A> . ?uri dbp:notableworks <B> . ?uri a dbo:Writer }
+<A> and <B> is written by what author?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri . <B> dbo:author ?uri }
+<A> authored which book?;SELECT DISTINCT ?uri where { ?uri dbo:author <A> }
+<A> has authored which books ?;SELECT DISTINCT ?uri where { ?uri dbp:author <A> . ?uri a dbo:Book }
+<A> has penned books on how many matters?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:author <A> . ?x dbp:subject ?uri }
+<A> has written about how many topics?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:author <A> . ?x dbo:nonFictionSubject ?uri }
+<A> is editor of which magazine?;SELECT DISTINCT ?uri where { ?uri dbp:editor <A> . ?uri a dbo:Magazine }
+<A> writers have been given which awards?;SELECT DISTINCT ?uri where { ?x dbp:movement <A> . ?x dbo:award ?uri . ?x a dbo:Writer }
+<A> writers have won which award?;SELECT DISTINCT ?uri where { ?x dbp:ethnicity <A> . ?x dbo:award ?uri . ?x a dbo:Writer }
+Among which city where <B> played also had <A> ?;SELECT DISTINCT ?uri where { <B> dbp:place ?uri . <A> dbp:place ?uri }
+By which university is the literary magazine named <A> published?;SELECT DISTINCT ?uri where { <A> dbo:publisher ?uri }
+Count all the books written by an author buried in the <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:restingPlace <A> . ?uri dbo:author ?x . ?uri a dbo:Book }
+Count the number of books whose author's were born in <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:birthPlace <A> . ?uri dbo:author ?x . ?uri a dbo:Book }
+Count the number of important works done by the writers of <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbo:author ?x . ?x dbo:notableWork ?uri }
+Count the total awards won by the writer who has won <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:awards <A> . ?x dbp:awards ?uri }
+Count the writers whose work has been played in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:place <A> . ?x dbp:writer ?uri }
+Did <A> create <B>?;ASK where { <B> dbp:creators <A> }
+Did <A> write the <B>?;ASK where { <B> dbp:writers <A> }
+Did <B> write <A>?;ASK where { <A> dbp:writers <B> }
+Did <B> write the lyrics of <A>;ASK where { <A> dbp:lyrics <B> }
+From which countries are the people from who are an academic authority of the <A> species?;SELECT DISTINCT ?uri where { <A> dbo:binomialAuthority ?x . ?x dbo:citizenship ?uri . ?x a dbo:Person }
+Give me all magazines whose editors live in <A>?;SELECT DISTINCT ?uri where { ?x dbo:hometown <A> . ?uri dbp:editor ?x . ?uri a dbo:Magazine }
+Give me all magazines whose founder died in <A>?;SELECT DISTINCT ?uri where { ?x dbo:deathPlace <A> . ?uri dbo:founder ?x . ?uri a dbo:Magazine }
+How many <A> books are there?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:literaryGenre <A> }
+How many books are there whose author's tomb is in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:restingPlace <A> . ?uri dbo:author ?x . ?uri a dbo:Book }
+How many books are written by the author who is famous for <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:notableWork <A> . ?uri dbo:author ?x . ?uri a dbo:Book }
+How many books have been penned by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:author <A> . ?uri a dbo:Book }
+How many different people hold authority over the members of <A> family?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:family <A> . ?x dbo:binomialAuthority ?uri }
+How many different writers have written for <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:magazine <A> . ?x dbp:author ?uri }
+How many local authorities manage <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:gender <A> . ?x dbo:localAuthority ?uri }
+How many non fiction topics does <A> deals with?;SELECT DISTINCT COUNT(?uri) where { <A> dbo:nonFictionSubject ?uri }
+How many non-fiction subject are there of the books whose one of the non-fiction subject is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:nonFictionSubject <A> . ?x dbo:nonFictionSubject ?uri }
+How many other important things have been written by the creator of <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbo:creator ?x . ?x dbo:notableWork ?uri }
+How many other important work has been done by the writers <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:notableworks <A> . ?x dbo:notableWork ?uri }
+How many people have written for <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:magazine <A> . ?x dbp:author ?uri }
+How many publisher have been founded by <A> citizens?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:stateOfOrigin <A> . ?uri dbo:founder ?x . ?uri a dbo:Publisher }
+How many subjects are covered in the publications of <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:publisher <A> . ?x dbo:nonFictionSubject ?uri }
+How many subjects have been covered in <A> novels?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:literaryGenre <A> . ?x dbo:nonFictionSubject ?uri }
+How many things are written in <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:programmingLanguage <A> }
+How many writers speak a language belonging to <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:languageFamily <A> . ?uri dbp:language ?x . ?uri a dbo:Writer }
+In which companies boards do the writers of <A> belong?;SELECT DISTINCT ?uri where { <A> dbo:author ?x . ?x dbo:board ?uri }
+In which countries can i find some <A> writers?;SELECT DISTINCT ?uri where { ?x dbo:movement <A> . ?x dbo:nationality ?uri . ?x a dbo:Writer }
+In which country does the publishing house exist which was cofounded by <A>?;SELECT DISTINCT ?uri where { ?x dbo:founder <A> . ?x dbp:country ?uri . ?x a dbo:Publisher }
+In which language is <A> written ?;SELECT DISTINCT ?uri where { <A> dbp:language ?uri }
+Is <A> a book about <B>?;ASK where { <A> dbo:literaryGenre <B> }
+Is <A> the narrator of <B>?;ASK where { <B> dbp:narrator <A> }
+Is <A> the narrator of <B>?;ASK where { <B> dbp:narrator <A> }
+Is <A> written in <B> language?;ASK where { <A> dbp:programmingLanguage <B> }
+Is <A> written in <B>?;ASK where { <A> dbo:programmingLanguage <B> }
+Is <A> written in <B>?;ASK where { <A> dbp:programmingLanguage <B> }
+Is <B> written in <A>;ASK where { <B> dbp:programmingLanguage <A> }
+Is the book <A> a book about <B>?;ASK where { <A> dbo:literaryGenre <B> }
+List all binomial authority of the insects whose one of the  binomial authority is <A>?;SELECT DISTINCT ?uri where { ?x dbo:binomialAuthority <A> . ?x dbo:binomialAuthority ?uri }
+List all the parents of writers coming from the <A> ?;SELECT DISTINCT ?uri where { ?x dbp:homeTown <A> . ?x dbo:parent ?uri . ?x a dbo:Writer }
+List all the writers of the comics which has <A> as one of the writer ?;SELECT DISTINCT ?uri where { ?x dbp:writers <A> . ?x dbp:writers ?uri . ?x a dbo:Comic }
+List books authored by <A> and published by <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:author <A> . ?uri dbo:publisher <B> . ?uri a dbo:Book }
+List few authors whose education took place in <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:education <A> . ?uri a dbo:Writer }
+List some writers which speak one of the <A>.;SELECT DISTINCT ?uri where { ?x dbo:languageFamily <A> . ?uri dbp:language ?x . ?uri a dbo:Writer }
+List the academic discipline of the journals whose publisher is <A>.;SELECT DISTINCT ?uri where { ?x dbp:publisher <A> . ?x dbo:academicDiscipline ?uri . ?x a dbo:AcademicJournal }
+List the awards won by the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:writer ?x . ?x dbp:awards ?uri }
+List the books by the authors buried in the <A>?;SELECT DISTINCT ?uri where { ?x dbo:restingPlace <A> . ?uri dbo:author ?x . ?uri a dbo:Book }
+List the books whose authors are in <A>.;SELECT DISTINCT ?uri where { ?x dbo:birthPlace <A> . ?uri dbo:author ?x . ?uri a dbo:Book }
+List the magazines published by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:publisher <A> . ?uri a dbo:Magazine }
+List the notable works of the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:writer ?x . ?x dbo:notableWork ?uri }
+List the popular works of the author of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:author ?x . ?x dbo:notableWork ?uri }
+List the products of the company which published <A>.;SELECT DISTINCT ?uri where { <A> dbp:publisher ?x . ?x dbp:products ?uri }
+List the series of the books whose author is <A>.;SELECT DISTINCT ?uri where { ?x dbp:author <A> . ?x dbo:series ?uri . ?x a dbo:Book }
+List the subjects of the books whose one of the topics is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:subject <A> . ?x dbp:subject ?uri . ?x a dbo:Book }
+List the websites which the authors of <A> own ?;SELECT DISTINCT ?uri where { <A> dbp:author ?x . ?x dbo:owner ?uri }
+List the writers of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:writers ?uri }
+Name a writer who was educated in <B> and had a son named <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:education <B> . ?uri dbo:child <A> . ?uri a dbo:Writer }
+Name books with publisher as <B> and writer as <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:publisher <B> . ?uri dbp:author <A> . ?uri a dbo:Book }
+Name some books by <A> speaking authors.;SELECT DISTINCT ?uri where { ?x dbp:language <A> . ?uri dbp:author ?x }
+Name some local authorities of schools which have a mixed <A> system?;SELECT DISTINCT ?uri where { ?x dbo:gender <A> . ?x dbo:localAuthority ?uri . ?x a dbo:School }
+Name the awards that have been given to the writer made famous for <A>?;SELECT DISTINCT ?uri where { ?x dbo:notableWork <A> . ?x dbo:award ?uri . ?x a dbo:Writer }
+NAme the emplyer for whihc <A> has worked and also written in <B> ?;SELECT DISTINCT ?uri where { <A> dbp:employer ?uri . <B> dbo:author ?uri }
+Name the local authority of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:localAuthority ?uri }
+Name the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:writer ?uri }
+Name the writer whose one of the notable work is <B> and died in <A>?;SELECT DISTINCT ?uri where { ?uri dbo:notableWork <B> . ?uri dbo:deathPlace <A> . ?uri a dbo:Writer }
+On how many subjects has <A> published books?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:publisher <A> . ?x dbp:subject ?uri }
+On what subjects was <A> written?;SELECT DISTINCT ?uri where { <A> dbp:subject ?uri }
+On which subjects does the author of the novel <A> delve?;SELECT DISTINCT ?uri where { <A> dbo:nonFictionSubject ?uri }
+Tell me the number of writers whose works have been recorded in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:recordedIn <A> . ?x dbp:writer ?uri . ?uri a dbo:Artist }
+The authors of <A> was influenced by whom ?;SELECT DISTINCT ?uri where { <A> dbo:author ?x . ?x dbo:influencedBy ?uri }
+To which books <A>, an editor?;SELECT DISTINCT ?uri where { ?uri dbo:publisher <A> . ?uri a dbo:Book }
+To which political party does the writer of <A> belong?;SELECT DISTINCT ?uri where { <A> dbp:writer ?x . ?x dbo:party ?uri }
+To which series does the book belong which came after the <A>?;SELECT DISTINCT ?uri where { ?x dbo:previousWork <A> . ?x dbo:series ?uri }
+Was <B> a novel of the <A> genre?;ASK where { <B> dbo:literaryGenre <A> }
+Was <B> written by <A>?;ASK where { <B> dbo:musicBy <A> }
+What are all the prizes won by the writer of <A>?;SELECT DISTINCT ?uri where { <A> dbo:writer ?x . ?x dbo:award ?uri }
+What are other famous works of the writer who created <A>?;SELECT DISTINCT ?uri where { ?x dbp:notableworks <A> . ?x dbo:notableWork ?uri . ?x a dbo:Writer }
+What are some <A> kind of Books?;SELECT DISTINCT ?uri where { ?uri dbo:literaryGenre <A> }
+What are some books whose cover illustration is designed by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:coverArtist <A> . ?uri a dbo:Book }
+What are some famous works of the writer of <A>?;SELECT DISTINCT ?uri where { <A> dbp:writer ?x . ?x dbp:notableworks ?uri }
+What are some magazines whose publishers are themselves <A> members?;SELECT DISTINCT ?uri where { ?x dbo:award <A> . ?uri dbo:publisher ?x . ?uri a dbo:Magazine }
+What are some non fiction subjects dealt with in <A> novels?;SELECT DISTINCT ?uri where { ?x dbo:literaryGenre <A> . ?x dbo:nonFictionSubject ?uri . ?x a dbo:Book }
+What are the awards won by the person who is an authority of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:binomialAuthority ?x . ?x dbp:awards ?uri . ?x a dbo:Person }
+What are the binomial authority of <A>?;SELECT DISTINCT ?uri where { <A> dbo:binomialAuthority ?uri }
+What are the books written by authors who died in <A>?;SELECT DISTINCT ?uri where { ?x dbo:restingPlace <A> . ?uri dbp:author ?x . ?uri a dbo:Book }
+What are the books written by the the person who made the <A>?;SELECT DISTINCT ?uri where { ?x dbo:notableWork <A> . ?uri dbo:author ?x . ?uri a dbo:Book }
+What are the non-fiction topics in the books whose authors is <A>?;SELECT DISTINCT ?uri where { ?x dbp:author <A> . ?x dbo:nonFictionSubject ?uri . ?x a dbo:Book }
+What are the products of the company who published <A> ?;SELECT DISTINCT ?uri where { <A> dbo:publisher ?x . ?x dbo:product ?uri . ?x a dbo:Company }
+What awards have been given to the writers of <A>?;SELECT DISTINCT ?uri where { ?x dbp:notableworks <A> . ?x dbo:award ?uri . ?x a dbo:Writer }
+What famous work is derived from the one whose lyrics are written by <A>?;SELECT DISTINCT ?uri where { ?x dbo:lyrics <A> . ?x dbo:basedOn ?uri }
+What has <A> written his books about?;SELECT DISTINCT ?uri where { ?x dbo:author <A> . ?x dbp:subject ?uri . ?x a dbo:Book }
+What is the academic journal whose editor is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:editor <A> . ?uri a dbo:AcademicJournal }
+What is the alma mater of the author of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:author ?x . ?x dbp:almaMater ?uri }
+What is the death location of the scientist who is the known authority of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:binomialAuthority ?x . ?x dbo:deathPlace ?uri . ?x a dbo:Scientist }
+What is the genre of <A>?;SELECT DISTINCT ?uri where { <A> dbp:genre ?uri }
+What is the local authority of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:localAuthority ?uri }
+What is the local authority of the <A> is also the birth palce of <B> ?;SELECT DISTINCT ?uri where { <A> dbo:localAuthority ?uri . <B> dbp:birthPlace ?uri }
+What is the local authority of the <B> and place of birth of the <A> ?;SELECT DISTINCT ?uri where { <B> dbo:localAuthority ?uri . <A> dbp:placeOfBirth ?uri }
+What is the magazine which have been  founded by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:founder <A> . ?uri a dbo:Magazine }
+What is the nationality of the entomologist who is a renowned authority of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:binomialAuthority ?x . ?x dbo:citizenship ?uri . ?x a dbo:Entomologist }
+What is the publisher of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:publisher ?uri }
+What is the religion of the academic authority on <A>?;SELECT DISTINCT ?uri where { <A> dbo:binomialAuthority ?x . ?x dbp:veneratedIn ?uri }
+What is the series of the book which is a subsequent work of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbo:series ?uri . ?x a dbo:Book }
+What is the subject of the book which preceded Sagan's <A>?;SELECT DISTINCT ?uri where { <A> dbo:previousWork ?x . ?x dbp:subject ?uri }
+What is the total number of other non-fiction subject of the books whose one of the subject is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:nonFictionSubject <A> . ?x dbo:nonFictionSubject ?uri }
+What is the total number of POD of the writers whose birth place is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:birthPlace <A> . ?x dbo:deathPlace ?uri . ?uri a dbo:Location }
+What magazine is <A> known for which has <B> as publisher ?;SELECT DISTINCT ?uri where { <A> dbo:knownFor ?uri . <B> dbo:publisher ?uri }
+What magazine published <A> and is the employer of <B>?;SELECT DISTINCT ?uri where { <A> dbo:publisher ?uri . <B> dbo:employer ?uri }
+What non fiction subjects are covered in books by <A> publishers?;SELECT DISTINCT ?uri where { ?x dbo:publisher <A> . ?x dbo:nonFictionSubject ?uri . ?x a dbo:Book }
+What novels are belong to the genre of <A>?;SELECT DISTINCT ?uri where { ?uri dbo:literaryGenre <A> }
+What show has writing of <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbp:writer <A> . ?uri dbp:writer <B> . ?uri a dbo:TelevisionShow }
+What was the book that lead to Sagan's <A>, about?;SELECT DISTINCT ?uri where { ?x dbo:subsequentWork <A> . ?x dbp:subject ?uri . ?x a dbo:Book }
+What writers have nationality as <A>?;SELECT DISTINCT ?uri where { ?uri dbp:nationality <A> . ?uri a dbo:Writer }
+Whay common comic is written by <A> and narrated by <B> ?;SELECT DISTINCT ?uri where { <A> dbp:author ?uri . <B> dbp:narrated ?uri }
+Where did the plays written by <A> take place?;SELECT DISTINCT ?uri where { ?x dbp:writer <A> . ?x dbp:place ?uri . ?x a dbo:Play }
+Where does the publisher of <A> live?;SELECT DISTINCT ?uri where { <A> dbo:publisher ?x . ?x dbp:residence ?uri }
+Which  writer has childrens named <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:children <B> . ?uri dbp:children <A> . ?uri a dbo:Writer }
+Which <B> journal has compiler as <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:editor <A> . ?uri dbp:discipline <B> . ?uri a dbo:AcademicJournal }
+Which author inspired <A>, and wrote <B>?;SELECT DISTINCT ?uri where { <B> dbp:author ?uri . <A> dbp:influences ?uri }
+Which awards did the writer of <A> win ?;SELECT DISTINCT ?uri where { <A> dbo:writer ?x . ?x dbp:awards ?uri }
+Which awards did the writer, who is  the creator of <A>, won ?;SELECT DISTINCT ?uri where { <A> dbp:creator ?x . ?x dbp:awards ?uri . ?x a dbo:Writer }
+Which borough of the <B> is also the local authority of <A> ?;SELECT DISTINCT ?uri where { <B> dbp:borough ?uri . <A> dbo:localAuthority ?uri }
+Which ceremonial County of the <A> is also the local authority of the <B> ?;SELECT DISTINCT ?uri where { <A> dbo:ceremonialCounty ?uri . <B> dbo:localAuthority ?uri }
+Which ceremonial County of the <A> is also the local authority of the <B>?;SELECT DISTINCT ?uri where { <A> dbo:ceremonialCounty ?uri . <B> dbo:localAuthority ?uri }
+Which companies published <A>?;SELECT DISTINCT ?uri where { <A> dbp:publisher ?uri }
+Which distributer of <A> is also the  publisher of the <B> ?;SELECT DISTINCT ?uri where { <A> dbo:distributor ?uri . <B> dbp:publisher ?uri }
+Which domain's journals did <A> edit?;SELECT DISTINCT ?uri where { ?x dbp:editor <A> . ?x dbp:discipline ?uri . ?x a dbo:AcademicJournal }
+Which employer of <A> has alsoe written <B> ?;SELECT DISTINCT ?uri where { <A> dbp:employer ?uri . <B> dbo:author ?uri }
+Which famous writer was married to <A> and had a son named <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:spouse <A> . ?uri dbo:child <B> . ?uri a dbo:Writer }
+Which field's journals are edited by <A>?;SELECT DISTINCT ?uri where { ?x dbo:editor <A> . ?x dbp:discipline ?uri . ?x a dbo:AcademicJournal }
+Which games publishers are located in <A>?;SELECT DISTINCT ?uri where { ?x dbo:location <A> . ?uri dbo:publisher ?x }
+Which genre of books are published by <A>?;SELECT DISTINCT ?uri where { ?x dbp:publisher <A> . ?x dbp:subject ?uri . ?x a dbo:Book }
+Which genre of books does the writer of <A> write?;SELECT DISTINCT ?uri where { <A> dbp:author ?x . ?x dbo:genre ?uri }
+Which house has published books about <A>?;SELECT DISTINCT ?uri where { ?x dbo:nonFictionSubject <A> . ?x dbo:publisher ?uri . ?x a dbo:Book }
+Which local authority of <B> is the palce of burial of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:placeOfBurial ?uri . <B> dbo:localAuthority ?uri }
+Which magazine has publisher as <A>?;SELECT DISTINCT ?uri where { ?uri dbo:publisher <A> . ?uri a dbo:Magazine }
+Which magazine's editor is married to <A>?;SELECT DISTINCT ?uri where { ?x dbp:spouse <A> . ?uri dbp:editor ?x . ?uri a dbo:Magazine }
+Which magazine's editor's official residence is <A>?;SELECT DISTINCT ?uri where { ?x dbo:residence <A> . ?uri dbp:editor ?x . ?uri a dbo:Magazine }
+Which magazine's publisher is <B> and founded by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:publisher <B> . ?uri dbo:founder <A> . ?uri a dbo:Magazine }
+Which magazines were founded by <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:founder <A> . ?uri a dbo:Magazine }
+Which newspaper owned by <B> is published in <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:language <A> . ?uri dbp:owners <B> . ?uri a dbo:Newspaper }
+Which novel was published by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:publisher <A> }
+Which person naratted <B> and also the writer of <A> ?;SELECT DISTINCT ?uri where { <B> dbp:narrated ?uri . <A> dbp:writers ?uri }
+Which publisher of <A> is also the university for which <B> plays for ?;SELECT DISTINCT ?uri where { <A> dbo:publisher ?uri . <B> dbo:team ?uri }
+Which publisher of <B> is also known for <A> ?;SELECT DISTINCT ?uri where { <B> dbo:publisher ?uri . <A> dbo:knownFor ?uri }
+Which writer is famous for works written by <A>?;SELECT DISTINCT ?uri where { ?x dbp:writers <A> . ?uri dbo:notableWork ?x }
+Which writer of <A> is also the author of <B> ?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri . <B> dbo:author ?uri }
+Which writer of <B> also extended the work of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:basedOn ?uri . <B> dbo:author ?uri }
+Which writer of <B> is also the writer of <A> ?;SELECT DISTINCT ?uri where { <B> dbp:writers ?uri . <A> dbp:author ?uri }
+Which writer of <B> is also the writer of <A> ?;SELECT DISTINCT ?uri where { <B> dbo:writer ?uri . <A> dbp:writer ?uri }
+Which writer of the <B> is also the writer of <A> ?;SELECT DISTINCT ?uri where { <B> dbp:writers ?uri . <A> dbo:writer ?uri }
+Who acted in the work written by <A>?;SELECT DISTINCT ?uri where { ?x dbp:writer <A> . ?x dbp:starring ?uri . ?x a dbo:Work }
+Who are some authoritative persons on the matter of <A>?;SELECT DISTINCT ?uri where { <A> dbo:binomialAuthority ?uri }
+Who are the local authority of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:localAuthority ?uri }
+Who are the parents of writers born and bred in <A>?;SELECT DISTINCT ?uri where { ?x dbp:homeTown <A> . ?x dbo:parent ?uri . ?x a dbo:Writer }
+Who are the people who influenced the writers of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:author ?x . ?x dbo:influenced ?uri }
+Who are the writers of <A>?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri }
+Who authored the work illustrated by <A>?;SELECT DISTINCT ?uri where { ?x dbo:illustrator <A> . ?x dbp:author ?uri }
+Who authored the works published in the <A> Magazine?;SELECT DISTINCT ?uri where { ?x dbp:magazine <A> . ?x dbp:author ?uri }
+Who has authored books published by the <A>?;SELECT DISTINCT ?uri where { ?x dbo:publisher <A> . ?x dbo:author ?uri . ?x a dbo:WrittenWork }
+Who has written works found in the <A>?;SELECT DISTINCT ?uri where { ?x dbp:magazine <A> . ?x dbp:author ?uri }
+Who influenced the author of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:writer ?x . ?x dbp:influences ?uri }
+Who is renowned for <A> and poem of <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:notableworks <A> . ?uri dbp:notableworks <B> }
+Who is the author of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:author ?uri }
+Who is the author of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:author ?uri }
+Who is the author of <B> is also the author of <A> ?;SELECT DISTINCT ?uri where { <B> dbp:author ?uri . <A> dbo:author ?uri }
+Who is the authority of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:authority ?uri }
+Who is the compiler of <B> whose prime minister is also <A> ?;SELECT DISTINCT ?uri where { <B> dbp:editor ?uri . <A> dbp:primeminister ?uri }
+Who is the editor of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:editor ?uri }
+Who is the father of <A> and is also a writer?;SELECT DISTINCT ?uri where { ?uri dbo:child <A> . ?uri a dbo:Writer }
+Who is the publisher of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:publisher ?uri }
+Who is the publisher of the comic, one of whose authors is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:writers <A> . ?x dbp:publisher ?uri . ?x a dbo:Comic }
+Who is the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:writers ?uri }
+Who is the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:writer ?uri }
+Who is the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri }
+Who is the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri }
+Who is the writer of the <A> and <B> ?;SELECT DISTINCT ?uri where { <A> dbo:writer ?uri . <B> dbo:writer ?uri }
+Who is the writer with notable works like <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbo:notableWork <B> . ?uri dbo:notableWork <A> . ?uri a dbo:Writer }
+Who owns the websites for which <A> writes?;SELECT DISTINCT ?uri where { ?x dbo:author <A> . ?x dbo:owner ?uri }
+Who was the editor of the newspaper owned by the the <A>?;SELECT DISTINCT ?uri where { ?x dbp:owners <A> . ?x dbp:editor ?uri . ?x a dbo:Newspaper }
+Who was the prime minister of <A> and also the editor of <B> ?;SELECT DISTINCT ?uri where { <A> dbp:primeminister ?uri . <B> dbp:editor ?uri }
+Who was the writer of the novel <A>?;SELECT DISTINCT ?uri where { ?uri dbp:notableworks <A> . ?uri a dbo:Writer }
+Who wrote <A> ?;SELECT DISTINCT ?uri where { <A> dbo:author ?uri }
+Who wrote <A> and <B>?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri . <B> dbo:writer ?uri }
+Who wrote <A>?;SELECT DISTINCT ?uri where { <A> dbo:author ?uri }
+Who wrote <A>?;SELECT DISTINCT ?uri where { <A> dbo:musicBy ?uri }
+Who wrote <A>?;SELECT DISTINCT ?uri where { <A> dbp:author ?uri }
+Who wrote <A>?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri }
+Who wrote <A>?;SELECT DISTINCT ?uri where { <A> dbo:writer ?uri }
+Who wrote <A>?;SELECT DISTINCT ?uri where { ?uri dbo:notableWork <A> . ?uri a dbo:Writer }
+Who wrote the play in which <A> is a character?;SELECT DISTINCT ?uri where { ?x dbp:characters <A> . ?x dbp:writer ?uri . ?x a dbo:Play }
+Who wrote the play in which a character called <A> exists?;SELECT DISTINCT ?uri where { ?x dbp:characters <A> . ?x dbp:writer ?uri . ?x a dbo:Play }
+Who wrote the subsequent work of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbo:writer ?uri }
+<A> did the music for what movies?;SELECT DISTINCT ?uri where { ?uri dbp:music <A> . ?uri a dbo:Film }
+<A> has been recorded in which places?;SELECT DISTINCT ?uri where { ?x dbo:artist <A> . ?x dbo:recordedIn ?uri }
+<A> has composed music for how many things?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:composer <A> }
+<A> is a musical instrument played by which artists?;SELECT DISTINCT ?uri where { ?uri dbo:instrument <A> . ?uri a dbo:MusicalArtist }
+<A> is in which band?;SELECT DISTINCT ?uri where { ?uri dbo:bandMember <A> }
+<A> is the member of what band?;SELECT DISTINCT ?uri where { ?uri dbp:currentMembers <A> . ?uri a dbo:Band }
+<A> makes songs in which languages?;SELECT DISTINCT ?uri where { ?x dbp:artist <A> . ?x dbp:language ?uri }
+<A> singles are of which language?;SELECT DISTINCT ?uri where { ?x dbo:musicalBand <A> . ?x dbp:language ?uri . ?x a dbo:Single }
+<A> was associated with which band?;SELECT DISTINCT ?uri where { ?uri dbo:associatedBand <A> }
+<A> was composed by whom ?;SELECT DISTINCT ?uri where { <A> dbo:composer ?uri }
+<A> wrote the musical extended from which book?;SELECT DISTINCT ?uri where { ?x dbo:author <A> . ?x dbo:basedOn ?uri . ?x a dbo:Musical }
+<A>'s musicals has been adapted from how many things?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:music <A> . ?x dbo:basedOn ?uri }
+<B> and <A> were originally composed by whom?;SELECT DISTINCT ?uri where { <B> dbo:composer ?uri . <A> dbo:composer ?uri }
+Among which sitcoms in which theme music is composed by <B> is located in <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:location <A> . ?uri dbp:themeMusicComposer <B> . ?uri a dbo:TelevisionShow }
+Artists trained at <A> buried where?;SELECT DISTINCT ?uri where { ?x dbo:training <A> . ?x dbo:restingPlace ?uri . ?x a dbo:Artist }
+Collaborators of <A> have composed music for which movies?;SELECT DISTINCT ?uri where { ?x dbp:associatedActs <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+Count all the band members who are in Bands which have signed up with <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:label <A> . ?x dbo:bandMember ?uri }
+Count all the shows whose music composers are in <A>.;SELECT DISTINCT COUNT(?uri) where { ?x dbo:associatedMusicalArtist <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Count the band members of <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbo:bandMember ?uri . ?uri a dbo:Person }
+Count the different genres of music made by <A> bands?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:hometown <A> . ?x dbo:genre ?uri . ?uri a dbo:MusicGenre }
+Count the movies directed by <B> and music composer <A> ?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:music <A> . ?uri dbp:director <B> }
+Count the number of artist whose pone of the field is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:field <A> . ?x dbo:field ?uri }
+Count the number of artists in the <A>?;SELECT DISTINCT COUNT(?uri) where { <A> dbp:artist ?uri }
+Count the number of artists who trained at the <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:training <A> . ?uri a dbo:Artist }
+Count the number of musical work which were sold by <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:label <A> . ?uri dbp:music ?x . ?uri a dbo:MusicalWork }
+Did <A> do the theme song of <B>?;ASK where { <B> dbp:opentheme <A> }
+Did <A> make <B>?;ASK where { <B> dbo:musicalArtist <A> }
+Did <A> make the song <B>?;ASK where { <B> dbo:musicalBand <A> }
+Did <B> do the cover of <A>?;ASK where { <A> dbo:coverArtist <B> }
+Did <B> the lyrics of <A>?;ASK where { <A> dbp:lyrics <B> }
+Does <A> play the <B>?;ASK where { <A> dbp:instrument <B> }
+Does <B> play <A>?;ASK where { <B> dbp:instrument <A> }
+Does <B> play the <A>?;ASK where { <B> dbo:instrument <A> }
+For how many movies are there whose musicians home town is in <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:hometown <A> . ?uri dbp:music ?x . ?uri a dbo:Film }
+For how many movies have the music composer composed music, who have collaborated with <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:associatedMusicalArtist <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+For which band did <A> perform in the past?;SELECT DISTINCT ?uri where { ?uri dbp:pastMembers <A> }
+From how many works is the musical derived, whose lyrics are written by <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:lyrics <A> . ?x dbo:basedOn ?uri }
+From which genres of music did those genres emerge where <A> are important?;SELECT DISTINCT ?uri where { ?x dbp:instruments <A> . ?x dbo:stylisticOrigin ?uri . ?x a dbo:MusicGenre }
+Give a list of all the labels that have <A> artists signed up with them?;SELECT DISTINCT ?uri where { ?x dbo:genre <A> . ?x dbo:recordLabel ?uri . ?x a dbo:MusicalArtist }
+Give me a count of movies whose music composer is <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+Give me a count of musical artists collaborating with <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:associatedMusicalArtist <A> . ?uri a dbo:MusicalArtist }
+Give me a count of musicians who play an instrument developed by <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:keyPeople <A> . ?uri dbo:instrument ?x . ?uri a dbo:MusicalArtist }
+Give me a list of everyone who married the musicians signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?uri dbo:spouse ?x }
+Give me the count of artist in the company whose Artist is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:artist <A> . ?x dbp:artist ?uri }
+Give me the home town of all musical artists who uses <A> as instrument ?;SELECT DISTINCT ?uri where { ?x dbo:instrument <A> . ?x dbo:hometown ?uri . ?x a dbo:MusicalArtist }
+Give me the total number of television shows whose theme music composer is <A> and created by  <B>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:themeMusicComposer <A> . ?uri dbp:creator <B> }
+How many albums did the maker of <A> produce?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:artist <A> . ?x dbo:subsequentWork ?uri . ?uri a dbo:Album }
+How many albums were released under the <A> label?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:label <A> . ?uri a dbo:Album }
+How many artists are signed up with <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:label <A> }
+How many artists have collaborated with famous <A> players?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:notableInstruments <A> . ?x dbo:associatedMusicalArtist ?uri . ?uri a dbo:Artist }
+How many artists have their works in the <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:museum <A> . ?x dbp:artist ?uri . ?uri a dbo:Artist }
+How many artists play as <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:instrument <A> . ?uri a dbo:Artist }
+How many artists' works are in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:museum <A> . ?x dbp:artist ?uri . ?uri a dbo:Artist }
+How many bands are based in <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:hometown <A> . ?uri a dbo:Band }
+How many bands are signed up with <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbo:recordLabel <A> . ?uri a dbo:Band }
+How many bands are signed up with labels which were founded in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:foundation <A> . ?uri dbp:label ?x . ?uri a dbo:Band }
+How many bands began in <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:origin <A> . ?uri a dbo:Band }
+How many bands collaborated with artists who signed up with <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:recordLabel <A> . ?x dbo:associatedMusicalArtist ?uri . ?uri a dbo:Band }
+How many bands have members currently playing the <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:notableInstruments <A> . ?uri dbp:currentMembers ?x . ?uri a dbo:Band }
+How many different genres led to other genres where <A> are important?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:instruments <A> . ?x dbo:stylisticOrigin ?uri . ?uri a dbo:MusicGenre }
+How many different songwriters have had their songs recorded in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:recordedIn <A> . ?x dbo:writer ?uri }
+How many labels sign up <A> artists?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:genre <A> . ?x dbo:recordLabel ?uri }
+How many movies have their music signed up with <A>.;SELECT DISTINCT COUNT(?uri) where { ?x dbo:recordLabel <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+How many movies music composers are associated with <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:associatedActs <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+How many other genere are there of the radio stations whose one of the genre  is <A> ?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:programmeFormat <A> . ?x dbo:programmeFormat ?uri }
+How many other people are in a band with <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:currentMembers <A> . ?x dbo:bandMember ?uri . ?uri a dbo:Person }
+How many people are famous for the <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:notableInstruments <A> }
+How many people are in the band with <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:currentMembers <A> . ?x dbo:bandMember ?uri . ?uri a dbo:Person }
+How many people have worked in the band one of whose current member is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:currentMembers <A> . ?x dbo:bandMember ?uri . ?uri a dbo:Person }
+How many record labels publish works of <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:genre <A> . ?x dbo:recordLabel ?uri }
+How many sitcoms are there whose theme music is composed by a <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:hometown <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+How many theme musics have been composed by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:themeMusicComposer <A> }
+How many writers worked on the album <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:album <A> . ?x dbp:writer ?uri }
+In how many places has <A> recorded their songs?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:producer <A> . ?x dbo:recordedIn ?uri }
+In how many places was the album of <A> recorded?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:artist <A> . ?x dbo:recordedIn ?uri }
+In what movies did <A> compose the music?;SELECT DISTINCT ?uri where { ?uri dbp:music <A> . ?uri a dbo:Film }
+In which city was <A> performed live?;SELECT DISTINCT ?uri where { <A> dbp:recorded ?uri }
+In which movies directed by <B> has <A> as music composer ?;SELECT DISTINCT ?uri where { ?uri dbo:musicComposer <A> . ?uri dbp:director <B> . ?uri a dbo:Film }
+Is <A> a band member of <B>?;ASK where { <B> dbo:bandMember <A> }
+Is <A> a band member of <B>?;ASK where { <B> dbo:bandMember <A> }
+Is <A> associated with <B>?;ASK where { <B> dbo:associatedBand <A> }
+Is <A> the band member of <B>?;ASK where { <B> dbo:bandMember <A> }
+Is <A> the former band member of <B>?;ASK where { <B> dbo:formerBandMember <A> }
+Is <A> the singer of <B>?;ASK where { <B> dbo:musicalArtist <A> }
+Is <A> the superintendent of <B>?;ASK where { <B> dbp:superintendent <A> }
+Is <A> the superintendent of <B>?;ASK where { <B> dbp:superintendent <A> }
+Is <B> associated with <A>?;ASK where { <A> dbo:associatedBand <B> }
+Is <B> by the musical band <A>?;ASK where { <B> dbo:musicalBand <A> }
+Is <B> in <A>?;ASK where { <B> dbo:associatedBand <A> }
+Is <B> in the <A> album?;ASK where { <B> dbo:album <A> }
+is <B> in the <A> album?;ASK where { <B> dbo:album <A> }
+Is <B> the band of <A>?;ASK where { <B> dbo:musicalBand <A> }
+Is the song <A> belong in the <B>?;ASK where { <A> dbp:album <B> }
+Is the song <B> from <A>?;ASK where { <B> dbp:fromAlbum <A> }
+List all the artist of albums which have been produced by <A> ?;SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?x dbp:artist ?uri . ?x a dbo:Album }
+List all the artist of the TV shows which has <A> as one of the artist ?;SELECT DISTINCT ?uri where { ?x dbp:artist <A> . ?x dbp:artist ?uri . ?x a dbo:TelevisionShow }
+List all the awards won by the artist who has won <A> ?;SELECT DISTINCT ?uri where { ?x dbo:award <A> . ?x dbo:award ?uri }
+List all the bands which have members of the band <A> in them?;SELECT DISTINCT ?uri where { <A> dbo:bandMember ?x . ?x dbo:associatedBand ?uri }
+List all the collaborators of the artist which has collaborated with <A> ?;SELECT DISTINCT ?uri where { ?x dbo:associatedMusicalArtist <A> . ?x dbo:associatedMusicalArtist ?uri . ?x a dbo:Artist }
+List all the movies whose music has been made up with someone under <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordLabel <A> . ?uri dbp:music ?x . ?uri a dbo:Film }
+List all the narrator of the albums which had <A> as one of the narrator ?;SELECT DISTINCT ?uri where { ?x dbp:narrated <A> . ?x dbp:narrated ?uri . ?x a dbo:Album }
+List all the record label distributed by the distributor of <A> ?;SELECT DISTINCT ?uri where { ?x dbp:distributor <A> . ?x dbp:distributor ?uri . ?x a dbo:RecordLabel }
+List down all the associcated musical artist of the artist of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:artist ?x . ?x dbo:associatedMusicalArtist ?uri }
+List down all the bands to which the writers of <A> are associated?;SELECT DISTINCT ?uri where { <A> dbo:writer ?x . ?x dbo:associatedBand ?uri }
+List down the associated musical artist of the writer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:writer ?x . ?x dbo:associatedMusicalArtist ?uri }
+List few musical artist whose notable instruments are <A> and  <B>?;SELECT DISTINCT ?uri where { ?uri dbp:notableInstruments <A> . ?uri dbo:instrument <B> . ?uri a dbo:MusicalArtist }
+List some musicians associated with famous <A> players?;SELECT DISTINCT ?uri where { ?x dbp:notableInstruments <A> . ?x dbo:associatedMusicalArtist ?uri }
+List some songwriters whose work has been recorded in <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordedIn <A> . ?x dbp:writer ?uri . ?x a dbo:Work }
+List the <A>'s movies which has music by <B>  ?;SELECT DISTINCT ?uri where { ?uri dbo:director <A> . ?uri dbp:music <B> . ?uri a dbo:Film }
+List the <B> TV shows with theme music given by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:genre <B> . ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+List the associated musical artist of the current members of <A>?;SELECT DISTINCT ?uri where { <A> dbp:currentMembers ?x . ?x dbo:associatedMusicalArtist ?uri }
+List the associates of bands which have a label by <A> ?;SELECT DISTINCT ?uri where { ?x dbo:recordLabel <A> . ?x dbp:associatedActs ?uri . ?x a dbo:Band }
+List the authors of the musicals whose songwriter is <A>.;SELECT DISTINCT ?uri where { ?x dbo:musicBy <A> . ?x dbo:author ?uri . ?x a dbo:Musical }
+List the home town of the bands whose label is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?x dbo:hometown ?uri . ?x a dbo:Band }
+List the judges of <B> which is also the artist of <A> ?;SELECT DISTINCT ?uri where { <B> dbp:judges ?uri . <A> dbp:artist ?uri }
+List the members of <A>?;SELECT DISTINCT ?uri where { <A> dbo:bandMember ?uri }
+List the movie whose music was given by <A> and distributed by <B>?;SELECT DISTINCT ?uri where { ?uri dbo:musicComposer <A> . ?uri dbo:distributor <B> . ?uri a dbo:Film }
+List the movies edited by <A> in which music was composed by <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:music <B> . ?uri dbp:editing <A> . ?uri a dbo:Film }
+List the movies whose music composer is often associated with <A>.;SELECT DISTINCT ?uri where { ?x dbp:associatedActs <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+List the music of <A>?;SELECT DISTINCT ?uri where { <A> dbp:music ?uri }
+List the other members of the band of which <A> is a part?;SELECT DISTINCT ?uri where { ?x dbp:currentMembers <A> . ?x dbo:bandMember ?uri . ?x a dbo:Band }
+List the subsequent work of the albums whose one of the subsequent work is <A>?;SELECT DISTINCT ?uri where { ?x dbo:subsequentWork <A> . ?x dbo:subsequentWork ?uri . ?x a dbo:Album }
+List the total number of awards of the musicals who have won <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:awards <A> . ?x dbp:awards ?uri }
+Music for what was made by someone who died of a <A>?;SELECT DISTINCT ?uri where { ?x dbo:deathCause <A> . ?uri dbp:music ?x }
+Music of how many things has been given by <A>?;SELECT DISTINCT COUNT(?uri) where { ?uri dbp:music <A> }
+Musical artists who are associated with <A> were born where ?;SELECT DISTINCT ?uri where { ?x dbp:associatedActs <A> . ?x dbp:birthPlace ?uri . ?x a dbo:MusicalArtist }
+Name all sitcoms whose theme music is made by <A>?;SELECT DISTINCT ?uri where { ?x dbo:musicalBand <A> . ?uri dbo:openingTheme ?x . ?uri a dbo:TelevisionShow }
+Name all the bands which have members of <A> in them.;SELECT DISTINCT ?uri where { <A> dbo:bandMember ?x . ?x dbo:associatedBand ?uri }
+Name all those whose spouses have performed with <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedMusicalArtist <A> . ?uri dbo:spouse ?x }
+Name some shows similar to the one whose theme song is made by <A>.;SELECT DISTINCT ?uri where { ?x dbp:themeMusicComposer <A> . ?uri dbo:related ?x . ?uri a dbo:TelevisionShow }
+Name the artist of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:artist ?uri }
+Name the artist of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:artist ?uri }
+Name the artist who made <B> and is often associated with <A>?;SELECT DISTINCT ?uri where { <A> dbo:associatedBand ?uri . <B> dbp:artist ?uri }
+Name the band atleast one of whose members is famous for playing the <A>?;SELECT DISTINCT ?uri where { ?x dbp:notableInstruments <A> . ?uri dbp:currentMembers ?x . ?uri a dbo:Band }
+Name the co-founder of the record labels which have one of the founder as <A> ?;SELECT DISTINCT ?uri where { ?x dbp:founder <A> . ?x dbp:founder ?uri . ?x a dbo:RecordLabel }
+Name the common associate band of <A> and <B> ?;SELECT DISTINCT ?uri where { <A> dbo:associatedBand ?uri . <B> dbo:associatedBand ?uri }
+Name the common musical band of <A> and <B> ?;SELECT DISTINCT ?uri where { <A> dbo:musicalBand ?uri . <B> dbo:musicalBand ?uri }
+Name the common record label of <A> and <B> ?;SELECT DISTINCT ?uri where { <A> dbp:label ?uri . <B> dbo:recordLabel ?uri }
+Name the composer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:composer ?uri }
+Name the cover artist of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:coverArtist ?uri }
+Name the founders of the record labels whose one of the founders is <A> ?;SELECT DISTINCT ?uri where { ?x dbp:founder <A> . ?x dbp:founder ?uri . ?x a dbo:RecordLabel }
+Name the movie in which <B> gave the music and <A> was the cinematographer ?;SELECT DISTINCT ?uri where { ?uri dbp:music <B> . ?uri dbo:cinematography <A> . ?uri a dbo:Film }
+Name the movie which has music composed by <A> and screenplay by <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:music <A> . ?uri dbp:screenplay <B> . ?uri a dbo:Film }
+Name the movie whose director is <B> and it's music composer is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:director <B> . ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+Name the movie whose director of photography is <B> and <A> was the music composer?;SELECT DISTINCT ?uri where { ?uri dbo:cinematography <B> . ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+Name the movie with narrator as <A> and music composer  as <B>?;SELECT DISTINCT ?uri where { ?uri dbp:narrator <A> . ?uri dbp:music <B> . ?uri a dbo:Film }
+Name the movie written by <B> and has music composer as <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:writer <B> . ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+Name the movies distributed by <B> and has music composer as <A>?;SELECT DISTINCT ?uri where { ?uri dbp:distributor <B> . ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+Name the movies for which music was given by  <A> and distributed by  <B>?;SELECT DISTINCT ?uri where { ?uri dbp:music <A> . ?uri dbp:distributor <B> . ?uri a dbo:Film }
+Name the movies in which music is give by  <B> and edited by <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:music <B> . ?uri dbo:editing <A> . ?uri a dbo:Film }
+Name the music artist which collaborated with the spouse of <A>?;SELECT DISTINCT ?uri where { ?x dbo:spouse <A> . ?uri dbo:associatedMusicalArtist ?x . ?uri a dbo:MusicalArtist }
+Name the musical artists whose label is given by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:label <A> . ?uri a dbo:MusicalArtist }
+Name the musical band of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:musicalBand ?uri }
+Name the musician who gave the music in <B> and is also wedded to <A> ?;SELECT DISTINCT ?uri where { <B> dbp:music ?uri . <A> dbo:spouse ?uri }
+Name the musician who was given label by <B> and has been associated with <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:label <B> . ?uri dbo:associatedMusicalArtist <A> . ?uri a dbo:MusicalArtist }
+Name the narrators of the album which has been narrated by <A> ?;SELECT DISTINCT ?uri where { ?x dbp:narrated <A> . ?x dbp:narrated ?uri }
+Name the sitcom with theme music composer as <A> and channel as <B>?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <A> . ?uri dbo:channel <B> . ?uri a dbo:TelevisionShow }
+Name the televesion show which has artist named <A> ?;SELECT DISTINCT ?uri where { ?uri dbp:artist <A> . ?uri a dbo:TelevisionShow }
+Name the television show whose theme music is composed by <A> and broadcasted on <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <A> . ?uri dbp:channel <B> . ?uri a dbo:TelevisionShow }
+Name the television show whose voice is given by  <B> and theme music composer is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:voices <B> . ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+Tell me the name of the <A>'s TV show whose Artist is <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:artist <B> . ?uri dbo:network <A> . ?uri a dbo:TelevisionShow }
+Through how many labels has <A> released her singles?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:writer <A> . ?x dbo:recordLabel ?uri }
+Through which label has <A> released her singles?;SELECT DISTINCT ?uri where { ?x dbo:writer <A> . ?x dbo:recordLabel ?uri . ?x a dbo:Single }
+Was <A> a former member of <B>?;ASK where { <B> dbo:formerBandMember <A> }
+Was <A> a member of <B>?;ASK where { <B> dbo:bandMember <A> }
+Was <A> a member of the <B>?;ASK where { <B> dbp:pastMembers <A> }
+Was <A> a part of <B>?;ASK where { <B> dbo:formerBandMember <A> }
+Was <A> in <B>?;ASK where { <B> dbp:pastMembers <A> }
+Was <A> in the <B> group?;ASK where { <B> dbo:musicalArtist <A> }
+Was <A> in the band <B>?;ASK where { <B> dbo:associatedBand <A> }
+Was <B> a band member of <A>?;ASK where { <A> dbo:formerBandMember <B> }
+Was <B> a member of <A>?;ASK where { <A> dbo:formerBandMember <B> }
+Was <B> in <A>?;ASK where { <B> dbp:album <A> }
+Was <B> made by <A>?;ASK where { <B> dbo:musicalBand <A> }
+Was <B> recorded in <A>?;ASK where { <B> dbp:recorded <A> }
+Was <B> the cover artist in <A>?;ASK where { <A> dbp:coverArtist <B> }
+Was the song <A> recorded in <B>?;ASK where { <A> dbp:recorded <B> }
+What academic discipline of the <B> is also the record label of the <A>?;SELECT DISTINCT ?uri where { <B> dbo:academicDiscipline ?uri . <A> dbo:recordLabel ?uri }
+What acts and artists are associated with people who have worked with <A>?;SELECT DISTINCT ?uri where { ?x dbp:associatedActs <A> . ?x dbo:associatedMusicalArtist ?uri }
+What are <A>'s musicals based upon?;SELECT DISTINCT ?uri where { ?x dbp:music <A> . ?x dbo:basedOn ?uri . ?x a dbo:Musical }
+What are shows whose theme music composer's home town is <A>?;SELECT DISTINCT ?uri where { ?x dbo:hometown <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+What are some artists on the show whose opening theme is <A>?;SELECT DISTINCT ?uri where { ?x dbo:openingTheme <A> . ?x dbp:artist ?uri . ?x a dbo:TelevisionShow }
+What are some bands originating in <A>?;SELECT DISTINCT ?uri where { ?uri dbo:hometown <A> . ?uri a dbo:Band }
+What are some bands out to <A>;SELECT DISTINCT ?uri where { ?uri dbp:origin <A> . ?uri a dbo:Band }
+What are some famous artists who rocked <A>?;SELECT DISTINCT ?uri where { ?uri dbp:notableInstruments <A> . ?uri a dbo:MusicalArtist }
+What are some music artists whose bands have signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?x dbo:bandMember ?uri . ?x a dbo:Band }
+What are some musical artists associated with the ones signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordLabel <A> . ?x dbo:associatedMusicalArtist ?uri . ?x a dbo:MusicalArtist }
+What are some musicians who have worked with <A>?;SELECT DISTINCT ?uri where { ?uri dbo:associatedMusicalArtist <A> . ?uri a dbo:MusicalArtist }
+What are some video games whose music is composed by an employ of the company <A>;SELECT DISTINCT ?uri where { ?x dbo:occupation <A> . ?uri dbp:composer ?x . ?uri a dbo:VideoGame }
+What are the albums whose artists have performed with the <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?uri dbp:artist ?x . ?uri a dbo:Album }
+What are the artists that have been in the band <A>?;SELECT DISTINCT ?uri where { ?uri dbp:associatedActs <A> . ?uri a dbo:Artist }
+What are the bands associated with the artists of <A>  ?;SELECT DISTINCT ?uri where { <A> dbp:artist ?x . ?x dbo:associatedBand ?uri }
+What are the current music bands of <A>?;SELECT DISTINCT ?uri where { ?uri dbp:currentMembers <A> }
+What are the last two studio albums of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?uri }
+What are the movies whose music composer is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+What are the movies whose music composer uses a <A>?;SELECT DISTINCT ?uri where { ?x dbo:instrument <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+What are the movies whose music is composed by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+What are the movies whose music is given by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:music <A> . ?uri a dbo:Film }
+What are the movies whose musicians's home town is <A>?;SELECT DISTINCT ?uri where { ?x dbo:hometown <A> . ?uri dbp:music ?x . ?uri a dbo:Film }
+What are the musical performances whose label is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:label <A> }
+What are the musicals based on, whose lyricist was <A>?;SELECT DISTINCT ?uri where { ?x dbp:lyrics <A> . ?x dbo:basedOn ?uri . ?x a dbo:Musical }
+What are the musicals of the people died in <A>?;SELECT DISTINCT ?uri where { ?x dbo:deathPlace <A> . ?uri dbp:music ?x . ?uri a dbo:Musical }
+What are the musicals whose musicians worked under <A>?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?uri dbp:music ?x . ?uri a dbo:Musical }
+What are the other band member of the Bands whose current members is <A>?;SELECT DISTINCT ?uri where { ?x dbp:currentMembers <A> . ?x dbo:bandMember ?uri . ?x a dbo:Band }
+What are the other band members of the band one of whose current member is <A>?;SELECT DISTINCT ?uri where { ?x dbp:currentMembers <A> . ?x dbo:bandMember ?uri . ?x a dbo:Band }
+What are the television shows whose starting music is composed by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+What artist of <A> influenced <B> in her career?;SELECT DISTINCT ?uri where { <A> dbp:artist ?uri . <B> dbp:influencedBy ?uri }
+What artist was associated closely with <B> and <A>?;SELECT DISTINCT ?uri where { <B> dbo:artist ?uri . <A> dbo:starring ?uri }
+What artists are associated with the members of the <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?x dbo:associatedMusicalArtist ?uri }
+What awards have been given to the artists coming out of the <A>?;SELECT DISTINCT ?uri where { ?x dbo:training <A> . ?x dbo:award ?uri . ?x a dbo:Artist }
+What band had  <A> and <B> as former members ?;SELECT DISTINCT ?uri where { ?uri dbp:pastMembers <A> . ?uri dbp:pastMembers <B> . ?uri a dbo:Band }
+What band has <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbp:currentMembers <A> . ?uri dbp:currentMembers <B> . ?uri a dbo:Band }
+What band made <B> and <A> song?;SELECT DISTINCT ?uri where { <B> dbp:artist ?uri . <A> dbo:musicalArtist ?uri }
+What band was <A> a part of, and often performed with <B>?;SELECT DISTINCT ?uri where { <A> dbo:associatedBand ?uri . <B> dbo:associatedMusicalArtist ?uri }
+What city was recorded in <B> which is also the official residence of <A> ?;SELECT DISTINCT ?uri where { <B> dbo:recordedIn ?uri . <A> dbo:residence ?uri }
+What did other artists associated with <A> make?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?x dbo:occupation ?uri . ?x a dbo:Artist }
+What famous musicians play the <A>?;SELECT DISTINCT ?uri where { ?uri dbo:instrument <A> . ?uri a dbo:MusicalArtist }
+What is the associated band of the musical artist who is the producer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:producer ?x . ?x dbo:associatedBand ?uri . ?x a dbo:MusicalArtist }
+What is the Band whose band member is <A>?;SELECT DISTINCT ?uri where { ?uri dbo:bandMember <A> }
+What is the band with previous members  <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:pastMembers <B> . ?uri dbp:pastMembers <A> . ?uri a dbo:Band }
+What is the birth place of music artists which were associated with <A> ?;SELECT DISTINCT ?uri where { <A> dbp:associatedActs ?x . ?x dbo:birthPlace ?uri . ?x a dbo:MusicalArtist }
+What is the genre of the Band whose home town is <A>?;SELECT DISTINCT ?uri where { ?x dbo:hometown <A> . ?x dbp:genre ?uri . ?x a dbo:Band }
+What is the home town of the band which is the artist of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:artist ?x . ?x dbo:hometown ?uri . ?x a dbo:Band }
+What is the home town of the Band which is the previous work of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:previousWork ?x . ?x dbo:hometown ?uri . ?x a dbo:Band }
+What is the home town of the musical artist who is the current members of <A>?;SELECT DISTINCT ?uri where { <A> dbp:currentMembers ?x . ?x dbo:hometown ?uri . ?x a dbo:MusicalArtist }
+What is the home town of the musician of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:musicalArtist ?x . ?x dbo:hometown ?uri }
+What is the label of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:recordLabel ?uri }
+What is the label of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:recordLabel ?uri }
+What is the label of the album whose previous work is <A>?;SELECT DISTINCT ?uri where { ?x dbo:previousWork <A> . ?x dbp:label ?uri . ?x a dbo:Album }
+What is the label of the singles whose group is <A> ?;SELECT DISTINCT ?uri where { ?x dbo:musicalArtist <A> . ?x dbp:label ?uri . ?x a dbo:Single }
+What is the label of things produced by the band <A>?;SELECT DISTINCT ?uri where { ?x dbp:artist <A> . ?x dbp:label ?uri }
+What is the musical whose music is by <A>,  based upon?;SELECT DISTINCT ?uri where { ?x dbo:musicBy <A> . ?x dbo:basedOn ?uri . ?x a dbo:Musical }
+What is the name of the artist which worked on the subsequent work of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbp:artist ?uri }
+What is the name of the movie whose director of photography was <B> and music composer was <A>?;SELECT DISTINCT ?uri where { ?uri dbp:cinematography <B> . ?uri dbo:musicComposer <A> . ?uri a dbo:Film }
+What is the name of the television show whose company is <B> and theme music composer is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:company <B> . ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+What is the occupation of the band members of <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedMusicalArtist <A> . ?x dbo:occupation ?uri }
+What is the origin of the musical artist of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:artist ?x . ?x dbp:origin ?uri }
+What is the origin of the musical artist whose associated band is <A> ?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?x dbp:origin ?uri . ?x a dbo:MusicalArtist }
+What is the programme format of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:programmeFormat ?uri }
+What is the record label of the <B> and also the  label of the <A>?;SELECT DISTINCT ?uri where { <B> dbo:recordLabel ?uri . <A> dbp:label ?uri }
+What is the Recorded of the <A> is also the headquarters of the <B> ?;SELECT DISTINCT ?uri where { <A> dbp:recorded ?uri . <B> dbp:headquarters ?uri }
+What is the stylistic origin of the music genres where the <A> is important?;SELECT DISTINCT ?uri where { ?x dbp:instruments <A> . ?x dbo:stylisticOrigin ?uri . ?x a dbo:MusicGenre }
+What is the television show whose opening theme's album is <A>?;SELECT DISTINCT ?uri where { ?x dbo:album <A> . ?uri dbo:openingTheme ?x . ?uri a dbo:TelevisionShow }
+What is the television show whose theme music composer's home town is <A>?;SELECT DISTINCT ?uri where { ?x dbo:hometown <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+What is the television show whose theme music is by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+What is the television show with presentator as <B> and theme music composer as <A>?;SELECT DISTINCT ?uri where { ?uri dbo:presenter <B> . ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+What is the total number of guests on the show whose theme music is <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbp:music <A> . ?x dbp:guests ?uri }
+What is the total number of writers whose singles are recorded in <A>?;SELECT DISTINCT COUNT(?uri) where { ?x dbo:recordedIn <A> . ?x dbp:writer ?uri }
+What kind of music is produced at the record label founded by <A>?;SELECT DISTINCT ?uri where { ?x dbp:founder <A> . ?x dbo:genre ?uri . ?x a dbo:RecordLabel }
+What musician is often associated with <B> and wrote <A>?;SELECT DISTINCT ?uri where { <A> dbp:writer ?uri . <B> dbo:associatedMusicalArtist ?uri }
+What musicians are signed up with <A>?;SELECT DISTINCT ?uri where { ?uri dbp:label <A> . ?uri a dbo:MusicalArtist }
+What program is  presented by <B> and has artist as <A>?;SELECT DISTINCT ?uri where { ?uri dbp:presenter <B> . ?uri dbp:creator <A> . ?uri a dbo:TelevisionShow }
+What show  has theme music composer as <A> and at the same time  related to <B>?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <A> . ?uri dbo:related <B> . ?uri a dbo:TelevisionShow }
+What show had <B> format and theme music composed by  <A>?;SELECT DISTINCT ?uri where { ?uri dbo:format <B> . ?uri dbp:themeMusicComposer <A> . ?uri a dbo:TelevisionShow }
+What subsequent work of <B> has the composer of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:composer ?uri . <B> dbo:subsequentWork ?uri }
+What was recorded by <B> and also palce of birth of the <A>?;SELECT DISTINCT ?uri where { <B> dbo:recordedIn ?uri . <A> dbp:placeOfBirth ?uri }
+What was the language of the single which came before <A>?;SELECT DISTINCT ?uri where { <A> dbo:previousWork ?x . ?x dbp:language ?uri }
+What woman acted in <A> and is often associated with <B>?;SELECT DISTINCT ?uri where { <A> dbp:starring ?uri . <B> dbo:associatedMusicalArtist ?uri }
+Whci co founder of <B> is also the artist of <A> /;SELECT DISTINCT ?uri where { <A> dbp:artist ?uri . <B> dbp:founder ?uri }
+Where did the genres originate, which were in the <A> album?;SELECT DISTINCT COUNT(?uri) where { <A> dbo:genre ?x . ?x dbo:stylisticOrigin ?uri }
+Where did the music genre of <A> originate?;SELECT DISTINCT ?uri where { <A> dbo:genre ?x . ?x dbo:stylisticOrigin ?uri }
+Where has <A> recorded its singles?;SELECT DISTINCT ?uri where { ?x dbo:producer <A> . ?x dbo:recordedIn ?uri . ?x a dbo:Single }
+Where was <A>  recorded ?;SELECT DISTINCT ?uri where { <A> dbp:recorded ?uri }
+Where was <A> ?;SELECT DISTINCT ?uri where { <A> dbp:recorded ?uri }
+Where was <A> recorded ?;SELECT DISTINCT ?uri where { <A> dbo:recordedIn ?uri }
+Where were some people associated with <A> employed at?;SELECT DISTINCT ?uri where { ?x dbo:associatedMusicalArtist <A> . ?x dbo:occupation ?uri . ?x a dbo:Person }
+Which <A>'s movie has music by <B>?;SELECT DISTINCT ?uri where { ?uri dbp:director <A> . ?uri dbp:music <B> . ?uri a dbo:Film }
+Which <B> show has <A> as artist?;SELECT DISTINCT ?uri where { ?uri dbp:artist <A> . ?uri dbp:network <B> . ?uri a dbo:TelevisionShow }
+Which artist married to <A>?;SELECT DISTINCT ?uri where { ?uri dbp:spouse <A> . ?uri a dbo:Artist }
+Which artist of <B> is also the writer of <A> ?;SELECT DISTINCT ?uri where { <B> dbp:artist ?uri . <A> dbp:writer ?uri }
+Which artist was taught by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:training <A> . ?uri a dbo:Artist }
+Which artists have co-starred with <A>?;SELECT DISTINCT ?uri where { ?uri dbp:associatedActs <A> . ?uri a dbo:Artist }
+Which artists trained in <A>?;SELECT DISTINCT ?uri where { ?uri dbp:training <A> . ?uri a dbo:Artist }
+Which associat of <B> is also married to <A> ?;SELECT DISTINCT ?uri where { <B> dbp:associatedActs ?uri . <A> dbo:spouse ?uri }
+Which associate musical artist of <B> is also the composer of <A> ?;SELECT DISTINCT ?uri where { <B> dbo:associatedMusicalArtist ?uri . <A> dbp:composer ?uri }
+Which associated band of the <B> is also the performer of the <A>?;SELECT DISTINCT ?uri where { <B> dbo:associatedBand ?uri . <A> dbo:musicalArtist ?uri }
+Which band had members who are now in <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?uri dbo:formerBandMember ?x . ?uri a dbo:Band }
+Which band had the members of <A>, and has made '<B>'?;SELECT DISTINCT ?uri where { <A> dbp:pastMembers ?uri . <B> dbo:musicalArtist ?uri }
+Which band made the song <A>, and has collaborated with <B> in the past?;SELECT DISTINCT ?uri where { <A> dbo:musicalBand ?uri . <B> dbo:associatedBand ?uri }
+Which band produced the album <A>?;SELECT DISTINCT ?uri where { ?x dbp:album <A> . ?x dbo:musicalArtist ?uri . ?x a dbo:MusicalWork }
+which band was <A> in?;SELECT DISTINCT ?uri where { ?uri dbo:formerBandMember <A> }
+Which band was left by <A>?;SELECT DISTINCT ?uri where { ?uri dbo:formerBandMember <A> . ?uri a dbo:Band }
+Which band's  former member are <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbo:formerBandMember <B> . ?uri dbp:pastMembers <A> . ?uri a dbo:Band }
+Which band's past member are <A> and <B>?;SELECT DISTINCT ?uri where { ?uri dbp:pastMembers <A> . ?uri dbp:pastMembers <B> . ?uri a dbo:Band }
+Which bands are associated to <A>?;SELECT DISTINCT ?uri where { <A> dbo:associatedBand ?uri }
+Which border country of the <B> is also the country of <A>, a musical group ?;SELECT DISTINCT ?uri where { <B> dbo:border ?uri . <A> dbo:country ?uri }
+Which collaborator of Nice <B> wrote <A> ?;SELECT DISTINCT ?uri where { <B> dbo:associatedBand ?uri . <A> dbp:writer ?uri }
+Which composer of <A> has also composed <B> ?;SELECT DISTINCT ?uri where { <A> dbp:composer ?uri . <B> dbo:musicBy ?uri }
+Which composer of <B> is the subsequent work of the <A>?;SELECT DISTINCT ?uri where { <B> dbo:composer ?uri . <A> dbo:subsequentWork ?uri }
+Which composer subsequent work of <A> and also composed <B> ?;SELECT DISTINCT ?uri where { <B> dbo:musicBy ?uri . <A> dbo:subsequentWork ?uri }
+Which cover artist of the <B> also the source of inspiration of <A> ?;SELECT DISTINCT ?uri where { <B> dbo:coverArtist ?uri . <A> dbo:basedOn ?uri }
+Which creator of <A> has also given the  musical score of the <B>?;SELECT DISTINCT ?uri where { <A> dbp:creator ?uri . <B> dbo:musicBy ?uri }
+Which currency is used by the record label of <A>?;SELECT DISTINCT ?uri where { <A> dbo:recordLabel ?x . ?x dbp:currency ?uri }
+Which current member of <A> is also the music composer of <B> ?;SELECT DISTINCT ?uri where { <A> dbp:currentMembers ?uri . <B> dbo:musicComposer ?uri }
+Which labels have published songs written by <A>?;SELECT DISTINCT ?uri where { ?x dbo:writer <A> . ?x dbp:label ?uri . ?x a dbo:Song }
+Which labels signs up <A> bands?;SELECT DISTINCT ?uri where { ?x dbp:genre <A> . ?x dbo:recordLabel ?uri . ?x a dbo:MusicalArtist }
+Which movies have their music composed by someone that signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordLabel <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+Which movies' music is composed by people associated with the band <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedMusicalArtist <A> . ?uri dbo:musicComposer ?x . ?uri a dbo:Film }
+Which music band made <A>, and to which <B> was associated?;SELECT DISTINCT ?uri where { <B> dbo:associatedBand ?uri . <A> dbo:musicalBand ?uri }
+Which musical artist associated with <A> has label with <B> ?;SELECT DISTINCT ?uri where { ?uri dbo:associatedMusicalArtist <A> . ?uri dbp:label <B> . ?uri a dbo:MusicalArtist }
+Which musical artist collaborated with <A> and label is <B>?;SELECT DISTINCT ?uri where { ?uri dbo:associatedMusicalArtist <A> . ?uri dbp:label <B> . ?uri a dbo:MusicalArtist }
+Which musical artists have collaborated with <A>?;SELECT DISTINCT ?uri where { ?uri dbo:associatedMusicalArtist <A> . ?uri a dbo:MusicalArtist }
+Which musical band produced the subsequent work <A> ?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbo:musicalBand ?uri }
+Which musician was born in <A>;SELECT DISTINCT ?uri where { ?uri dbp:placeOfBirth <A> . ?uri a dbo:MusicalArtist }
+Which past members of the <A> also sang <B> (Blackstreet & Ma song)?;SELECT DISTINCT ?uri where { <A> dbp:pastMembers ?uri . <B> dbo:musicalBand ?uri }
+Which serving railway line of the <B> was also the place where <A> was recorded ?;SELECT DISTINCT ?uri where { <B> dbo:servingRailwayLine ?uri . <A> dbp:recorded ?uri }
+Which show developed by <A> has theme music composed by <B> ?;SELECT DISTINCT ?uri where { ?uri dbp:developer <A> . ?uri dbp:themeMusicComposer <B> . ?uri a dbo:TelevisionShow }
+Which show's theme music composer's label is <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordLabel <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Which show's theme music was composed by <B> and voiced by <A>?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <B> . ?uri dbp:voices <A> . ?uri a dbo:TelevisionShow }
+Which shows theme music is composed by a band which has <A> in it?;SELECT DISTINCT ?uri where { ?x dbo:bandMember <A> . ?uri dbp:themeMusicComposer ?x . ?uri a dbo:TelevisionShow }
+Which television show's theme music composer is <A> and subsequent work is <B>?;SELECT DISTINCT ?uri where { ?uri dbp:themeMusicComposer <A> . ?uri dbo:subsequentWork <B> . ?uri a dbo:TelevisionShow }
+Which things have been made by artists who died in <A>?;SELECT DISTINCT ?uri where { ?x dbo:deathPlace <A> . ?uri dbo:creator ?x }
+Which video game's artist is <B> and computing platform is <A>?;SELECT DISTINCT ?uri where { ?uri dbp:artist <B> . ?uri dbo:computingPlatform <A> . ?uri a dbo:VideoGame }
+Who acted in the movies whose music is composed by <A>?;SELECT DISTINCT ?uri where { ?x dbo:musicComposer <A> . ?x dbp:artist ?uri . ?x a dbo:Film }
+Who all have been in bands which have recorded their work in the <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordedIn <A> . ?uri dbp:associatedActs ?x . ?uri a dbo:Person }
+Who all have written songs that were then recorded in the <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordedIn <A> . ?x dbp:writer ?uri . ?x a dbo:MusicalWork }
+Who are some cofounders of record labels with <A>?;SELECT DISTINCT ?uri where { ?x dbo:foundedBy <A> . ?x dbp:founder ?uri . ?x a dbo:RecordLabel }
+Who are the associate musical artists of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:associatedMusicalArtist ?uri }
+Who are the associated musical artist of <A>?;SELECT DISTINCT ?uri where { <A> dbo:associatedMusicalArtist ?uri }
+Who are the associated musical artist of the  artists of band <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?x dbo:associatedMusicalArtist ?uri }
+Who are the producers of the movies  which has music by <A> ?;SELECT DISTINCT ?uri where { ?x dbp:music <A> . ?x dbp:producer ?uri . ?x a dbo:Film }
+Who are the writer of the singles whose music genre is <A> ?;SELECT DISTINCT ?uri where { ?x dbo:genre <A> . ?x dbo:writer ?uri . ?x a dbo:Single }
+Who composed songs in the <A> album?;SELECT DISTINCT ?uri where { ?x dbp:album <A> . ?x dbo:composer ?uri . ?x a dbo:Song }
+Who composed the episode after which came <A>?;SELECT DISTINCT ?uri where { ?x dbo:subsequentWork <A> . ?x dbo:musicComposer ?uri . ?x a dbo:TelevisionEpisode }
+Who composed the lyrics of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:lyrics ?uri }
+Who composed the music for <A> ?;SELECT DISTINCT ?uri where { <A> dbp:music ?uri }
+Who directed the albums recorded in <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordedIn <A> . ?x dbp:director ?uri . ?x a dbo:Album }
+WHo gave the lyrcis of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:lyrics ?uri }
+Who gave the musical score  of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:musicBy ?uri }
+Who has composed songs produced by <A>?;SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?x dbo:composer ?uri . ?x a dbo:Song }
+Who has given guest appearances on the TV Episodes whose was music done by <A>?;SELECT DISTINCT ?uri where { ?x dbp:music <A> . ?x dbp:guests ?uri . ?x a dbo:TelevisionEpisode }
+Who has recorded their singles in <A>?;SELECT DISTINCT ?uri where { ?x dbo:recordedIn <A> . ?x dbo:writer ?uri . ?x a dbo:Single }
+Who has starred in the amusement park attractions where <A> was performing?;SELECT DISTINCT ?uri where { ?x dbp:music <A> . ?x dbp:starring ?uri . ?x a dbo:AmusementParkAttraction }
+Who has written the <A> musical?;SELECT DISTINCT ?uri where { <A> dbo:author ?uri }
+Who is associated  with the musical artists from <B> and <A> ?;SELECT DISTINCT ?uri where { ?uri dbo:associatedMusicalArtist <B> . ?uri dbo:associatedMusicalArtist <A> . ?uri a dbo:MusicalArtist }
+Who is the artist <A> ?;SELECT DISTINCT ?uri where { <A> dbp:creator ?uri }
+Who is the artist of <B> and also performed <A> atleast once?;SELECT DISTINCT ?uri where { <B> dbp:artist ?uri . <A> dbo:artist ?uri }
+Who is the artist of the album which has the song <A> ?;SELECT DISTINCT ?uri where { <A> dbp:album ?x . ?x dbp:artist ?uri }
+Who is the composer of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:composer ?uri }
+Who is the cover artist of <A> ?;SELECT DISTINCT ?uri where { <A> dbp:coverArtist ?uri }
+Who is the music composer of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:musicComposer ?uri }
+Who is the musical artist worked for labels <B> and <A>?;SELECT DISTINCT ?uri where { ?uri dbp:label <B> . ?uri dbp:label <A> . ?uri a dbo:MusicalArtist }
+Who is the musician of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:musicalArtist ?uri }
+"Who is the performer of album which has the song ""<A>"" ?";SELECT DISTINCT ?uri where { <A> dbo:album ?x . ?x dbo:artist ?uri }
+Who is the performer of the album whose subsequent work is <A> ?;SELECT DISTINCT ?uri where { ?x dbo:subsequentWork <A> . ?x dbo:artist ?uri }
+Who is the producer of album which has the song <A>?;SELECT DISTINCT ?uri where { <A> dbp:album ?x . ?x dbp:producer ?uri }
+Who is the producer of album, which has the song <A> ?;SELECT DISTINCT ?uri where { <A> dbo:album ?x . ?x dbp:producer ?uri . ?x a dbo:Album }
+Who is the producer of the album, after which <A> was released ?;SELECT DISTINCT ?uri where { <A> dbo:previousWork ?x . ?x dbp:producer ?uri }
+Who is the producer of the single which was the subsequent work of <A>?;SELECT DISTINCT ?uri where { <A> dbo:subsequentWork ?x . ?x dbo:producer ?uri }
+Who is the producer of the song which is the previous work of <A> ?;SELECT DISTINCT ?uri where { <A> dbo:previousWork ?x . ?x dbo:producer ?uri . ?x a dbo:Song }
+Who is the singer of the album which has a song <A> ?;SELECT DISTINCT ?uri where { <A> dbo:album ?x . ?x dbp:narrated ?uri . ?x a dbo:Album }
+Who is the starring of the movies such that music is by <A>?;SELECT DISTINCT ?uri where { ?x dbp:music <A> . ?x dbo:starring ?uri . ?x a dbo:Film }
+Who is the writer of the singles whose producer is <A>?;SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?x dbo:writer ?uri . ?x a dbo:Single }
+Who made the singles on the famous album <A>?;SELECT DISTINCT ?uri where { ?x dbo:album <A> . ?x dbo:musicalArtist ?uri . ?x a dbo:Single }
+Who narrated the albums in which <A> performed?;SELECT DISTINCT ?uri where { ?x dbo:artist <A> . ?x dbp:narrated ?uri . ?x a dbo:Album }
+Who was the cover artist of <A> also wrote <B> ?;SELECT DISTINCT ?uri where { <A> dbo:coverArtist ?uri . <B> dbp:writer ?uri }
+Who was the narrator of the show who's music is composed by <A>?;SELECT DISTINCT ?uri where { ?x dbo:composer <A> . ?x dbp:narrated ?uri . ?x a dbo:TelevisionShow }
+Who were the narrators of the albums which had <A> as one of the narrator ?;SELECT DISTINCT ?uri where { ?x dbp:narrated <A> . ?x dbp:narrated ?uri . ?x a dbo:Album }
+Who wrote the album coming right before <A>?;SELECT DISTINCT ?uri where { ?x dbp:nextAlbum <A> . ?x dbp:writer ?uri . ?x a dbo:Album }
+Who wrote the musical based on <A>?;SELECT DISTINCT ?uri where { ?x dbo:basedOn <A> . ?x dbo:author ?uri . ?x a dbo:Musical }
+Who wrote the musical whose composer is <A>?;SELECT DISTINCT ?uri where { ?x dbo:musicBy <A> . ?x dbo:author ?uri . ?x a dbo:Musical }
+Who wrote the singles on the <A>?;SELECT DISTINCT ?uri where { ?x dbp:album <A> . ?x dbp:writer ?uri . ?x a dbo:Single }
+Whose album is <A>?;SELECT DISTINCT ?uri where { <A> dbo:album ?uri }
+Whose music composer is signed up with <A>?;SELECT DISTINCT ?uri where { ?x dbp:label <A> . ?uri dbo:musicComposer ?x }
+Whose songs are <A> and <B>?;SELECT DISTINCT ?uri where { <A> dbp:artist ?uri . <B> dbp:artist ?uri }
+Whose theme music is composed by the band one of whose member is <A>?;SELECT DISTINCT ?uri where { ?x dbo:bandMember <A> . ?uri dbp:themeMusicComposer ?x }
+Whose theme music was composed by a band which collaborated with <A>?;SELECT DISTINCT ?uri where { ?x dbo:associatedBand <A> . ?uri dbp:themeMusicComposer ?x }
+With which artist did the musical artist of <A> collaborated ?;SELECT DISTINCT ?uri where { <A> dbo:musicalArtist ?x . ?x dbp:associatedActs ?uri }
+With which musical artist is the music group which sung <A> related to ?;SELECT DISTINCT ?uri where { <A> dbo:musicalArtist ?x . ?x dbo:associatedMusicalArtist ?uri }
+With which musical artist is the producer of <A> associated ?;SELECT DISTINCT ?uri where { <A> dbo:producer ?x . ?x dbp:associatedActs ?uri . ?x a dbo:MusicalArtist }

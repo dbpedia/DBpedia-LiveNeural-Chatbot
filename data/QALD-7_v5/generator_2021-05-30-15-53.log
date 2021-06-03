@@ -1,0 +1,475 @@
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:TelevisionShow . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:TelevisionShow . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:numberOfEpisodes ?x . ?b dbo:numberOfEpisodes ?y }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:TelevisionShow . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:TelevisionShow . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:numberOfEpisodes ?x . ?b dbo:numberOfEpisodes ?y }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:numberOfEpisodes ?x . ?b dbo:numberOfEpisodes ?y }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 1
+DEBUG:root:no data for 1
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:TelevisionShow . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a rdfs:label ?l . ?x rdf:type dbo:TelevisionShow . ?x foaf:name ?l . ?x dbo:completionDate ?ad . ?x dbo:numberOfEpisodes ?an . ?y rdf:type dbo:TelevisionShow . ?y foaf:name ?l . ?y dbo:completionDate ?bd . ?y dbo:numberOfEpisodes ?bn . }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:TelevisionShow . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a rdfs:label ?l . ?x rdf:type dbo:TelevisionShow . ?x foaf:name ?l . ?x dbo:completionDate ?ad . ?x dbo:numberOfEpisodes ?an . ?y rdf:type dbo:TelevisionShow . ?y foaf:name ?l . ?y dbo:completionDate ?bd . ?y dbo:numberOfEpisodes ?bn . }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a rdfs:label ?l . ?x rdf:type dbo:TelevisionShow . ?x foaf:name ?l . ?x dbo:completionDate ?ad . ?x dbo:numberOfEpisodes ?an . ?y rdf:type dbo:TelevisionShow . ?y foaf:name ?l . ?y dbo:completionDate ?bd . ?y dbo:numberOfEpisodes ?bn . }
+DEBUG:root:0 matches for 2
+DEBUG:root:no data for 2
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:MusicalWork . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:MusicalArtist . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?y rdf:type ?b . ?y dbo:artist ?a . ?y dbo:releaseDate ?c . ?y dbo:recordLabel ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:MusicalWork . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:MusicalArtist . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?y rdf:type ?b . ?y dbo:artist ?a . ?y dbo:releaseDate ?c . ?y dbo:recordLabel ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?y rdf:type ?b . ?y dbo:artist ?a . ?y dbo:releaseDate ?c . ?y dbo:recordLabel ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 3
+DEBUG:root:no data for 3
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:MusicalWork . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:MusicalArtist . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?y rdf:type ?b . ?y dbo:artist ?a . ?y dbo:releaseDate ?c . ?y dbo:recordLabel ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:MusicalWork . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:MusicalArtist . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?y rdf:type ?b . ?y dbo:artist ?a . ?y dbo:releaseDate ?c . ?y dbo:recordLabel ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?y rdf:type ?b . ?y dbo:artist ?a . ?y dbo:releaseDate ?c . ?y dbo:recordLabel ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 4
+DEBUG:root:no data for 4
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:MusicGenre . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:RecordLabel . ?uri dbo:genre ?b. ?uri dbo:country ?a.  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:MusicGenre . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:RecordLabel . ?uri dbo:genre ?b. ?uri dbo:country ?a.  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:RecordLabel . ?uri dbo:genre ?b. ?uri dbo:country ?a.  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 5
+DEBUG:root:no data for 5
+DEBUG:root:1. attempt generator_query: select distinct  where {  [] dbo:starring ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct  where {  [] dbo:starring ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct  where {  [] dbo:starring ?x  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 6
+DEBUG:root:no data for 6
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Film . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:starring ?x  }
+DEBUG:root:8142 matches for 7
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:starring ?x . ?uri dbo:director ?a }
+DEBUG:root:7560 matches for 8
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Writer . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Book . ?uri dbo:author ?a . }
+DEBUG:root:477 matches for 9
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Band . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:bandMember ?uri .  }
+DEBUG:root:9336 matches for 10
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:director ?a  }
+DEBUG:root:2049 matches for 11
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:TelevisionShow . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a rdfs:label ?l . ?x a dbo:TelevisionShow . ?x foaf:name ?l . ?x dbo:completionDate ?ad  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:TelevisionShow . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a rdfs:label ?l . ?x a dbo:TelevisionShow . ?x foaf:name ?l . ?x dbo:completionDate ?ad  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a rdfs:label ?l . ?x a dbo:TelevisionShow . ?x foaf:name ?l . ?x dbo:completionDate ?ad  }
+DEBUG:root:0 matches for 12
+DEBUG:root:no data for 12
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Book . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:numberOfPages ?n .  }
+DEBUG:root:10000 matches for 13
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Film . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:budget ?n .  }
+DEBUG:root:3177 matches for 14
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:starring ?a . ?uri dbo:starring ?b  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:starring ?a . ?uri dbo:starring ?b  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:starring ?a . ?uri dbo:starring ?b  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 15
+DEBUG:root:no data for 15
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Film . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a <http://dbpedia.org/class/yago/Actor109765278> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:starring ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Film . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a <http://dbpedia.org/class/yago/Actor109765278> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:starring ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:starring ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 16
+DEBUG:root:no data for 16
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:TelevisionShow . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Broadcaster . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:series ?b . ?uri dbo:seasonNumber 1 . ?b dbo:network ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:TelevisionShow . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Broadcaster . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:series ?b . ?uri dbo:seasonNumber 1 . ?b dbo:network ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:series ?b . ?uri dbo:seasonNumber 1 . ?b dbo:network ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 17
+DEBUG:root:no data for 17
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Musical . ?uri dbo:musicBy ?a.  }
+DEBUG:root:714 matches for 18
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:author ?a . ?uri dbo:literaryGenre dbr:Autobiography  }
+DEBUG:root:296 matches for 19
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:series ?a . ?uri rdf:type dbo:Book.  }
+DEBUG:root:1222 matches for 20
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Book . ?uri dbo:author ?a.  }
+DEBUG:root:5836 matches for 21
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:author ?person . ?person dbo:movement ?uri . ?person rdf:type dbo:Artist  }
+DEBUG:root:3619 matches for 22
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:alterEgo ?s .  }
+DEBUG:root:626 matches for 23
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:Work . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Artist . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?b. ?uri dbo:artist ?a . ?uri dbo:releaseDate ?d .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:Work . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Artist . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?b. ?uri dbo:artist ?a . ?uri dbo:releaseDate ?d .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?b. ?uri dbo:artist ?a . ?uri dbo:releaseDate ?d .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 24
+DEBUG:root:no data for 24
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/Actor109765278> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:starring ?a . ?uri dbo:releaseDate ?date .  }
+DEBUG:root:4864 matches for 25
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b, ?c  (str(?laba) as ?la)  (str(?labb) as ?lb)  (str(?labc) as ?lc) where { ?c a dbo:Publisher . ?c rdfs:label ?labc . FILTER(lang(?labc) = 'en') . ?b a dbo:Artist . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:publisher ?c . ?uri dbo:author ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b, ?c  (str(?laba) as ?la)  (str(?labb) as ?lb)  (str(?labc) as ?lc) where { ?c a dbo:Publisher . ?c rdfs:label ?labc . FILTER(lang(?labc) = 'en') . ?b a dbo:Artist . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:publisher ?c . ?uri dbo:author ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b, ?c  (str(?laba) as ?la)  (str(?labb) as ?lb)  (str(?labc) as ?lc) where { ?c rdfs:label ?labc . FILTER(lang(?labc) = 'en') . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:publisher ?c . ?uri dbo:author ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 26
+DEBUG:root:no data for 26
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Artist . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:creator ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Artist . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:creator ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:creator ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 27
+DEBUG:root:no data for 27
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:field ?a .  }
+DEBUG:root:1924 matches for 28
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:subClassOf dbo:WrittenWork . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:numberOfPages ?n .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:subClassOf dbo:WrittenWork . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:numberOfPages ?n .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:numberOfPages ?n .  }
+DEBUG:root:5 matches for 29
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/PrizeWinner109627807> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:award ?uri .  }
+DEBUG:root:808 matches for 30
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:director ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:director ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:director ?a .  }
+DEBUG:root:2617 matches for 31
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:director ?a .  }
+DEBUG:root:2617 matches for 32
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a <http://dbpedia.org/class/yago/Actor109765278> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:starring ?a . ?uri dbo:director ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a <http://dbpedia.org/class/yago/Actor109765278> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:starring ?a . ?uri dbo:director ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Film . ?uri dbo:starring ?a . ?uri dbo:director ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 33
+DEBUG:root:no data for 33
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Artist . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Artwork . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:museum ?uri . ?a dbo:author  ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Artist . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Artwork . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:museum ?uri . ?a dbo:author  ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:museum ?uri . ?a dbo:author  ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 34
+DEBUG:root:no data for 34
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/FilmDirector110088200> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:director ?a . ?uri dbo:budget ?y .  }
+DEBUG:root:4282 matches for 35
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:musicComposer ?uri .  }
+DEBUG:root:10000 matches for 36
+DEBUG:root:10000 matches for 37
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Book . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:author ?uri .  }
+DEBUG:root:10000 matches for 38
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:creator ?uri .  }
+DEBUG:root:10000 matches for 39
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:architect ?uri .  }
+DEBUG:root:10000 matches for 40
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a <http://dbpedia.org/class/yago/FilmMaker110088390> . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?film rdf:type dbo:Film . ?film dbo:country ?a . ?film dbo:producer ?b . ?film dbo:starring ?uri . ?uri rdf:type dbo:Person .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a <http://dbpedia.org/class/yago/FilmMaker110088390> . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?film rdf:type dbo:Film . ?film dbo:country ?a . ?film dbo:producer ?b . ?film dbo:starring ?uri . ?uri rdf:type dbo:Person .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?film rdf:type dbo:Film . ?film dbo:country ?a . ?film dbo:producer ?b . ?film dbo:starring ?uri . ?uri rdf:type dbo:Person .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 41
+DEBUG:root:no data for 41
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:editor ?uri .  }
+DEBUG:root:5833 matches for 42
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:presenter ?uri .  }
+DEBUG:root:8322 matches for 43
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/Painting103876519> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:author ?uri .  }
+DEBUG:root:1675 matches for 44
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:portrayer ?uri . ?a dbo:series ?b.  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:portrayer ?uri . ?a dbo:series ?b.  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:portrayer ?uri . ?a dbo:series ?b.  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 45
+DEBUG:root:no data for 45
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Artist . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:influenced ?a .  }
+DEBUG:root:418 matches for 46
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:composer ?uri. ?a rdf:type dbo:TelevisionShow.  }
+DEBUG:root:9281 matches for 47
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Book . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:author ?uri . ?uri rdf:type dbo:Book }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Book . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:author ?uri . ?uri rdf:type dbo:Book }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:author ?uri . ?uri rdf:type dbo:Book }
+DEBUG:root:15 matches for 48
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:writer ?uri . ?a rdf:type dbo:Song  }
+DEBUG:root:4989 matches for 49
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Organisation . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Infrastructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:operator ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Organisation . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Infrastructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:operator ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:operator ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 50
+DEBUG:root:no data for 50
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Organisation . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Organisation . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:foundingYear ?year . ?b dbo:foundingYear ?year .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Organisation . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Organisation . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:foundingYear ?year . ?b dbo:foundingYear ?year .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:foundingYear ?year . ?b dbo:foundingYear ?year .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 51
+DEBUG:root:no data for 51
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Company . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:foundedBy ?uri . }
+DEBUG:root:10000 matches for 52
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?b dbo:headquarter ?uri . ?uri dbo:country ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?b dbo:headquarter ?uri . ?uri dbo:country ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?b dbo:headquarter ?uri . ?uri dbo:country ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 53
+DEBUG:root:no data for 53
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Company . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:foundationPlace ?uri .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Company . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:foundationPlace ?uri .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:foundationPlace ?uri .  }
+DEBUG:root:80 matches for 54
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Company . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:foundingYear ?year .  }
+DEBUG:root:10000 matches for 55
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a dbo:Company . ?uri dbo:industry ?a . ?uri dbo:foundationPlace ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a dbo:Company . ?uri dbo:industry ?a . ?uri dbo:foundationPlace ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a dbo:Company . ?uri dbo:industry ?a . ?uri dbo:foundationPlace ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 56
+DEBUG:root:no data for 56
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a dbo:Company . ?uri dbo:location ?a . ?uri dbo:numberOfEmployees ?n .  }
+DEBUG:root:2391 matches for 57
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Airline . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:targetAirport ?uri .  }
+DEBUG:root:1465 matches for 58
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a dbo:Company . ?uri dbo:product ?a .  }
+DEBUG:root:5653 matches for 59
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b, ?c  (str(?laba) as ?la)  (str(?labb) as ?lb)  (str(?labc) as ?lc) where { ?c a dbo:Airport . ?c rdfs:label ?labc . FILTER(lang(?labc) = 'en') . ?b a dbo:Airport . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Airline . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:subsidiary ?uri . ?uri dbo:targetAirport ?b . ?uri dbo:targetAirport ?c .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b, ?c  (str(?laba) as ?la)  (str(?labb) as ?lb)  (str(?labc) as ?lc) where { ?c a dbo:Airport . ?c rdfs:label ?labc . FILTER(lang(?labc) = 'en') . ?b a dbo:Airport . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Airline . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:subsidiary ?uri . ?uri dbo:targetAirport ?b . ?uri dbo:targetAirport ?c .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b, ?c  (str(?laba) as ?la)  (str(?labb) as ?lb)  (str(?labc) as ?lc) where { ?c rdfs:label ?labc . FILTER(lang(?labc) = 'en') . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:subsidiary ?uri . ?uri dbo:targetAirport ?b . ?uri dbo:targetAirport ?c .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 60
+DEBUG:root:no data for 60
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Company . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:founder ?uri .  }
+DEBUG:root:695 matches for 61
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Company . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?b dbo:foundedBy ?uri .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Company . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?b dbo:foundedBy ?uri .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?b dbo:foundedBy ?uri .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 62
+DEBUG:root:no data for 62
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a <http://dbpedia.org/class/yago/WikicatVideoGameDevelopmentCompanies> . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:VideoGame . ?uri dbo:publisher ?a }
+DEBUG:root:611 matches for 63
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Software . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:programmingLanguage ?uri .  }
+DEBUG:root:4686 matches for 64
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a a dbo:VideoGame  }
+DEBUG:root:10000 matches for 65
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:publisher ?a . ?uri rdf:type dbo:VideoGame }
+DEBUG:root:1985 matches for 66
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Software . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:developer ?uri .  }
+DEBUG:root:10000 matches for 67
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Software . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:product ?a .  }
+DEBUG:root:589 matches for 68
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:Software . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Software . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:developer ?uri . ?a rdf:type ?b  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:Software . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Software . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:developer ?uri . ?a rdf:type ?b  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:developer ?uri . ?a rdf:type ?b  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 69
+DEBUG:root:no data for 69
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  }
+DEBUG:root:5128 matches for 70
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:BodyOfWater . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:River . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?x dbo:inflow ?a . ?x rdf:type ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:subClassOf dbo:BodyOfWater . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:River . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?x dbo:inflow ?a . ?x rdf:type ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?x dbo:inflow ?a . ?x rdf:type ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 71
+DEBUG:root:no data for 71
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:wineRegion ?uri .  }
+DEBUG:root:249 matches for 72
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Place . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:isPartOf ?b . ?uri dbp:populationTotal ?inhabitants .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Place . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:isPartOf ?b . ?uri dbp:populationTotal ?inhabitants .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:isPartOf ?b . ?uri dbp:populationTotal ?inhabitants .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 73
+DEBUG:root:no data for 73
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Mountain . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:elevation ?num.  }
+DEBUG:root:10000 matches for 74
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Building . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:height ?num .  }
+DEBUG:root:4003 matches for 75
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:numberOfLocations ?number .  }
+DEBUG:root:4728 matches for 76
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:largestCity ?city . ?city dbo:populationTotal ?num .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:largestCity ?city . ?city dbo:populationTotal ?num .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:largestCity ?city . ?city dbo:populationTotal ?num .  }
+DEBUG:root:3105 matches for 77
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type dbo:Language . ?a dbo:language ?uri .  }
+DEBUG:root:286 matches for 78
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:populationTotal ?uri .  }
+DEBUG:root:4340 matches for 79
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:capital ?x . ?x dbo:populationTotal ?num .  }
+DEBUG:root:2240 matches for 80
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:type dbr:Beer }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:type dbr:Beer }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:type dbr:Beer }
+DEBUG:root:42 matches for 81
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:language ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:language ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:language ?b .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 82
+DEBUG:root:no data for 82
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?b dbp:location ?uri . ?uri dbo:country ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?b dbp:location ?uri . ?uri dbo:country ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?b dbp:location ?uri . ?uri dbo:country ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 83
+DEBUG:root:no data for 83
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?x dbp:office ?b . ?x dbo:birthPlace ?uri . ?uri a ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?x dbp:office ?b . ?x dbo:birthPlace ?uri . ?uri a ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?x dbp:office ?b . ?x dbo:birthPlace ?uri . ?uri a ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 84
+DEBUG:root:no data for 84
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:currency ?a . ?uri a <http://dbpedia.org/class/yago/Empire108557482>}
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:currency ?a . ?uri a <http://dbpedia.org/class/yago/Empire108557482>}
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:currency ?a . ?uri a <http://dbpedia.org/class/yago/Empire108557482>}
+DEBUG:root:122 matches for 85
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Building . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:location ?uri . ?uri a dbo:City .  }
+DEBUG:root:10000 matches for 86
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:deathPlace ?uri . ?uri rdf:type dbo:City .  }
+DEBUG:root:903 matches for 87
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Road . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:routeEnd ?uri .  }
+DEBUG:root:10000 matches for 88
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a dbo:City . ?a dbo:residence ?uri .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a dbo:City . ?a dbo:residence ?uri .  }
+DEBUG:root:4988 matches for 89
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:River . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:sourceCountry ?uri .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:River . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:sourceCountry ?uri .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:sourceCountry ?uri .  }
+DEBUG:root:0 matches for 90
+DEBUG:root:no data for 90
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Road . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:sourceCountry ?uri .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Road . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:sourceCountry ?uri .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:sourceCountry ?uri .  }
+DEBUG:root:0 matches for 91
+DEBUG:root:no data for 91
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:country ?uri .  }
+DEBUG:root:10000 matches for 92
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:NaturalPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:country ?uri .  }
+DEBUG:root:2688 matches for 93
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:timeZone ?uri .  }
+DEBUG:root:10000 matches for 94
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:deathPlace ?uri .}
+DEBUG:root:1367 matches for 95
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:BodyOfWater . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:areaTotal ?a1 . ?b dbo:areaTotal ?a2 . }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:BodyOfWater . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:areaTotal ?a1 . ?b dbo:areaTotal ?a2 . }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:areaTotal ?a1 . ?b dbo:areaTotal ?a2 . }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 96
+DEBUG:root:no data for 96
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:country ?uri . ?a rdf:type dbo:River }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:country ?uri . ?a rdf:type dbo:River }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:country ?uri . ?a rdf:type dbo:River }
+DEBUG:root:54 matches for 97
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:mayor ?x . ?x dbo:party ?uri .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:mayor ?x . ?x dbo:party ?uri .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:mayor ?x . ?x dbo:party ?uri .  }
+DEBUG:root:148 matches for 98
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:NaturalPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:locatedInArea ?uri . ?uri rdf:type dbo:Country .  }
+DEBUG:root:3626 matches for 99
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:areaCode ?string .  }
+DEBUG:root:7720 matches for 100
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:SportFacility . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:location ?b . ?uri dbo:seatingCapacity ?n .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:SportFacility . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:location ?b . ?uri dbo:seatingCapacity ?n .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:location ?b . ?uri dbo:seatingCapacity ?n .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 101
+DEBUG:root:no data for 101
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:capital ?uri.  }
+DEBUG:root:4431 matches for 102
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:areaTotal ?n .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:areaTotal ?n .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri a ?a . ?uri dbo:areaTotal ?n .  }
+DEBUG:root:35 matches for 103
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:largestCity ?uri .  }
+DEBUG:root:3212 matches for 104
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:location ?uri .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:location ?uri .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:location ?uri .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 105
+DEBUG:root:no data for 105
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbp:timezone ?uri .  }
+DEBUG:root:6409 matches for 106
+DEBUG:root:10000 matches for 107
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:populationTotal ?uri .  }
+DEBUG:root:10000 matches for 108
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Road . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:routeStart ?a.  }
+DEBUG:root:755 matches for 109
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:wineProduced ?b . ?uri dbo:location ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:wineProduced ?b . ?uri dbo:location ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:wineProduced ?b . ?uri dbo:location ?a .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 110
+DEBUG:root:no data for 110
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a. ?uri dbo:populationTotal ?pop .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a. ?uri dbo:populationTotal ?pop .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a. ?uri dbo:populationTotal ?pop .  }
+DEBUG:root:22 matches for 111
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:populationTotal ?pop .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:subClassOf dbo:PopulatedPlace . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:populationTotal ?pop .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a . ?uri dbo:populationTotal ?pop .  }
+DEBUG:root:22 matches for 112
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:PopulatedPlace . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a. ?uri dbo:location ?b . ?uri dbo:numberOfVisitors ?num .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:PopulatedPlace . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:subClassOf dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a. ?uri dbo:location ?b . ?uri dbo:numberOfVisitors ?num .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri rdf:type ?a. ?uri dbo:location ?b . ?uri dbo:numberOfVisitors ?num .  }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 113
+DEBUG:root:no data for 113
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:city ?uri . ?a rdf:type dbo:River }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:city ?uri . ?a rdf:type dbo:River }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:city ?uri . ?a rdf:type dbo:River }
+DEBUG:root:2 matches for 114
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Work . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:creator ?x . ?x dbo:nationality ?uri .  }
+DEBUG:root:404 matches for 115
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Bridge . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?a dbo:crosses ?uri .  }
+DEBUG:root:4269 matches for 116
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:connotation ?a .  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:connotation ?a .  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:connotation ?a .  }
+DEBUG:root:26 matches for 117
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:abbreviation ?a.  }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:abbreviation ?a.  }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') .  ?uri dbo:abbreviation ?a.  }
+DEBUG:root:0 matches for 118
+DEBUG:root:no data for 118
+DEBUG:root:1. attempt generator_query: select distinct ?a where {}
+DEBUG:root:2. attempt generator_query: select distinct ?a where {}
+DEBUG:root:3. attempt generator_query: select distinct ?a where {}

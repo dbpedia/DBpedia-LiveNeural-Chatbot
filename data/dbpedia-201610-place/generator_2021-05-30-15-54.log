@@ -1,0 +1,174 @@
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/county> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:1387 matches for 1
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/district> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2710 matches for 2
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/endPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/endPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/endPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 3
+DEBUG:root:no data for 3
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/highestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/highestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/highestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:33 matches for 4
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/intercommunality> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:10000 matches for 5
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/locatedInArea> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/locatedInArea> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/locatedInArea> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 6
+DEBUG:root:no data for 6
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/location> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:10000 matches for 7
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/lowestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/lowestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/lowestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:39 matches for 8
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/managementPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/managementPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/managementPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 9
+DEBUG:root:no data for 9
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/municipality> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:777 matches for 10
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/nearestCity> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/nearestCity> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/nearestCity> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 11
+DEBUG:root:no data for 11
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/origin> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/origin> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/origin> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 12
+DEBUG:root:no data for 12
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/region> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:7244 matches for 13
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourcePlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourcePlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourcePlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:1 matches for 14
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourceRegion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourceRegion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourceRegion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 15
+DEBUG:root:no data for 15
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/startPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/startPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/startPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 16
+DEBUG:root:no data for 16
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/state> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:4527 matches for 17
+DEBUG:root:1. attempt generator_query: select ?a  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/subregion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:506 matches for 18
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/county> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:922 matches for 19
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/endPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/endPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/endPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 20
+DEBUG:root:no data for 20
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/highestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/highestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/highestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:33 matches for 21
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/intercommunality> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/intercommunality> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/intercommunality> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 22
+DEBUG:root:no data for 22
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/locatedInArea> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/locatedInArea> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/locatedInArea> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 23
+DEBUG:root:no data for 23
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/lowestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/lowestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/lowestPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:38 matches for 24
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/managementPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/managementPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/managementPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 25
+DEBUG:root:no data for 25
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/municipality> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:776 matches for 26
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/nearestCity> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:1586 matches for 27
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/origin> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/origin> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/origin> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 28
+DEBUG:root:no data for 28
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourcePlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourcePlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourcePlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:1 matches for 29
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourceRegion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourceRegion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/sourceRegion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 30
+DEBUG:root:no data for 30
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/startPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/startPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/startPoint> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:0 matches for 31
+DEBUG:root:no data for 31
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/state> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:5007 matches for 32
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/subregion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:2. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/subregion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:3. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/subregion> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:128 matches for 33
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/district> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:8009 matches for 34
+DEBUG:root:1. attempt generator_query: select distinct(?a)  (str(?laba) as ?la) where { ?a a dbo:Place . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a <http://dbpedia.org/ontology/region> [] . ?a a <http://dbpedia.org/ontology/Place> }
+DEBUG:root:8530 matches for 35
+INFO:root:  4753 used resources in 8579 placeholder positions
+INFO:root:  2299 resources occur 	     2 times 	( 48.37 %) 
+INFO:root:    30 resources occur 	     5 times 	(  0.63 %) 
+INFO:root:   277 resources occur 	     3 times 	(  5.83 %) 
+INFO:root:     9 resources occur 	     7 times 	(  0.19 %) 
+INFO:root:   155 resources occur 	     4 times 	(  3.26 %) 
+INFO:root:    24 resources occur 	     6 times 	(  0.50 %) 
+INFO:root:     6 resources occur 	     8 times 	(  0.13 %) 
+INFO:root:  1940 resources occur 	     1 times 	( 40.82 %) 
+INFO:root:     1 resources occur 	    17 times 	(  0.02 %) 
+INFO:root:     1 resources occur 	    15 times 	(  0.02 %) 
+INFO:root:     2 resources occur 	    11 times 	(  0.04 %) 
+INFO:root:     3 resources occur 	     9 times 	(  0.06 %) 
+INFO:root:     1 resources occur 	    28 times 	(  0.02 %) 
+INFO:root:     2 resources occur 	    19 times 	(  0.04 %) 
+INFO:root:     1 resources occur 	    16 times 	(  0.02 %) 
+INFO:root:     1 resources occur 	    10 times 	(  0.02 %) 
+INFO:root:     1 resources occur 	    12 times 	(  0.02 %) 
+INFO:root:dbo:Person contains: <http://dbpedia.org/class/yago/Wikicat21st-centuryActors>, <http://dbpedia.org/class/yago/WikicatEnglishMusicians>, <http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>, <http://dbpedia.org/class/yago/Honoree110183757>, dbo:LacrossePlayer
+INFO:root:dbo:Athlete contains: dbo:LacrossePlayer
+INFO:root:dbo:SportsTeam contains: dboBasketballTeam
+INFO:root:    14 not instanciated templates:
+INFO:root:3
+INFO:root:6
+INFO:root:9
+INFO:root:11
+INFO:root:12
+INFO:root:15
+INFO:root:16
+INFO:root:20
+INFO:root:22
+INFO:root:23
+INFO:root:25
+INFO:root:28
+INFO:root:30
+INFO:root:31

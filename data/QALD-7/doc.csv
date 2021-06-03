@@ -1,0 +1,401 @@
+did <A> ever win the <B>,ask where { <A> dbo:award <B> }
+does <A> have more episodes than <B>?,ask where { <A> dbo:numberOfEpisodes ?a . <B> dbo:numberOfEpisodes ?b . filter (?a > ?b) }
+does the new <A> series have more episodes than the old one?,ask where { <A> rdfs:label ?l . ?a rdf:type dbo:TelevisionShow . ?a foaf:name ?l . ?a dbo:completionDate ?ad . ?a dbo:numberOfEpisodes ?an . ?b rdf:type dbo:TelevisionShow . ?b foaf:name ?l . ?b dbo:completionDate ?bd . ?b dbo:numberOfEpisodes ?bn . filter(?ad > ?bd && ?an > ?bn) }
+give me the new <A> series,describe ?a where { <A> rdfs:label ?l . ?a a dbo:TelevisionShow . ?a foaf:name ?l . ?a dbo:completionDate ?ad } order by desc(?ad) limit 1
+for which label did <A> record his first <B>?,select ?a where { ?b rdf:type <B> . ?b dbo:artist <A> . ?b dbo:releaseDate ?c . ?b dbo:recordLabel ?a } order by ?c offset 0 limit 1
+for which label did <A> record his second <B>?,select ?a where { ?b rdf:type <B> . ?b dbo:artist <A> . ?b dbo:releaseDate ?c . ?b dbo:recordLabel ?a } order by ?c offset 1 limit 1
+give me all actors starring in <A>,select ?a where { <A> dbo:starring ?a }
+give me all actors starring in movies directed by <A>,select distinct ?uri where { ?uri dbo:starring ?x . ?uri dbo:director <A> }
+give me all books by <A> with more than <B> pages.,select distinct ?uri where { ?uri rdf:type dbo:Book . ?uri dbo:author <A> . ?uri dbo:numberOfPages ?x . filter (?x ><B>) }
+give me all <A> <B> record labels.,select distinct ?uri where { ?uri rdf:type dbo:RecordLabel . ?uri dbo:genre <B>. ?uri dbo:country <A>. }
+give me all members of <A>,select distinct ?uri where { <A> dbo:bandMember ?uri . }
+give me all movies directed by <A>,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:director <A> }
+give me all video games published by <A>,select distinct ?uri where { ?uri rdf:type dbo:VideoGame . ?uri dbo:publisher <A>}
+how many pages does <A> have?,select distinct ?n where { <A> dbo:numberOfPages ?n . }
+how much did <A> cost?,select distinct ?n where { <A> dbo:budget ?n . }
+in which films did <A> as well as <B> play?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:starring <A> . ?uri dbo:starring <B> }
+is <A> starring in <B>?,ask where { <A> dbo:starring <B> . }
+is there a video game called <A>?,ask where { ?uri rdf:type dbo:VideoGame . ?uri rdfs:label <A> . }
+list all episodes of the first season of the <A> television series <B>!,select distinct ?uri where { ?uri dbo:series <B> . ?uri dbo:seasonNumber 1 . <B> dbo:network <A> }
+list all video games by <A>.,select distinct ?uri where { ?uri dbo:publisher <A> . ?uri rdf:type dbo:VideoGame}
+list all the musicals with music by <A>.,select distinct ?uri where { ?uri rdf:type dbo:Musical . ?uri dbo:musicBy <A> . }
+show me all books in <A> series.,select distinct ?uri where { ?uri dbo:series <A>.  ?uri rdf:type dbo:Book}
+show me <A>â€™s autobiography ,select distinct ?uri where { ?uri dbo:author <A> . ?uri dbo:literaryGenre dbr:Autobiography. }
+show me the book that <A> wrote.,select distinct ?uri where { ?uri rdf:type dbo:Book . ?uri dbo:author <A>. }
+to which artistic movement did the <A> of the <B> belong?,select distinct ?uri where { <B> dbo:author ?person . ?person dbo:movement ?uri . ?person rdf:type <A> }
+what is <A>â€™s real name?,select distinct ?s where { <A> dbp:alterEgo ?s . }
+what was the first <A> <B>?,select distinct ?uri where { ?uri a <B>. ?uri dbo:artist <A> . ?uri dbo:releaseDate ?d . } order by asc(?d) offset 0 limit 1
+what was the last movie with <A>?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:starring <A> . ?uri dbo:releaseDate ?date . } order by desc(?date) limit 1
+which awards did <A> win?,select distinct ?uri where { <A> dbo:award ?uri . }
+which <A>has the most pages?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:numberOfPages ?n . } order by desc(?n) offset 0 limit 1
+which <A> by <B> were published by <C>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:publisher <C> . ?uri dbo:author <B> . }
+which <A> won an oscar?,select distinct ?uri where { { ?uri dbo:field <A> . } union { ?uri dc:description ?s . filter regex(?scomma'<A>'comma'i') } ?uri dbo:award dbr:Academy_Awards . }
+which films did <A> direct?,select distinct ?uri where { ?uri dbo:director <A> . }
+which movies did <A> direct?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:director <A> . }
+which movies starring <A> were directed by <B>?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:starring <A> . ?uri dbo:director <B> . }
+which museum exhibits the <A> by <B>?,select distinct ?uri where { <A> dbo:museum ?uri . <A> dbo:author  <B>}
+which <A> in <B> has the most visitors?,select distinct ?uri where { ?uri rdf:type <A>. ?uri dbo:location <B> . ?uri dbo:numberOfVisitors ?num . } order by desc(?num) offset 0 limit 1
+which of <A> films had the highest budget?,select distinct ?uri where { ?uri dbo:director <A> . ?uri dbo:budget ?b . } order by ?b offset 0 limit 1
+which <A> were created by <B>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:creator <B> . }
+who composed the music for <A>?,select distinct ?uri where { <A> dbo:musicComposer ?uri . }
+who composed the soundtrack for <A>?,select distinct ?uri where { <A> dbo:musicComposer ?uri . }
+who created <A>?,select distinct ?uri where { <A> dbo:creator ?uri . }
+who created <A>?,select distinct ?uri where { <A> dbo:author ?uri . }
+who is starring in <A> movies produced by <B>?,select distinct ?uri where { ?film rdf:type dbo:Film . ?film dbo:country <A> . ?film dbo:producer <B> . ?film dbo:starring ?uri . ?uri rdf:type dbo:Person . }
+who is the editor of <A>?,select distinct ?uri where { <A> dbo:editor ?uri . }
+who is the host of the <A>?,select distinct ?uri where { <A> dbo:presenter ?uri . }
+who painted the <A>?,select distinct ?uri where { <A> dbp:artist ?uri . }
+who played <A> in <B>?,select distinct ?uri where { <A> dbp:portrayer ?uri . <A> dbo:series <B>. }
+who was <A> inspired by?,select distinct ?uri where { ?uri dbo:influenced <A> . }
+who wrote the book <A>?,select distinct ?uri where { <A> dbo:author ?uri . ?uri rdf:type dbo:Book}
+who wrote the <A> theme?,select distinct ?uri where { <A> dbo:composer ?uri. <A> rdf:type dbo:TelevisionShow. }
+who wrote the song <A>?,select distinct ?uri where { <A> dbo:writer ?uri . <A> rdf:type dbo:Song }
+how many companies were founded by the founder of <A>?,select (count(distinct ?uri) as ?c) where { <A> dbo:foundedBy ?uri . ?uri dbo:foundedBy ?uri . }
+in which city are <A>?,select distinct ?uri where { <A> dbo:location ?uri . ?uri a dbo:City . }
+what country is <A> from?,select distinct ?uri where { <A> dbo:foundationPlace ?uri . }
+when was <A> founded?,select distinct ?year where { <A> dbo:foundingYear ?year . }
+where in <A> is <B> wine produced?,select distinct ?uri where { ?uri dbo:wineProduced <B> . ?uri dbo:location <A> . }
+which airports does <A> serve?,select distinct ?uri where { <A> dbo:targetAirport ?uri . }
+which companies produce <A>?,select distinct ?uri where { ?uri a dbo:Company . ?uri dbo:product <A> . }
+which <A> companies were founded in <B>?,select distinct ?uri where { ?uri a dbo:Company . ?uri dbo:industry <A> . ?uri dbo:foundationPlace <B> . }
+which <A> company has the most employees?,select distinct ?uri where { ?uri a dbo:Company . ?uri dbo:location <A> . ?uri dbo:numberOfEmployees ?n . } order by desc(?n) offset 0 limit 1
+which subsidiary of <A> serves both <B> and <C>?,select distinct ?uri where { <A> dbo:subsidiary ?uri . ?uri dbo:targetAirport <B> . ?uri dbo:targetAirport <C> . }
+who is the founder of <A>?,select distinct ?uri where { <A> dbo:founder ?uri . }
+who was the <A> that founded the <B>?,select ?uri where { ?uri rdf:type <A> . <B> dbo:foundedBy ?uri . }
+in which programming language is <A> written?,select distinct ?uri where { <A> dbo:programmingLanguage ?uri . }
+who are the developers of <A>?,select distinct ?uri where { <A> dbo:developer ?uri . }
+who developed <A>?,select distinct ?uri where { ?uri dbo:product <A> . }
+who developed the <B> <A>?,select distinct ?uri where { <A> dbo:developer ?uri . <A> rdf:type <B> }
+does <A>â€™s death place have a website?,ask where { <A> dbo:deathPlace ?p . ?p dbo:website ?w . }
+does the <A> flow into a <B>?,ask where { ?x dbo:inflow <A> . ?x rdf:type <B> . }
+from which region is the <A>?,select distinct ?uri where { <A> dbo:wineRegion ?uri . }
+give me all <A> in <B> with more than <C> inhabitants.,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:isPartOf <B> . ?uri dbp:populationTotal ?inhabitants . filter (?inhabitants > <C>) . }
+how high is the <A>?,select distinct ?num where { <A> dbo:elevation ?num. }
+how high is the <A>?,select distinct ?num where { <A> dbo:height ?num . }
+how many <A> are there?,select distinct ?number where { <A> dbo:numberOfLocations ?number . }
+how many ethnic groups live in <A>?,select (count(distinct ?uri) as ?c) where { <A> dbo:ethnicGroup ?uri . }
+how many inhabitants does the largest city in <A> have?,select distinct ?num where { <A> dbo:largestCity ?city . ?city dbo:populationTotal ?num . }
+how many languages are spoken in <A>?,select (count(distinct ?uri) as ?c) where { ?uri rdf:type dbo:Language . <A> dbo:language ?uri . }
+how many people live in <A>?,select distinct ?uri where { <A> dbo:populationTotal ?uri . }
+how many people live in the capital of <A>?,select distinct ?num where { <A> dbo:capital ?x . ?x dbo:populationTotal ?num . }
+in what city is the <A> brewery?,select distinct ?uri where { <A> dbo:manufacturer ?x . ?x dbo:locationCity ?uri . <A> dbp:type dbr:Beer}
+in which city does <A> live?,select distinct ?uri where { ?uri a dbo:City . <A> dbo:residence ?uri . }
+in which city does <A> end?,select distinct ?uri where { <A> dbo:routeEnd ?uri . }
+in which <A> do people speak <B>?,select distinct ?uri where { ?uri a <A> . ?uri dbo:language <B> . }
+in which country does the <A> start?,select distinct ?uri where { <A> dbo:sourceCountry ?uri . }
+in which country does the <A> start?,select distinct ?uri where { <A> dbo:sourceCountry ?uri . }
+in which country is <A> located?,select distinct ?uri where { <A> dbo:country ?uri . }
+in which country is the <A>?,select distinct ?uri where { <A> dbo:country ?uri . }
+in which time zone is <A>?,select distinct ?uri where { <A> dbo:timeZone ?uri . }
+in which <A> state is <B> located?,select distinct ?uri where { <B> dbp:location ?uri . ?uri dbo:country <A> . }
+in which <A> city are the headquarters of the <B>?,select distinct ?uri where { <B> dbo:headquarter ?uri . ?uri dbo:country <A> . }
+is <A> bigger than the <B>?,ask where { <A> dbo:areaTotal ?a1 . <B> dbo:areaTotal ?a2 . filter (?a1 > ?a2) }
+through which countries does the <A> flow?,select distinct ?uri where { <A> dbp:country ?uri . <A> rdf:type dbo:River}
+what are the government of <A>?,select distinct ?uri where { ?uri dbo:governmentType <A> . }
+what are the nicknames of <A>?,select distinct ?string where { <A> dbp:nickname ?string . }
+what country is <A> in?,select distinct ?uri where { <A> dbo:locatedInArea ?uri . ?uri rdf:type dbo:Country . }
+what is the area code of <A>?,select distinct ?string where { <A> dbo:areaCode ?string . }
+what is the biggest <A> in <B>?,select distinct ?uri where { ?uri a <A> . ?uri dbo:location <B> . ?uri dbo:seatingCapacity ?n . } order by desc(?n) offset 0 limit 1
+what is the bridge with the longest span?,select distinct ?uri where { ?uri rdf:type dbo:Bridge . ?uri dbo:mainspan ?s . } order by desc(?s) offset 0 limit 1
+what is the capital of <A>?,select distinct ?uri where { <A> dbo:capital ?uri. }
+what is the highest <A> in <B>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:locatedInArea <B> . ?uri dbo:elevation ?elevation . } order by desc(?elevation) limit 1
+what is the largest city in <A>?,select distinct ?uri where { <A> dbo:largestCity ?uri . }
+what is the largest <A> in the world?,select distinct ?uri where { ?uri a <A> . ?uri dbo:areaTotal ?n . } order by desc(?n) offset 0 limit 1
+what is the location of the <A>?,select ?uri where { <A> dbo:location ?uri . }
+what is the official language of <A>?,select distinct ?uri where { <A> dbo:officialLanguage ?uri . }
+what is the time zone of <A>?,select distinct ?uri where { <A> dbp:timezone ?uri . }
+what is the timezone in <A>?,select distinct ?uri where { <A> dbo:timeZone ?uri . }
+what is the total population of <A>?,select ?uri where { <A> dbo:populationTotal ?uri . }
+where is <A> located?,select distinct ?uri where { <A> dbp:location ?uri . }
+which cities does the <A> flow through?,select distinct ?uri where { <A> dbo:city ?uri . <A> rdf:type dbo:River}
+which <A> has the least inhabitants?,select distinct ?uri where { ?uri rdf:type <A>. ?uri dbo:populationTotal ?pop . } order by asc(?pop) offset 0 limit 1
+which <A> has the most inhabitants?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:populationTotal ?pop . } order by desc(?pop) offset 0 limit 1
+which river does the <A> cross?,select distinct ?uri where { <A> dbo:crosses ?uri . }
+who designed the <A>?,select distinct ?uri where { <A> dbo:architect ?uri . }
+what does <A> stand for?,select distinct ?uri where { ?uri dbo:abbreviation '<A>' . }
+did <A> attend a <B>?,ask where { <A> dbo:almaMater ?x . ?x rdf:type <B> . }
+did <A> have children?,ask where { <A> dbo:child ?uri . }
+did <A> have children?,ask where { <A> dbo:child ?uri . }
+did <A> influence <B>?,ask where { <B> dbo:influencedBy <A> . }
+do <A> and <B> have the same parents?,ask where { <B> dbo:parent ?x . <A> dbo:parent ?x . }
+give me the grandchildren of <A>.,select distinct ?uri where { <A> dbo:child ?child . ?child dbo:child ?uri . }
+how many children did <A> have?,select (count(distinct ?uri) as ?c) where { <A> dbo:child ?uri . }
+how often did <A> marry?,select (count(distinct ?uri) as ?c) where { <A> dbo:spouse ?uri . }
+how tall is <A>?,select distinct ?height where { <A> dbo:height ?height . }
+in which city did <A> die?,select distinct ?uri where { <A> dbo:deathPlace ?uri . ?uri rdf:type dbo:City . }
+in which town did <A> die?,select distinct ?uri where { <A> dbo:deathPlace ?uri . ?uri a dbo:City . }
+in which <A> was the <B> born?,select distinct ?uri where { ?x dbp:office <B> . ?x dbo:birthPlace ?uri . ?uri a <A> . }
+in which year was <A> born?,select distinct ?uri where { <A> dbo:birthYear ?uri . }
+is <A> still alive?,ask where { optional { <A> dbo:deathDate ?date . } filter (!bound(?date)) }
+is <A> married?,ask where { <A> dbo:spouse ?uri . }
+is <A> the wife of <B>?,ask where { <B> dbo:spouse <A> . }
+is <A> the wife of <B>?,ask where { <B> dbo:spouse <A> . }
+is the wife of <A> called <B>?,ask where { <A> dbo:spouse ?spouse . ?spouse rdfs:label ?name . filter(regex(?namecomma'<B>')) }
+list the children of <A>.,select distinct ?uri where { <A> dbo:child ?uri . }
+was <A> born in the <B>?,ask where { <A> dbo:birthPlace ?city . ?city dbo:country <B> . }
+was the wife of <A> called <B>?,ask where { <A> ?spouse . ?spouse rdfs:label ?name . filter(regex(?namecomma'<B>')) }
+what did <A> die from?,select distinct ?uri where { <A> dbo:deathCause ?uri . }
+when did <A> creator die?,select distinct ?date where { <A> dbo:creator ?x . ?x dbo:deathDate ?date . }
+when did <A> die?,select distinct ?d where { <A> dbo:deathDate ?d . }
+where is <A> buried?,select distinct ?uri where { <A> dbo:restingPlace ?uri . }
+where was <A> born?,select distinct ?uri where { <A> dbo:birthPlace ?uri . }
+which country does the creator of <A> come from?,select distinct ?uri where { <A> dbo:creator ?x . ?x dbo:nationality ?uri . }
+which country was <A> born in?,select distinct ?uri where { <A> dbo:birthPlace ?x . ?x dbo:country ?uri . }
+which professional <A> were born in <B>?,select distinct ?uri where { ?uri dbo:occupation <A> . ?uri dbo:birthPlace <B> . }
+who are the parents of the wife of <A>?,select distinct ?uri where { <A> dbo:spouse ?x . ?x dbo:parent ?uri . }
+who is the daughter of <A> married to?,select distinct ?uri where {<A> dbo:child ?child . ?child dbo:spouse ?uri . }
+who is the oldest child of <A>?,select distinct ?uri where { <A> dbo:child ?uri . ?uri dbo:birthDate ?d . } order by asc(?d) offset 0 limit 1
+who is the son of <A> and <B>?,select distinct ?uri where { ?uri dbo:parent <A> . ?uri dbo:parent <B> . }
+who was called <A>?,select distinct ?uri where { ?uri dbp:nickname <A> . }
+who was married to <A>?,select distinct ?uri where { <A> dbo:spouse ?uri . }
+who was the father of <A>?,select distinct ?uri where { <A> dbp:father ?uri . }
+who was the wife of <A>?,select distinct ?uri where { <A> dbo:spouse ?uri. }
+who were the parents of <A>?,select distinct ?uri where { <A> dbo:parent ?uri . }
+whom did <A> marry?,select distinct ?uri where { ?uri dbo:spouse <A> . }
+are <A> a type of <B>?,ask where { <A> dbo:class <B> . }
+did <A> win a <B>?,ask where { <A> dbo:award <B> . }
+give me a list of all critically endangered <A>.,select distinct ?uri  where { ?uri a <A>. { ?uri dbo:conservationStatus 'CR'^^<http://www.w3.org/2001/XMLSchema#string> . } union { ?uri <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Critically_endangered_animals> . } }
+give me all <A> operated by <B>.,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:operator <B> . }
+give me all <A> <B>.,select distinct ?uri where { ?uri dbo:field <B> . ?uri dbo:birthPlace <A>. }
+is <A> a <B>?,ask where { <A> rdf:type <B> . }
+what color express <A>?,select distinct ?uri where { ?uri dbo:connotation <A> . }
+what is in a <A>?,select distinct ?uri where { <A> dbo:ingredient ?uri . }
+which ingredients do i need for <A>?,select distinct ?uri where { <A> dbo:ingredient ?uri . }
+which <A> is known for the <B> and the <C>?,select distinct ?uri where { ?uri dbo:knownFor <B> . ?uri rdf:type <A> . ?uri dbo:knownFor <C> . }
+which types of grapes grow in <A>?,select distinct ?uri where { <A> dbo:growingGrape ?uri . }
+who discovered <A>?,select distinct ?uri where { <A> dbo:discoverer ?uri . }
+who was the doctoral supervisor of <A>?,select distinct ?uri where { <A> dbo:doctoralAdvisor ?uri . }
+give me the currency of <A>.,select distinct ?uri where { <A> dbo:currency ?uri . }
+in which ancient empire could you pay with <A>?,select distinct ?uri where { ?uri dbo:currency <A> . ?uri a <http://dbpedia.org/class/yago/Empire108557482>}
+in which military conflicts did <A> participate?,select distinct ?uri where { <A> dbo:battle ?uri . }
+is <A> a <B>?,ask where { <A> dbo:party <B> . }
+to which party does the mayor of <A> belong?,select distinct ?uri where { <A> dbo:mayor ?x . ?x dbo:party ?uri . }
+was <A> involved in a war?,ask where { <A> dbo:battle ?battle . }
+what form of government does <A> have?,select distinct ?uri where { <A> dbo:governmentType ?uri . }
+what is the currency of <A>?,select distinct ?uri where { <A> dbo:currency ?uri . }
+who is the king of <A>?,select distinct ?uri where { <A> dbo:leader ?uri . ?uri a dbo:Royalty . }
+who is the mayor of <A>?,select distinct ?uri where { <A> dbo:mayor ?uri . }
+who is the leader of <A>?,select distinct ?uri where { <A> dbo:leaderName ?uri . }
+who is the mayor of the capital of <A>?,select distinct ?uri where { <A> dbo:capital ?x . ?x dbo:mayor ?uri . }
+who is the president of <A>?,select distinct ?uri where { <A> dbo:leader ?uri . <A> dbo:leaderTitle  'President'@en }
+who was <A>â€™s vice president?,select distinct ?uri where { <A> dbo:vicePresident ?uri . }
+who was the <A> <B>?,select distinct ?uri where { ?uri dbo:office <B> . ?uri dbo:orderInOffice <A> . }
+who was the successor of <A>?,select distinct ?uri where { <A> dbo:successor ?uri . }
+does <A> play for <B>?,ask where { <A> dbo:team <B> . }
+give me all professional <A> from <B>.,select distinct ?uri where { ?uri dbo:occupation <A> . { ?uri dbo:birthPlace <B> . } union { ?uri dbo:birthPlace ?place . ?place dbo:country <B> . } }
+how many seats does the home stadium of <A> have?,select distinct ?n where { <A> dbo:ground ?x . ?x dbo:seatingCapacity ?n . }
+when did <A> end his active career?,select distinct ?d where { <A> dbo:activeYearsEndDate ?d . }
+where does <A> start?,select distinct ?uri where { ?uri dbo:routeStart <A>. }
+which professional <A> were born on the <B>?,select distinct ?uri where { ?uri dbo:occupation <A> . ?uri dbo:birthPlace <B> . }
+who is the coach of <A>â€™s <B> team?,select distinct ?uri where { ?x dbo:city <A> . ?x dbo:league <B> . ?x dbo:coach ?uri . }
+who is the <A> with the most races?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:races ?x . } order by desc(?x) offset 0 limit 1
+who is the tallest <A>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:height ?num . } order by desc(?num) offset 0 limit 1
+who is the youngest <A>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:birthDate ?date . } order by desc(?date) offset 0 limit 1
+who is the youngest player in the <A>?,select distinct ?uri where { ?uri dbo:team ?x . ?x dbo:league <A> . ?uri dbo:birthDate ?y . } order by desc(?y) offset 0 limit 1
+who was the first to climb <A>?,select distinct ?uri where { <A> dbo:firstAscentPerson ?uri . }
+how many <A> were founded in the same year as <B>?,select (count(distinct ?uri) as ?c) where { ?uri rdf:type <A> . ?uri dbo:foundingYear ?year . <B> dbo:foundingYear ?year . <B> a <A>}
+was the <A> earlier than the <B>?,ask where { <A> dbo:date ?x .<B> dbo:date ?y . filter (?x < ?y) }
+when did <A> commence?,select distinct ?d where { <A> dbo:date ?d . }
+when did the <A> dissolve?,select distinct ?date where { <A> dbo:dissolutionDate ?date . }
+when was the <A>?,select distinct ?date where { <A> dbo:date ?date . }
+when was the <A> completed?,select distinct ?date where { <A> dbo:completionDate ?date . }
+does <A> have more episodes than <B>?,ask where { <A> dbo:numberOfEpisodes ?a . <B> dbo:numberOfEpisodes ?b . filter (?a > ?b) }
+does the new <A> series have more episodes than the old one?,ask where { <A> rdfs:label ?l . ?a rdf:type dbo:TelevisionShow . ?a foaf:name ?l . ?a dbo:completionDate ?ad . ?a dbo:numberOfEpisodes ?an . ?b rdf:type dbo:TelevisionShow . ?b foaf:name ?l . ?b dbo:completionDate ?bd . ?b dbo:numberOfEpisodes ?bn . filter(?ad > ?bd && ?an > ?bn) }
+for which label did <A> record his first <B>?,select ?a where { ?b rdf:type <B> . ?b dbo:artist <A> . ?b dbo:releaseDate ?c . ?b dbo:recordLabel ?a } order by ?c offset 0 limit 1
+for which label did <A> record his second <B>?,select ?a where { ?b rdf:type <B> . ?b dbo:artist <A> . ?b dbo:releaseDate ?c . ?b dbo:recordLabel ?a } order by ?c offset 1 limit 1
+give me all <A> <B> record labels.,select distinct ?uri where { ?uri rdf:type dbo:RecordLabel . ?uri dbo:genre <B>. ?uri dbo:country <A>. }
+give me all actors,select ?a where { [] dbo:starring ?a }
+give me all actors starring in <A>,select ?a where { <A> dbo:starring ?a }
+give me all actors starring in movies directed by <A>,select distinct ?uri where { ?uri dbo:starring ?x . ?uri dbo:director <A> }
+give me all books by <A> with more than 300 pages.,select distinct ?uri where { ?uri rdf:type dbo:Book . ?uri dbo:author <A> . ?uri dbo:numberOfPages ?x . filter (?x > 300) }
+give me all members of <A>,select distinct ?uri where { <A> dbo:bandMember ?uri . }
+give me all movies directed by <A>,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:director <A> }
+give me the new <A> series,describe ?a where { <A> rdfs:label ?l . ?a a dbo:TelevisionShow . ?a foaf:name ?l . ?a dbo:completionDate ?ad } order by desc(?ad) limit 1
+how many pages does <A> have?,select distinct ?n where { <A> dbo:numberOfPages ?n . }
+how much did <A> cost?,select distinct ?n where { <A> dbo:budget ?n . }
+in which films did <A> as well as <B> play?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:starring <A> . ?uri dbo:starring <B> }
+is <A> starring in <B>?,ask where { <A> dbo:starring <B> . }
+list all episodes of the first season of the <A> television series <B>!,select distinct ?uri where { ?uri dbo:series <B> . ?uri dbo:seasonNumber 1 . <B> dbo:network <A> }
+list all the musicals with music by <A>.,select distinct ?uri where { ?uri rdf:type dbo:Musical . ?uri dbo:musicBy <A> . }
+show me <A>â€™s autobiography ,select distinct ?uri where { ?uri dbo:author <A> . ?uri dbo:literaryGenre dbr:Autobiography. }
+show me all books in <A> series.,select distinct ?uri where { ?uri dbo:series <A>.  ?uri rdf:type dbo:Book}
+show me the book that <A> wrote.,select distinct ?uri where { ?uri rdf:type dbo:Book . ?uri dbo:author <A>. }
+to which artistic movement did the artist of the <A> belong?,select distinct ?uri where { <A> dbo:author ?person . ?person dbo:movement ?uri . ?person rdf:type dbo:Artist }
+what is <A>â€™s real name?,select distinct ?s where { <A> dbp:alterEgo ?s . }
+what was the first <A> <B>?,select distinct ?uri where { ?uri a <B>. ?uri dbo:artist <A> . ?uri dbo:releaseDate ?d . } order by asc(?d) offset 0 limit 1
+what was the last movie with <A>?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:starring <A> . ?uri dbo:releaseDate ?date . } order by desc(?date) limit 1
+which <A> by <B> were published by <C>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:publisher <C> . ?uri dbo:author <B> . }
+which <A> were created by <B>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:creator <B> . }
+which <A> won an oscar?,select distinct ?uri where { { ?uri dbo:field <A> . } union { ?uri dc:description ?s . filter regex(?scomma'<A>'comma'i') } ?uri dbo:award dbr:Academy_Awards . }
+which <A>has the most pages?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:numberOfPages ?n . } order by desc(?n) offset 0 limit 1
+which awards did <A> win?,select distinct ?uri where { <A> dbo:award ?uri . }
+which films did <A> direct?,select distinct ?uri where { ?uri dbo:director <A> . }
+which movies did <A> direct?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:director <A> . }
+which movies starring <A> were directed by <B>?,select distinct ?uri where { ?uri rdf:type dbo:Film . ?uri dbo:starring <A> . ?uri dbo:director <B> . }
+which museum exhibits the <A> by <B>?,select distinct ?uri where { <A> dbo:museum ?uri . <A> dbo:author  <B>}
+which of <A> films had the highest budget?,select distinct ?uri where { ?uri dbo:director <A> . ?uri dbo:budget ?b . } order by ?b offset 0 limit 1
+who composed the music for <A>?,select distinct ?uri where { <A> dbo:musicComposer ?uri . }
+who composed the soundtrack for <A>?,select distinct ?uri where { <A> dbo:musicComposer ?uri . }
+who created <A>?,select distinct ?uri where { <A> dbo:author ?uri . }
+who created <A>?,select distinct ?uri where { <A> dbo:creator ?uri . }
+who designed the <A>?,select distinct ?uri where { <A> dbo:architect ?uri . }
+who is starring in <A> movies produced by <B>?,select distinct ?uri where { ?film rdf:type dbo:Film . ?film dbo:country <A> . ?film dbo:producer <B> . ?film dbo:starring ?uri . ?uri rdf:type dbo:Person . }
+who is the editor of <A>?,select distinct ?uri where { <A> dbo:editor ?uri . }
+who is the host of the <A>?,select distinct ?uri where { <A> dbo:presenter ?uri . }
+who painted the <A>?,select distinct ?uri where { <A> dbo:author ?uri . }
+who played <A> in <B>?,select distinct ?uri where { <A> dbp:portrayer ?uri . <A> dbo:series <B>. }
+who was <A> inspired by?,select distinct ?uri where { ?uri dbo:influenced <A> . }
+who wrote the <A> theme?,select distinct ?uri where { <A> dbo:composer ?uri. <A> rdf:type dbo:TelevisionShow. }
+who wrote the book <A>?,select distinct ?uri where { <A> dbo:author ?uri . ?uri rdf:type dbo:Book}
+who wrote the song <A>?,select distinct ?uri where { <A> dbo:writer ?uri . <A> rdf:type dbo:Song }
+give me all <A> operated by <B>.,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:operator <B> . }
+how many <A> were founded in the same year as <B>?,select (count(distinct ?uri) as ?c) where { ?uri rdf:type <A> . ?uri dbo:foundingYear ?year . <B> dbo:foundingYear ?year . <B> a <A>}
+how many companies were founded by the founder of <A>?,select (count(distinct ?uri) as ?c) where { <A> dbo:foundedBy ?y . ?uri dbo:foundedBy ?y . }
+in which <A> city are the headquarters of the <B>?,select distinct ?uri where { <B> dbo:headquarter ?uri . ?uri dbo:country <A> . }
+what country is <A> from?,select distinct ?uri where { <A> dbo:foundationPlace ?uri . }
+when was <A> founded?,select distinct ?year where { <A> dbo:foundingYear ?year . }
+which <A> companies were founded in <B>?,select distinct ?uri where { ?uri a dbo:Company . ?uri dbo:industry <A> . ?uri dbo:foundationPlace <B> . }
+which <A> company has the most employees?,select distinct ?uri where { ?uri a dbo:Company . ?uri dbo:location <A> . ?uri dbo:numberOfEmployees ?n . } order by desc(?n) offset 0 limit 1
+which airports does <A> serve?,select distinct ?uri where { <A> dbo:targetAirport ?uri . }
+which companies produce <A>?,select distinct ?uri where { ?uri a dbo:Company . ?uri dbo:product <A> . }
+which subsidiary of <A> serves both <B> and <C>?,select distinct ?uri where { <A> dbo:subsidiary ?uri . ?uri dbo:targetAirport <B> . ?uri dbo:targetAirport <C> . }
+who is the founder of <A>?,select distinct ?uri where { <A> dbo:founder ?uri . }
+who was the <A> that founded the <B>?,select ?uri where { ?uri rdf:type <A> . <B> dbo:foundedBy ?uri . }
+give me all video games published by <A>,select distinct ?uri where { ?uri rdf:type dbo:VideoGame . ?uri dbo:publisher <A>}
+in which programming language is <A> written?,select distinct ?uri where { <A> dbo:programmingLanguage ?uri . }
+is there a video game called <A>?,ask where { ?uri rdf:type dbo:VideoGame . ?uri rdfs:label <A> . }
+list all video games by <A>.,select distinct ?uri where { ?uri dbo:publisher <A> . ?uri rdf:type dbo:VideoGame}
+who are the developers of <A>?,select distinct ?uri where { <A> dbo:developer ?uri . }
+who developed <A>?,select distinct ?uri where { ?uri dbo:product <A> . }
+who developed the <B> <A>?,select distinct ?uri where { <A> dbo:developer ?uri . <A> rdf:type <B> }
+does <A>â€™s death place have a website?,ask where { <A> dbo:deathPlace ?p . ?p dbo:website ?w . }
+does the <A> flow into a <B>?,ask where { ?x dbo:inflow <A> . ?x rdf:type <B> . }
+from which region is the <A>?,select distinct ?uri where { <A> dbo:wineRegion ?uri . }
+give me all <A> in <B> with more than 1000000 inhabitants.,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:isPartOf <B> . ?uri dbp:populationTotal ?inhabitants . filter (?inhabitants > 1000000) . }
+how high is the <A>?,select distinct ?num where { <A> dbo:elevation ?num. }
+how high is the <A>?,select distinct ?num where { <A> dbo:height ?num . }
+how many <A> are there?,select distinct ?number where { <A> dbo:numberOfLocations ?number . }
+how many inhabitants does the largest city in <A> have?,select distinct ?num where { <A> dbo:largestCity ?city . ?city dbo:populationTotal ?num . }
+how many languages are spoken in <A>?,select (count(distinct ?uri) as ?c) where { ?uri rdf:type dbo:Language . <A> dbo:language ?uri . }
+how many people live in <A>?,select distinct ?uri where { <A> dbo:populationTotal ?uri . }
+how many people live in the capital of <A>?,select distinct ?num where { <A> dbo:capital ?x . ?x dbo:populationTotal ?num . }
+in what city is the <A> brewery?,select distinct ?uri where { <A> dbo:manufacturer ?x . ?x dbo:locationCity ?uri . <A> dbp:type dbr:Beer}
+in which <A> do people speak <B>?,select distinct ?uri where { ?uri a <A> . ?uri dbo:language <B> . }
+in which <A> state is <B> located?,select distinct ?uri where { <B> dbp:location ?uri . ?uri dbo:country <A> . }
+in which <A> was the <B> born?,select distinct ?uri where { ?x dbp:office <B> . ?x dbo:birthPlace ?uri . ?uri a <A> . }
+in which ancient empire could you pay with <A>?,select distinct ?uri where { ?uri dbo:currency <A> . ?uri a <http://dbpedia.org/class/yago/Empire108557482>}
+in which city are <A>?,select distinct ?uri where { <A> dbo:location ?uri . ?uri a dbo:City . }
+in which city did <A> die?,select distinct ?uri where { <A> dbo:deathPlace ?uri . ?uri rdf:type dbo:City . }
+in which city does <A> end?,select distinct ?uri where { <A> dbo:routeEnd ?uri . }
+in which city does <A> live?,select distinct ?uri where { ?uri a dbo:City . <A> dbo:residence ?uri . }
+in which country does the <A> start?,select distinct ?uri where { <A> dbo:sourceCountry ?uri . }
+in which country does the <A> start?,select distinct ?uri where { <A> dbo:sourceCountry ?uri . }
+in which country is <A> located?,select distinct ?uri where { <A> dbo:country ?uri . }
+in which country is the <A>?,select distinct ?uri where { <A> dbo:country ?uri . }
+in which time zone is <A>?,select distinct ?uri where { <A> dbo:timeZone ?uri . }
+in which town did <A> die?,select distinct ?uri where { <A> dbo:deathPlace ?uri . ?uri a dbo:City . }
+is <A> bigger than the <B>?,ask where { <A> dbo:areaTotal ?a1 . <B> dbo:areaTotal ?a2 . filter (?a1 > ?a2) }
+through which countries does the <A> flow?,select distinct ?uri where { <A> dbp:country ?uri . <A> rdf:type dbo:River}
+to which party does the mayor of <A> belong?,select distinct ?uri where { <A> dbo:mayor ?x . ?x dbo:party ?uri . }
+what country is <A> in?,select distinct ?uri where { <A> dbo:locatedInArea ?uri . ?uri rdf:type dbo:Country . }
+what is the area code of <A>?,select distinct ?string where { <A> dbo:areaCode ?string . }
+what is the biggest <A> in <B>?,select distinct ?uri where { ?uri a <A> . ?uri dbo:location <B> . ?uri dbo:seatingCapacity ?n . } order by desc(?n) offset 0 limit 1
+what is the capital of <A>?,select distinct ?uri where { <A> dbo:capital ?uri. }
+what is the largest <A> in the world?,select distinct ?uri where { ?uri a <A> . ?uri dbo:areaTotal ?n . } order by desc(?n) offset 0 limit 1
+what is the largest city in <A>?,select distinct ?uri where { <A> dbo:largestCity ?uri . }
+what is the location of the <A>?,select ?uri where { <A> dbo:location ?uri . }
+what is the time zone of <A>?,select distinct ?uri where { <A> dbp:timezone ?uri . }
+what is the timezone in <A>?,select distinct ?uri where { <A> dbo:timeZone ?uri . }
+what is the total population of <A>?,select ?uri where { <A> dbo:populationTotal ?uri . }
+where does <A> start?,select distinct ?uri where { ?uri dbo:routeStart <A>. }
+where in <A> is <B> wine produced?,select distinct ?uri where { ?uri dbo:wineProduced <B> . ?uri dbo:location <A> . }
+which <A> has the least inhabitants?,select distinct ?uri where { ?uri rdf:type <A>. ?uri dbo:populationTotal ?pop . } order by asc(?pop) offset 0 limit 1
+which <A> has the most inhabitants?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:populationTotal ?pop . } order by desc(?pop) offset 0 limit 1
+which <A> in <B> has the most visitors?,select distinct ?uri where { ?uri rdf:type <A>. ?uri dbo:location <B> . ?uri dbo:numberOfVisitors ?num . } order by desc(?num) offset 0 limit 1
+which cities does the <A> flow through?,select distinct ?uri where { <A> dbo:city ?uri . <A> rdf:type dbo:River}
+which country does the creator of <A> come from?,select distinct ?uri where { <A> dbo:creator ?x . ?x dbo:nationality ?uri . }
+which river does the <A> cross?,select distinct ?uri where { <A> dbo:crosses ?uri . }
+what color express <A>?,select distinct ?uri where { ?uri dbo:connotation <A> . }
+what does <A> stand for?,select distinct ?uri where { ?uri dbo:abbreviation '<A>' . }
+what is the bridge with the longest span?,select distinct ?uri where { ?uri rdf:type dbo:Bridge . ?uri dbo:mainspan ?s . } order by desc(?s) offset 0 limit 1
+what is the currency of <A>?,select distinct ?uri where { <A> dbo:currency ?uri . }
+which types of grapes grow in <A>?,select distinct ?uri where { <A> dbo:growingGrape ?uri . }
+did <A> attend a <B>?,ask where { <A> dbo:almaMater ?x . ?x rdf:type <B> . }
+did <A> ever win the <B>,ask where { <A> dbo:award <B> }
+did <A> have children?,ask where { <A> dbo:child ?uri . }
+did <A> influence <B>?,ask where { <B> dbo:influencedBy <A> . }
+do <A> and <B> have the same parents?,ask where { <B> dbo:parent ?x . <A> dbo:parent ?x . }
+give me the grandchildren of <A>.,select distinct ?uri where { <A> dbo:child ?child . ?child dbo:child ?uri . }
+how many children did <A> have?,select (count(distinct ?uri) as ?c) where { <A> dbo:child ?uri . }
+how often did <A> marry?,select (count(distinct ?uri) as ?c) where { <A> dbo:spouse ?uri . }
+how tall is <A>?,select distinct ?height where { <A> dbo:height ?height . }
+in which military conflicts did <A> participate?,select distinct ?uri where { <A> dbo:battle ?uri . }
+in which year was <A> born?,select distinct ?uri where { <A> dbo:birthYear ?uri . }
+is <A> married?,ask where { <A> dbo:spouse ?uri . }
+is <A> still alive?,ask where { optional { <A> dbo:deathDate ?date . } filter (!bound(?date)) }
+is <A> the wife of <B>?,ask where { <B> dbo:spouse <A> . }
+is the wife of <A> called <B>?,ask where { <A> dbo:spouse ?spouse . ?spouse rdfs:label ?name . filter(regex(?namecomma'<B>')) }
+list the children of <A>.,select distinct ?uri where { <A> dbo:child ?uri . }
+was <A> born in the <B>?,ask where { <A> dbo:birthPlace ?city . ?city dbo:country <B> . }
+was <A> involved in a war?,ask where { <A> dbo:battle ?battle . }
+was the wife of <A> called <B>?,ask where { <A> ?spouse . ?spouse rdfs:label ?name . filter(regex(?namecomma'<B>')) }
+what are the nicknames of <A>?,select distinct ?string where { <A> dbp:nickname ?string . }
+what did <A> die from?,select distinct ?uri where { <A> dbo:deathCause ?uri . }
+when did <A> die?,select distinct ?d where { <A> dbo:deathDate ?d . }
+where is <A> buried?,select distinct ?uri where { <A> dbo:restingPlace ?uri . }
+where is <A> located?,select distinct ?uri where { <A> dbp:location ?uri . }
+where was <A> born?,select distinct ?uri where { <A> dbo:birthPlace ?uri . }
+which <A> is known for the <B> and the <C>?,select distinct ?uri where { ?uri dbo:knownFor <B> . ?uri rdf:type <A> . ?uri dbo:knownFor <C> . }
+which country was <A> born in?,select distinct ?uri where { <A> dbo:birthPlace ?x . ?x dbo:country ?uri . }
+who are the parents of the wife of <A>?,select distinct ?uri where { <A> dbo:spouse ?x . ?x dbo:parent ?uri . }
+who is the daughter of <A> married to?,select distinct ?uri where {<A> dbo:child ?child . ?child dbo:spouse ?uri . }
+who is the oldest child of <A>?,select distinct ?uri where { <A> dbo:child ?uri . ?uri dbo:birthDate ?d . } order by asc(?d) offset 0 limit 1
+who is the son of <A> and <B>?,select distinct ?uri where { ?uri dbo:parent <A> . ?uri dbo:parent <B> . }
+who was called <A>?,select distinct ?uri where { ?uri dbp:nickname <A> . }
+who was married to <A>?,select distinct ?uri where { <A> dbo:spouse ?uri . }
+who was the father of <A>?,select distinct ?uri where { <A> dbp:father ?uri . }
+who was the wife of <A>?,select distinct ?uri where { <A> dbo:spouse ?uri. }
+who were the parents of <A>?,select distinct ?uri where { <A> dbo:parent ?uri . }
+whom did <A> marry?,select distinct ?uri where { ?uri dbo:spouse <A> . }
+are <A> a type of <B>?,ask where { <A> dbo:class <B> . }
+did <A> win a <B>?,ask where { <A> dbo:award <B> . }
+give me a list of all critically endangered <A>.,select distinct ?uri  where { ?uri a <A>. { ?uri dbo:conservationStatus 'CR'^^<http://www.w3.org/2001/XMLSchema#string> . } union { ?uri <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Critically_endangered_animals> . } }
+give me all <A> <B>.,select distinct ?uri where { ?uri dbo:field <B> . ?uri dbo:birthPlace <A>. }
+is <A> a <B>?,ask where { <A> rdf:type <B> . }
+what is in a <A>?,select distinct ?uri where { <A> dbo:ingredient ?uri . }
+which ingredients do i need for <A>?,select distinct ?uri where { <A> dbo:ingredient ?uri . }
+who discovered <A>?,select distinct ?uri where { <A> dbo:discoverer ?uri . }
+who was the doctoral supervisor of <A>?,select distinct ?uri where { <A> dbo:doctoralAdvisor ?uri . }
+give me the currency of <A>.,select distinct ?uri where { <A> dbo:currency ?uri . }
+how many ethnic groups live in <A>?,select (count(distinct ?uri) as ?c) where { <A> dbo:ethnicGroup ?uri . }
+is <A> a <B>?,ask where { <A> dbo:party <B> . }
+what are the government of <A>?,select distinct ?uri where { ?uri dbo:governmentType <A> . }
+what form of government does <A> have?,select distinct ?uri where { <A> dbo:governmentType ?uri . }
+what is the highest <A> in <B>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:locatedInArea <B> . ?uri dbo:elevation ?elevation . } order by desc(?elevation) limit 1
+what is the official language of <A>?,select distinct ?uri where { <A> dbo:officialLanguage ?uri . }
+who is the king of <A>?,select distinct ?uri where { <A> dbo:leader ?uri . ?uri a dbo:Royalty . }
+who is the leader of <A>?,select distinct ?uri where { <A> dbo:leaderName ?uri . }
+who is the mayor of <A>?,select distinct ?uri where { <A> dbo:mayor ?uri . }
+who is the mayor of the capital of <A>?,select distinct ?uri where { <A> dbo:capital ?x . ?x dbo:mayor ?uri . }
+who is the president of <A>?,select distinct ?uri where { <A> dbo:leader ?uri . <A> dbo:leaderTitle  'President'@en }
+who was <A>â€™s vice president?,select distinct ?uri where { <A> dbo:vicePresident ?uri . }
+who was the <A> <B>?,select distinct ?uri where { ?uri dbo:office <B> . ?uri dbo:orderInOffice <A> . }
+who was the successor of <A>?,select distinct ?uri where { <A> dbo:successor ?uri . }
+does <A> play for <B>?,ask where { <A> dbo:team <B> . }
+give me all professional <A> from <B>.,select distinct ?uri where { ?uri dbo:occupation <A> . { ?uri dbo:birthPlace <B> . } union { ?uri dbo:birthPlace ?place . ?place dbo:country <B> . } }
+how many seats does the home stadium of <A> have?,select distinct ?n where { <A> dbo:ground ?x . ?x dbo:seatingCapacity ?n . }
+when did <A> end his active career?,select distinct ?d where { <A> dbo:activeYearsEndDate ?d . }
+which professional <A> were born in <B>?,select distinct ?uri where { ?uri dbo:occupation <A> . ?uri dbo:birthPlace <B> . }
+which professional <A> were born on the <B>?,select distinct ?uri where { ?uri dbo:occupation <A> . ?uri dbo:birthPlace <B> . }
+who is the <A> with the most races?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:races ?x . } order by desc(?x) offset 0 limit 1
+who is the coach of <A>â€™s <B> team?,select distinct ?uri where { ?x dbo:city <A> . ?x dbo:league <B> . ?x dbo:coach ?uri . }
+who is the tallest <A>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:height ?num . } order by desc(?num) offset 0 limit 1
+who is the youngest <A>?,select distinct ?uri where { ?uri rdf:type <A> . ?uri dbo:birthDate ?date . } order by desc(?date) offset 0 limit 1
+who is the youngest player in the <A>?,select distinct ?uri where { ?uri dbo:team ?x . ?x dbo:league <A> . ?uri dbo:birthDate ?y . } order by desc(?y) offset 0 limit 1
+who was the first to climb <A>?,select distinct ?uri where { <A> dbo:firstAscentPerson ?uri . }
+was the <A> earlier than the <B>?,ask where { <A> dbo:date ?x .<B> dbo:date ?y . filter (?x < ?y) }
+when did <A> commence?,select distinct ?d where { <A> dbo:date ?d . }
+when did <A> creator die?,select distinct ?date where { <A> dbo:creator ?x . ?x dbo:deathDate ?date . }
+when did the <A> dissolve?,select distinct ?date where { <A> dbo:dissolutionDate ?date . }
+when was the <A> completed?,select distinct ?date where { <A> dbo:completionDate ?date . }
+when was the <A>?,select distinct ?date where { <A> dbo:date ?date . }

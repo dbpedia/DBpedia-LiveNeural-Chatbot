@@ -1,0 +1,1142 @@
+<A> has how many relatives?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:relatives ?uri }
+<A> has won how many awards?,SELECT DISTINCT COUNT(?uri) where { <A> dbo:award ?uri }
+<A> is from which city?,SELECT DISTINCT ?uri where { <A> dbo:hometown ?uri }
+Count the affiliations of <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:affiliation ?uri }
+Count the different causes of death of <A>.,SELECT DISTINCT COUNT(?uri) where { ?x dbo:religion <A> . ?x dbo:deathCause ?uri }
+Did <A> did his highschool in <B>?,ASK where { <A> dbp:highSchool <B> }
+Did <A> study at the <B> university?,ASK where { <A> dbp:university <B> }
+Did <A> study at the <B>?,ASK where { <A> dbo:institution <B> }
+Did <A> study at the <B>?,ASK where { <A> dbo:university <B> }
+Did <A> study in <B>?,ASK where { <A> dbp:highSchool <B> }
+Did <A> study in the <B>?,ASK where { <A> dbo:institution <B> }
+Did <B> do his highschool in <A>?,ASK where { <B> dbp:highSchool <A> }
+Did <B> go to <A> studying?,ASK where { <B> dbo:university <A> }
+Did <B> study at the <A>,ASK where { <B> dbo:institution <A> }
+Does <B> have a license of <A>?,ASK where { <B> dbp:license <A> }
+Does <B> have the <A>?,ASK where { <B> dbp:license <A> }
+Does <B> study <A>?,ASK where { <B> dbo:field <A> }
+Does <B> study <A>?,ASK where { <B> dbp:mainInterests <A> }
+For how many things are <A> famous for?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:placeOfBirth <A> . ?x dbo:knownFor ?uri }
+For what is <A> known ?,SELECT DISTINCT ?uri where { <A> dbp:knownFor ?uri }
+From where did the son of <A> graduate?,SELECT DISTINCT ?uri where { <A> dbo:child ?x . ?x dbp:almaMater ?uri }
+How did <A> died ?,SELECT DISTINCT ?uri where { <A> dbo:deathCause ?uri }
+How did the child of <A> die?,SELECT DISTINCT ?uri where { <A> dbo:child ?x . ?x dbo:deathCause ?uri }
+How many people are there whose children died in <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:deathPlace <A> . ?uri dbo:child ?x . ?uri a dbo:Person }
+In how many places did <A> study?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:almaMater ?uri . ?uri a dbo:University }
+In which country did <B> and <A> die?,SELECT DISTINCT ?uri where { <B> dbp:placeOfDeath ?uri . <A> dbp:placeOfDeath ?uri }
+In which state does the university which is the alma mater of <A> lie?,SELECT DISTINCT ?uri where { <A> dbp:almaMater ?x . ?x dbp:state ?uri . ?x a dbo:University }
+In which university did <B> studycomma where <A> went too?,SELECT DISTINCT ?uri where { <B> dbo:almaMater ?uri . <A> dbo:almaMater ?uri }
+Is <A> buried in the <B>?,ASK where { <A> dbp:placeofburial <B> }
+Is <B> buried in <A>?,ASK where { <B> dbp:placeofburial <A> }
+List all the children of <A>?,SELECT DISTINCT ?uri where { <A> dbp:children ?uri }
+List down all notable works of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:notableWork ?uri }
+List the affiliation of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:affiliation ?uri }
+List the affiliations of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:affiliations ?uri }
+List the alma mater of the person who is wedded to <A>.,SELECT DISTINCT ?uri where { ?x dbo:spouse <A> . ?x dbp:almaMater ?uri }
+List the awards given to the relatives of <A>.,SELECT DISTINCT ?uri where { <A> dbo:relative ?x . ?x dbo:award ?uri }
+List the awards received of the person whose child is <A>?,SELECT DISTINCT ?uri where { ?x dbp:children <A> . ?x dbo:award ?uri . ?x a dbo:Person }
+List the awards won by the wife of <A>.,SELECT DISTINCT ?uri where { <A> dbp:spouse ?x . ?x dbp:awards ?uri }
+List the children of the parent of <A>.,SELECT DISTINCT ?uri where { <A> dbo:parent ?x . ?x dbp:children ?uri }
+List the honorary title given to the spouse of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:spouse ?x . ?x dbo:award ?uri }
+List the places where the relatives of <A> died ?,SELECT DISTINCT ?uri where { <A> dbp:relatives ?x . ?x dbo:deathPlace ?uri }
+List the relative of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:relative ?uri }
+List the relatives of <A> ?,SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> }
+List the relatives of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:relatives ?uri }
+List the relatives of the children of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:children ?x . ?x dbo:relative ?uri }
+List the school of <A>?,SELECT DISTINCT ?uri where { <A> dbp:school ?uri }
+List the things for which the relatives of <A> are known?,SELECT DISTINCT ?uri where { <A> dbo:relative ?x . ?x dbp:knownFor ?uri }
+Name a famous relative of <A>,SELECT DISTINCT ?uri where { ?uri dbo:relative <A> }
+Name the <A>'s school ?,SELECT DISTINCT ?uri where { <A> dbo:school ?uri }
+Name the alma mater of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:almaMater ?uri }
+Name the alma mater of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:almaMater ?uri }
+Name the cause of death of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:deathCause ?uri }
+Name the college of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:college ?uri }
+Name the death location of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:deathPlace ?uri }
+Name the home town of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:hometown ?uri }
+Name the person whose child is <A>?,SELECT DISTINCT ?uri where { ?uri dbp:children <A> . ?uri a dbo:Person }
+Name the person whose daughter is <A> and also another children named <B> ?,SELECT DISTINCT ?uri where { ?uri dbo:child <A> . ?uri dbp:children <B> . ?uri a dbo:Person }
+Name the person whose mother name is <A> and has a son named <B>?,SELECT DISTINCT ?uri where { ?uri dbo:parent <A> . ?uri dbp:children <B> . ?uri a dbo:Person }
+Name the person whose parent is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:parent <A> . ?uri a dbo:Person }
+Name the resting place of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:restingplace ?uri }
+Name the university of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:university ?uri }
+Tell me the school to which <A> went?,SELECT DISTINCT ?uri where { <A> dbp:education ?uri }
+To which educational institutions did <A> go for her studies?,SELECT DISTINCT ?uri where { <A> dbo:education ?uri }
+To which persons is <A> a relative?,SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> . ?uri a dbo:Person }
+Was <A> the mother of <B>?,ASK where { <B> dbp:mother <A> }
+Was <B> born in <A>?,ASK where { <B> dbp:birthplace <A> }
+What  is the Nickname of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:nickname ?uri }
+What are <A> and <B> both affiliated with?,SELECT DISTINCT ?uri where { <A> dbp:affiliation ?uri . <B> dbp:affiliation ?uri }
+What are some other children of the father of <A>?,SELECT DISTINCT ?uri where { ?x dbo:child <A> . ?x dbp:children ?uri }
+What are some relatives of the spouse of <A>?,SELECT DISTINCT ?uri where { ?x dbo:spouse <A> . ?uri dbo:relative ?x }
+What are the awards received by spouse of <A>?,SELECT DISTINCT ?uri where { ?x dbo:spouse <A> . ?x dbp:awards ?uri }
+What are the notableworks of <A>?,SELECT DISTINCT ?uri where { <A> dbp:notableworks ?uri }
+What are the professions of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:occupation ?uri }
+What are the things <A> known for ?,SELECT DISTINCT ?uri where { <A> dbo:knownFor ?uri }
+What award was won by the father of <A>?,SELECT DISTINCT ?uri where { ?x dbp:children <A> . ?x dbo:award ?uri }
+what awards have been giving to <A>?,SELECT DISTINCT ?uri where { <A> dbo:award ?uri }
+What city gave birth to <B> and also houses <A>?,SELECT DISTINCT ?uri where { <B> dbo:birthPlace ?uri . <A> dbp:location ?uri }
+What did <A>'s father die from?,SELECT DISTINCT ?uri where { ?x dbo:child <A> . ?x dbo:deathCause ?uri }
+What do <B> and <A> do for a living?,SELECT DISTINCT ?uri where { <A> dbo:occupation ?uri . <B> dbo:occupation ?uri }
+What does the famous relative of <A> do for a living?,SELECT DISTINCT ?uri where { ?x dbp:relatives <A> . ?x dbo:occupation ?uri }
+What faiths are followed by the relatives of <A>?,SELECT DISTINCT ?uri where { <A> dbo:relative ?x . ?x dbo:religion ?uri }
+What is <A> hometown ?,SELECT DISTINCT ?uri where { <A> dbp:hometown ?uri }
+What is <A> known for?,SELECT DISTINCT ?uri where { <A> dbp:knownFor ?uri }
+What is the <A> associated with?,SELECT DISTINCT ?uri where { <A> dbp:affiliations ?uri }
+What is the affiliation of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:affiliation ?uri }
+What is the alma mater of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:almaMater ?uri }
+What is the alma mater of <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:college ?uri . <B> dbp:almaMater ?uri }
+What is the alma mater of <A>?,SELECT DISTINCT ?uri where { <A> dbp:almaMater ?uri }
+What is the alma mater of the personcomma whose child is <A>?,SELECT DISTINCT ?uri where { ?x dbp:children <A> . ?x dbp:almaMater ?uri }
+What is the birth name  of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:birthName ?uri }
+What is the birth place of the children of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:children ?x . ?x dbo:birthPlace ?uri }
+What is the birthplace of <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbo:birthPlace ?uri . <A> dbo:birthPlace ?uri }
+What is the burial place of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:placeOfBurial ?uri }
+What is the career of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:occupation ?uri }
+What is the citizenship of <A>?,SELECT DISTINCT ?uri where { <A> dbo:citizenship ?uri }
+What is the city of the <B> is also the resting place of <A> ?,SELECT DISTINCT ?uri where { <B> dbo:authority ?uri . <A> dbp:restingplace ?uri }
+What is the college of <A> is also the college of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:college ?uri . <B> dbp:college ?uri }
+What is the common palce of study for <A> and <B> ?,SELECT DISTINCT ?uri where { <A> dbo:education ?uri . <B> dbp:education ?uri }
+What is the common religious affiliation of the <B> and that of  <A>?,SELECT DISTINCT ?uri where { <B> dbp:religiousAffiliation ?uri . <A> dbo:type ?uri }
+What is the common school of <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:school ?uri . <A> dbo:almaMater ?uri }
+What is the common university iof <A> and also the college of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:university ?uri . <B> dbo:college ?uri }
+What is the craft of the <B> which is also the profession of  <A> ?,SELECT DISTINCT ?uri where { <B> dbp:occupation ?uri . <A> dbo:profession ?uri }
+What is the deathplace of whom who is the relative of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:relatives ?x . ?x dbo:deathPlace ?uri }
+What is the famous relative of <A> known for?,SELECT DISTINCT ?uri where { ?x dbp:relatives <A> . ?x dbp:knownFor ?uri }
+What is the hometown of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:hometown ?uri }
+What is the hometown of <A>comma where <B> was born too?,SELECT DISTINCT ?uri where { <B> dbp:birthPlace ?uri . <A> dbo:hometown ?uri }
+What is the nationality of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:nationality ?uri }
+What is the nickname of the school where <A> studied  ?,SELECT DISTINCT ?uri where { <A> dbp:highschool ?x . ?x dbp:nickname ?uri . ?x a dbo:School }
+What is the place of birth of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:placeOfBirth ?uri }
+What is the place of birth of the <A> which is also the  place of death of the <B>,SELECT DISTINCT ?uri where { <A> dbp:placeOfBirth ?uri . <B> dbo:deathPlace ?uri }
+What is the place of birth of the <B> and <A>,SELECT DISTINCT ?uri where { <B> dbp:placeOfBirth ?uri . <A> dbp:placeOfBirth ?uri }
+What is the place of death of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:placeOfDeath ?uri }
+What is the profession of the children of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:children ?x . ?x dbo:profession ?uri }
+What is the religious affiliation of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:religiousAffiliation ?uri }
+What is the religious affiliation of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:religiousAffiliation ?uri }
+What is the resting place of the child of <A>?,SELECT DISTINCT ?uri where { <A> dbp:children ?x . ?x dbo:restingPlace ?uri }
+What is the resting place of the children of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:children ?x . ?x dbo:restingPlace ?uri }
+What killed <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:deathCause ?uri . <A> dbo:deathCause ?uri }
+What made <A> and <B> both famous?,SELECT DISTINCT ?uri where { <A> dbo:knownFor ?uri . <B> dbo:knownFor ?uri }
+What made <A> and <B> famous?,SELECT DISTINCT ?uri where { <A> dbo:field ?uri . <B> dbo:knownFor ?uri }
+What prizes have been awarded to the relatives of <A>?,SELECT DISTINCT ?uri where { <A> dbp:relatives ?x . ?x dbp:awards ?uri }
+What was founded by <A> ?,SELECT DISTINCT ?uri where { <A> dbp:founded ?uri }
+What were the occupations of <A>?,SELECT DISTINCT ?uri where { <A> dbo:occupation ?uri }
+When did <A> die?,SELECT DISTINCT ?uri where { <A> dbp:deathDate ?uri }
+Where are <A> and <B> buried?,SELECT DISTINCT ?uri where { <A> dbp:restingplace ?uri . <B> dbp:restingplace ?uri }
+Where are the burial grounds of <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbp:restingplace ?uri . <A> dbp:restingplace ?uri }
+Where did <A> die ?,SELECT DISTINCT ?uri where { <A> dbp:deathPlace ?uri }
+Where did <A> do his elementary schooling?,SELECT DISTINCT ?uri where { <A> dbp:highSchool ?uri }
+Where did <A> do his highschool?,SELECT DISTINCT ?uri where { <A> dbp:highschool ?uri }
+Where did <A> go to high school,SELECT DISTINCT ?uri where { <A> dbo:highschool ?uri }
+Where did <A> graduated ?,SELECT DISTINCT ?uri where { <A> dbo:education ?uri }
+Where did <A> study?,SELECT DISTINCT ?uri where { <A> dbo:almaMater ?uri }
+Where did <B> and <A> both die?,SELECT DISTINCT ?uri where { <A> dbp:deathPlace ?uri . <B> dbp:deathPlace ?uri }
+Where did <B> and <A> die?,SELECT DISTINCT ?uri where { <B> dbp:placeOfDeath ?uri . <A> dbp:deathPlace ?uri }
+Where did <B> and <A> study?,SELECT DISTINCT ?uri where { <A> dbp:almaMater ?uri . <B> dbo:almaMater ?uri }
+Where did the partner of <A> die?,SELECT DISTINCT ?uri where { <A> dbp:spouse ?x . ?x dbo:deathPlace ?uri }
+Where did the relatives of <A> study?,SELECT DISTINCT ?uri where { ?x dbo:relative <A> . ?x dbp:education ?uri }
+Where did the relatives of <A> study?,SELECT DISTINCT ?uri where { ?x dbo:relation <A> . ?x dbp:almaMater ?uri }
+Where did the spouse of <A> die?,SELECT DISTINCT ?uri where { ?x dbp:spouse <A> . ?x dbo:deathPlace ?uri }
+Where do <A> and <B> both live?,SELECT DISTINCT ?uri where { <A> dbo:residence ?uri . <B> dbo:residence ?uri }
+Where do <A> live?,SELECT DISTINCT ?uri where { ?x dbp:almaMater <A> . ?x dbo:residence ?uri }
+Where does <A> work?,SELECT DISTINCT ?uri where { <A> dbp:office ?uri }
+Where does <B> and <A> both live?,SELECT DISTINCT ?uri where { <A> dbp:residence ?uri . <B> dbp:residence ?uri }
+Where is <A> from?,SELECT DISTINCT ?uri where { <A> dbo:stateOfOrigin ?uri }
+Where is <A> from?,SELECT DISTINCT ?uri where { <A> dbo:nationality ?uri }
+Where is the birthplace of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:birthplace ?uri }
+Where is the grave of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:placeOfBurial ?uri }
+Where is the hometown of <A>?,SELECT DISTINCT ?uri where { <A> dbo:hometown ?uri }
+Where is the spouse of <A> buried?,SELECT DISTINCT ?uri where { ?x dbo:spouse <A> . ?x dbp:placeOfBurial ?uri }
+Where is the tomb of son of <A>?,SELECT DISTINCT ?uri where { ?x dbo:parent <A> . ?x dbo:restingPlace ?uri }
+Where is the tombstone of <A>?,SELECT DISTINCT ?uri where { <A> dbp:restingplace ?uri }
+Where was <A> born ?,SELECT DISTINCT ?uri where { <A> dbp:birthplace ?uri }
+Where was <A> buried ?,SELECT DISTINCT ?uri where { <A> dbp:placeOfBurial ?uri }
+Where was <A> laid to rest?,SELECT DISTINCT ?uri where { <A> dbo:placeOfBurial ?uri }
+Where were <B> and <A> born?,SELECT DISTINCT ?uri where { <B> dbp:birthPlace ?uri . <A> dbo:birthPlace ?uri }
+which award has been won by <A>?,SELECT DISTINCT ?uri where { <A> dbp:title ?uri }
+Which awards did the children of <A> won ?,SELECT DISTINCT ?uri where { <A> dbp:children ?x . ?x dbp:awards ?uri }
+Which awards did the parents of <A> win ?,SELECT DISTINCT ?uri where { <A> dbo:parent ?x . ?x dbp:awards ?uri }
+Which awards have <A> won?,SELECT DISTINCT ?uri where { <A> dbp:awards ?uri }
+Which college has been attended  by both Mr. <B> and Mr. <A>?,SELECT DISTINCT ?uri where { <B> dbo:college ?uri . <A> dbo:college ?uri }
+Which college of <A> is the alma mater of <B>,SELECT DISTINCT ?uri where { <A> dbp:college ?uri . <B> dbp:almaMater ?uri }
+Which college of the <A> is the alma mater of the <B> ?,SELECT DISTINCT ?uri where { <A> dbp:college ?uri . <B> dbo:almaMater ?uri }
+Which home town of <A> is the death location of the <B> ?,SELECT DISTINCT ?uri where { <A> dbp:hometown ?uri . <B> dbo:deathPlace ?uri }
+Which home town of <A> is the place of death of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:hometown ?uri . <B> dbp:placeOfDeath ?uri }
+Which school did <A> attend?,SELECT DISTINCT ?uri where { <A> dbp:school ?uri }
+Which sports are played in the alma mater of <A>?,SELECT DISTINCT ?uri where { <A> dbp:almaMater ?x . ?x dbo:sport ?uri }
+Which sports are played in the alma mater of <A>?,SELECT DISTINCT ?uri where { <A> dbp:almaMater ?x . ?x dbo:sport ?uri }
+Which spouse of <A> a mother named <B> ?,SELECT DISTINCT ?uri where { ?uri dbo:parent <B> . ?uri dbo:spouse <A> }
+Which things are <A> known for ?,SELECT DISTINCT ?uri where { <A> dbp:knownFor ?uri }
+Which uni did <A> attend ?,SELECT DISTINCT ?uri where { <A> dbp:education ?uri }
+Which university is alma mater to <A>?,SELECT DISTINCT ?uri where { <A> dbp:university ?uri }
+Which university was attended by both <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbp:education ?uri . <A> dbp:education ?uri }
+Who are relatives of <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> . ?uri dbp:relatives <B> }
+Who are the children of <A>?,SELECT DISTINCT ?uri where { <A> dbp:children ?uri }
+Who are the parents of  <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:child <A> . ?uri dbo:child <B> }
+Who are the spouse of the parents of <A>?,SELECT DISTINCT ?uri where { <A> dbo:parent ?x . ?x dbo:spouse ?uri }
+Who did <A> marry?,SELECT DISTINCT ?uri where { ?uri dbo:spouse <A> }
+Who has <A> and <B> as relatives?,SELECT DISTINCT ?uri where { ?uri dbo:relative <A> . ?uri dbo:relative <B> }
+Who has a  child named <A> and is resting place as <B>?,SELECT DISTINCT ?uri where { ?uri dbp:children <A> . ?uri dbp:restingPlace <B> }
+Who has been married to both <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:spouse ?uri . <B> dbo:spouse ?uri }
+Who have children named <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:children <B> . ?uri dbp:children <A> }
+Who is  related to <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> . ?uri dbp:relatives <B> }
+Who is a famous relative of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:relative <A> . ?uri a dbo:Person }
+Who is child of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:children ?uri }
+Who is married to <A>?,SELECT DISTINCT ?uri where { ?uri dbp:spouse <A> }
+Who is married to a <A>?,SELECT DISTINCT ?uri where { ?x dbp:title <A> . ?uri dbp:spouse ?x }
+Who is relative of the people died in <A> ?,SELECT DISTINCT ?uri where { ?x dbp:deathPlace <A> . ?x dbo:relative ?uri }
+Who is the child of <A>?,SELECT DISTINCT ?uri where { <A> dbo:child ?uri }
+Who is the common parent of <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbo:parentOrganisation ?uri . <A> dbp:parent ?uri }
+Who is the employer of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:employer ?uri }
+Who is the famous relative of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:relatives <A> }
+Who is the father of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:child <A> }
+Who is the former partner of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:formerPartner ?uri }
+who is the husband of <A>?,SELECT DISTINCT ?uri where { <A> dbo:partner ?uri }
+Who is the parent of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:children <A> }
+Who is the partner of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:partner <A> }
+Who is the person whose child performed with <A>?,SELECT DISTINCT ?uri where { ?x dbp:associatedActs <A> . ?uri dbo:child ?x }
+Who is the relative of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:relatives ?uri }
+Who is the spouse of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:spouse <A> }
+who married <A>?,SELECT DISTINCT ?uri where { ?uri dbp:spouse <A> }
+Who was the parent of person whose child is <A>?,SELECT DISTINCT ?uri where { ?x dbp:children <A> . ?x dbo:parent ?uri . ?x a dbo:Person }
+Whos a famous relative of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:relation <A> }
+Whose children are married to <A>?,SELECT DISTINCT ?uri where { ?x dbp:spouse <A> . ?uri dbp:children ?x }
+Whose children died in <A>?,SELECT DISTINCT ?uri where { ?x dbo:deathPlace <A> . ?uri dbo:child ?x }
+Whose mom is <A>?,SELECT DISTINCT ?uri where { ?uri dbp:mother <A> }
+Whose relatives are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:relative <A> . ?uri dbo:relative <B> }
+Whose resting place is <A> and has kids named <B>?,SELECT DISTINCT ?uri where { ?uri dbp:restingplace <A> . ?uri dbo:child <B> }
+Why did <A> and <B> die?,SELECT DISTINCT ?uri where { <A> dbo:deathCause ?uri . <B> dbp:deathCause ?uri }
+Which offices were held by the politicians who held their allegiance to the <A>?,SELECT DISTINCT ?uri where { ?x dbp:allegiance <A> . ?x dbp:office ?uri . ?x a dbo:OfficeHolder }
+Which operator of <B> is also the  governing body of the <A> ?,SELECT DISTINCT ?uri where { <B> dbp:operator ?uri . <A> dbp:governingBody ?uri }
+Which owner of <B> india is the leader of <A> ?,SELECT DISTINCT ?uri where { <B> dbo:owner ?uri . <A> dbp:governmentType ?uri }
+Which parent organization of <A> is also the label of <B> ?,SELECT DISTINCT ?uri where { <B> dbo:recordLabel ?uri . <A> dbo:parentOrganisation ?uri }
+Which part of the political framework did <B> and <A> both serve?,SELECT DISTINCT ?uri where { <B> dbp:order ?uri . <A> dbp:order ?uri }
+Which parties have their members live in the <A>?,SELECT DISTINCT ?uri where { ?x dbp:residence <A> . ?uri dbo:leader ?x . ?uri a dbo:PoliticalParty }
+Which partner of the <A> is also the primeminister of the <B> ?,SELECT DISTINCT ?uri where { <A> dbo:partner ?uri . <B> dbp:primeminister ?uri }
+Which party does <B> and <A> currently belong to?,SELECT DISTINCT ?uri where { <B> dbp:party ?uri . <A> dbp:party ?uri }
+Which party has come in power at both <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:leaderName ?uri . <A> dbo:leaderName ?uri }
+Which party has come in power in <A>?,SELECT DISTINCT ?uri where { ?x dbp:constituency <A> . ?x dbo:party ?uri }
+Which party has won the <A> and has been in the <B>,SELECT DISTINCT ?uri where { <A> dbp:party ?uri . <B> dbp:party ?uri }
+Which party of <A> is the leader at <B> ?,SELECT DISTINCT ?uri where { <B> dbo:leaderName ?uri . <A> dbp:party ?uri }
+Which party won both <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:affiliation ?uri . <B> dbo:affiliation ?uri }
+Which party won the elections when <A> was in power?,SELECT DISTINCT ?uri where { ?x dbp:leader <A> . ?x dbo:affiliation ?uri . ?x a dbo:Election }
+Which political figures were awarded <A>?,SELECT DISTINCT ?uri where { ?uri dbo:award <A> }
+Which political party got elected in <A> ?,SELECT DISTINCT ?uri where { <A> dbp:party ?uri }
+Which political party of <B> had affiliation with <A>,SELECT DISTINCT ?uri where { <B> dbp:governmentType ?uri . <A> dbo:affiliation ?uri }
+Which political party of <B> is also the political party of <A> ?,SELECT DISTINCT ?uri where { <B> dbo:otherParty ?uri . <A> dbo:party ?uri }
+Which political party of <B> was the leader of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:party ?uri . <A> dbo:leaderName ?uri }
+which politician is currently ruling over <A>?,SELECT DISTINCT ?uri where { <A> dbo:leaderName ?uri }
+Which politician was succeeded by someone who graduated from the <A>?,SELECT DISTINCT ?uri where { ?x dbo:almaMater <A> . ?uri dbp:successor ?x . ?uri a dbo:OfficeHolder }
+Which politician's constituency is led by the <A>?,SELECT DISTINCT ?uri where { ?x dbp:leaderTitle <A> . ?uri dbp:constituency ?x . ?uri a dbo:OfficeHolder }
+Which politicians died in cities built by the Roman emperor <A>?,SELECT DISTINCT ?uri where { ?x dbo:builder <A> . ?uri dbo:deathPlace ?x . ?uri a dbo:OfficeHolder }
+Which politicians live in a city led by <A>?,SELECT DISTINCT ?uri where { ?x dbo:leader <A> . ?uri dbo:residence ?x }
+Which politicians son is buried in <A>?,SELECT DISTINCT ?uri where { ?x dbp:placeofburial <A> . ?uri dbo:child ?x . ?uri a dbo:OfficeHolder }
+Which ppolitical party of <A> is also the owner <B> ?,SELECT DISTINCT ?uri where { <B> dbo:owner ?uri . <A> dbo:party ?uri }
+Which president had lieutenants whose governor was <A>?,SELECT DISTINCT ?uri where { ?x dbp:governor <A> . ?uri dbo:lieutenant ?x . ?uri a dbo:President }
+Which president of <A> also married to <B> ?,SELECT DISTINCT ?uri where { <B> dbo:spouse ?uri . <A> dbp:president ?uri }
+Which president of <A> had nickname <B> ?,SELECT DISTINCT ?uri where { <A> dbp:president ?uri . <B> dbp:nickname ?uri }
+Which president of United States had vice president as <A>?,SELECT DISTINCT ?uri where { ?uri dbo:vicePresident <A> . ?uri a dbo:OfficeHolder }
+which president was served by <A>?,SELECT DISTINCT ?uri where { <A> dbp:president ?uri }
+Which president was served by someone whose lieutenant is <A>?,SELECT DISTINCT ?uri where { ?x dbp:lieutenant <A> . ?x dbo:president ?uri }
+Which prime ministers were served by the governor who appointed <A>?,SELECT DISTINCT ?uri where { <A> dbo:appointer ?x . ?x dbo:primeMinister ?uri }
+Which professional fightercomma who is also a politician and was elected to <A>?,SELECT DISTINCT ?uri where { ?uri dbp:occupation <A> }
+Which sects people are part of local political parties which fall under the International <A>?,SELECT DISTINCT ?uri where { ?x dbp:international <A> . ?x dbo:religion ?uri . ?x a dbo:PoliticalParty }
+Which settlement's neighboring municipalities are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:neighboringMunicipalities <A> . ?uri dbo:neighboringMunicipality <B> . ?uri a dbo:Settlement }
+Which statesman is married to <A>?,SELECT DISTINCT ?uri where { ?uri dbp:spouse <A> . ?uri a dbo:OfficeHolder }
+Which vice president of <B> is also the president <A> ?,SELECT DISTINCT ?uri where { <B> dbo:vicePresident ?uri . <A> dbo:president ?uri }
+Which workplace of the <A> is also the  governing body of the <B>?,SELECT DISTINCT ?uri where { <A> dbo:employer ?uri . <B> dbo:governingBody ?uri }
+Whihc party of the <B> is the government type of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:governmentType ?uri . <B> dbp:party ?uri }
+Who all held a position when <A> was the prime minister?,SELECT DISTINCT ?uri where { ?uri dbo:primeMinister <A> }
+Who appointed the governor under which <A> worked?,SELECT DISTINCT ?uri where { <A> dbo:governor ?x . ?x dbp:appointer ?uri }
+Who appointed the governor under whom <A> served?,SELECT DISTINCT ?uri where { <A> dbo:governor ?x . ?x dbp:appointer ?uri }
+Who appointed the governor under whom <A> works?,SELECT DISTINCT ?uri where { ?x dbp:lieutenant <A> . ?x dbp:appointer ?uri . ?x a dbo:Governor }
+Who are the politicians whose death place is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:deathPlace <A> . ?uri a dbo:Politician }
+Who had headed the governmental agencies whose admin HQ was in <A>?,SELECT DISTINCT ?uri where { ?x dbo:headquarter <A> . ?x dbo:leader ?uri . ?x a dbo:GovernmentAgency }
+Who is  office holder of constituencies <<B> ?,SELECT DISTINCT ?uri where { ?uri dbp:constituency <A> . ?uri dbp:constituency <B> . ?uri a dbo:OfficeHolder }
+Who is buried at the place governed by <A>?,SELECT DISTINCT ?uri where { ?x dbp:governingBody <A> . ?uri dbp:restingplace ?x }
+Who is the chancellor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:chancellor ?uri }
+Who is the common prime minster of <B>r and <A> ?,SELECT DISTINCT ?uri where { <B> dbo:primeMinister ?uri . <A> dbp:primeminister ?uri }
+Who is the governor of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:governor ?uri }
+Who is the leader of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:leader ?uri }
+Who is the leader of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:leaderName ?uri }
+Who is the leader of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:leaderName ?uri }
+Who is the leader of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:leader ?uri }
+Who is the leader of the <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:leader ?uri . <B> dbo:leader ?uri }
+Who is the leader of the town where the <A> originates?,SELECT DISTINCT ?uri where { <A> dbo:origin ?x . ?x dbo:leaderName ?uri . ?x a dbo:Town }
+Who is the mayor of the city under which is the constituency of <A>?,SELECT DISTINCT ?uri where { <A> dbp:constituency ?x . ?x dbo:leaderName ?uri }
+Who is the monarch of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:monarch ?uri }
+Who is the office holder for constituencies  <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:constituency <A> . ?uri dbp:constituency <B> . ?uri a dbo:OfficeHolder }
+Who is the office holder whose deputy was <A> and predecessor was <B>?,SELECT DISTINCT ?uri where { ?uri dbp:deputy <A> . ?uri dbo:predecessor <B> . ?uri a dbo:OfficeHolder }
+Who is the office holder whose resting place is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:restingPlace <A> . ?uri a dbo:OfficeHolder }
+Who is the office holder with deputies as <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:deputy <B> . ?uri dbp:deputy <A> . ?uri a dbo:OfficeHolder }
+Who is the political figure whose military branch is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:militaryBranch <A> }
+Who is the President of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:president ?uri }
+Who is the president of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:president ?uri }
+Who is the president of <A> nad <B> ?,SELECT DISTINCT ?uri where { <A> dbp:president ?uri . <B> dbo:president ?uri }
+Who is the President of the <A> and <B> ?,SELECT DISTINCT ?uri where { <A> dbp:president ?uri . <B> dbp:president ?uri }
+Who is the prime minister of <A> who is also the minister of <B> ?,SELECT DISTINCT ?uri where { <A> dbp:primeminister ?uri . <B> dbo:primeMinister ?uri }
+Who is the prime minister of the successor of <A>?,SELECT DISTINCT ?uri where { <A> dbo:successor ?x . ?x dbp:primeminister ?uri }
+Who is the prime minister that <A> served?,SELECT DISTINCT ?uri where { <A> dbp:primeminister ?uri }
+Who is the vice president of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:vicePresident ?uri }
+Who preceded <A> as an office holder?,SELECT DISTINCT ?uri where { ?uri dbo:predecessor <A> . ?uri a dbo:OfficeHolder }
+Who represent the constituencies of <B> and <A>,SELECT DISTINCT ?uri where { ?uri dbp:constituency <B> . ?uri dbp:constituency <A> }
+Who served a vice president buried in <A>?,SELECT DISTINCT ?uri where { ?x dbp:restingplace <A> . ?uri dbo:vicePresident ?x }
+Who was the PM under which <A> served?,SELECT DISTINCT ?uri where { <A> dbo:primeMinister ?uri }
+Who was the president at the time when both <A> and <B> held a position in US political framework?,SELECT DISTINCT ?uri where { <A> dbp:president ?uri . <B> dbp:president ?uri }
+Who was the president under which people won the <A> ?,SELECT DISTINCT ?uri where { <A> dbp:leader ?x . ?x dbp:president ?uri . ?x a dbo:Person }
+Who was the president under whomcomma a governor participated in Shay'<A>?,SELECT DISTINCT ?uri where { ?x dbo:battle <A> . ?x dbp:president ?uri . ?x a dbo:Governor }
+Who was the prime minister under which the predecessor of <A>,SELECT DISTINCT ?uri where { ?x dbp:successor <A> . ?x dbp:primeminister ?uri }
+Who was the vice president under which <A> served?,SELECT DISTINCT ?uri where { <A> dbo:vicePresident ?uri }
+Who were all the people in office when <A> was the PM?,SELECT DISTINCT ?uri where { ?uri dbo:primeMinister <A> }
+Who were some governmental heads in <A>?,SELECT DISTINCT ?uri where { ?x dbo:jurisdiction <A> . ?x dbo:leader ?uri }
+Who were the head of government agencies working in the <A>?,SELECT DISTINCT ?uri where { ?x dbp:jurisdiction <A> . ?x dbo:leader ?uri . ?x a dbo:GovernmentAgency }
+Whose constituency is <A>,SELECT DISTINCT ?uri where { ?uri dbp:constituency <A> }
+Whose leaders are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:leader <A> . ?uri dbo:leader <B> }
+Whose mayors are affiliated with <A>?,SELECT DISTINCT ?uri where { ?x dbp:affiliation <A> . ?uri dbo:leaderName ?x }
+Whose network's parent organisation is <A>?,SELECT DISTINCT ?uri where { ?x dbo:parentOrganisation <A> . ?uri dbo:network ?x }
+Whose shrines are in a place governed by <A>?,SELECT DISTINCT ?uri where { ?x dbp:leaderName <A> . ?uri dbo:majorShrine ?x }
+<B> and <A> are two followers of which religion?,SELECT DISTINCT ?uri where { <B> dbp:religion ?uri . <A> dbp:religion ?uri }
+<B> follows what religioncomma which once employed <A> too?,SELECT DISTINCT ?uri where { <B> dbp:religion ?uri . <A> dbo:occupation ?uri }
+<B> is affiliated to <A> Religion,ASK where { <B> dbp:religiousAffiliation <A> }
+Count all the <A>.,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:religion <A> }
+Count number of people who follow a religion which has an important office in <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:headquarters <A> . ?uri dbo:religion ?x . ?uri a dbo:Person }
+Count the different religions followed by <A> in military.,SELECT DISTINCT COUNT(?uri) where { ?x dbo:militaryRank <A> . ?x dbo:religion ?uri }
+Count the different religions practiced by people who are in the <A>.,SELECT DISTINCT COUNT(?uri) where { ?x dbo:party <A> . ?x dbo:religion ?uri }
+Count the number of different religions that <A> have followed?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:militaryRank <A> . ?x dbo:religion ?uri }
+Count the number of religions followed by <A> members.,SELECT DISTINCT COUNT(?uri) where { ?x dbp:party <A> . ?x dbo:religion ?uri }
+Count the number of religions followed by <A> members.,SELECT DISTINCT COUNT(?uri) where { ?x dbp:party <A> . ?x dbo:religion ?uri }
+Count the number of religions followed by the alumini of <A>.,SELECT DISTINCT COUNT(?uri) where { ?x dbo:almaMater <A> . ?x dbo:religion ?uri }
+Count the religions followed by people living in <A>.,SELECT DISTINCT COUNT(?uri) where { ?x dbp:residence <A> . ?x dbp:religion ?uri }
+Count the total religions followed by the ones living in <A>.,SELECT DISTINCT COUNT(?uri) where { ?x dbp:residence <A> . ?x dbp:religion ?uri }
+From which state do the <A> come?,SELECT DISTINCT ?uri where { ?x dbo:religion <A> . ?x dbo:stateOfOrigin ?uri }
+How many different religions have <A> followed?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:profession <A> . ?x dbo:religion ?uri }
+How many major shrine are therecomma of the saints whose beatified by <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:beatifiedBy <A> . ?x dbo:majorShrine ?uri }
+How many religion's commanders have served in the <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:notableCommanders ?x . ?x dbo:religion ?uri }
+How many religion's people have died in <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:deathPlace <A> . ?x dbo:religion ?uri }
+How many religions are followed amongst the people who've worked in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:militaryBranch <A> . ?x dbo:religion ?uri }
+How many religions are followed by organizations which are internationally known as the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:international <A> . ?x dbo:religion ?uri }
+How many religions are followed by the group whose architectural style can be seen on <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:architecturalStyle ?x . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+How many religions are followed by the people in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:militaryBranch <A> . ?x dbo:religion ?uri }
+How many religions are practiced by <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:profession <A> . ?x dbp:religion ?uri }
+How many religions have the relatives of <A> followed?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:related ?x . ?x dbo:religion ?uri }
+How many saints have been venerated in <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:veneratedIn <A> . ?uri a dbo:Saint }
+How many total religions are followed by people whose hometown is somewhere in <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:hometown <A> . ?x dbp:religion ?uri }
+In which religions are both <B> and <A> reverred?,SELECT DISTINCT ?uri where { <B> dbp:veneratedIn ?uri . <A> dbp:veneratedIn ?uri }
+In which sects were the aristocrats includedcomma who were buried in <A>?,SELECT DISTINCT ?uri where { ?x dbp:majorShrine <A> . ?x dbp:veneratedIn ?uri . ?x a dbo:Royalty }
+List all the major shrines of the saints which has one of the shrines as <A> ?,SELECT DISTINCT ?uri where { ?x dbo:majorShrine <A> . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+List the common relegion affiliation of <A> <B> ?,SELECT DISTINCT ?uri where { <A> dbp:religion ?uri . <B> dbo:religion ?uri }
+List the major shrines of <A>?,SELECT DISTINCT ?uri where { <A> dbp:majorShrine ?uri }
+List the major shrines of the saints whose one of the shrine is <A>'s Church ?,SELECT DISTINCT ?uri where { ?x dbp:majorShrine <A> . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+List the people with <A> as their religious belief?,SELECT DISTINCT ?uri where { ?uri dbo:religion <A> . ?uri a dbo:Person }
+List the relegion of <A> which is also the life stance of <B> ?,SELECT DISTINCT ?uri where { <A> dbp:affiliation ?uri . <B> dbo:religion ?uri }
+List the religion of people in the Cambodian <A>?,SELECT DISTINCT ?uri where { ?x dbo:otherParty <A> . ?x dbo:religion ?uri . ?x a dbo:Person }
+List the religions of the commanders of <A>.,SELECT DISTINCT ?uri where { <A> dbp:notableCommanders ?x . ?x dbo:religion ?uri }
+List the saints venerated in <B> having major shrine as <A> ?,SELECT DISTINCT ?uri where { ?uri dbp:majorShrine <A> . ?uri dbo:veneratedIn <B> . ?uri a dbo:Saint }
+List the shrines of the saint whose one of the shrine is <A> ?,SELECT DISTINCT ?uri where { ?x dbo:majorShrine <A> . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+Name the major shrine of <A>?,SELECT DISTINCT ?uri where { <A> dbo:majorShrine ?uri }
+Name the religious affiliation of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:religion ?uri }
+Name the saint whose major shrine is in <B> and was canonized by <A>?,SELECT DISTINCT ?uri where { ?uri dbo:majorShrine <B> . ?uri dbp:canonizedBy <A> . ?uri a dbo:Saint }
+People in the <A> follow which religion?,SELECT DISTINCT ?uri where { ?x dbp:branch <A> . ?x dbo:religion ?uri . ?x a dbo:Person }
+People of which religion have been the members of parliamentcomma and are from the <A>?,SELECT DISTINCT ?uri where { ?x dbo:region <A> . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+Relatives of <A> used to follow which religions?,SELECT DISTINCT ?uri where { <A> dbo:relative ?x . ?x dbo:veneratedIn ?uri }
+State the religion of the person known for <A> ?,SELECT DISTINCT ?uri where { ?x dbo:knownFor <A> . ?x dbo:religion ?uri }
+The pope whose shrine is in <A> was venerated in which sects?,SELECT DISTINCT ?uri where { ?x dbp:majorShrine <A> . ?x dbp:veneratedIn ?uri . ?x a dbo:Pope }
+The president who was in office when <A> was the PM followed which religion?,SELECT DISTINCT ?uri where { ?x dbp:primeminister <A> . ?x dbo:religion ?uri . ?x a dbo:President }
+The Prime minister who worked in the <A> follows which religion?,SELECT DISTINCT ?uri where { ?x dbo:militaryBranch <A> . ?x dbo:religion ?uri . ?x a dbo:PrimeMinister }
+The successor of <A> belongs to which religion?,SELECT DISTINCT ?uri where { <A> dbo:successor ?x . ?x dbo:region ?uri }
+To which religion does the commander of <A> belong?,SELECT DISTINCT ?uri where { <A> dbo:commander ?x . ?x dbo:religion ?uri }
+What are all the religions in which <B> and <A> are important?,SELECT DISTINCT ?uri where { <B> dbp:veneratedIn ?uri . <A> dbp:veneratedIn ?uri }
+What are all the religions that have been followed by the <A>?,SELECT DISTINCT ?uri where { ?x dbo:profession <A> . ?x dbo:religion ?uri }
+What are the different religions followed by presidents whose prime minister was <A>?,SELECT DISTINCT ?uri where { ?x dbp:primeminister <A> . ?x dbo:religion ?uri . ?x a dbo:President }
+What are the veneration of the one for which there's a major shrine in <A>?,SELECT DISTINCT ?uri where { ?x dbp:majorShrine <A> . ?x dbp:veneratedIn ?uri }
+What common relegion affiliation exists for <A> and <B> ?,SELECT DISTINCT ?uri where { <A> dbo:religion ?uri . <B> dbp:religiousAffiliation ?uri }
+What faith do <A> and <B> follow?,SELECT DISTINCT ?uri where { <A> dbo:religion ?uri . <B> dbo:religion ?uri }
+What faith of <B> is also the acadmeic interest of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:fields ?uri . <B> dbp:religion ?uri }
+What is the common ideology followed by <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbp:religion ?uri . <A> dbo:ideology ?uri }
+What is the common relegion of <B>  and the country where <A> is celebrated ?,SELECT DISTINCT ?uri where { <B> dbo:religion ?uri . <A> dbo:country ?uri }
+What is the denomination of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:religion ?uri }
+What is the faith of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:religion ?uri }
+What is the faith of the <B> and religious affiliation of the <A>?,SELECT DISTINCT ?uri where { <B> dbo:religion ?uri . <A> dbp:religiousAffiliation ?uri }
+What is the life stance of the ethnic groups related to <A> ?,SELECT DISTINCT ?uri where { ?x dbo:related <A> . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+What is the location of the pope whose major shrine is <A> ?,SELECT DISTINCT ?uri where { ?x dbp:majorShrine <A> . ?x dbp:birthPlace ?uri . ?x a dbo:Pope }
+What is the major shrine of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:majorShrine ?uri }
+What is the major shrine of the monarchs whose successor is <A>?,SELECT DISTINCT ?uri where { ?x dbo:successor <A> . ?x dbp:majorShrine ?uri . ?x a dbo:Monarch }
+What is the relegious affiliations of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:religion ?uri }
+What is the religion of <A>?,SELECT DISTINCT ?uri where { <A> dbo:religion ?uri }
+What is the religion of the ethnic group to which <A> belongs?,SELECT DISTINCT ?uri where { <A> dbo:ethnicity ?x . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+What is the religion of the ethnic group to which the relatives of <A> belong?,SELECT DISTINCT ?uri where { <A> dbp:related ?x . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+What is the religion of the governors whose office is the <A>?,SELECT DISTINCT ?uri where { ?x dbp:office <A> . ?x dbo:religion ?uri . ?x a dbo:Governor }
+What is the religion of the leader of <A>?,SELECT DISTINCT ?uri where { <A> dbp:leader ?x . ?x dbo:religion ?uri }
+What is the religion of the member of parliament who is a relative of <A>?,SELECT DISTINCT ?uri where { ?x dbo:relation <A> . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+What is the religion of the ones in the <A>?,SELECT DISTINCT ?uri where { ?x dbo:militaryBranch <A> . ?x dbo:religion ?uri }
+What is the religion of the person who founded the <A> magazine?,SELECT DISTINCT ?uri where { <A> dbp:founder ?x . ?x dbo:religion ?uri . ?x a dbo:Person }
+What is the religion of the person who is in the cast of <A>> ?,SELECT DISTINCT ?uri where { <A> dbo:starring ?x . ?x dbp:religion ?uri . ?x a dbo:Person }
+What is the religion of the president who won the <A> ?,SELECT DISTINCT ?uri where { <A> dbp:leader ?x . ?x dbo:religion ?uri }
+What is the religion of the relatives of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:relative ?x . ?x dbo:religion ?uri }
+What is the religion of the relatives of <A>?,SELECT DISTINCT ?uri where { ?x dbo:relation <A> . ?x dbo:religion ?uri }
+What is the religion of the successor of <A>?,SELECT DISTINCT ?uri where { <A> dbo:successor ?x . ?x dbo:religion ?uri }
+What is the total number of religions that <A> have followed?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:profession <A> . ?x dbo:religion ?uri }
+What is the venerated in of the <B> and religion of the <A>,SELECT DISTINCT ?uri where { <B> dbp:veneratedIn ?uri . <A> dbp:religion ?uri }
+What relegious affiliation of <A> was canonized by <B> ?,SELECT DISTINCT ?uri where { <B> dbo:canonizedBy ?uri . <A> dbo:religion ?uri }
+What religion did <A> follow?,SELECT DISTINCT ?uri where { <A> dbo:religion ?uri }
+What religion did the president follow which was served by <A>?,SELECT DISTINCT ?uri where { <A> dbp:president ?x . ?x dbo:religion ?uri }
+What religion did the spouse of <A> follow?,SELECT DISTINCT ?uri where { <A> dbp:spouse ?x . ?x dbo:religion ?uri }
+What religion do people of the country of <A> follow?,SELECT DISTINCT ?uri where { <A> dbo:nationality ?x . ?x dbo:religion ?uri }
+What religion do the <B> and <A> both follow?,SELECT DISTINCT ?uri where { <B> dbp:religiousAffiliation ?uri . <A> dbp:religiousAffiliation ?uri }
+What religion does <B> and <A> follow?,SELECT DISTINCT ?uri where { <B> dbp:religion ?uri . <A> dbo:religion ?uri }
+What religion is <A> from?,SELECT DISTINCT ?uri where { ?x dbp:birthName <A> . ?x dbp:religion ?uri }
+What religion is followed by the commander of <A>?,SELECT DISTINCT ?uri where { <A> dbo:notableCommander ?x . ?x dbo:religion ?uri }
+What religion is practiced by <B>comma and many others <A>?,SELECT DISTINCT ?uri where { <A> dbo:religion ?uri . <B> dbp:religion ?uri }
+What religions are followed by <A>?,SELECT DISTINCT ?uri where { ?x dbo:profession <A> . ?x dbo:religion ?uri }
+What religions are followed by members of the societies whose architectural influences can be seen on the <A> ?,SELECT DISTINCT ?uri where { <A> dbp:architecturalStyle ?x . ?x dbo:religion ?uri }
+What religions do <A> typically follow?,SELECT DISTINCT ?uri where { ?x dbo:profession <A> . ?x dbp:religion ?uri }
+What's the religion of the winner of <A>?,SELECT DISTINCT ?uri where { <A> dbp:leader ?x . ?x dbo:religion ?uri }
+Where are the shrines of the saints who were beatified by <A>?,SELECT DISTINCT ?uri where { ?x dbp:beatifiedBy <A> . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+Which fields of the <B> is also the faith of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:fields ?uri . <A> dbo:religion ?uri }
+Which idelogy of the <A> is also the  faith of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:ideology ?uri . <B> dbo:religion ?uri }
+Which major shrine of <A> is the palce of death of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:majorShrine ?uri . <B> dbp:placeOfDeath ?uri }
+Which religion did both <B> and <A> follow?,SELECT DISTINCT ?uri where { <B> dbo:religion ?uri . <A> dbo:religion ?uri }
+Which religion do the people followcomma whose constituency is <A>?,SELECT DISTINCT ?uri where { ?x dbp:constituency <A> . ?x dbp:religion ?uri . ?x a dbo:Person }
+Which religion does the leader of <A> follow?,SELECT DISTINCT ?uri where { <A> dbp:leaderName ?x . ?x dbo:religion ?uri }
+Which religion followers are in the <A>?,SELECT DISTINCT ?uri where { ?x dbo:militaryBranch <A> . ?x dbo:religion ?uri }
+Which religion followers are the members of <A>?,SELECT DISTINCT ?uri where { ?x dbp:party <A> . ?x dbo:religion ?uri }
+Which religion is followed by people in the family of <A>?,SELECT DISTINCT ?uri where { ?x dbp:family <A> . ?x dbo:religion ?uri . ?x a dbo:Person }
+Which religion is followed by the PM who was served by <A>?,SELECT DISTINCT ?uri where { <A> dbp:primeminister ?x . ?x dbo:religion ?uri }
+Which religion is prevalent in the schools of the <A>?,SELECT DISTINCT ?uri where { ?x dbp:region <A> . ?x dbp:denomination ?uri . ?x a dbo:School }
+Which religion's people are member of <A>?,SELECT DISTINCT ?uri where { ?x dbp:party <A> . ?x dbo:religion ?uri . ?x a dbo:Person }
+Which religions are followed by people in <A>?,SELECT DISTINCT ?uri where { ?x dbp:residence <A> . ?x dbp:religion ?uri . ?x a dbo:Person }
+Which religions are practiced in <A>?,SELECT DISTINCT ?uri where { ?x dbo:hometown <A> . ?x dbp:religion ?uri }
+Which religions' people fought in the <A>,SELECT DISTINCT ?uri where { <A> dbp:combatant ?x . ?x dbo:religion ?uri }
+Which saints were the messengers of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:veneratedIn <A> . ?uri a dbo:Saint }
+Who  has these major shrines  : <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:majorShrine <A> . ?uri dbo:majorShrine <B> }
+Who are some people whose relation is hqed in <A>?,SELECT DISTINCT ?uri where { ?x dbp:headquarters <A> . ?uri dbo:religion ?x }
+Who follow religions led by <A>?,SELECT DISTINCT ?uri where { ?x dbp:leaderName <A> . ?uri dbo:religion ?x }
+Whose shrine is in <A>?,SELECT DISTINCT ?uri where { ?uri dbp:majorShrine <A> }
+Where is the tombstone of the successor of <A>?,SELECT DISTINCT ?uri where { <A> dbp:successor ?x . ?x dbo:restingPlace ?uri }
+<A> is father to which royalty?,SELECT DISTINCT ?uri where { ?uri dbp:mother <A> }
+Count the number of families of the <A> kingdom.,SELECT DISTINCT COUNT(?uri) where { ?x dbo:kingdom <A> . ?x dbo:family ?uri }
+Give me a count of royalties buried in <A> ?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:placeOfBurial <A> . ?uri a dbo:Royalty }
+How many kings and queens have died in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:deathPlace <A> }
+In which sects was the aristocrat veneratedcomma whose parent is <A>?,SELECT DISTINCT ?uri where { ?x dbo:parent <A> . ?x dbp:veneratedIn ?uri . ?x a dbo:Royalty }
+List the graves of the royalities which have been buried at <A> ?,SELECT DISTINCT ?uri where { ?x dbp:placeOfBurial <A> . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+List the people with final resting place as <B> and has <A> as predecessor?,SELECT DISTINCT ?uri where { ?uri dbo:restingPlace <B> . ?uri dbp:predecessor <A> . ?uri a dbo:Person }
+List the tomb of the royalties whose burial place is <A> ?,SELECT DISTINCT ?uri where { ?x dbp:placeOfBurial <A> . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+Name a queen whose parent is <B> and consort is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:parent <B> . ?uri dbp:spouse <A> . ?uri a dbo:Royalty }
+Name a royalty whose one of the child is <B>  and is associated with <A>?,SELECT DISTINCT ?uri where { ?uri dbp:children <B> . ?uri dbo:associate <A> }
+Name the royalty whose daughter was <B> married to <A>?,SELECT DISTINCT ?uri where { ?uri dbp:mother <B> . ?uri dbo:spouse <A> . ?uri a dbo:Royalty }
+Name the royalty whose spouse was <A> and one of his parent was <B>?,SELECT DISTINCT ?uri where { ?uri dbp:mother <A> . ?uri dbo:parent <B> . ?uri a dbo:Royalty }
+What is the birth location of the pope who was canonized by <A>?,SELECT DISTINCT ?uri where { <A> dbo:canonizedBy ?x . ?x dbp:birthPlace ?uri . ?x a dbo:Pope }
+What is the common location of  tomb of the <B> and <A>,SELECT DISTINCT ?uri where { <B> dbp:placeOfBurial ?uri . <A> dbp:placeOfBurial ?uri }
+What is the place of death of the royalties one of whose parents was <A>?,SELECT DISTINCT ?uri where { ?x dbo:parent <A> . ?x dbp:deathPlace ?uri . ?x a dbo:Royalty }
+What is the resting place of the person who is the successor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:successor ?x . ?x dbo:restingPlace ?uri . ?x a dbo:Person }
+Where are the tombs of kings and queens who have died in <A>?,SELECT DISTINCT ?uri where { ?x dbp:placeOfDeath <A> . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+Where did the aristocrats die whose mother was <A>?,SELECT DISTINCT ?uri where { ?x dbp:mother <A> . ?x dbp:deathPlace ?uri . ?x a dbo:Royalty }
+Where is the king buried whose predecessor was <A>?,SELECT DISTINCT ?uri where { ?x dbp:predecessor <A> . ?x dbp:placeOfBurial ?uri . ?x a dbo:Monarch }
+Which <B> consort is <A>?,SELECT DISTINCT ?uri where { ?uri dbp:rank <B> . ?uri dbp:spouse <A> }
+Which royal people are buried in <A>?,SELECT DISTINCT ?uri where { ?uri dbp:placeOfBurial <A> . ?uri a dbo:Royalty }
+Which royal person married the successor of <A>?,SELECT DISTINCT ?uri where { ?x dbp:predecessor <A> . ?uri dbp:spouse ?x . ?uri a dbo:Royalty }
+Which royalty was married to <A> and had mother named <B>,SELECT DISTINCT ?uri where { ?uri dbp:mother <B> . ?uri dbp:spouse <A> . ?uri a dbo:Royalty }
+Which royalty's spouse is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:spouse <A> . ?uri a dbo:Royalty }
+Who all have succeeded the kings buried in <A>?,SELECT DISTINCT ?uri where { ?x dbp:placeOfBurial <A> . ?x dbo:successor ?uri . ?x a dbo:Royalty }
+Who astronaut from <B> was on the mission of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:mission <A> . ?uri dbp:type <B> . ?uri a dbo:Astronaut }
+<A> and <B> belong to which species?,SELECT DISTINCT ?uri where { <A> dbo:species ?uri . <B> dbo:species ?uri }
+<A> compiled journals of which field?,SELECT DISTINCT ?uri where { ?x dbp:editor <A> . ?x dbp:discipline ?uri }
+<A> has been awarded to which scientists?,SELECT DISTINCT ?uri where { ?uri dbp:awards <A> . ?uri a dbo:Scientist }
+<A> was doctoral supervisor of which scientist ?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralAdvisor <A> . ?uri a dbo:Scientist }
+<A> was the advisor of how many people?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:doctoralAdvisor <A> }
+Among the scientist known for <A> who had a doctoral student named <B> ?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralStudents <B> . ?uri dbp:knownFor <A> . ?uri a dbo:Scientist }
+Amongst the winner of <B>comma who has <A> doctoral supervisor ?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralAdvisor <A> . ?uri dbp:prizes <B> }
+Count  the journals in the field of <A>.,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:discipline <A> . ?uri a dbo:AcademicJournal }
+Count the  total number of mammals whose phylum is <A> and order (taxonomy) is <B>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:phylum <A> . ?uri dbo:order <B> }
+Count the different number of academic areas covered by publications of <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:publisher <A> . ?x dbo:academicDiscipline ?uri }
+Count the different origins of members of the <A> species.,SELECT DISTINCT COUNT(?uri) where { ?x dbo:species <A> . ?x dbo:origin ?uri . ?uri a dbo:Place }
+Count the number of  fields of the scientists whose one of the fields is <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:fields <A> . ?x dbp:fields ?uri }
+Count the number of fileds of the scientist whose one of the interest is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:fields <A> . ?x dbp:fields ?uri }
+Count the PhD students whose thesis are supervised by <A> winners?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:prizes <A> . ?x dbp:doctoralStudents ?uri }
+Count the total number of academic discipline of the journals whose one of the academic discipline is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:academicDiscipline <A> . ?x dbo:academicDiscipline ?uri }
+Count the total number of launch site of the rockets which have been launched form <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:launchSite <A> . ?x dbo:launchSite ?uri }
+Did <A> invent <B>?,ASK where { <B> dbp:discoverer <A> }
+Do <A> lie in the c<B> class?,ASK where { <A> dbo:class <B> }
+Does <A> work for <B>?,ASK where { <A> dbp:institution <B> }
+From how many different places have people gone to the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:institution <A> . ?x dbo:birthPlace ?uri }
+Give me a count of bacterias which belongs to <A> class?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:class <A> . ?uri a dbo:Bacteria }
+Give me a count of mammals which have their order as <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:order <A> . ?uri a dbo:Mammal }
+Give me a count on scientist who are known for garrison is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:garrison <A> . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+How many honorary title are there of the scientists who has  <A> award  ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:award <A> . ?x dbo:award ?uri }
+How many mammals are in the <A> phylum?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:phylum <A> . ?uri a dbo:Mammal }
+How many other field are there of the scientists whose one of the field is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:field <A> . ?x dbo:field ?uri }
+How many scientist became famous for the battle of <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:battle <A> . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+How many scientist have won an award by the society led by <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:leaderName <A> . ?uri dbp:prizes ?x . ?uri a dbo:Scientist }
+How many scientists are known for the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:knownFor <A> . ?uri a dbo:Scientist }
+How many thesis were supervised by <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:doctoralAdvisor <A> }
+How many things belong to phylum of <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:phylum <A> }
+In how many places can I find wine made of <A> grapes?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:species <A> . ?x dbo:wineRegion ?uri }
+In which areas can I find wine made of <A> grapes?,SELECT DISTINCT ?uri where { ?x dbo:species <A> . ?x dbo:wineRegion ?uri . ?x a dbo:Grape }
+In which areas did the pupils of <A> work?,SELECT DISTINCT ?uri where { ?x dbo:academicAdvisor <A> . ?x dbp:fields ?uri }
+In which fields are both <A> and <B> experts?,SELECT DISTINCT ?uri where { <A> dbp:fields ?uri . <B> dbp:fields ?uri }
+In which fields are pupils of <A> working?,SELECT DISTINCT ?uri where { ?x dbo:academicAdvisor <A> . ?x dbp:fields ?uri }
+Is <A>  of the <B> phylum?,ASK where { <A> dbp:phylum <B> }
+Is <A> a <B>?,ASK where { <A> dbo:field <B> }
+Is <A> a doctoral student of <B>,ASK where { <B> dbo:doctoralStudent <A> }
+Is <A> belong to the phylum of <B>?,ASK where { <A> dbo:phylum <B> }
+Is <A> in the <B> phylum?,ASK where { <A> dbp:phylum <B> }
+Is <B> a doctoral student of <A>?,ASK where { <A> dbo:doctoralStudent <B> }
+Is <B> the academic discipline of <A>?,ASK where { <A> dbo:academicDiscipline <B> }
+Is the Journal <B> about <A>?,ASK where { <B> dbo:academicDiscipline <A> }
+Journals of how many fields can be found in <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:country <A> . ?x dbp:discipline ?uri }
+List <A> whose order (taxonomy) is <B> and domain is Bacteria?,SELECT DISTINCT ?uri where { ?uri dbo:order <B> . ?uri dbp:domain <A> . ?uri a dbo:Bacteria }
+List all discipline of the journals whose one of the discipline is <A> ?,SELECT DISTINCT ?uri where { ?x dbo:academicDiscipline <A> . ?x dbo:academicDiscipline ?uri . ?x a dbo:AcademicJournal }
+List all the doctoral student of the scientist who has advised <A> ?,SELECT DISTINCT ?uri where { ?x dbp:doctoralStudents <A> . ?x dbp:doctoralStudents ?uri . ?x a dbo:Scientist }
+List some pupils of <A> Medal winning scientists?,SELECT DISTINCT ?uri where { ?x dbp:prizes <A> . ?x dbp:doctoralStudents ?uri . ?x a dbo:Scientist }
+List the academic discipline of the journals whose one of the discipline is neuro <A> ?,SELECT DISTINCT ?uri where { ?x dbo:academicDiscipline <A> . ?x dbo:academicDiscipline ?uri . ?x a dbo:AcademicJournal }
+List the doctoral students of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:doctoralStudents ?uri }
+List the fields of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:fields ?uri }
+List the fields of the scientists with <A> as one of the interest ?,SELECT DISTINCT ?uri where { ?x dbp:fields <A> . ?x dbp:fields ?uri . ?x a dbo:Scientist }
+List the institute of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:institution ?uri }
+List the interest of the scientists whose one of the field is <A> ?,SELECT DISTINCT ?uri where { ?x dbp:fields <A> . ?x dbp:fields ?uri . ?x a dbo:Scientist }
+List the launch site of the rockets whose one of the launch site has been <A> ?,SELECT DISTINCT ?uri where { ?x dbo:launchSite <A> . ?x dbo:launchSite ?uri . ?x a dbo:Rocket }
+List the mammals whose taxonomy is <B> and phylum is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:order <B> . ?uri dbo:phylum <A> . ?uri a dbo:Mammal }
+List the scientists whose doctoral advisor is <A> and are known for <B>?,SELECT DISTINCT ?uri where { ?uri dbo:doctoralAdvisor <A> . ?uri dbp:knownFor <B> . ?uri a dbo:Scientist }
+List the work institute of the medicians who has also worked at <A> ?,SELECT DISTINCT ?uri where { ?x dbp:workInstitutions <A> . ?x dbp:workInstitutions ?uri . ?x a dbo:Medician }
+Name a scientist whose official residence is <B> and also won a <A> ?,SELECT DISTINCT ?uri where { ?uri dbp:prizes <A> . ?uri dbp:residence <B> . ?uri a dbo:Scientist }
+Name all the doctoral student of the scientist who also supervised <A> ?,SELECT DISTINCT ?uri where { ?x dbp:doctoralStudents <A> . ?x dbp:doctoralStudents ?uri . ?x a dbo:Scientist }
+Name the alma mater of the scientist famous for <A> ?,SELECT DISTINCT ?uri where { ?x dbp:knownFor <A> . ?x dbp:almaMater ?uri . ?x a dbo:Scientist }
+Name the common institute of <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbo:institution ?uri . <A> dbo:institution ?uri }
+Name the common institution of the <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:institution ?uri . <B> dbo:institution ?uri }
+Name the institute of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:institution ?uri }
+Name the people whose academic advisor has also mentored the thesis of <A>?,SELECT DISTINCT ?uri where { ?x dbp:doctoralStudents <A> . ?uri dbo:academicAdvisor ?x . ?uri a dbo:Person }
+Name the scientist who become the part of <B> and had academic advisor as <A>?,SELECT DISTINCT ?uri where { ?uri dbp:prizes <B> . ?uri dbo:academicAdvisor <A> . ?uri a dbo:Scientist }
+Name the scientist who is known for inventing <A> and was a member of <B>?,SELECT DISTINCT ?uri where { ?uri dbo:knownFor <A> . ?uri dbp:prizes <B> . ?uri a dbo:Scientist }
+Name the scientist who was awarded a position in <B> and has academic advisor as <A>?,SELECT DISTINCT ?uri where { ?uri dbp:awards <B> . ?uri dbo:academicAdvisor <A> . ?uri a dbo:Scientist }
+Name the scientist who was the winner of <B> award and had <A> as his doctoral advisor ?,SELECT DISTINCT ?uri where { ?uri dbp:prizes <B> . ?uri dbp:doctoralAdvisor <A> . ?uri a dbo:Scientist }
+Name the scientist whose academic advisor is <B> and supervisor is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:academicAdvisor <B> . ?uri dbp:doctoralAdvisor <A> . ?uri a dbo:Scientist }
+Name the scientist whose doctoral supervisor's doctoral student is <A>?,SELECT DISTINCT ?uri where { ?x dbo:doctoralStudent <A> . ?uri dbp:doctoralAdvisor ?x . ?uri a dbo:Scientist }
+Name the scientist whose supervisor also supervised <A>?,SELECT DISTINCT ?uri where { ?x dbp:doctoralStudents <A> . ?uri dbp:doctoralAdvisor ?x . ?uri a dbo:Scientist }
+Name the scientist whose supervisor was <A> and had a doctoral students named <B>?,SELECT DISTINCT ?uri where { ?uri dbo:doctoralAdvisor <A> . ?uri dbp:doctoralStudents <B> . ?uri a dbo:Scientist }
+Name the scientist whose supervisor was <B> and has won <A>?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralAdvisor <B> . ?uri dbp:prizes <A> . ?uri a dbo:Scientist }
+Name the species of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:species ?uri }
+Name the species of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:species ?uri }
+Name the species of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:species ?uri }
+Name the work institutions of <A>?,SELECT DISTINCT ?uri where { <A> dbp:workInstitutions ?uri }
+Namt the fields of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:fields ?uri }
+Scientists at <A> have won which awards?,SELECT DISTINCT ?uri where { ?x dbo:almaMater <A> . ?x dbp:awards ?uri . ?x a dbo:Scientist }
+To how many different species does the members of the <A> Kingdom belong?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:kingdom <A> . ?x dbo:species ?uri . ?uri a dbo:Species }
+To which students did <A> advised to?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralAdvisor <A> }
+Under which scientist did doctoral students <A> and <B> study?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralStudents <A> . ?uri dbp:doctoralStudents <B> . ?uri a dbo:Scientist }
+Under whom did <A> do his PhD?,SELECT DISTINCT ?uri where { ?uri dbo:doctoralStudent <A> }
+Was <A> a doctoral student of <B>?,ASK where { <B> dbo:doctoralStudent <A> }
+Was <A> a mission of <B>?,ASK where { <B> dbp:mission <A> }
+was <B> a <A>?,ASK where { <B> dbo:field <A> }
+Was <B> a doctoral student of <A>?,ASK where { <A> dbo:doctoralStudent <B> }
+Was <B> discovered by <A>,ASK where { <B> dbp:discoverer <A> }
+Was <B> discovered by <A>?,ASK where { <B> dbp:discoverer <A> }
+Was <B> invented in <A>,ASK where { <B> dbo:discoverer <A> }
+Was <B> on the <A> mission?,ASK where { <B> dbp:mission <A> }
+Was the body of <A> discovered in <B>?,ASK where { <A> dbo:bodyDiscovered <B> }
+what are some journals of academic <A>,SELECT DISTINCT ?uri where { ?uri dbp:discipline <A> }
+What are some mammals whose phylum is <A>?,SELECT DISTINCT ?uri where { ?uri dbp:phylum <A> . ?uri a dbo:Mammal }
+What are some scientists who have <A> citizenship?,SELECT DISTINCT ?uri where { ?uri dbo:citizenship <A> . ?uri a dbo:Scientist }
+What are the academic interests of the advisor of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:academicAdvisor ?x . ?x dbp:fields ?uri }
+What are the famous <A> scientists known for?,SELECT DISTINCT ?uri where { ?x dbo:almaMater <A> . ?x dbo:knownFor ?uri . ?x a dbo:Scientist }
+What are the mammals whose phylum is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:phylum <A> . ?uri a dbo:Mammal }
+What is <A> famous for?,SELECT DISTINCT ?uri where { <A> dbo:field ?uri }
+What is the academic discipline of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:academicDiscipline ?uri }
+What is the alma mater of the scientist  whose PhD advisor is <A> ?,SELECT DISTINCT ?uri where { ?x dbo:doctoralAdvisor <A> . ?x dbp:almaMater ?uri . ?x a dbo:Scientist }
+What is the alma mater of the scientist who is known for <A> ?,SELECT DISTINCT ?uri where { ?x dbo:knownFor <A> . ?x dbo:almaMater ?uri . ?x a dbo:Scientist }
+What is the alma mater of the scientists  known for  <A>?,SELECT DISTINCT ?uri where { ?x dbo:knownFor <A> . ?x dbp:almaMater ?uri . ?x a dbo:Scientist }
+What is the award won of the scientists known for <A>?,SELECT DISTINCT ?uri where { ?x dbp:knownFor <A> . ?x dbo:award ?uri . ?x a dbo:Scientist }
+What is the birth location of the advisor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:doctoralAdvisor ?x . ?x dbo:birthPlace ?uri }
+What is the birth place of the astronaut whose mission was the <A>r?,SELECT DISTINCT ?uri where { ?x dbp:mission <A> . ?x dbo:birthPlace ?uri . ?x a dbo:Astronaut }
+What is the field of interest of the advisor of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:academicAdvisor ?x . ?x dbp:fields ?uri }
+What is the field of the <B> and occupation of the <A>?,SELECT DISTINCT ?uri where { <B> dbo:field ?uri . <A> dbo:occupation ?uri }
+What is the official language of <B>comma which is the target area of <A> Journal?,SELECT DISTINCT ?uri where { <B> dbo:officialLanguage ?uri . <A> dbo:academicDiscipline ?uri }
+What is the scientist whose doctoral students are <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:doctoralStudent <B> . ?uri dbo:doctoralStudent <A> }
+What is the scientist whose PhD students are <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralStudents <B> . ?uri dbp:doctoralStudents <A> . ?uri a dbo:Scientist }
+What mammals are classified into <A> ?,SELECT DISTINCT ?uri where { ?uri dbo:order <A> . ?uri a dbo:Mammal }
+Where did the <A> grapes originate?,SELECT DISTINCT ?uri where { ?x dbo:species <A> . ?x dbo:origin ?uri . ?x a dbo:Grape }
+Where did the scientist study whose doctoral thesis was supervised by <A>?,SELECT DISTINCT ?uri where { ?x dbp:doctoralAdvisor <A> . ?x dbp:almaMater ?uri . ?x a dbo:Scientist }
+Where were the doctoral students of <A> born?,SELECT DISTINCT ?uri where { <A> dbo:doctoralStudent ?x . ?x dbp:placeOfBirth ?uri }
+Which  <A> astronaut was on mission <B>?,SELECT DISTINCT ?uri where { ?uri dbp:type <A> . ?uri dbp:mission <B> . ?uri a dbo:Astronaut }
+which astronaut's mission was <A>?,SELECT DISTINCT ?uri where { ?uri dbp:mission <A> }
+Which astronauts went on the <A> mission?,SELECT DISTINCT ?uri where { ?uri dbp:mission <A> . ?uri a dbo:Astronaut }
+Which awards have been given to scientists that graduated from <A>?,SELECT DISTINCT ?uri where { ?x dbo:almaMater <A> . ?x dbo:award ?uri . ?x a dbo:Scientist }
+Which famous physicist was academically advised by <A>?,SELECT DISTINCT ?uri where { ?uri dbo:academicAdvisor <A> . ?uri a dbo:Scientist }
+Which fields are covered by academic journals in the <A>?,SELECT DISTINCT ?uri where { ?x dbp:country <A> . ?x dbp:discipline ?uri . ?x a dbo:AcademicJournal }
+Which fields' academic journals are found in the <A>?,SELECT DISTINCT ?uri where { ?x dbo:country <A> . ?x dbp:discipline ?uri }
+Which kmascot od <A> species of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:species ?uri . <A> dbp:mascot ?uri }
+Which moto of <A> is also the academic discipline of <B> ?,SELECT DISTINCT ?uri where { <A> dbp:motto ?uri . <B> dbo:academicDiscipline ?uri }
+Which non fiction of the <B> is also the field of the <A> ?,SELECT DISTINCT ?uri where { <B> dbo:nonFictionSubject ?uri . <A> dbo:field ?uri }
+Which planet was discovered by <A> <B> ?,SELECT DISTINCT ?uri where { ?uri dbp:discoverer <A> . ?uri dbo:discoverer <B> . ?uri a dbo:Planet }
+which planet was discovered by <A>?,SELECT DISTINCT ?uri where { ?uri dbo:discoverer <A> }
+Which planet was first discovered by <A>?,SELECT DISTINCT ?uri where { ?uri dbp:discoverer <A> . ?uri a dbo:Planet }
+Which scientist advised a doctoral student named <A>?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralStudents <A> . ?uri a dbo:Scientist }
+Which scientist is known for <A> and has <B> as his academic advisor ?,SELECT DISTINCT ?uri where { ?uri dbo:knownFor <A> . ?uri dbo:academicAdvisor <B> . ?uri a dbo:Scientist }
+Which scientist is known for writing <A>?,SELECT DISTINCT ?uri where { ?uri dbp:knownFor <A> }
+Which scientist was advised by <A>?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralAdvisor <A> . ?uri a dbo:Scientist }
+Which scientist's academic advisor is <A> and is known for invention of <B> ?,SELECT DISTINCT ?uri where { ?uri dbo:knownFor <B> . ?uri dbp:doctoralAdvisor <A> . ?uri a dbo:Scientist }
+Which species' members are there in the <A> kingdom?,SELECT DISTINCT ?uri where { ?x dbo:kingdom <A> . ?x dbo:species ?uri }
+Which work institutions of the <A> is the  alma mater of the <B> ?,SELECT DISTINCT ?uri where { <A> dbp:workInstitutions ?uri . <B> dbp:almaMater ?uri }
+Which work of <A> is close to the area of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:discipline ?uri . <A> dbo:occupation ?uri }
+Who are the people whose phD advisor was <A>?,SELECT DISTINCT ?uri where { ?uri dbp:doctoralAdvisor <A> . ?uri a dbo:Person }
+Who are the scientists known for the <A>?,SELECT DISTINCT ?uri where { ?uri dbp:knownFor <A> . ?uri a dbo:Scientist }
+Who discovered <A> ?,SELECT DISTINCT ?uri where { <A> dbo:discoverer ?uri }
+Who discovered <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbp:discoverer ?uri . <A> dbo:discoverer ?uri }
+Who have done their PhDs under a <A> winner?,SELECT DISTINCT ?uri where { ?x dbp:prizes <A> . ?uri dbp:doctoralAdvisor ?x }
+Who is the scientist whose academic advisor is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:academicAdvisor <A> . ?uri a dbo:Scientist }
+Who is the scientist whose academic advisor was <A>?,SELECT DISTINCT ?uri where { ?uri dbo:academicAdvisor <A> . ?uri a dbo:Scientist }
+Who is the scientist whose doctoral student is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:doctoralStudent <A> . ?uri a dbo:Scientist }
+Who was in missions of <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:mission <B> . ?uri dbp:mission <A> }
+Who was in the missions of <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:mission <A> . ?uri dbp:mission <B> }
+Whose academic advisor works at the <A>?,SELECT DISTINCT ?uri where { ?x dbp:workInstitutions <A> . ?uri dbo:academicAdvisor ?x }
+Whose doctoral student is <A>,SELECT DISTINCT ?uri where { ?uri dbo:doctoralStudent <A> }
+<A> is the origin of how many things?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:origin <A> }
+<A> is used in making what?,SELECT DISTINCT ?uri where { ?uri dbo:ingredient <A> }
+<B> and <A> are citizens of which country?,SELECT DISTINCT ?uri where { <B> dbo:citizenship ?uri . <A> dbo:citizenship ?uri }
+Count all the <A> people,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:citizenship <A> }
+Count all the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:rank <A> }
+Count all the different purposes followed by the different <A>.,SELECT DISTINCT COUNT(?uri) where { ?x dbp:type <A> . ?x dbp:purpose ?uri }
+Count all the ethinic group who speaks language which belongs to <A> family ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:languageFamily <A> . ?uri dbp:languages ?x . ?uri a dbo:EthnicGroup }
+Count all the things licensed as <A>.,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:license <A> }
+Count the  origin of the beverages which have been originated in <A> /,SELECT DISTINCT COUNT(?uri) where { ?x dbp:origin <A> . ?x dbp:origin ?uri }
+Count the birthplaces of recepients of the <A>.,SELECT DISTINCT COUNT(?uri) where { ?x dbo:honours <A> . ?x dbo:birthPlace ?uri . ?uri a dbo:Place }
+Count the different types of <A> ?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:type <A> }
+Count the drinks originated in <A>.,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:origin <A> . ?uri a dbo:Beverage }
+Count the key people of the <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:keyPeople ?uri }
+Count the number of cities on the <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:cities ?uri }
+Count the number of ingredient of the foods which have one of the ingredient is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:ingredient <A> . ?x dbo:ingredient ?uri }
+Count the number of members of the organization which have <A> as one of the member ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:membership <A> . ?x dbp:membership ?uri }
+Count the number of places where <A> university have died?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:education <A> . ?x dbo:deathPlace ?uri }
+Count the number of tenants whose one of the tenant is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:tenant <A> . ?x dbo:tenant ?uri }
+Count the number of things people who know <A> are known for ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:knownFor <A> . ?x dbo:knownFor ?uri }
+Count the tenants of <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbp:tenants ?uri }
+Does <A> mean the same as a <B>?,ASK where { <A> dbp:meaning <B> }
+Does <B> <A>?,ASK where { <B> dbp:mainInterests <A> }
+Does the <A> belong in the <B> kingdom?,ASK where { <A> dbo:kingdom <B> }
+does the <A> have the <B>?,ASK where { <A> dbp:license <B> }
+During the reigns of which monarchs was the name to the kingdom <A>?,SELECT DISTINCT ?uri where { ?uri dbp:title <A> }
+Find the total number of  ingredient of the recepies whose ingredient is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:ingredient <A> . ?x dbo:ingredient ?uri }
+For a position in which institution were both <B> and <A> both appointed?,SELECT DISTINCT ?uri where { <B> dbo:nominee ?uri . <A> dbo:nominee ?uri . ?uri a dbo:Organisation }
+For all the senators who once studied in <A>comma give their burial place?,SELECT DISTINCT ?uri where { ?x dbo:almaMater <A> . ?x dbp:restingplace ?uri . ?x a dbo:Senator }
+For everyone who died in <A>comma count their different fields of work.,SELECT DISTINCT COUNT(?uri) where { ?x dbp:deathPlace <A> . ?x dbp:fields ?uri }
+For which games are <A> and <B> both famous?,SELECT DISTINCT ?uri where { <A> dbo:knownFor ?uri . <B> dbo:knownFor ?uri }
+From where is <A> billed?,SELECT DISTINCT ?uri where { <A> dbp:billed ?uri }
+From which country is <A>'s nationality ?,SELECT DISTINCT ?uri where { <A> dbp:nationality ?uri }
+Give me a count of mammals whose family is <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:family <A> . ?uri a dbo:Mammal }
+Give me a count on associates of <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:associatedActs <A> }
+Give me list of people who were the first to climb a peak in the <A>?,SELECT DISTINCT ?uri where { ?x dbo:locatedInArea <A> . ?x dbo:firstAscentPerson ?uri }
+Give me some organizations working for <A>,SELECT DISTINCT ?uri where { ?uri dbp:purpose <A> . ?uri a dbo:Organisation }
+Give me someone on the board of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:board <A> }
+Give me the count of all people who ascented a peak in <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:locatedInArea <A> . ?x dbo:firstAscentPerson ?uri . ?uri a dbo:Person }
+Give me the count of interests of the philosopher whose primary interest is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:mainInterests <A> . ?x dbp:mainInterests ?uri }
+Give me the total number of membership of the organisations which have memebers as  <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:membership <A> . ?x dbp:membership ?uri }
+How many <A> are there?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:family <A> }
+How many <A> have taxonomy as <B> and domain as Bacteria?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:order <B> . ?uri dbp:domain <A> }
+How many awards have been given to the ones who died of <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:deathCause <A> . ?x dbo:award ?uri . ?uri a dbo:Award }
+How many awards have been given to the participants of the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:race <A> . ?x dbo:honours ?uri }
+How many causes of death have been associated with <A> citizens?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:citizenship <A> . ?x dbo:deathCause ?uri }
+How many cities are around the sea in which the the <A> meets?,SELECT DISTINCT COUNT(?uri) where { <A> dbo:inflow ?x . ?x dbp:cities ?uri . ?x a dbo:Sea }
+How many different layouts do cars designed by <A> have?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:designer <A> . ?x dbo:layout ?uri }
+How many different things are used as ingredients in <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:country <A> . ?x dbo:ingredient ?uri }
+How many dishes are made with an ingredient belonging to the <A> species?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:division <A> . ?uri dbo:ingredient ?x . ?uri a dbo:Food }
+How many food items have an ingredient from the <A> family?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:order <A> . ?uri dbo:ingredient ?x . ?uri a dbo:Food }
+How many genres gave birth to other genres which emphasize <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:instruments <A> . ?x dbo:stylisticOrigin ?uri . ?uri a dbo:MusicGenre }
+How many have been venerateds in <B> and <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:veneratedIn <B> . ?uri dbo:veneratedIn <A> }
+How many have family as <B> and order (taxonomy) is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:family <B> . ?uri dbo:order <A> }
+How many ingedients are required to make the <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbo:ingredient ?uri }
+How many licensee are therecomma of the radio stations whose area is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:area <A> . ?x dbp:licensee ?uri }
+How many maintainers are there of the bridges that can carry <A> over them?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:carries <A> . ?x dbo:maintainedBy ?uri }
+How many members are there of the order of <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:order <A> }
+How many molluscas are there whose families are <B> and <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:family <B> . ?uri dbo:family <A> }
+How many organizations work for <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:purpose <A> }
+How many other family of the mammals exists  whose family is also <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:family <A> . ?x dbo:family ?uri }
+How many other ingredient are there in the foods whihh have one of the ingredient as <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:ingredient <A> . ?x dbo:ingredient ?uri }
+How many other key people are there of the non-profit organisations whose key people is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:keyPeople <A> . ?x dbp:keyPeople ?uri }
+How many people are buried in <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:placeofburial <A> }
+How many people are buried in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:placeOfBurial <A> }
+How many people are buried in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:restingPlace <A> }
+How many people are known for <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:knownFor <A> }
+How many people are there who have relationship with <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:relation <A> }
+How many people have been canonized by <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:canonizedBy <A> }
+How many people have been the first one to scale a peak in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:locatedInArea <A> . ?x dbo:firstAscentPerson ?uri . ?uri a dbo:Person }
+How many people hold important positions alongwith <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:keyPerson <A> . ?x dbp:keyPeople ?uri }
+How many people live in <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:residence <A> }
+How many people live in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:residence <A> . ?uri a dbo:Person }
+How many people were opponents of the ones buried in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:restingPlace <A> . ?x dbo:opponent ?uri . ?uri a dbo:Person }
+How many people won the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:prizes <A> }
+How many people work at the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:occupation <A> }
+How many people work in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbp:office <A> }
+How many relatives are there of people fought in the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:battles <A> . ?x dbo:relation ?uri }
+How many relatives are there of the people who died in <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:placeOfDeath <A> . ?x dbo:relation ?uri }
+How many relatives are there of veterans of <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:battle <A> . ?x dbo:relation ?uri }
+How many tenants are there in the <A>?,SELECT DISTINCT COUNT(?uri) where { <A> dbo:tenant ?uri }
+How many things are people who died in <A> known for?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:deathPlace <A> . ?x dbo:knownFor ?uri }
+How many things have made different people living in <A> famous?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:nationality <A> . ?x dbo:knownFor ?uri }
+In what group <A> and <B> were previously involved?,SELECT DISTINCT ?uri where { ?uri dbp:pastMembers <A> . ?uri dbp:pastMembers <B> . ?uri a dbo:Group }
+In which countries is <A> used as a food ingredient?,SELECT DISTINCT ?uri where { ?x dbo:ingredient <A> . ?x dbp:country ?uri . ?x a dbo:Food }
+Is <A>  the first person to scale <B>?,ASK where { <B> dbo:firstAscentPerson <A> }
+Is <A> a main ingredient of <B>?,ASK where { <B> dbp:mainIngredient <A> }
+Is <A> the distributing label of <B>?,ASK where { <B> dbo:distributingLabel <A> }
+Is <A> the distributor of <B>?,ASK where { <A> dbo:distributingLabel <B> }
+Is <A> the main ingredient of <B>?,ASK where { <B> dbp:mainIngredient <A> }
+Is <A> the main interest of <B>?,ASK where { <B> dbo:mainInterest <A> }
+Is <B> a <A>?,ASK where { <B> dbp:gender <A> }
+Is <B> an <A>?,ASK where { <B> dbo:kingdom <A> }
+Is <B> belong to the <A> family?,ASK where { <B> dbo:languageFamily <A> }
+Is <B> belong to the domain <A>?,ASK where { <B> dbp:domain <A> }
+Is <B> interested in <A>?,ASK where { <B> dbp:mainInterests <A> }
+Is <B> the main interests of <A>?,ASK where { <A> dbp:mainInterests <B> }
+Is <B> the membership of <A>?,ASK where { <A> dbp:membership <B> }
+Is <B> the national motto of <A>?,ASK where { <A> dbp:nationalMotto <B> }
+Is <B> the result of <A>?,ASK where { <A> dbp:result <B> }
+Is <B> the right tributary of <A>?,ASK where { <A> dbo:rightTributary <B> }
+Is the <A> similar to the <B>?,ASK where { <B> dbo:relatedMeanOfTransportation <A> }
+Is the <B> a <A>?,ASK where { <B> dbo:class <A> }
+Is the <B> a <A>?,ASK where { <B> dbp:settlementType <A> }
+Is the <B> related to <A>?,ASK where { <A> dbo:relatedMeanOfTransportation <B> }
+Is the <B> under the jurisdiction of <A>?,ASK where { <B> dbp:jurisdiction <A> }
+List all crafts of the people whose one of the profession is <A> ?,SELECT DISTINCT ?uri where { ?x dbo:occupation <A> . ?x dbo:occupation ?uri . ?x a dbo:Person }
+List all important people of the non profit organization which has <A> as a key person ?,SELECT DISTINCT ?uri where { ?x dbp:keyPeople <A> . ?x dbp:keyPeople ?uri . ?x a dbo:Non-ProfitOrganisation }
+List all the line of <A>?,SELECT DISTINCT ?uri where { <A> dbp:line ?uri }
+List all the members of the organization whose one of the members is <A> ?,SELECT DISTINCT ?uri where { ?x dbp:membership <A> . ?x dbp:membership ?uri . ?x a dbo:Organisation }
+List all the nicknames of the city which has <A> as one of it ?,SELECT DISTINCT ?uri where { ?x dbp:nickname <A> . ?x dbp:nickname ?uri }
+List all the notable works of  <A>?,SELECT DISTINCT ?uri where { <A> dbo:notableWork ?uri }
+List all the settlements which has a part named <A> ?,SELECT DISTINCT ?uri where { ?x dbo:part <A> . ?x dbo:part ?uri . ?x a dbo:Settlement }
+List all those whose relatives' nationality is <A>.,SELECT DISTINCT ?uri where { ?x dbp:nationality <A> . ?uri dbo:relative ?x }
+List down the important people of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:keyPeople ?uri }
+List down the opponents of <A>?,SELECT DISTINCT ?uri where { <A> dbo:opponent ?uri }
+List down the schools whose mascot's order is <A>?,SELECT DISTINCT ?uri where { ?x dbo:order <A> . ?uri dbp:mascot ?x }
+List out the people who are related to the relatives of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:relation ?x . ?x dbo:relation ?uri }
+list some <A> people?,SELECT DISTINCT ?uri where { ?uri dbp:nationality <A> }
+List the <A> with branch as <B> ?,SELECT DISTINCT ?uri where { ?uri dbp:branch <B> . ?uri dbp:rank <A> }
+List the cities which share the same water body as that of <A> ?,SELECT DISTINCT ?uri where { ?x dbp:cities <A> . ?x dbp:cities ?uri . ?x a dbo:BodyOfWater }
+List the director of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:director ?uri }
+list the founders of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:founder ?uri }
+List the home town of the people who have <A> as one of it ?,SELECT DISTINCT ?uri where { ?x dbp:homeTown <A> . ?x dbp:homeTown ?uri . ?x a dbo:Person }
+List the import people of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:keyPeople ?uri }
+List the ingredient of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:ingredient ?uri }
+List the ingredients of <A>?,SELECT DISTINCT ?uri where { <A> dbo:ingredient ?uri }
+List the main ingredient of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:mainIngredient ?uri }
+List the maintainers of <A>?,SELECT DISTINCT ?uri where { <A> dbo:maintainedBy ?uri }
+List the name of those who became famous for something garrisoned at <A>?,SELECT DISTINCT ?uri where { ?x dbo:garrison <A> . ?uri dbp:knownFor ?x }
+List the opponents of the relatives of <A>?,SELECT DISTINCT ?uri where { ?x dbo:relation <A> . ?x dbo:opponent ?uri . ?x a dbo:Person }
+list the organisation with motive for <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:purpose <B> . ?uri dbp:purpose <A> . ?uri a dbo:Organisation }
+List the other nicknames of city which has one of the nickname as <A> ?,SELECT DISTINCT ?uri where { ?x dbp:nickname <A> . ?x dbp:nickname ?uri }
+List the parts of <A>?,SELECT DISTINCT ?uri where { <A> dbo:part ?uri }
+List the people residing in <A>?,SELECT DISTINCT ?uri where { ?uri dbp:residence <A> }
+List the primary  subjects of <A>?,SELECT DISTINCT ?uri where { <A> dbp:subject ?uri }
+List the relatives of the governor of <A>?,SELECT DISTINCT ?uri where { <A> dbo:governor ?x . ?x dbo:relation ?uri }
+List the successor of successor of <A>,SELECT DISTINCT ?uri where { <A> dbo:successor ?x . ?x dbo:successor ?uri }
+List the total number of board members who share board with <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:board <A> . ?x dbo:board ?uri }
+Name a <B> whose resting place is <A> ?,SELECT DISTINCT ?uri where { ?uri dbp:rank <B> . ?uri dbp:restingplace <A> }
+Name all the venues of the convention which has also been hosted in <A>,SELECT DISTINCT ?uri where { ?x dbp:venue <A> . ?x dbp:venue ?uri }
+Name the  people whose residence is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:residence <A> . ?uri a dbo:Person }
+name the <A>'s distributer ?,SELECT DISTINCT ?uri where { <A> dbo:distributor ?uri }
+Name the agency of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:agencyName ?uri }
+Name the appointer of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:appointer ?uri }
+Name the associate acts of  <A>?,SELECT DISTINCT ?uri where { <A> dbp:associatedActs ?uri }
+Name the branch of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:branch ?uri }
+Name the common distributing label of the <A> and <B> ?,SELECT DISTINCT ?uri where { <A> dbo:distributingLabel ?uri . <B> dbo:distributingLabel ?uri }
+Name the common home port of the <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:homeport ?uri . <B> dbo:homeport ?uri }
+Name the common nationality of <A> and <B> ?,SELECT DISTINCT ?uri where { <A> dbo:nationality ?uri . <B> dbo:nationality ?uri }
+Name the common serving line of <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:servingRailwayLine ?uri . <A> dbo:servingRailwayLine ?uri }
+Name the console whose successor is <A> and predecessor is <B>?,SELECT DISTINCT ?uri where { ?uri dbo:successor <A> . ?uri dbp:predecessor <B> . ?uri a dbo:InformationAppliance }
+Name the ground of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:ground ?uri }
+Name the incumbent of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:incumbent ?uri }
+Name the key people of the non-profit organisations whose one of the key person is <A> ?,SELECT DISTINCT ?uri where { ?x dbp:keyPeople <A> . ?x dbp:keyPeople ?uri }
+Name the licensee of the <A> who has the affiliation of  <B> ?,SELECT DISTINCT ?uri where { <A> dbp:licensee ?uri . <B> dbp:affiliation ?uri }
+Name the mammals which are <A> and belongs to family of <B> ?,SELECT DISTINCT ?uri where { ?uri dbo:order <A> . ?uri dbo:family <B> . ?uri a dbo:Mammal }
+Name the members of  boards of <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:board <B> . ?uri dbo:board <A> }
+Name the office holders whose successor died in <A>?,SELECT DISTINCT ?uri where { ?x dbo:deathPlace <A> . ?uri dbo:successor ?x . ?uri a dbo:OfficeHolder }
+Name the office of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:office ?uri }
+Name the origin of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:origin ?uri }
+Name the part of <A> >,SELECT DISTINCT ?uri where { <A> dbo:part ?uri }
+Name the partners of <A>?,SELECT DISTINCT ?uri where { <A> dbo:partner ?uri }
+Name the partners of the models whose one of the partner is <A> ?,SELECT DISTINCT ?uri where { ?x dbo:partner <A> . ?x dbo:partner ?uri . ?x a dbo:Model }
+Name the parts of the settlements which has <A> one of the parts ?,SELECT DISTINCT ?uri where { ?x dbo:part <A> . ?x dbo:part ?uri . ?x a dbo:Settlement }
+Name the person whose relation is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:relation <A> . ?uri a dbo:Person }
+Name the person with opponents <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:opponent <B> . ?uri dbo:opponent <A> . ?uri a dbo:Person }
+Name the place of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:place ?uri }
+Name the president whose had relatives in <B> and lieutenant named <A>?,SELECT DISTINCT ?uri where { ?uri dbo:relation <B> . ?uri dbo:lieutenant <A> . ?uri a dbo:President }
+Name the profession of <A> for which <B> was also nominated ?,SELECT DISTINCT ?uri where { <B> dbo:nominee ?uri . <A> dbp:order ?uri }
+name the region served by <A> which was also the conflict region in <B>,SELECT DISTINCT ?uri where { <A> dbo:service ?uri . <B> dbp:result ?uri }
+Name the serving line of <A>?,SELECT DISTINCT ?uri where { <A> dbo:servingRailwayLine ?uri }
+Name the source <A> ?,SELECT DISTINCT ?uri where { <A> dbo:source ?uri }
+Name the source of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:source ?uri }
+Name the ssignificant buildings of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:significantBuilding ?uri }
+Name the states which have been billed by the wrestlers who has also <A> ?,SELECT DISTINCT ?uri where { ?x dbp:billed <A> . ?x dbp:billed ?uri . ?x a dbo:Wrestler }
+Name the street address of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:address ?uri }
+Name the tenants of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:tenant ?uri }
+Of what all has <A> been an editor of?,SELECT DISTINCT ?uri where { ?uri dbp:editing <A> }
+Of which countries  does <A> have citizenship?,SELECT DISTINCT ?uri where { <A> dbp:citizenship ?uri }
+On what subject does <A> air?,SELECT DISTINCT ?uri where { <A> dbp:format ?uri }
+Tell me the total number of organizations who maintain the bridges made by the <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:designer <A> . ?x dbo:maintainedBy ?uri . ?uri a dbo:Organisation }
+The official residence of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:residence ?uri }
+To which branch <A>  belong ?,SELECT DISTINCT ?uri where { <A> dbp:branch ?uri }
+To which country is <A> from?,SELECT DISTINCT ?uri where { <A> dbp:origin ?uri }
+To which families does the <A> belong ?,SELECT DISTINCT ?uri where { <A> dbo:family ?uri }
+To which family does <A> belongs to ?,SELECT DISTINCT ?uri where { <A> dbo:family ?uri }
+To which label did <A> and <B> sign up?,SELECT DISTINCT ?uri where { <A> dbp:label ?uri . <B> dbp:label ?uri }
+To which settlement does <A> belong to?,SELECT DISTINCT ?uri where { <A> dbp:cities ?uri }
+To whom was <A> born to?,SELECT DISTINCT ?uri where { <A> dbo:parent ?uri }
+Under which common jurisdiction do <B> and <A> fall?,SELECT DISTINCT ?uri where { <B> dbo:localAuthority ?uri . <A> dbo:localAuthority ?uri }
+Was <A> a part of <B> movement?,ASK where { <A> dbp:movement <B> }
+Was <A> an interest of <B>?,ASK where { <B> dbo:mainInterest <A> }
+Was <A> beatified by <B>?,ASK where { <A> dbp:beatifiedBy <B> }
+was <A> canonized by <B>?,ASK where { <A> dbp:canonizedBy <B> }
+Was <A> canonized by <B>?,ASK where { <A> dbp:canonizedBy <B> }
+Was <A> the winner of the <B>?,ASK where { <B> dbp:incumbent <A> }
+Was <B> a <A>?,ASK where { <B> dbp:rank <A> }
+Was <B> a nominee of <A>?,ASK where { <B> dbo:nominee <A> }
+Was <B> a nominee of the <A>?,ASK where { <B> dbo:nominee <A> }
+Was <B> at the rank of <A> ever?,ASK where { <B> dbp:rank <A> }
+Was <B> beatified by <A> the second?,ASK where { <B> dbp:beatifiedBy <A> }
+Was <B> by <A>,ASK where { <B> dbp:trainer <A> }
+Was <B> canonized by <A>?,ASK where { <B> dbp:canonizedBy <A> }
+Was <B> from the <A> School of thought?,ASK where { <B> dbp:movement <A> }
+Was <B> the first one to ascend one of the peaks in the <A>?,ASK where { <A> dbo:firstAscentPerson <B> }
+Was <B> the first person that ascended the <A>?,ASK where { <A> dbo:firstAscentPerson <B> }
+Was the <A> distributed by <B>?,ASK where { <A> dbo:distributingLabel <B> }
+Was the <B> released in <A>?,ASK where { <B> dbp:released <A> }
+Were the bodies involved in the <A> discovered in <B>?,ASK where { <A> dbp:bodyDiscovered <B> }
+What  is the meaning of the <B> which is also a relegion of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:meaning ?uri . <A> dbo:type ?uri }
+What are <A> and <B>comma both known for?,SELECT DISTINCT ?uri where { <A> dbp:knownFor ?uri . <B> dbp:knownFor ?uri }
+What are <A> in the italic family of languages?,SELECT DISTINCT ?uri where { ?uri dbo:languageFamily <A> }
+What are a few molluscas whose family is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:family <A> . ?uri a dbo:Mollusca }
+What are some <A> birds?,SELECT DISTINCT ?uri where { ?uri dbo:family <A> . ?uri a dbo:Bird }
+What are some <A> citizens famous for?,SELECT DISTINCT ?uri where { ?x dbo:nationality <A> . ?x dbo:knownFor ?uri }
+What are some <A>?,SELECT DISTINCT ?uri where { ?uri dbo:family <A> }
+What are some <A>?,SELECT DISTINCT ?uri where { ?uri dbo:order <A> }
+What are some causes of death of <A>?,SELECT DISTINCT ?uri where { ?x dbo:ethnicity <A> . ?x dbo:deathCause ?uri }
+What are some common ingredients used in <A> dishes?,SELECT DISTINCT ?uri where { ?x dbo:country <A> . ?x dbo:ingredient ?uri }
+what are some common surnames of <A> people?,SELECT DISTINCT ?uri where { ?uri dbp:gender <A> }
+What are some dishes from the family of dishes which primarily use <A>?,SELECT DISTINCT ?uri where { ?x dbp:mainIngredient <A> . ?uri dbo:type ?x . ?uri a dbo:Food }
+What are some families of mammals in the <A> kingdom?,SELECT DISTINCT ?uri where { ?x dbo:kingdom <A> . ?x dbo:family ?uri . ?x a dbo:Mammal }
+What are some famous <A> known for?,SELECT DISTINCT ?uri where { ?x dbp:field <A> . ?x dbp:knownFor ?uri }
+What are some given names for <A>?,SELECT DISTINCT ?uri where { ?uri dbo:gender <A> }
+What are some important people in NGOs headed by <A>?,SELECT DISTINCT ?uri where { ?x dbo:keyPerson <A> . ?x dbp:keyPeople ?uri . ?x a dbo:Non-ProfitOrganisation }
+What are some parties which have people from <A> as a member?,SELECT DISTINCT ?uri where { ?x dbp:placeOfBirth <A> . ?x dbp:party ?uri }
+What are some relatives of <A> veterans?,SELECT DISTINCT ?uri where { ?x dbp:battles <A> . ?x dbo:relation ?uri . ?x a dbo:MilitaryPerson }
+What are the academic interest of <A>?,SELECT DISTINCT ?uri where { <A> dbp:mainInterests ?uri }
+What are the academic interests of the past members of <A>?,SELECT DISTINCT ?uri where { <A> dbp:pastMembers ?x . ?x dbp:mainInterests ?uri }
+What are the awrds won by <A> ?,SELECT DISTINCT ?uri where { <A> dbo:service ?uri }
+What are the beverages whose origin is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:origin <A> }
+What are the main interests of <A>?,SELECT DISTINCT ?uri where { <A> dbp:mainInterests ?uri }
+What are the name of the casualties affected by shooting rampage of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:deathCause <A> . ?uri a dbo:Person }
+What are the organisation founded in <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:foundationPlace <A> . ?uri dbo:foundationPlace <B> . ?uri a dbo:Organisation }
+What are the other key people of the non-profit organisations whose one of the  key person is <A> ?,SELECT DISTINCT ?uri where { ?x dbp:keyPeople <A> . ?x dbp:keyPeople ?uri . ?x a dbo:Non-ProfitOrganisation }
+What are the other launch site of the rockets which also have been launched from  <A> ?,SELECT DISTINCT ?uri where { ?x dbo:launchSite <A> . ?x dbo:launchSite ?uri . ?x a dbo:Rocket }
+What are the schools whose city is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:city <A> }
+What are the source of the streams whose one of the source is <A>?,SELECT DISTINCT ?uri where { ?x dbo:source <A> . ?x dbo:source ?uri . ?x a dbo:Stream }
+What are the things whose mascots are from the class <A>?,SELECT DISTINCT ?uri where { ?x dbo:class <A> . ?uri dbp:mascot ?x }
+What are the track and field events of <A>?,SELECT DISTINCT ?uri where { <A> dbp:athletics ?uri }
+What are the type of <A>?,SELECT DISTINCT ?uri where { <A> dbp:type ?uri }
+What belongs to the families of <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:family <B> . ?uri dbo:family <A> }
+What beverage was launched by <A>?,SELECT DISTINCT ?uri where { ?uri dbp:creator <A> . ?uri a dbo:Food }
+What beverages originate in <A>?,SELECT DISTINCT ?uri where { ?uri dbo:origin <A> . ?uri a dbo:Beverage }
+What came before  <B> and uses <A> as OS?,SELECT DISTINCT ?uri where { ?uri dbo:successor <B> . ?uri dbp:os <A> }
+What can be cooked out of things belonging to the order <A>?,SELECT DISTINCT ?uri where { ?x dbo:order <A> . ?uri dbo:ingredient ?x }
+What city is the residence of <A>?,SELECT DISTINCT ?uri where { <A> dbo:residence ?uri }
+What country provides a citizenship too <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbp:nationality ?uri . <B> dbo:nationality ?uri }
+What disease led to the demise of <A> and <B> ?,SELECT DISTINCT ?uri where { <A> dbo:deathCause ?uri . <B> dbo:deathCause ?uri . ?uri a dbo:Disease }
+What do the relatives of <A> do?,SELECT DISTINCT ?uri where { ?x dbo:relation <A> . ?x dbp:occupation ?uri }
+What do typically <A> work for?,SELECT DISTINCT ?uri where { ?x dbp:type <A> . ?x dbp:purpose ?uri }
+What genre is<B> fromcomma which employes <A>?,SELECT DISTINCT ?uri where { <A> dbo:occupation ?uri . <B> dbp:genre ?uri }
+What has been founded in the state that <A> is a part of?,SELECT DISTINCT ?uri where { ?x dbo:part <A> . ?uri dbo:foundationPlace ?x }
+What have some <A> citizens died of?,SELECT DISTINCT ?uri where { ?x dbp:citizenship <A> . ?x dbo:deathCause ?uri }
+What have some famous <A> died of?,SELECT DISTINCT ?uri where { ?x dbo:religion <A> . ?x dbo:deathCause ?uri }
+What honours did <A> receive?,SELECT DISTINCT ?uri where { <A> dbo:honours ?uri }
+What ingredients are used in preparing the dish of <A>?,SELECT DISTINCT ?uri where { <A> dbo:ingredient ?uri }
+What is <A> a part of?,SELECT DISTINCT ?uri where { <A> dbo:type ?uri }
+What is a <A>?,SELECT DISTINCT ?uri where { <A> dbo:type ?uri }
+What is a common ingredient used in boyt <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbo:ingredient ?uri . <A> dbo:ingredient ?uri }
+What is a common nickname given to both <A> and the <B> in massachusetts?,SELECT DISTINCT ?uri where { <A> dbp:nickname ?uri . <B> dbp:nickname ?uri }
+What is the <A> of Robert Nutting ?,SELECT DISTINCT ?uri where { <A> dbo:knownFor ?uri }
+What is the <A> of Union of Cambodian Democrats ?,SELECT DISTINCT ?uri where { <A> dbo:ideology ?uri }
+What is the academic discipline of the <B> and also an ingredient of the <A> ?,SELECT DISTINCT ?uri where { <B> dbo:academicDiscipline ?uri . <A> dbo:ingredient ?uri }
+What is the address of <A>?,SELECT DISTINCT ?uri where { <A> dbp:address ?uri }
+What is the appliance which uses the central processing unit manufactured by <A>?,SELECT DISTINCT ?uri where { ?uri dbo:cpu <A> . ?uri a dbo:InformationAppliance }
+What is the area of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:area ?uri }
+What is the area of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:area ?uri }
+What is the area of the <A> which is  official residence of the <B> ?,SELECT DISTINCT ?uri where { <A> dbp:area ?uri . <B> dbo:residence ?uri }
+What is the awards given to the horse whose grandson is the famous <A>?,SELECT DISTINCT ?uri where { <A> dbp:grandsire ?x . ?x dbo:honours ?uri . ?x a dbo:Horse }
+What is the colour of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:colour ?uri }
+What is the colour of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:colour ?uri }
+What is the common genere of <B> <A> ?,SELECT DISTINCT ?uri where { <B> dbp:knownFor ?uri . <A> dbo:genre ?uri }
+What is the common licence of the <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:license ?uri . <A> dbo:license ?uri }
+What is the common nationality of <A> a comedian and that of <B> ?,SELECT DISTINCT ?uri where { <A> dbp:nationality ?uri . <B> dbo:nationality ?uri }
+What is the common nationality of <A> anad <B> ?,SELECT DISTINCT ?uri where { <A> dbp:citizenship ?uri . <B> dbo:nationality ?uri }
+What is the common nickname given both to <B> <A>?,SELECT DISTINCT ?uri where { <B> dbp:nickname ?uri . <A> dbp:nickname ?uri }
+What is the common official residence of <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbp:residence ?uri . <A> dbp:residence ?uri }
+What is the common profession of <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:profession ?uri . <B> dbo:profession ?uri }
+What is the common profession of <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbp:office ?uri . <A> dbo:profession ?uri }
+What is the constituency of the people who died in <A>?,SELECT DISTINCT ?uri where { ?x dbp:deathPlace <A> . ?x dbp:constituency ?uri . ?x a dbo:Person }
+What is the content licence of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:license ?uri }
+What is the content license of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:license ?uri }
+What is the country of citizenship of the model whose die from is <A> ?,SELECT DISTINCT ?uri where { ?x dbp:deathCause <A> . ?x dbp:citizenship ?uri . ?x a dbo:Model }
+What is the country of the <A> and the <B> missile?,SELECT DISTINCT ?uri where { <A> dbo:origin ?uri . <B> dbo:origin ?uri }
+What is the county seat of the county which has an <A> School?,SELECT DISTINCT ?uri where { <A> dbo:county ?x . ?x dbo:countySeat ?uri }
+What is the death place of the <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:deathPlace ?uri . <B> dbo:deathPlace ?uri }
+What is the deathplace of people who have worked in <A>?,SELECT DISTINCT ?uri where { ?x dbp:mainInterests <A> . ?x dbp:placeOfDeath ?uri . ?x a dbo:Person }
+What is the deathplace of the <A> which is also the death place of  <B>?,SELECT DISTINCT ?uri where { <A> dbp:deathPlace ?uri . <B> dbp:deathPlace ?uri }
+What is the distributing label of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:distributingLabel ?uri }
+What is the home town of the <B> is the DOD of the <A> ?,SELECT DISTINCT ?uri where { <B> dbp:homeTown ?uri . <A> dbp:deathDate ?uri }
+What is the homeport of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:homeport ?uri }
+What is the hometown of the residents of <A>?,SELECT DISTINCT ?uri where { ?x dbo:residence <A> . ?x dbo:hometown ?uri }
+What is the ideology of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:ideology ?uri }
+What is the ideology of the <B> which is also the ideology of <A> ?,SELECT DISTINCT ?uri where { <B> dbo:ideology ?uri . <A> dbo:ideology ?uri }
+What is the job of the <B> which is also the office of the <A>,SELECT DISTINCT ?uri where { <B> dbo:occupation ?uri . <A> dbp:office ?uri }
+What is the label of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:label ?uri }
+What is the launch site of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:launchSite ?uri }
+What is the launch site of the <B> which was also the ground of <A> ?,SELECT DISTINCT ?uri where { <B> dbo:launchSite ?uri . <A> dbo:ground ?uri }
+What is the layout of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:layout ?uri }
+What is the location of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:other ?uri }
+What is the main common interests of the <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbp:mainInterests ?uri . <A> dbp:mainInterests ?uri }
+What is the mascot of the military unit in which <A> served?,SELECT DISTINCT ?uri where { <A> dbp:branch ?x . ?x dbp:mascot ?uri }
+What is the mascot of the military unit of <A>?,SELECT DISTINCT ?uri where { <A> dbp:branch ?x . ?x dbp:mascot ?uri }
+What is the mascot of the rival school of <A>,SELECT DISTINCT ?uri where { <A> dbp:rival ?x . ?x dbp:mascot ?uri }
+What is the meaning of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:meaning ?uri }
+What is the municipality of the <A> and also the  place of birth of the <B>,SELECT DISTINCT ?uri where { <A> dbo:municipality ?uri . <B> dbp:placeOfBirth ?uri }
+What is the name of <A>'s divine child?,SELECT DISTINCT ?uri where { ?uri dbo:parent <A> }
+What is the name of the person who has relations with <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:relation <A> . ?uri dbo:relation <B> . ?uri a dbo:Person }
+What is the national origin of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:nationalOrigin ?uri }
+What is the nationality of <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbp:nationality ?uri . <A> dbp:nationality ?uri }
+What is the nationality of the economist who is one of the important people in the <A>?,SELECT DISTINCT ?uri where { <A> dbo:keyPerson ?x . ?x dbo:nationality ?uri . ?x a dbo:Economist }
+What is the nationality of the successor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:successor ?x . ?x dbo:nationality ?uri }
+What is the number of occupation of the people who died in tampa <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbo:deathPlace <A> . ?x dbo:occupation ?uri }
+What is the occupation of the <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:occupation ?uri . <A> dbo:occupation ?uri }
+What is the official name of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:officialName ?uri }
+What is the official name of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:officialName ?uri }
+What is the official residence of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:residence ?uri }
+What is the official residence of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:residence ?uri }
+What is the official residence of the <A> which is also the death location of the <B> ?,SELECT DISTINCT ?uri where { <A> dbo:residence ?uri . <B> dbo:deathPlace ?uri }
+What is the official residence of the <B> which is also the palce of death of the <A> ?,SELECT DISTINCT ?uri where { <B> dbo:residence ?uri . <A> dbp:placeOfDeath ?uri }
+What is the official residence of the senator who is the deputy of <A>?,SELECT DISTINCT ?uri where { <A> dbp:deputy ?x . ?x dbo:residence ?uri . ?x a dbo:Senator }
+What is the order of <A>?,SELECT DISTINCT ?uri where { <A> dbp:order ?uri }
+What is the order of the <A> where <B> was also the nominee ?,SELECT DISTINCT ?uri where { <A> dbp:order ?uri . <B> dbo:nominee ?uri }
+What is the order of the <B> and profession of the <A>?,SELECT DISTINCT ?uri where { <B> dbp:order ?uri . <A> dbo:profession ?uri }
+What is the organisation whose purposes are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:purpose <A> . ?uri dbp:purpose <B> . ?uri a dbo:Organisation }
+What is the origin of <A>?,SELECT DISTINCT ?uri where { <A> dbo:origin ?uri }
+What is the place of the <B> which is also the  official residence of the <A>?,SELECT DISTINCT ?uri where { <B> dbp:place ?uri . <A> dbp:residence ?uri }
+What is the POD of the successor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:successor ?x . ?x dbo:deathPlace ?uri }
+What is the predecessor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:predecessor ?uri }
+What is the profession of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:profession ?uri }
+What is the profession of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:profession ?uri }
+What is the profession of the <B> and also the office of the <A> ?,SELECT DISTINCT ?uri where { <B> dbo:profession ?uri . <A> dbp:office ?uri }
+What is the purpose of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:purpose ?uri }
+What is the purpose of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:purpose ?uri }
+What is the residence of the personcomma who starred in <A> ?,SELECT DISTINCT ?uri where { <A> dbo:starring ?x . ?x dbp:residence ?uri . ?x a dbo:Person }
+What is the result of the <B> is also  the  place of the <A>?,SELECT DISTINCT ?uri where { <B> dbp:result ?uri . <A> dbp:place ?uri }
+What is the sea connected to <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:cities <A> . ?uri dbp:cities <B> . ?uri a dbo:Sea }
+What is the sea connected to <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:cities <B> . ?uri dbp:cities <A> . ?uri a dbo:Sea }
+What is the sea whose cities are <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:cities <B> . ?uri dbp:cities <A> . ?uri a dbo:Sea }
+What is the serving railway line of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:servingRailwayLine ?uri }
+What is the serving railway line of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:servingRailwayLine ?uri }
+What is the subject of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:subject ?uri }
+What is the successor of <A>,SELECT DISTINCT ?uri where { ?uri dbp:successor <A> }
+What is the title of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:title ?uri }
+What is the title of the successor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:successor ?x . ?x dbp:title ?uri }
+What is the total number of awards of the architects whose location born is <A> ?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:birthPlace <A> . ?x dbp:awards ?uri }
+What is the total number of other combatant of the military conflicts whose combatant is <A>?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:combatant <A> . ?x dbp:combatant ?uri }
+What is the total number of professions in which someone who has <A>d worked?,SELECT DISTINCT COUNT(?uri) where { ?x dbp:deathCause <A> . ?x dbo:occupation ?uri }
+What is the type of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:type ?uri }
+What is the type of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:type ?uri }
+What is the university to which <A> wentcomma and where <B> was a club manager?,SELECT DISTINCT ?uri where { <A> dbo:institution ?uri . <B> dbo:managerClub ?uri }
+What is the venerated in of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:veneratedIn ?uri }
+What is the venue of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:venue ?uri }
+What is the venue of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:venue ?uri }
+What kind of things are on the radio stations affiliated with the <A>?,SELECT DISTINCT ?uri where { ?x dbp:affiliations <A> . ?x dbo:programmeFormat ?uri . ?x a dbo:RadioStation }
+What mammals fall into the biological family <A>?,SELECT DISTINCT ?uri where { ?uri dbo:family <A> . ?uri a dbo:Mammal }
+What medals have been given to people who died of <A>?,SELECT DISTINCT ?uri where { ?x dbo:deathCause <A> . ?x dbo:award ?uri . ?x a dbo:Person }
+What organisation regulates and controls the <A>?,SELECT DISTINCT ?uri where { <A> dbo:tenant ?uri }
+What organisations purpose is <A>?,SELECT DISTINCT ?uri where { ?uri dbp:purpose <A> . ?uri a dbo:Organisation }
+What other things are provided by the producer of <A>?,SELECT DISTINCT ?uri where { ?x dbo:service <A> . ?x dbp:services ?uri }
+What people are known to work for <A>?,SELECT DISTINCT ?uri where { ?uri dbp:associatedActs <A> . ?uri a dbo:Person }
+What provides the services of <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:services <A> . ?uri dbp:services <B> }
+What royalties's sepulchre is <A>?,SELECT DISTINCT ?uri where { ?uri dbp:placeOfBurial <A> }
+What things canonized <B> and and also venerated the <A> ?,SELECT DISTINCT ?uri where { <B> dbo:canonizedBy ?uri . <A> dbp:veneratedIn ?uri }
+What things have founded place as <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:foundation <B> . ?uri dbp:foundation <A> }
+What was founded by <A> which has name of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:name ?uri . <A> dbp:founded ?uri }
+What was the career of some people who have committed <A>?,SELECT DISTINCT ?uri where { ?x dbp:deathCause <A> . ?x dbo:occupation ?uri }
+What was the result of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:result ?uri }
+What water bodies are nearest to <A> city?,SELECT DISTINCT ?uri where { ?uri dbo:nearestCity <A> . ?uri a dbo:BodyOfWater }
+What water bodies have primary inflows sa <A>?,SELECT DISTINCT ?uri where { ?uri dbo:inflow <A> }
+What were <A> and <B> nominated for ?,SELECT DISTINCT ?uri where { <A> dbo:nominee ?uri . <B> dbo:nominee ?uri }
+Which  person has opponent <A>?,SELECT DISTINCT ?uri where { ?uri dbo:opponent <A> . ?uri a dbo:Person }
+Which administrative headquarters of the <B> is also the resting place of the <A>,SELECT DISTINCT ?uri where { <B> dbo:capital ?uri . <A> dbo:restingPlace ?uri }
+Which appliance has cpu from <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:cpu <A> . ?uri dbo:cpu <B> . ?uri a dbo:InformationAppliance }
+Which appointer of <A> is the successor of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:successor ?uri . <A> dbp:appointer ?uri }
+Which are the predecessor of <A>?,SELECT DISTINCT ?uri where { <A> dbo:predecessor ?uri }
+Which are the predecessors of the cars which are similar to the <A>?,SELECT DISTINCT ?uri where { <A> dbp:related ?x . ?x dbo:predecessor ?uri }
+Which bacteria's taxonomic class is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:class <A> . ?uri a dbo:Bacteria }
+Which borough is common for <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbp:borough ?uri . <A> dbp:borough ?uri }
+Which cities of the <A> has Nickname <B>?,SELECT DISTINCT ?uri where { <A> dbp:cities ?uri . <B> dbp:nickname ?uri }
+Which city do both <B> and <A> come from?,SELECT DISTINCT ?uri where { <B> dbp:placeOfBirth ?uri . <A> dbo:birthPlace ?uri }
+Which city has it's landmark as <A>?,SELECT DISTINCT ?uri where { <A> dbo:maintainedBy ?uri }
+Which city is known for the people working in the <A>?,SELECT DISTINCT ?uri where { ?x dbp:workInstitutions <A> . ?x dbo:knownFor ?uri . ?x a dbo:Person }
+Which city was designed by <B> which is also the birht location of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:designer ?uri . <A> dbo:birthPlace ?uri }
+Which content license of the <A> is also the profession of the <B> ?,SELECT DISTINCT ?uri where { <A> dbp:license ?uri . <B> dbo:occupation ?uri }
+Which countries came together to serve a greater purpose and founded <A>?,SELECT DISTINCT ?uri where { <A> dbp:membership ?uri }
+Which country gave birth to the <A> and <B> aircrafts?,SELECT DISTINCT ?uri where { <A> dbp:nationalOrigin ?uri . <B> dbp:nationalOrigin ?uri }
+Which country has given citizenship to both <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:citizenship ?uri . <A> dbo:citizenship ?uri }
+Which country were the associates of <A> from?,SELECT DISTINCT ?uri where { <A> dbo:associate ?x . ?x dbo:nationality ?uri }
+Which country's engineered have studied at <A> Wroclaw?,SELECT DISTINCT ?uri where { ?x dbo:institution <A> . ?x dbp:nationality ?uri }
+Which expertise of the <A> is the  nationality of the <B> ?,SELECT DISTINCT ?uri where { <A> dbo:binomialAuthority ?uri . <B> dbo:nationality ?uri }
+Which famous person is born in <A>?,SELECT DISTINCT ?uri where { ?uri dbp:homeTown <A> }
+Which football managers managed <A>?,SELECT DISTINCT ?uri where { ?uri dbo:managerClub <A> }
+Which founder of <A> is also the jursdiction of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:jurisdiction ?uri . <A> dbp:founder ?uri }
+Which founder of <B> is also the judge of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:founder ?uri . <A> dbp:judges ?uri }
+Which holy places did consider <A> as a saint?,SELECT DISTINCT ?uri where { <A> dbp:veneratedIn ?uri }
+Which holy things canonized <A>?,SELECT DISTINCT ?uri where { <A> dbo:canonizedBy ?uri }
+Which interest of <B> is the relegion of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:mainInterests ?uri . <A> dbo:type ?uri }
+Which is the city closest to both the <A> and the home of <B>,SELECT DISTINCT ?uri where { <A> dbo:nearestCity ?uri . <B> dbo:nearestCity ?uri }
+Which job of <B> is the non-fiction subject of the <A>,SELECT DISTINCT ?uri where { <B> dbo:occupation ?uri . <A> dbo:nonFictionSubject ?uri }
+Which key person of <A> is the appointer of <B> ?,SELECT DISTINCT ?uri where { <B> dbo:appointer ?uri . <A> dbp:keyPeople ?uri }
+Which leader of <A> is a relative of <B>?,SELECT DISTINCT ?uri where { <B> dbo:relation ?uri . <A> dbo:keyPerson ?uri }
+Which license provider of <B> is also the designer of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:designer ?uri . <B> dbp:license ?uri }
+Which licensee of <B> is also the licensee of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:licensee ?uri . <A> dbp:licensee ?uri }
+Which mascot of <A> is also the nickname of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:nickname ?uri . <A> dbp:mascot ?uri }
+Which memeber of <B> is also the nationality of <A> ?,SELECT DISTINCT ?uri where { <B> dbp:membership ?uri . <A> dbp:nationality ?uri }
+Which models were featured <A>?,SELECT DISTINCT ?uri where { ?uri dbp:succeeded <A> . ?uri a dbo:PlayboyPlaymate }
+Which motion picture stories were edited by <A>?,SELECT DISTINCT ?uri where { ?uri dbo:writer <A> . ?uri a dbo:Film }
+Which nation is the origin of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:nationalOrigin ?uri }
+Which nationalist group was responsible for foundation of <A>?,SELECT DISTINCT ?uri where { <A> dbp:international ?uri }
+Which nationality of <A> is also the nationality of <B> ?,SELECT DISTINCT ?uri where { <A> dbp:nationality ?uri . <B> dbo:nationality ?uri }
+Which nickname of <A> is also the mascot of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:mascot ?uri . <A> dbp:nickname ?uri }
+Which non fictional subject of <B> is the athletics of <A> ?,SELECT DISTINCT ?uri where { <B> dbo:nonFictionSubject ?uri . <A> dbp:athletics ?uri }
+Which official residence of <B> is also the origin of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:origin ?uri . <B> dbo:residence ?uri }
+Which organisation has superintendent as <A>?,SELECT DISTINCT ?uri where { ?uri dbo:superintendent <A> . ?uri a dbo:Organisation }
+Which owner of <B> made <A> famous?,SELECT DISTINCT ?uri where { <B> dbp:owner ?uri . <A> dbo:knownFor ?uri }
+Which peak was first scaled by <A>?,SELECT DISTINCT ?uri where { ?uri dbo:firstAscentPerson <A> }
+Which person belongs to the board of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:board <A> . ?uri a dbo:Person }
+Which person's successor is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:successor <A> . ?uri a dbo:Person }
+Which predecessor of <A> was deputy to <B> ?,SELECT DISTINCT ?uri where { ?uri dbo:predecessor <A> . ?uri dbp:deputy <B> }
+Which purpose of the <B> is <A> is also know for ?,SELECT DISTINCT ?uri where { <B> dbp:purpose ?uri . <A> dbp:knownFor ?uri }
+Which relative of <A> is the appointer of <B> ?,SELECT DISTINCT ?uri where { <B> dbp:appointer ?uri . <A> dbo:relation ?uri }
+Which relative of <A> was the leader of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:relation ?uri . <B> dbp:leader ?uri }
+Which sea is surrounded by <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:cities <A> . ?uri dbp:cities <B> . ?uri a dbo:Sea }
+Which serving railway line of the <B> is the home port of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:homeport ?uri . <B> dbo:servingRailwayLine ?uri }
+Which set of researchers won the <A> award?,SELECT DISTINCT ?uri where { ?uri dbp:prizes <A> . ?uri a dbo:Scientist }
+Which sucessor of <A> is the sucessor of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:relation ?uri . <B> dbp:successor ?uri }
+Which title of <B> is also the nationality of <A>,SELECT DISTINCT ?uri where { <B> dbp:title ?uri . <A> dbo:nationality ?uri }
+Which type of  building is <A> ?,SELECT DISTINCT ?uri where { <A> dbp:buildingType ?uri }
+Which university of <A> is the place of death of <B> /,SELECT DISTINCT ?uri where { <A> dbp:university ?uri . <B> dbp:placeOfDeath ?uri }
+Which university provides license for <A> ?,SELECT DISTINCT ?uri where { <A> dbp:licensee ?uri }
+Which US city can be said to be a part of <B> and the <A>?,SELECT DISTINCT ?uri where { <B> dbp:cities ?uri . <A> dbp:cities ?uri }
+Which US state gave  us <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbp:birthPlace ?uri . <A> dbp:birthPlace ?uri }
+Which venue of <A> is also the death palce of <B> ?,SELECT DISTINCT ?uri where { <A> dbp:venue ?uri . <B> dbp:placeOfDeath ?uri }
+Which veterans served at <A>?,SELECT DISTINCT ?uri where { ?uri dbo:occupation <A> }
+Which were the philosophers whose primary interest was <A>?,SELECT DISTINCT ?uri where { ?uri dbp:mainInterests <A> . ?uri a dbo:Philosopher }
+Whichi office of <B> is also the part of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:part ?uri . <B> dbp:office ?uri }
+Whihc associate of <A> is also the founder of <B> ?,SELECT DISTINCT ?uri where { <A> dbo:associate ?uri . <B> dbo:founder ?uri }
+Who all are buried in <A>?,SELECT DISTINCT ?uri where { ?uri dbp:placeofburial <A> }
+Who all have been canonized by <A>,SELECT DISTINCT ?uri where { ?uri dbp:canonizedBy <A> }
+Who all have created new kinds of <A>?,SELECT DISTINCT ?uri where { ?x dbp:type <A> . ?x dbp:creator ?uri }
+Who all were venerated in <A>?,SELECT DISTINCT COUNT(?uri) where { ?uri dbo:veneratedIn <A> }
+Who appointed <A> ?,SELECT DISTINCT ?uri where { <A> dbo:appointer ?uri }
+Who appointed <B> and <A> to their office?,SELECT DISTINCT ?uri where { <B> dbo:appointer ?uri . <A> dbo:appointer ?uri }
+Who appointed both <B> and <A> to their respective offices?,SELECT DISTINCT ?uri where { <B> dbp:appointer ?uri . <A> dbp:appointer ?uri }
+Who appointed the successor of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:successor ?x . ?x dbp:appointer ?uri }
+Who appointed the successor of <A>?,SELECT DISTINCT ?uri where { <A> dbo:successor ?x . ?x dbp:appointer ?uri }
+Who are buried in  <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:placeOfBurial <A> . ?uri dbp:placeOfBurial <B> }
+Who are in the board of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:board ?uri }
+who are some <A>?,SELECT DISTINCT ?uri where { ?uri dbp:title <A> }
+Who are some US <A>?,SELECT DISTINCT ?uri where { ?uri dbp:rank <A> }
+Who are the astronauts associated with <A>?,SELECT DISTINCT ?uri where { ?uri dbp:type <A> . ?uri a dbo:Astronaut }
+Who are the biological parents of <A>?,SELECT DISTINCT ?uri where { <A> dbo:parent ?uri }
+Who are the founders of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:foundedBy ?uri }
+Who are the key people of <A>?,SELECT DISTINCT ?uri where { <A> dbp:keyPeople ?uri }
+who are the managers of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:managerclubs <A> }
+Who are the opponents of <A>?,SELECT DISTINCT ?uri where { <A> dbo:opponent ?uri }
+Who are the parent  of the people that  has POD as <A> ?,SELECT DISTINCT ?uri where { ?x dbo:deathPlace <A> . ?x dbo:parent ?uri }
+Who are the people which were the influencer of the personcomma who influenced <A> ?,SELECT DISTINCT ?uri where { <A> dbo:influencedBy ?x . ?x dbo:influencedBy ?uri . ?x a dbo:Person }
+Who are the people who died in a place architected by <A>,SELECT DISTINCT ?uri where { ?x dbo:architect <A> . ?uri dbo:deathPlace ?x . ?uri a dbo:Person }
+Who are the predecessors of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:predecessor <A> }
+Who are the tenants of <A>?,SELECT DISTINCT ?uri where { <A> dbp:tenants ?uri }
+Who collaborated with <A> and <B> ?,SELECT DISTINCT ?uri where { ?uri dbp:associatedActs <A> . ?uri dbp:associatedActs <B> }
+Who created the <A>?,SELECT DISTINCT ?uri where { <A> dbp:founded ?uri }
+Who did the associated act which is a <A> production ?,SELECT DISTINCT ?uri where { ?x dbp:producer <A> . ?uri dbp:associatedActs ?x }
+Who died due to <A> ?,SELECT DISTINCT ?uri where { ?uri dbo:deathCause <A> }
+Who directed <A> ?,SELECT DISTINCT ?uri where { <A> dbo:director ?uri }
+Who directed <A> and <B>?,SELECT DISTINCT ?uri where { <B> dbo:director ?uri . <A> dbo:director ?uri }
+Who founded the <A> NGO?,SELECT DISTINCT ?uri where { <A> dbo:foundedBy ?uri }
+Who founded the city where <A> die?,SELECT DISTINCT ?uri where { <A> dbo:deathPlace ?x . ?x dbo:founder ?uri }
+Who founded the sister stations of <A>?,SELECT DISTINCT ?uri where { ?x dbp:sisterNames <A> . ?x dbp:founder ?uri }
+Who gives the license of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:licensee ?uri }
+Who has <A> and <B> as parents ?,SELECT DISTINCT ?uri where { ?uri dbo:parent <A> . ?uri dbo:parent <B> }
+Who has allegiance is <B> and buried in <A>?,SELECT DISTINCT ?uri where { ?uri dbp:allegiance <B> . ?uri dbp:restingplace <A> }
+Who has canonized someone who's a <A>?,SELECT DISTINCT ?uri where { ?x dbp:titles <A> . ?x dbo:canonizedBy ?uri }
+Who has his resting place at  <B> and office at <A>?,SELECT DISTINCT ?uri where { ?uri dbo:restingPlace <B> . ?uri dbp:office <A> }
+Who has official residences at <A> <B>,SELECT DISTINCT ?uri where { ?uri dbo:residence <A> . ?uri dbo:residence <B> }
+Who has official residences at <B>>,SELECT DISTINCT ?uri where { ?uri dbo:residence <B> . ?uri dbo:residence <A> }
+Who holds shares in something famous for the <A>?,SELECT DISTINCT ?uri where { ?x dbo:knownFor <A> . ?uri dbp:owner ?x }
+Who is  venerated in  <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:veneratedIn <A> . ?uri dbo:veneratedIn <B> }
+Who is a religious figure titled <A>?,SELECT DISTINCT ?uri where { ?uri dbp:title <A> . ?uri a dbo:Religious }
+Who is a successor of Kingship whose parents were <A>?,SELECT DISTINCT ?uri where { ?x dbo:parent <A> . ?x dbo:successor ?uri . ?x a dbo:Royalty }
+Who is associated to <A>  and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:associate <A> . ?uri dbo:associate <B> }
+Who is associated to the predecessor of <A>?,SELECT DISTINCT ?uri where { ?x dbp:predecessor <A> . ?uri dbo:associate ?x }
+Who is considered to be the deciding person when it comes to crustaceans from the <A> family?,SELECT DISTINCT ?uri where { ?x dbo:family <A> . ?x dbo:binomialAuthority ?uri . ?x a dbo:Crustacean }
+Who is known for are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:knownFor <A> . ?uri dbo:knownFor <B> }
+Who is known for are <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:knownFor <B> . ?uri dbo:knownFor <A> }
+Who is the  distributor of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:distributor ?uri }
+who is the <A>?,SELECT DISTINCT ?uri where { ?uri dbp:order <A> }
+Who is the appointer of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:appointer ?uri }
+Who is the appointer of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:appointer ?uri }
+Who is the appointer of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:appointer ?uri }
+Who is the associate of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:associate ?uri }
+Who is the co-founder of the city where <A> died?,SELECT DISTINCT ?uri where { <A> dbp:placeOfDeath ?x . ?x dbo:founder ?uri . ?x a dbo:City }
+Who is the common distributer of <B> and <A> ?,SELECT DISTINCT ?uri where { <B> dbp:distributor ?uri . <A> dbo:distributor ?uri }
+Who is the distributer of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:distributor ?uri }
+Who is the founder of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:founder ?uri }
+Who is the founder of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:founder ?uri }
+Who is the founder of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:founder ?uri }
+Who is the founder of <A>?,SELECT DISTINCT ?uri where { <A> dbo:founder ?uri }
+Who is the founder of the trade union with whom <A> is affiliated?,SELECT DISTINCT ?uri where { <A> dbo:affiliation ?x . ?x dbp:founded ?uri }
+Who is the incumbent of <A>?,SELECT DISTINCT ?uri where { <A> dbo:incumbent ?uri }
+Who is the label of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:label ?uri }
+Who is the licensee of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:licensee ?uri }
+Who is the meaning of <A>  ?,SELECT DISTINCT ?uri where { <A> dbp:meaning ?uri }
+Who is the narrator of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:narrator ?uri }
+Who is the narrator of <A>?,SELECT DISTINCT ?uri where { <A> dbp:narrated ?uri }
+Who is the nominee of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:nominee ?uri }
+Who is the opponent of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:opponent ?uri }
+Who is the person opposed  by <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:opponent <A> . ?uri dbo:opponent <B> . ?uri a dbo:Person }
+Who is the person that first ascented the <B> and <A>?,SELECT DISTINCT ?uri where { <B> dbo:firstAscentPerson ?uri . <A> dbo:firstAscentPerson ?uri }
+Who is the person who are on the board of <A>?,SELECT DISTINCT ?uri where { ?uri dbo:board <A> . ?uri a dbo:Person }
+Who is the person whose home town is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:hometown <A> . ?uri a dbo:Person }
+Who is the person whose opponent's father is <A>?,SELECT DISTINCT ?uri where { ?x dbo:parent <A> . ?uri dbo:opponent ?x }
+Who is the person whose parent is <A>?,SELECT DISTINCT ?uri where { ?uri dbo:parent <A> . ?uri a dbo:Person }
+Who is the predecessor of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:predecessor ?uri }
+Who is the successor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:successor ?uri }
+Who is the successor of <A> ?,SELECT DISTINCT ?uri where { <A> dbp:successor ?uri }
+Who managed <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:managerclubs <A> . ?uri dbo:managerClub <B> }
+Who offers the services of <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbp:services <B> . ?uri dbp:services <A> }
+Who originally wrote the manga which was later illustrated by <A>?,SELECT DISTINCT ?uri where { ?x dbo:illustrator <A> . ?x dbp:author ?uri . ?x a dbo:Manga }
+Who owns <A>?,SELECT DISTINCT ?uri where { ?uri dbo:occupation <A> }
+Who penned <B> and <A>?,SELECT DISTINCT ?uri where { <A> dbo:writer ?uri . <B> dbp:author ?uri }
+Who starred <A> and fifety five <B> ?,SELECT DISTINCT ?uri where { <A> dbp:starring ?uri . <B> dbo:starring ?uri }
+Who voiced in <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:voice <A> . ?uri dbo:voice <B> }
+Who was member of boards at <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:board <B> . ?uri dbo:board <A> }
+Who was on the boards of <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:board <B> . ?uri dbo:board <A> }
+Who was once married to both <A> and <B>?,SELECT DISTINCT ?uri where { <A> dbo:partner ?uri . <B> dbo:partner ?uri }
+Who was succeeded by <A> as the office holder ?,SELECT DISTINCT ?uri where { ?uri dbo:successor <A> }
+who was the <A>?,SELECT DISTINCT ?uri where { <A> dbp:flagbearer ?uri }
+Who was the influencer of <B> who also starred in <A>?,SELECT DISTINCT ?uri where { <B> dbo:influencedBy ?uri . <A> dbo:starring ?uri }
+Who was the narrator in <A>,SELECT DISTINCT ?uri where { <A> dbp:narrated ?uri }
+Who was the opponent of <A> ?,SELECT DISTINCT ?uri where { <A> dbo:opponent ?uri }
+Who was the president at the time when the opponent of <A> held office?,SELECT DISTINCT ?uri where { ?x dbo:opponent <A> . ?x dbp:incumbent ?uri }
+Who was the president during the time the opponent of <A> was in the office?,SELECT DISTINCT ?uri where { ?x dbo:opponent <A> . ?x dbo:incumbent ?uri }
+Who was the United States president who also served as a governor of <A>?,SELECT DISTINCT ?uri where { ?uri dbp:branch <A> }
+Who were the founders of <A>?,SELECT DISTINCT ?uri where { <A> dbp:founder ?uri }
+Who were the opponents of the people buried in the <A>?,SELECT DISTINCT ?uri where { ?x dbp:restingPlace <A> . ?x dbo:opponent ?uri . ?x a dbo:Person }
+Who won the <A>comma and had also won the <B> ?,SELECT DISTINCT ?uri where { <B> dbo:affiliation ?uri . <A> dbo:affiliation ?uri }
+Who worked at  <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:occupation <B> . ?uri dbo:occupation <A> }
+Whose associate is <A> and has predecessor as <B>?,SELECT DISTINCT ?uri where { ?uri dbo:associate <A> . ?uri dbo:predecessor <B> }
+Whose deputy is <A>?,SELECT DISTINCT ?uri where { ?uri dbp:deputy <A> }
+Whose deputy was <A>?,SELECT DISTINCT ?uri where { ?uri dbp:deputy <A> }
+Whose families are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbo:family <A> . ?uri dbo:family <B> }
+whose is famous works are <B> and <A> ?,SELECT DISTINCT ?uri where { ?uri dbp:notableworks <B> . ?uri dbp:notableworks <A> }
+Whose labels are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:label <A> . ?uri dbp:label <B> }
+Whose opponents are <B> and <A>?,SELECT DISTINCT ?uri where { ?uri dbo:opponent <B> . ?uri dbo:opponent <A> }
+Whose predecessor had <A> as a deputy ?,SELECT DISTINCT ?uri where { ?x dbp:deputy <A> . ?uri dbp:predecessor ?x }
+Whose successors are <A> and <B>?,SELECT DISTINCT ?uri where { ?uri dbp:successor <A> . ?uri dbp:successor <B> }
+With whom is <A> a relative to who also served Nazi Army?,SELECT DISTINCT ?uri where { <A> dbo:relation ?uri }

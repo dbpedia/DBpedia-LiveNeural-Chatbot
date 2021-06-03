@@ -1,0 +1,1186 @@
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:majorShrine ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:majorShrine ?uri }
+DEBUG:root:1182 matches for de4a17ef8b2f4b39b40ef30f83c56a81
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:495 matches for 17b4a249affa4dde85cdeb1693177725
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:religion ?a . ?uri a dbo:Person }
+DEBUG:root:259 matches for 6d69d75249944430948e09c0741a01b2
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:affiliation ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:affiliation ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:affiliation ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 95ad975ecd3f4f8a96cdc1d5ad089e0a
+DEBUG:root:no data for 95ad975ecd3f4f8a96cdc1d5ad089e0a
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:otherParty ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:otherParty ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:otherParty ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:72 matches for 148cdeb62654466ba6820ef343817fdb
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:notableCommanders ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:notableCommanders ?x . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:notableCommanders ?x . ?x dbo:religion ?uri }
+DEBUG:root:48 matches for a8f0871a3d594450b08d3676964a27ff
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:majorShrine ?a . ?uri dbo:veneratedIn ?b . ?uri a dbo:Saint }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:majorShrine ?a . ?uri dbo:veneratedIn ?b . ?uri a dbo:Saint }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:majorShrine ?a . ?uri dbo:veneratedIn ?b . ?uri a dbo:Saint }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 893492c37b564d4d9e1ce129547ed023
+DEBUG:root:no data for 893492c37b564d4d9e1ce129547ed023
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:majorShrine ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:majorShrine ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:majorShrine ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:1344 matches for cf7aca2e48a445299efbf5664c867e8e
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:majorShrine ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:majorShrine ?uri }
+DEBUG:root:1034 matches for 49e05cb4c7b944b687a0c3d8d1766fc5
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:10000 matches for 72e904a0c1464fa49e6a57b90d012b10
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Country . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:majorShrine ?b . ?uri dbp:canonizedBy ?a . ?uri a dbo:Saint }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Country . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:majorShrine ?b . ?uri dbp:canonizedBy ?a . ?uri a dbo:Saint }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:majorShrine ?b . ?uri dbp:canonizedBy ?a . ?uri a dbo:Saint }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for eb9973f1951346f39307949428dd4e26
+DEBUG:root:no data for eb9973f1951346f39307949428dd4e26
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:branch ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:branch ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:branch ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:97 matches for 018ff49cdfa0414f8e55961b5a7022b1
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:region ?a . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:region ?a . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:region ?a . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+DEBUG:root:6 matches for d857c581856d4696a3df4d5cff4b538c
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:relative ?x . ?x dbo:veneratedIn ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:relative ?x . ?x dbo:veneratedIn ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:relative ?x . ?x dbo:veneratedIn ?uri }
+DEBUG:root:21 matches for 1b85b83eced84ed5bac6ce3b7641fe6b
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:knownFor ?a . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:knownFor ?a . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:knownFor ?a . ?x dbo:religion ?uri }
+DEBUG:root:3 matches for 6ddddbe9746248c1ad7bf21a4e745094
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:veneratedIn ?uri . ?x a dbo:Pope }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:veneratedIn ?uri . ?x a dbo:Pope }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:veneratedIn ?uri . ?x a dbo:Pope }
+DEBUG:root:0 matches for 04c55a217eca42488ea5a3fadb654924
+DEBUG:root:no data for 04c55a217eca42488ea5a3fadb654924
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:primeminister ?a . ?x dbo:religion ?uri . ?x a dbo:President }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:primeminister ?a . ?x dbo:religion ?uri . ?x a dbo:President }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:primeminister ?a . ?x dbo:religion ?uri . ?x a dbo:President }
+DEBUG:root:62 matches for a4c071295df54e628add12c26e1551d7
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri . ?x a dbo:PrimeMinister }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri . ?x a dbo:PrimeMinister }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri . ?x a dbo:PrimeMinister }
+DEBUG:root:3 matches for a785e76da4ec49cea487642d65c77144
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:successor ?x . ?x dbo:region ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:successor ?x . ?x dbo:region ?uri }
+DEBUG:root:853 matches for beb30f1a6feb4cb2a855e669bf3f7555
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:commander ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:commander ?x . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:commander ?x . ?x dbo:religion ?uri }
+DEBUG:root:178 matches for 25d1a97101e943698160921c3f0bb7cc
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:veneratedIn ?uri . ?a dbp:veneratedIn ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:veneratedIn ?uri . ?a dbp:veneratedIn ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:veneratedIn ?uri . ?a dbp:veneratedIn ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for a807b47daf314dd1867083e605303a2b
+DEBUG:root:no data for a807b47daf314dd1867083e605303a2b
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 9636268ee7834242905069b017dfdce7
+DEBUG:root:no data for 9636268ee7834242905069b017dfdce7
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:primeminister ?a . ?x dbo:religion ?uri . ?x a dbo:President }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:primeminister ?a . ?x dbo:religion ?uri . ?x a dbo:President }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:primeminister ?a . ?x dbo:religion ?uri . ?x a dbo:President }
+DEBUG:root:62 matches for bce6e73ad4d543ab9e13b7845aea8d94
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:veneratedIn ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:veneratedIn ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:veneratedIn ?uri }
+DEBUG:root:495 matches for 18eeaa768fa343b285501be229538892
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 99518f87aadb4ffdbc84a7b46b300383
+DEBUG:root:no data for 99518f87aadb4ffdbc84a7b46b300383
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 93b33f2e4d4f4d07a6dbd2be5baba794
+DEBUG:root:no data for 93b33f2e4d4f4d07a6dbd2be5baba794
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri . ?b dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri . ?b dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri . ?b dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for efe69ad1cb94450398a0a0a408332d63
+DEBUG:root:no data for efe69ad1cb94450398a0a0a408332d63
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religion ?uri . ?a dbo:ideology ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religion ?uri . ?a dbo:ideology ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religion ?uri . ?a dbo:ideology ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 2ba1fd420a3144f68cb807b475c66dd5
+DEBUG:root:no data for 2ba1fd420a3144f68cb807b475c66dd5
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbo:country ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbo:country ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbo:country ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 629e52550fd146e191ec02ae20114735
+DEBUG:root:no data for 629e52550fd146e191ec02ae20114735
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:religion ?uri }
+DEBUG:root:10000 matches for 3c8fdf37975f4f08945c5542bcc97d93
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:10000 matches for c66a34d84ddc42f89d6642978c5f9b1c
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 4d7bec0dba5d42e0982d9832d3a78971
+DEBUG:root:no data for 4d7bec0dba5d42e0982d9832d3a78971
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:related ?a . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+DEBUG:root:3673 matches for 6658f7d6a2f84f6db5f3da64b9953c8d
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:birthPlace ?uri . ?x a dbo:Pope }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:birthPlace ?uri . ?x a dbo:Pope }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:majorShrine ?a . ?x dbp:birthPlace ?uri . ?x a dbo:Pope }
+DEBUG:root:0 matches for 5e448ee7e7a347909af9a05fd941d609
+DEBUG:root:no data for 5e448ee7e7a347909af9a05fd941d609
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:majorShrine ?uri }
+DEBUG:root:1034 matches for 624847b205bc4cfdb3fc6d5a3bb94089
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:successor ?a . ?x dbp:majorShrine ?uri . ?x a dbo:Monarch }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:successor ?a . ?x dbp:majorShrine ?uri . ?x a dbo:Monarch }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:successor ?a . ?x dbp:majorShrine ?uri . ?x a dbo:Monarch }
+DEBUG:root:0 matches for 4279f6d60e2b40aca3b49c6d92f96f80
+DEBUG:root:no data for 4279f6d60e2b40aca3b49c6d92f96f80
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:religion ?uri }
+DEBUG:root:10000 matches for ac18c05943054b51a0b6a6c6483e24fa
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:10000 matches for 70c322e322db4335be2a68becb37f2fc
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:ethnicity ?x . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:ethnicity ?x . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:ethnicity ?x . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+DEBUG:root:3 matches for cfa6884352b444d8add91a623bbab10f
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:related ?x . ?x dbo:religion ?uri . ?x a dbo:EthnicGroup }
+DEBUG:root:1720 matches for b955cb31b2e74d689d1313c1238b9510
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:office ?a . ?x dbo:religion ?uri . ?x a dbo:Governor }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:office ?a . ?x dbo:religion ?uri . ?x a dbo:Governor }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:office ?a . ?x dbo:religion ?uri . ?x a dbo:Governor }
+DEBUG:root:35 matches for 9ac44261ad7c40989a2beefb39bb7b13
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:leader ?x . ?x dbo:religion ?uri }
+DEBUG:root:1096 matches for 6f97fe98633b44dcb7ba31cf7719b380
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:relation ?a . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:relation ?a . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:relation ?a . ?x dbo:religion ?uri . ?x a dbo:MemberOfParliament }
+DEBUG:root:0 matches for 286e3b7df05248f9bcaf081f3a5bfae7
+DEBUG:root:no data for 286e3b7df05248f9bcaf081f3a5bfae7
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri }
+DEBUG:root:4 matches for b71a96db56e8414aba5648ec5935ecf9
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:founder ?x . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:founder ?x . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:founder ?x . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:143 matches for efb34433b68544b09f7dc35e94b450f9
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:starring ?x . ?x dbp:religion ?uri . ?x a dbo:Person }
+DEBUG:root:531 matches for 654b89b5de0945439a24d12e98348582
+DEBUG:root:1096 matches for da38af790e6e4c63a38c8f834d67ca62
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:relative ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:relative ?x . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:relative ?x . ?x dbo:religion ?uri }
+DEBUG:root:154 matches for 9c14e0afc5d44598951f1f9037822b2b
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:relation ?a . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:relation ?a . ?x dbo:religion ?uri }
+DEBUG:root:537 matches for c1d9817b260a4d0ead5c03372c35d776
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:successor ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:successor ?x . ?x dbo:religion ?uri }
+DEBUG:root:860 matches for 2ce7408563bc4fff84ed8255c318beac
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:156 matches for 0954f05704294cdc948715c7348303d7
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:FashionDesigner . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:veneratedIn ?uri . ?a dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:FashionDesigner . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:veneratedIn ?uri . ?a dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:veneratedIn ?uri . ?a dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 2c0f7eee1b634f1895cbd246bd8c6e3c
+DEBUG:root:no data for 2c0f7eee1b634f1895cbd246bd8c6e3c
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:canonizedBy ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:canonizedBy ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:canonizedBy ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 30d274c7ebc944d6ac4e29e01c552fbb
+DEBUG:root:no data for 30d274c7ebc944d6ac4e29e01c552fbb
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri }
+DEBUG:root:10000 matches for c73a4a3eacb742309e74d6f0c2e8e729
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:president ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:president ?x . ?x dbo:religion ?uri }
+DEBUG:root:252 matches for c2b361e703db47748197f55a513a8f91
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:spouse ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:spouse ?x . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:spouse ?x . ?x dbo:religion ?uri }
+DEBUG:root:44 matches for 06cd798687b746528a43245de0c8ab00
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:nationality ?x . ?x dbo:religion ?uri }
+DEBUG:root:238 matches for aef45b1c0926436fbf9066333c15dd4c
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religiousAffiliation ?uri . ?a dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religiousAffiliation ?uri . ?a dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religiousAffiliation ?uri . ?a dbp:religiousAffiliation ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for f2e6e08d863b45a0b2fde08ff71c4d93
+DEBUG:root:no data for f2e6e08d863b45a0b2fde08ff71c4d93
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religion ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religion ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:religion ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 09da33e36b464a00852d478e1a46581d
+DEBUG:root:no data for 09da33e36b464a00852d478e1a46581d
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:birthName ?a . ?x dbp:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:birthName ?a . ?x dbp:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:birthName ?a . ?x dbp:religion ?uri }
+DEBUG:root:9 matches for a47123efd7d64ca9aa928cfb92693d4d
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:notableCommander ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:notableCommander ?x . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:notableCommander ?x . ?x dbo:religion ?uri }
+DEBUG:root:51 matches for bd1de460e21d4db4bf8e5065934b8bc6
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:religion ?uri . ?b dbp:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 032d3755146e42a3be21305ce7766f9a
+DEBUG:root:no data for 032d3755146e42a3be21305ce7766f9a
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbo:religion ?uri }
+DEBUG:root:156 matches for 7410520bca4c45bbab391b31101a6df3
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:architecturalStyle ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:architecturalStyle ?x . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:architecturalStyle ?x . ?x dbo:religion ?uri }
+DEBUG:root:27 matches for adb40156d8b943db81c77206edceffb5
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbp:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbp:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:profession ?a . ?x dbp:religion ?uri }
+DEBUG:root:288 matches for ee3ee4db6ae94b3d9abdf399e280c592
+DEBUG:root:1096 matches for ec098d0e9dc04cb997cf1bedf575db5c
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:beatifiedBy ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:beatifiedBy ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:beatifiedBy ?a . ?x dbo:majorShrine ?uri . ?x a dbo:Saint }
+DEBUG:root:42 matches for 33a68bbb7cbb44749a300fcafe94dadf
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:fields ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:fields ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:fields ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 8994dc83e54f403699937e9328a327a8
+DEBUG:root:no data for 8994dc83e54f403699937e9328a327a8
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:ideology ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:ideology ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:ideology ?uri . ?b dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 276666cb2dd442d29983656956c65930
+DEBUG:root:no data for 276666cb2dd442d29983656956c65930
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:majorShrine ?uri . ?b dbp:placeOfDeath ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:majorShrine ?uri . ?b dbp:placeOfDeath ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:majorShrine ?uri . ?b dbp:placeOfDeath ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 101dfea643e24d1483797bfb175000f1
+DEBUG:root:no data for 101dfea643e24d1483797bfb175000f1
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Athlete . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:religion ?uri . ?a dbo:religion ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for adc7d53883de42c6be0600b7cace1446
+DEBUG:root:no data for adc7d53883de42c6be0600b7cace1446
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:constituency ?a . ?x dbp:religion ?uri . ?x a dbo:Person }
+DEBUG:root:1092 matches for 08165fd11c3f4e49bdd932736db1e9c3
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:leaderName ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:leaderName ?x . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:leaderName ?x . ?x dbo:religion ?uri }
+DEBUG:root:21 matches for 7991781a1984410b9f4707dd643830a3
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:militaryBranch ?a . ?x dbo:religion ?uri }
+DEBUG:root:4 matches for cbc87af1e755447fa98c05a0e64a2eb2
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:party ?a . ?x dbo:religion ?uri }
+DEBUG:root:1025 matches for fe726ec84eda43a7aa4725b1811e6540
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:family ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:family ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:family ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:27 matches for fd0df4cfc4fc439696f39dd5d17dc45a
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:primeminister ?x . ?x dbo:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:primeminister ?x . ?x dbo:religion ?uri }
+DEBUG:root:924 matches for 67978a98005d4f27897894daf8f8feeb
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:region ?a . ?x dbp:denomination ?uri . ?x a dbo:School }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:region ?a . ?x dbp:denomination ?uri . ?x a dbo:School }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:region ?a . ?x dbp:denomination ?uri . ?x a dbo:School }
+DEBUG:root:32 matches for 3b2227b9098045048da2d706d5ff058e
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:party ?a . ?x dbo:religion ?uri . ?x a dbo:Person }
+DEBUG:root:977 matches for a561ecf7220a4ede974139e2dd42ed14
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:residence ?a . ?x dbp:religion ?uri . ?x a dbo:Person }
+DEBUG:root:780 matches for e14c2eb6c1784c0b8a72befd991b28b9
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:hometown ?a . ?x dbp:religion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:hometown ?a . ?x dbp:religion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:hometown ?a . ?x dbp:religion ?uri }
+DEBUG:root:5 matches for 5f5159b391bc417294f896820d53baf8
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:combatant ?x . ?x dbo:religion ?uri }
+DEBUG:root:861 matches for 5bba92da3db5463eb604709023bbdce3
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:veneratedIn ?a . ?uri a dbo:Saint }
+DEBUG:root:344 matches for d225159e360c4ab99b91e8064247d40a
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:ArchitecturalStructure . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Town . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:majorShrine ?a . ?uri dbo:majorShrine ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:ArchitecturalStructure . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Town . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:majorShrine ?a . ?uri dbo:majorShrine ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:majorShrine ?a . ?uri dbo:majorShrine ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 444fa4b359354a5ea47e8d33ef5d0d05
+DEBUG:root:no data for 444fa4b359354a5ea47e8d33ef5d0d05
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:headquarters ?a . ?uri dbo:religion ?x }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:headquarters ?a . ?uri dbo:religion ?x }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:headquarters ?a . ?uri dbo:religion ?x }
+DEBUG:root:27 matches for 44960e14ef46436fbcc7c4d75318662a
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:leaderName ?a . ?uri dbo:religion ?x }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:leaderName ?a . ?uri dbo:religion ?x }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:leaderName ?a . ?uri dbo:religion ?x }
+DEBUG:root:167 matches for b3cd59226f27478faeb65afb4ba0b123
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:majorShrine ?a }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:majorShrine ?a }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:majorShrine ?a }
+DEBUG:root:536 matches for de05f30a4e304ecc8294fe2c50948518
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:successor ?x . ?x dbo:restingPlace ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:successor ?x . ?x dbo:restingPlace ?uri }
+DEBUG:root:297 matches for 221d800881d44522a1fbc7d81300bcb8
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?a }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?a }
+DEBUG:root:1522 matches for 7ad74ad36f964369a61126ec8c40b05c
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:kingdom ?a . ?x dbo:family ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:kingdom ?a . ?x dbo:family ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:kingdom ?a . ?x dbo:family ?uri }
+DEBUG:root:10 matches for 002b171e559d44dab3ae234723824bac
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:placeOfBurial ?a . ?uri a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:placeOfBurial ?a . ?uri a dbo:Royalty }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:placeOfBurial ?a . ?uri a dbo:Royalty }
+DEBUG:root:760 matches for a33350d8ce8d449a9ce52f0ca2451234
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Continent . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:deathPlace ?a }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Continent . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:deathPlace ?a }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:deathPlace ?a }
+DEBUG:root:774 matches for 7d16db5ff7dc4f1d820159cb7b83bff8
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:parent ?a . ?x dbp:veneratedIn ?uri . ?x a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:parent ?a . ?x dbp:veneratedIn ?uri . ?x a dbo:Royalty }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:parent ?a . ?x dbp:veneratedIn ?uri . ?x a dbo:Royalty }
+DEBUG:root:64 matches for 6f0ee8f2cf284dce972eed151ef62685
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfBurial ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+DEBUG:root:760 matches for 1defef355b2c46aabc6b54f50c3c95fc
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Town . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:restingPlace ?b . ?uri dbp:predecessor ?a . ?uri a dbo:Person }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Town . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:restingPlace ?b . ?uri dbp:predecessor ?a . ?uri a dbo:Person }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:restingPlace ?b . ?uri dbp:predecessor ?a . ?uri a dbo:Person }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for bef8f6aac12d4d6283dceb45a5a45f15
+DEBUG:root:no data for bef8f6aac12d4d6283dceb45a5a45f15
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Village . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfBurial ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Village . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfBurial ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+DEBUG:root:760 matches for d7c5b09663594b8d9849e4b0a4561068
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:parent ?b . ?uri dbp:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:parent ?b . ?uri dbp:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:parent ?b . ?uri dbp:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 81ced9f9e10b4380a691a73a17095c6e
+DEBUG:root:no data for 81ced9f9e10b4380a691a73a17095c6e
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:children ?b . ?uri dbo:associate ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:children ?b . ?uri dbo:associate ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:children ?b . ?uri dbo:associate ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for daa90042f4ff4210a603ae0931b2e92d
+DEBUG:root:no data for daa90042f4ff4210a603ae0931b2e92d
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?b . ?uri dbo:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?b . ?uri dbo:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?b . ?uri dbo:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 7ffdaaa1870e4b449f08ef6591198dfb
+DEBUG:root:no data for 7ffdaaa1870e4b449f08ef6591198dfb
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?a . ?uri dbo:parent ?b . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?a . ?uri dbo:parent ?b . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?a . ?uri dbo:parent ?b . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for ae7bd0ded6804ceead902c06ec9b71e1
+DEBUG:root:no data for ae7bd0ded6804ceead902c06ec9b71e1
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:canonizedBy ?x . ?x dbp:birthPlace ?uri . ?x a dbo:Pope }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:canonizedBy ?x . ?x dbp:birthPlace ?uri . ?x a dbo:Pope }
+DEBUG:root:552 matches for 80b6db330714404da1f2443e719d62f4
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:placeOfBurial ?uri . ?a dbp:placeOfBurial ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:placeOfBurial ?uri . ?a dbp:placeOfBurial ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:placeOfBurial ?uri . ?a dbp:placeOfBurial ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 7a39f5fc355c464eb024ab21d1b43e89
+DEBUG:root:no data for 7a39f5fc355c464eb024ab21d1b43e89
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:parent ?a . ?x dbp:deathPlace ?uri . ?x a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:parent ?a . ?x dbp:deathPlace ?uri . ?x a dbo:Royalty }
+DEBUG:root:3020 matches for 2e77394fb30c488ba0cb3132da2b5e95
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:successor ?x . ?x dbo:restingPlace ?uri . ?x a dbo:Person }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:successor ?x . ?x dbo:restingPlace ?uri . ?x a dbo:Person }
+DEBUG:root:5926 matches for 3c8f5b5976af40178208af0ac6ccae51
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfDeath ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfDeath ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfDeath ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Royalty }
+DEBUG:root:0 matches for d84486681133495fa12247728693ae90
+DEBUG:root:no data for d84486681133495fa12247728693ae90
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:mother ?a . ?x dbp:deathPlace ?uri . ?x a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:mother ?a . ?x dbp:deathPlace ?uri . ?x a dbo:Royalty }
+DEBUG:root:2146 matches for 5af32623f2d747d88f0b3fe7df64b489
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:predecessor ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Monarch }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:predecessor ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Monarch }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:predecessor ?a . ?x dbp:placeOfBurial ?uri . ?x a dbo:Monarch }
+DEBUG:root:6 matches for 9b7b9393ba92438d807402980092a498
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:rank ?b . ?uri dbp:spouse ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:rank ?b . ?uri dbp:spouse ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:rank ?b . ?uri dbp:spouse ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for c45b083d0f4e4d43b3c84cbb54b3e598
+DEBUG:root:no data for c45b083d0f4e4d43b3c84cbb54b3e598
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:placeOfBurial ?a . ?uri a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:placeOfBurial ?a . ?uri a dbo:Royalty }
+DEBUG:root:760 matches for 7e85b0de27ab4b60aeca0149dd793305
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:predecessor ?a . ?uri dbp:spouse ?x . ?uri a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:predecessor ?a . ?uri dbp:spouse ?x . ?uri a dbo:Royalty }
+DEBUG:root:2315 matches for f20340cfdedd4821a148e2baf7bbc531
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?b . ?uri dbp:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?b . ?uri dbp:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mother ?b . ?uri dbp:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for e963127fc9c048e089c071e56b80f214
+DEBUG:root:no data for e963127fc9c048e089c071e56b80f214
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:spouse ?a . ?uri a dbo:Royalty }
+DEBUG:root:3630 matches for f399c7a1da5e48e29810f8606fdfe5ec
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfBurial ?a . ?x dbo:successor ?uri . ?x a dbo:Royalty }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:City . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfBurial ?a . ?x dbo:successor ?uri . ?x a dbo:Royalty }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:placeOfBurial ?a . ?x dbo:successor ?uri . ?x a dbo:Royalty }
+DEBUG:root:490 matches for acf96951be6c4bdda4d3fe9e77b9da55
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:CelestialBody . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mission ?a . ?uri dbp:type ?b . ?uri a dbo:Astronaut }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:CelestialBody . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mission ?a . ?uri dbp:type ?b . ?uri a dbo:Astronaut }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:mission ?a . ?uri dbp:type ?b . ?uri a dbo:Astronaut }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 3b7d789c05074466884d8e0d189d97c4
+DEBUG:root:no data for 3b7d789c05074466884d8e0d189d97c4
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:species ?uri . ?b dbo:species ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:species ?uri . ?b dbo:species ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:species ?uri . ?b dbo:species ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 2006a24c1c3e478b98df523596714251
+DEBUG:root:no data for 2006a24c1c3e478b98df523596714251
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:editor ?a . ?x dbp:discipline ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Athlete . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:editor ?a . ?x dbp:discipline ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:editor ?a . ?x dbp:discipline ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 337774a6b5bc4fb4bdf86ecb5abf0a33
+DEBUG:root:no data for 337774a6b5bc4fb4bdf86ecb5abf0a33
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:awards ?a . ?uri a dbo:Scientist }
+DEBUG:root:325 matches for 2a59af2efcc74bec9b6f9b1d25486ae5
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:4076 matches for 4b6587fe43824a6385cac583915ac1cc
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?a }
+DEBUG:root:389 matches for 78671ca44f6445c08adb515eb5031860
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralStudents ?b . ?uri dbp:knownFor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralStudents ?b . ?uri dbp:knownFor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralStudents ?b . ?uri dbp:knownFor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 0da441743df14fafb7bc6b4bcacc81bf
+DEBUG:root:no data for 0da441743df14fafb7bc6b4bcacc81bf
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?a . ?uri dbp:prizes ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?a . ?uri dbp:prizes ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?a . ?uri dbp:prizes ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for e179bec4f0ea4b508f69fac03d08356e
+DEBUG:root:no data for e179bec4f0ea4b508f69fac03d08356e
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:discipline ?a . ?uri a dbo:AcademicJournal }
+DEBUG:root:893 matches for b4c8a3b66e0e4e5f84d3b105133a1a76
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:phylum ?a . ?uri dbo:order ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:phylum ?a . ?uri dbo:order ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:phylum ?a . ?uri dbo:order ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for d1caae4b8c75454d93e63dad304d42b9
+DEBUG:root:no data for d1caae4b8c75454d93e63dad304d42b9
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:publisher ?a . ?x dbo:academicDiscipline ?uri }
+DEBUG:root:780 matches for 9ddba4eb7a16400f906e88d1c0390a79
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:origin ?uri . ?uri a dbo:Place }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:origin ?uri . ?uri a dbo:Place }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:origin ?uri . ?uri a dbo:Place }
+DEBUG:root:69 matches for 96454da162fa47f48d85f23ed72f4933
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:fields ?a . ?x dbp:fields ?uri }
+DEBUG:root:2729 matches for 4f7bb480e41d4360a942060f68dd6654
+DEBUG:root:2729 matches for 6edb218446b8457c9a2ea5168ff7fb50
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:prizes ?a . ?x dbp:doctoralStudents ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:prizes ?a . ?x dbp:doctoralStudents ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:prizes ?a . ?x dbp:doctoralStudents ?uri }
+DEBUG:root:316 matches for d8cbe0bde1c74580876d692bc41e1096
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:academicDiscipline ?a . ?x dbo:academicDiscipline ?uri }
+DEBUG:root:2211 matches for ee4e4eda446b49beaab2d615cfcec423
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:launchSite ?a . ?x dbo:launchSite ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:ArchitecturalStructure . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:launchSite ?a . ?x dbo:launchSite ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:launchSite ?a . ?x dbo:launchSite ?uri }
+DEBUG:root:174 matches for 1d08293ffa5440beaad63cd2ffd708a8
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for ddec2336ee0e4356a255236006bca1fc
+DEBUG:root:no data for ddec2336ee0e4356a255236006bca1fc
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:class ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:class ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:class ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for f17ff46a28de491a93859a94e3046480
+DEBUG:root:no data for f17ff46a28de491a93859a94e3046480
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:institution ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:institution ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:institution ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 8e29eff6b17f4319b9c659532af37bad
+DEBUG:root:no data for 8e29eff6b17f4319b9c659532af37bad
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:institution ?a . ?x dbo:birthPlace ?uri }
+DEBUG:root:1957 matches for 2a7a43ae00334b49bc601589c3cad2a4
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:class ?a . ?uri a dbo:Bacteria }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:class ?a . ?uri a dbo:Bacteria }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:class ?a . ?uri a dbo:Bacteria }
+DEBUG:root:56 matches for 6027ae40ca0541feb5c23edebbf8dc5c
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?a . ?uri a dbo:Mammal }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?a . ?uri a dbo:Mammal }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?a . ?uri a dbo:Mammal }
+DEBUG:root:104 matches for 1db54969ed89429596435519a1e8fbf2
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Region . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:garrison ?a . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Region . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:garrison ?a . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:garrison ?a . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+DEBUG:root:5 matches for e53671fb7bb643e7a161cbd7560e68f6
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:award ?a . ?x dbo:award ?uri }
+DEBUG:root:1687 matches for 69eda413b32a4ef18311180654f38ad1
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:phylum ?a . ?uri a dbo:Mammal }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:phylum ?a . ?uri a dbo:Mammal }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:phylum ?a . ?uri a dbo:Mammal }
+DEBUG:root:1 matches for 784fa60a6196464d8a6c45f97733c61f
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:field ?a . ?x dbo:field ?uri }
+DEBUG:root:1105 matches for 5f7d68b6d7c24bd29b84f2fd7fa2d1c2
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:battle ?a . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:battle ?a . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:battle ?a . ?uri dbp:knownFor ?x . ?uri a dbo:Scientist }
+DEBUG:root:2 matches for 7124c65f43eb4c7db607755053ad3252
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:leaderName ?a . ?uri dbp:prizes ?x . ?uri a dbo:Scientist }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:leaderName ?a . ?uri dbp:prizes ?x . ?uri a dbo:Scientist }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:leaderName ?a . ?uri dbp:prizes ?x . ?uri a dbo:Scientist }
+DEBUG:root:28 matches for 84f2de8922174f768151cc95ffc13a23
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:knownFor ?a . ?uri a dbo:Scientist }
+DEBUG:root:3279 matches for 58cce734a7f44455a0cf5a7d76f94bf2
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralAdvisor ?a }
+DEBUG:root:260 matches for 8de783323c0a490694c0e920f0ad07b8
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:phylum ?a }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:phylum ?a }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:phylum ?a }
+DEBUG:root:30 matches for 40370fe27b3a4ec29366818da40b692d
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:wineRegion ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:wineRegion ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:wineRegion ?uri }
+DEBUG:root:8 matches for 7c24a58761f249839782415660523ba4
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:wineRegion ?uri . ?x a dbo:Grape }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:wineRegion ?uri . ?x a dbo:Grape }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:species ?a . ?x dbo:wineRegion ?uri . ?x a dbo:Grape }
+DEBUG:root:8 matches for 3230a08d90af4614ae2510d4feb9382f
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:academicAdvisor ?a . ?x dbp:fields ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:academicAdvisor ?a . ?x dbp:fields ?uri }
+DEBUG:root:809 matches for d353e53adbc14a819a6b8cb914e9288f
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri . ?b dbp:fields ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri . ?b dbp:fields ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri . ?b dbp:fields ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for e9036a6c1a674f64a85a400eb987393b
+DEBUG:root:no data for e9036a6c1a674f64a85a400eb987393b
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:academicAdvisor ?a . ?x dbp:fields ?uri }
+DEBUG:root:809 matches for 0b977445d3f142d3a514eb59c55000fd
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 835e3bc3c8764022b3555cb4b8175d3b
+DEBUG:root:no data for 835e3bc3c8764022b3555cb4b8175d3b
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:field ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:field ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:field ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for f1bd78d345634e9d9d237a044ba8599b
+DEBUG:root:no data for f1bd78d345634e9d9d237a044ba8599b
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:doctoralStudent ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:doctoralStudent ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:doctoralStudent ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for cd7f39c8d3324c20a0beff615cfa9063
+DEBUG:root:no data for cd7f39c8d3324c20a0beff615cfa9063
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for d4b5df324bec450b833f8f4c1145992c
+DEBUG:root:no data for d4b5df324bec450b833f8f4c1145992c
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:phylum ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 7043f3a3431945138482107c7f71a3a7
+DEBUG:root:no data for 7043f3a3431945138482107c7f71a3a7
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:doctoralStudent ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:doctoralStudent ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:doctoralStudent ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for fd60b1d920e4435cbfbbe74a8631fde0
+DEBUG:root:no data for fd60b1d920e4435cbfbbe74a8631fde0
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:academicDiscipline ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:academicDiscipline ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:academicDiscipline ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 232b47d723104bf9af52c6a454123647
+DEBUG:root:no data for 232b47d723104bf9af52c6a454123647
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:academicDiscipline ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:academicDiscipline ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:academicDiscipline ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for d8c7892603d64401909742551945fd10
+DEBUG:root:no data for d8c7892603d64401909742551945fd10
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:country ?a . ?x dbp:discipline ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Country . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:country ?a . ?x dbp:discipline ?uri }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:country ?a . ?x dbp:discipline ?uri }
+DEBUG:root:92 matches for 6f8cdbe8fb024dcbb7da14e008bca23c
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?b . ?uri dbp:domain ?a . ?uri a dbo:Bacteria }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?b . ?uri dbp:domain ?a . ?uri a dbo:Bacteria }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?b . ?uri dbp:domain ?a . ?uri a dbo:Bacteria }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 243a759bcba94cc98226ca3477da618a
+DEBUG:root:no data for 243a759bcba94cc98226ca3477da618a
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:academicDiscipline ?a . ?x dbo:academicDiscipline ?uri . ?x a dbo:AcademicJournal }
+DEBUG:root:1373 matches for 017a115aacc2455e86ab1e3924f75e23
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:doctoralStudents ?a . ?x dbp:doctoralStudents ?uri . ?x a dbo:Scientist }
+DEBUG:root:261 matches for 9385b5410adb4b398d78b74233daa3e7
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:prizes ?a . ?x dbp:doctoralStudents ?uri . ?x a dbo:Scientist }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:prizes ?a . ?x dbp:doctoralStudents ?uri . ?x a dbo:Scientist }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:prizes ?a . ?x dbp:doctoralStudents ?uri . ?x a dbo:Scientist }
+DEBUG:root:311 matches for 0875010dd1d442a09d23bdaaf2293064
+DEBUG:root:1373 matches for 0de77adbc13b469fb9d23dec23d37f13
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:doctoralStudents ?uri }
+DEBUG:root:309 matches for 53ed8e82e6ec49d0b9e1762d781e71d4
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri }
+DEBUG:root:10000 matches for 8f28ab18a0db420a9c7403df42c1e14f
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:fields ?a . ?x dbp:fields ?uri . ?x a dbo:Scientist }
+DEBUG:root:1554 matches for 09a6fbecddd347ed8eb1e9af79aa1a07
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:institution ?uri }
+DEBUG:root:302 matches for c6c9dbbe628c4282bac952abf1b6d056
+DEBUG:root:1554 matches for c9675b3e25a74a45b74ce591e393e65c
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:launchSite ?a . ?x dbo:launchSite ?uri . ?x a dbo:Rocket }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:launchSite ?a . ?x dbo:launchSite ?uri . ?x a dbo:Rocket }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:launchSite ?a . ?x dbo:launchSite ?uri . ?x a dbo:Rocket }
+DEBUG:root:172 matches for f42232f5745444f2b59bd33f072d1b72
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?b . ?uri dbo:phylum ?a . ?uri a dbo:Mammal }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?b . ?uri dbo:phylum ?a . ?uri a dbo:Mammal }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:order ?b . ?uri dbo:phylum ?a . ?uri a dbo:Mammal }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 14fbed5378264537bb4a579854d59789
+DEBUG:root:no data for 14fbed5378264537bb4a579854d59789
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralAdvisor ?a . ?uri dbp:knownFor ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralAdvisor ?a . ?uri dbp:knownFor ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralAdvisor ?a . ?uri dbp:knownFor ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for f152c9e6bda2455781b4900277175979
+DEBUG:root:no data for f152c9e6bda2455781b4900277175979
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:workInstitutions ?a . ?x dbp:workInstitutions ?uri . ?x a dbo:Medician }
+DEBUG:root:468 matches for 2ea87bee77ff44d2a1bd856fc6106c1c
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:City . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?a . ?uri dbp:residence ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:City . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Award . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?a . ?uri dbp:residence ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?a . ?uri dbp:residence ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for ec18ccd4be91486aa5253f7a802da354
+DEBUG:root:no data for ec18ccd4be91486aa5253f7a802da354
+DEBUG:root:261 matches for a2bb1b6a34864a0fa79b65de6dcbe19b
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:knownFor ?a . ?x dbp:almaMater ?uri . ?x a dbo:Scientist }
+DEBUG:root:2877 matches for c588fe59d877476892d39589f6172632
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:institution ?uri . ?a dbo:institution ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:institution ?uri . ?a dbo:institution ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:institution ?uri . ?a dbo:institution ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 60deb84874954198b4c9b6cc5c85e747
+DEBUG:root:no data for 60deb84874954198b4c9b6cc5c85e747
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:institution ?uri . ?b dbo:institution ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:institution ?uri . ?b dbo:institution ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:institution ?uri . ?b dbo:institution ?uri }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for c1cdd10d876d429ba602f0b60fc91f53
+DEBUG:root:no data for c1cdd10d876d429ba602f0b60fc91f53
+DEBUG:root:302 matches for 4ff9b452822549048ab6fb060739559c
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:doctoralStudents ?a . ?uri dbo:academicAdvisor ?x . ?uri a dbo:Person }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:doctoralStudents ?a . ?uri dbo:academicAdvisor ?x . ?uri a dbo:Person }
+DEBUG:root:803 matches for 0f0065ebc6d9448a9925cf985837df80
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?b . ?uri dbo:academicAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?b . ?uri dbo:academicAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?b . ?uri dbo:academicAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 20ece59a1aa9487bbe525dcba5247d38
+DEBUG:root:no data for 20ece59a1aa9487bbe525dcba5247d38
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:knownFor ?a . ?uri dbp:prizes ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:knownFor ?a . ?uri dbp:prizes ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:knownFor ?a . ?uri dbp:prizes ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for f4b7def86f6e444b8521908b40cef72c
+DEBUG:root:no data for f4b7def86f6e444b8521908b40cef72c
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:awards ?b . ?uri dbo:academicAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:awards ?b . ?uri dbo:academicAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:awards ?b . ?uri dbo:academicAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 9a2c07ecaef04020b5ad3820012f0ef4
+DEBUG:root:no data for 9a2c07ecaef04020b5ad3820012f0ef4
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?b . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?b . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:prizes ?b . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 1df69aaf84db4e6ebf8479f68c52d2fe
+DEBUG:root:no data for 1df69aaf84db4e6ebf8479f68c52d2fe
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:academicAdvisor ?b . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:academicAdvisor ?b . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:academicAdvisor ?b . ?uri dbp:doctoralAdvisor ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 8cf47e5b92d148bdac37fa14e7f2f0d3
+DEBUG:root:no data for 8cf47e5b92d148bdac37fa14e7f2f0d3
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:doctoralStudent ?a . ?uri dbp:doctoralAdvisor ?x . ?uri a dbo:Scientist }
+DEBUG:root:270 matches for cb2064da897547b2abcb8b409bdd0817
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbp:doctoralStudents ?a . ?uri dbp:doctoralAdvisor ?x . ?uri a dbo:Scientist }
+DEBUG:root:251 matches for 7f9100dd95784db5aa76614d9d7d3c8b
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralAdvisor ?a . ?uri dbp:doctoralStudents ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralAdvisor ?a . ?uri dbp:doctoralStudents ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralAdvisor ?a . ?uri dbp:doctoralStudents ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 7136d470a4c340bb8a9e1b60d5e68fdf
+DEBUG:root:no data for 7136d470a4c340bb8a9e1b60d5e68fdf
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?b . ?uri dbp:prizes ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?b . ?uri dbp:prizes ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralAdvisor ?b . ?uri dbp:prizes ?a . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 2cc0b2ad617642aaace9eab113615942
+DEBUG:root:no data for 2cc0b2ad617642aaace9eab113615942
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:species ?uri }
+DEBUG:root:2499 matches for ac98a0220f7340f187466f3e2d99aab4
+DEBUG:root:2499 matches for c1231c9ac8174bc4bb544853d3faf6ca
+DEBUG:root:2499 matches for 571fc2015ffd4fc78f1f711b2042fbe1
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:workInstitutions ?uri }
+DEBUG:root:225 matches for 133aa4a4648d4bb3b3f15ed06a0566cd
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbp:fields ?uri }
+DEBUG:root:10000 matches for 3065422e5ed048afbfe5677cff2a318b
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:almaMater ?a . ?x dbp:awards ?uri . ?x a dbo:Scientist }
+DEBUG:root:970 matches for e487c6936b554e3d8395e85c17492758
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:kingdom ?a . ?x dbo:species ?uri . ?uri a dbo:Species }
+DEBUG:root:2. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:kingdom ?a . ?x dbo:species ?uri . ?uri a dbo:Species }
+DEBUG:root:3. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?x dbo:kingdom ?a . ?x dbo:species ?uri . ?uri a dbo:Species }
+DEBUG:root:7 matches for 5c70e8faf9b847f3ac27fe491ccd6a65
+DEBUG:root:389 matches for d039c214abca4acb95ebefed1ec4aee3
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralStudents ?a . ?uri dbp:doctoralStudents ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralStudents ?a . ?uri dbp:doctoralStudents ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbp:doctoralStudents ?a . ?uri dbp:doctoralStudents ?b . ?uri a dbo:Scientist }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 5f766cb18b93417495ec541e7749269c
+DEBUG:root:no data for 5f766cb18b93417495ec541e7749269c
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?uri dbo:doctoralStudent ?a }
+DEBUG:root:290 matches for 990ab53fdb8b485cbcd019106a15fdf2
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:doctoralStudent ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:doctoralStudent ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:doctoralStudent ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for f107c093f6cd4143af7f686892a28d70
+DEBUG:root:no data for f107c093f6cd4143af7f686892a28d70
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:CelestialBody . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:mission ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:CelestialBody . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:mission ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:mission ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for d3f64fbb4efc4bf583de0d8ffe4be68d
+DEBUG:root:no data for d3f64fbb4efc4bf583de0d8ffe4be68d
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Sport . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:field ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Sport . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:field ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:field ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for d94cdcd8ddea4f6ca38ef78a76aeb4f2
+DEBUG:root:no data for d94cdcd8ddea4f6ca38ef78a76aeb4f2
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:doctoralStudent ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:doctoralStudent ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?a dbo:doctoralStudent ?b }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for c6a4fb6c10984d2494a7f6b2c3c6f6a9
+DEBUG:root:no data for c6a4fb6c10984d2494a7f6b2c3c6f6a9
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 390bec142f5a4354a4a0d47a64474646
+DEBUG:root:no data for 390bec142f5a4354a4a0d47a64474646
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:Person . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 418b062f88884aff8095211e8c44cbed
+DEBUG:root:no data for 418b062f88884aff8095211e8c44cbed
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:CelestialBody . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbo:discoverer ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:0 matches for 2c39c59a5b3d4c15844b34930828326b
+DEBUG:root:no data for 2c39c59a5b3d4c15844b34930828326b
+DEBUG:root:1. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a ?t . VALUES (?t) { (<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>) (<http://dbpedia.org/class/yago/WikicatEnglishMusicians>) (<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>) (<http://dbpedia.org/class/yago/Honoree110183757>) (dbo:LacrossePlayer) } . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:CelestialBody . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:mission ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:2. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b a dbo:Person . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a a dbo:CelestialBody . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:mission ?a }
+DEBUG:root:*** Query error. Empty result set. ***
+DEBUG:root:3. attempt generator_query: select distinct ?a, ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'en') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'en') . ?b dbp:mission ?a }
+ERROR:root:template 6ac8c31d60b54b13b8e5241fd7e4b741 caused exception Traceback (most recent call last):
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 966, in send
+    self.connect()
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1422, in connect
+    server_hostname=server_hostname)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 423, in wrap_socket
+    session=session
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 870, in _create
+    self.do_handshake()
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "generator.py", line 188, in generate_dataset
+    results = get_results_of_generator_query(cache, template)
+  File "generator.py", line 250, in get_results_of_generator_query
+    results = query_dbpedia(query)
+  File "C:\Users\Ashut\Desktop\projects\GSOC\DBNQA\generator_utils.py", line 58, in query_dbpedia
+    resp = urllib.request.urlopen(ENDPOINT + "?" + urllib.parse.urlencode(param))
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "C:\Users\Ashut\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+
+INFO:root:1. fix problem
+2. remove templates until the exception template in the template file
+3. restart with `--continue` parameter
+INFO:root:167276 used resources in 560577 placeholder positions
+INFO:root:     1 resources occur 	   132 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   104 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    79 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    82 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    78 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    77 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    76 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    73 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    75 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    68 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    72 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    71 times 	(  0.00 %) 
+INFO:root:     4 resources occur 	    67 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    66 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    69 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    70 times 	(  0.00 %) 
+INFO:root:     5 resources occur 	    63 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    64 times 	(  0.00 %) 
+INFO:root:     4 resources occur 	    62 times 	(  0.00 %) 
+INFO:root:     8 resources occur 	    60 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    65 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    59 times 	(  0.00 %) 
+INFO:root:     5 resources occur 	    61 times 	(  0.00 %) 
+INFO:root:     9 resources occur 	    58 times 	(  0.01 %) 
+INFO:root:     6 resources occur 	    57 times 	(  0.00 %) 
+INFO:root:     5 resources occur 	    56 times 	(  0.00 %) 
+INFO:root:    11 resources occur 	    55 times 	(  0.01 %) 
+INFO:root:    10 resources occur 	    54 times 	(  0.01 %) 
+INFO:root:    11 resources occur 	    53 times 	(  0.01 %) 
+INFO:root:    18 resources occur 	    52 times 	(  0.01 %) 
+INFO:root:    23 resources occur 	    51 times 	(  0.01 %) 
+INFO:root:    14 resources occur 	    50 times 	(  0.01 %) 
+INFO:root:     9 resources occur 	    49 times 	(  0.01 %) 
+INFO:root:     9 resources occur 	    48 times 	(  0.01 %) 
+INFO:root:     9 resources occur 	    47 times 	(  0.01 %) 
+INFO:root:    12 resources occur 	    46 times 	(  0.01 %) 
+INFO:root:    15 resources occur 	    45 times 	(  0.01 %) 
+INFO:root:    17 resources occur 	    44 times 	(  0.01 %) 
+INFO:root:    20 resources occur 	    43 times 	(  0.01 %) 
+INFO:root:    19 resources occur 	    42 times 	(  0.01 %) 
+INFO:root:    17 resources occur 	    41 times 	(  0.01 %) 
+INFO:root:    21 resources occur 	    40 times 	(  0.01 %) 
+INFO:root:    26 resources occur 	    39 times 	(  0.02 %) 
+INFO:root:    32 resources occur 	    38 times 	(  0.02 %) 
+INFO:root:    34 resources occur 	    37 times 	(  0.02 %) 
+INFO:root:    33 resources occur 	    36 times 	(  0.02 %) 
+INFO:root:    51 resources occur 	    35 times 	(  0.03 %) 
+INFO:root:    53 resources occur 	    34 times 	(  0.03 %) 
+INFO:root:    81 resources occur 	    33 times 	(  0.05 %) 
+INFO:root:   114 resources occur 	    32 times 	(  0.07 %) 
+INFO:root:   120 resources occur 	    31 times 	(  0.07 %) 
+INFO:root:    64 resources occur 	    30 times 	(  0.04 %) 
+INFO:root:    65 resources occur 	    29 times 	(  0.04 %) 
+INFO:root:    64 resources occur 	    28 times 	(  0.04 %) 
+INFO:root:    83 resources occur 	    27 times 	(  0.05 %) 
+INFO:root:    79 resources occur 	    26 times 	(  0.05 %) 
+INFO:root:    94 resources occur 	    25 times 	(  0.06 %) 
+INFO:root:   131 resources occur 	    24 times 	(  0.08 %) 
+INFO:root:   116 resources occur 	    23 times 	(  0.07 %) 
+INFO:root:   149 resources occur 	    22 times 	(  0.09 %) 
+INFO:root:   151 resources occur 	    21 times 	(  0.09 %) 
+INFO:root:   210 resources occur 	    20 times 	(  0.13 %) 
+INFO:root:   237 resources occur 	    19 times 	(  0.14 %) 
+INFO:root:   278 resources occur 	    18 times 	(  0.17 %) 
+INFO:root:   301 resources occur 	    17 times 	(  0.18 %) 
+INFO:root:   375 resources occur 	    16 times 	(  0.22 %) 
+INFO:root:   420 resources occur 	    15 times 	(  0.25 %) 
+INFO:root:   467 resources occur 	    14 times 	(  0.28 %) 
+INFO:root:   571 resources occur 	    13 times 	(  0.34 %) 
+INFO:root:   656 resources occur 	    12 times 	(  0.39 %) 
+INFO:root:   863 resources occur 	    11 times 	(  0.52 %) 
+INFO:root:  1550 resources occur 	    10 times 	(  0.93 %) 
+INFO:root:  2268 resources occur 	     9 times 	(  1.36 %) 
+INFO:root:  3056 resources occur 	     8 times 	(  1.83 %) 
+INFO:root:  4293 resources occur 	     7 times 	(  2.57 %) 
+INFO:root:  6293 resources occur 	     6 times 	(  3.76 %) 
+INFO:root:  9389 resources occur 	     5 times 	(  5.61 %) 
+INFO:root: 15464 resources occur 	     4 times 	(  9.24 %) 
+INFO:root: 23056 resources occur 	     3 times 	( 13.78 %) 
+INFO:root: 37463 resources occur 	     2 times 	( 22.40 %) 
+INFO:root: 58214 resources occur 	     1 times 	( 34.80 %) 
+INFO:root:dbo:Person contains: <http://dbpedia.org/class/yago/Wikicat21st-centuryActors>, <http://dbpedia.org/class/yago/WikicatEnglishMusicians>, <http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>, <http://dbpedia.org/class/yago/Honoree110183757>, dbo:LacrossePlayer
+INFO:root:dbo:Athlete contains: dbo:LacrossePlayer
+INFO:root:dbo:SportsTeam contains: dboBasketballTeam
+INFO:root:    73 not instanciated templates:
+INFO:root:95ad975ecd3f4f8a96cdc1d5ad089e0a
+INFO:root:893492c37b564d4d9e1ce129547ed023
+INFO:root:eb9973f1951346f39307949428dd4e26
+INFO:root:04c55a217eca42488ea5a3fadb654924
+INFO:root:a807b47daf314dd1867083e605303a2b
+INFO:root:9636268ee7834242905069b017dfdce7
+INFO:root:99518f87aadb4ffdbc84a7b46b300383
+INFO:root:93b33f2e4d4f4d07a6dbd2be5baba794
+INFO:root:efe69ad1cb94450398a0a0a408332d63
+INFO:root:2ba1fd420a3144f68cb807b475c66dd5
+INFO:root:629e52550fd146e191ec02ae20114735
+INFO:root:4d7bec0dba5d42e0982d9832d3a78971
+INFO:root:5e448ee7e7a347909af9a05fd941d609
+INFO:root:4279f6d60e2b40aca3b49c6d92f96f80
+INFO:root:286e3b7df05248f9bcaf081f3a5bfae7
+INFO:root:2c0f7eee1b634f1895cbd246bd8c6e3c
+INFO:root:30d274c7ebc944d6ac4e29e01c552fbb
+INFO:root:f2e6e08d863b45a0b2fde08ff71c4d93
+INFO:root:09da33e36b464a00852d478e1a46581d
+INFO:root:032d3755146e42a3be21305ce7766f9a
+INFO:root:8994dc83e54f403699937e9328a327a8
+INFO:root:276666cb2dd442d29983656956c65930
+INFO:root:101dfea643e24d1483797bfb175000f1
+INFO:root:adc7d53883de42c6be0600b7cace1446
+INFO:root:444fa4b359354a5ea47e8d33ef5d0d05
+INFO:root:bef8f6aac12d4d6283dceb45a5a45f15
+INFO:root:81ced9f9e10b4380a691a73a17095c6e
+INFO:root:daa90042f4ff4210a603ae0931b2e92d
+INFO:root:7ffdaaa1870e4b449f08ef6591198dfb
+INFO:root:ae7bd0ded6804ceead902c06ec9b71e1
+INFO:root:7a39f5fc355c464eb024ab21d1b43e89
+INFO:root:d84486681133495fa12247728693ae90
+INFO:root:c45b083d0f4e4d43b3c84cbb54b3e598
+INFO:root:e963127fc9c048e089c071e56b80f214
+INFO:root:3b7d789c05074466884d8e0d189d97c4
+INFO:root:2006a24c1c3e478b98df523596714251
+INFO:root:337774a6b5bc4fb4bdf86ecb5abf0a33
+INFO:root:0da441743df14fafb7bc6b4bcacc81bf
+INFO:root:e179bec4f0ea4b508f69fac03d08356e
+INFO:root:d1caae4b8c75454d93e63dad304d42b9
+INFO:root:ddec2336ee0e4356a255236006bca1fc
+INFO:root:f17ff46a28de491a93859a94e3046480
+INFO:root:8e29eff6b17f4319b9c659532af37bad
+INFO:root:e9036a6c1a674f64a85a400eb987393b
+INFO:root:835e3bc3c8764022b3555cb4b8175d3b
+INFO:root:f1bd78d345634e9d9d237a044ba8599b
+INFO:root:cd7f39c8d3324c20a0beff615cfa9063
+INFO:root:d4b5df324bec450b833f8f4c1145992c
+INFO:root:7043f3a3431945138482107c7f71a3a7
+INFO:root:fd60b1d920e4435cbfbbe74a8631fde0
+INFO:root:232b47d723104bf9af52c6a454123647
+INFO:root:d8c7892603d64401909742551945fd10
+INFO:root:243a759bcba94cc98226ca3477da618a
+INFO:root:14fbed5378264537bb4a579854d59789
+INFO:root:f152c9e6bda2455781b4900277175979
+INFO:root:ec18ccd4be91486aa5253f7a802da354
+INFO:root:60deb84874954198b4c9b6cc5c85e747
+INFO:root:c1cdd10d876d429ba602f0b60fc91f53
+INFO:root:20ece59a1aa9487bbe525dcba5247d38
+INFO:root:f4b7def86f6e444b8521908b40cef72c
+INFO:root:9a2c07ecaef04020b5ad3820012f0ef4
+INFO:root:1df69aaf84db4e6ebf8479f68c52d2fe
+INFO:root:8cf47e5b92d148bdac37fa14e7f2f0d3
+INFO:root:7136d470a4c340bb8a9e1b60d5e68fdf
+INFO:root:2cc0b2ad617642aaace9eab113615942
+INFO:root:5f766cb18b93417495ec541e7749269c
+INFO:root:f107c093f6cd4143af7f686892a28d70
+INFO:root:d3f64fbb4efc4bf583de0d8ffe4be68d
+INFO:root:d94cdcd8ddea4f6ca38ef78a76aeb4f2
+INFO:root:c6a4fb6c10984d2494a7f6b2c3c6f6a9
+INFO:root:390bec142f5a4354a4a0d47a64474646
+INFO:root:418b062f88884aff8095211e8c44cbed
+INFO:root:2c39c59a5b3d4c15844b34930828326b

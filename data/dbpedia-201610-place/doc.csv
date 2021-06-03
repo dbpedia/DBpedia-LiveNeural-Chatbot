@@ -1,0 +1,35 @@
+what is the county of <A>;select ?a where { <A> <http://dbpedia.org/ontology/county> ?a }
+what is the district of <A>;select ?a where { <A> <http://dbpedia.org/ontology/district> ?a }
+what is the end point of <A>;select ?a where { <A> <http://dbpedia.org/ontology/endPoint> ?a }
+what is the highest place of <A>;select ?a where { <A> <http://dbpedia.org/ontology/highestPlace> ?a }
+what is the intercommunality of <A>;select ?a where { <A> <http://dbpedia.org/ontology/intercommunality> ?a }
+what is the located in area of <A>;select ?a where { <A> <http://dbpedia.org/ontology/locatedInArea> ?a }
+what is the location of <A>;select ?a where { <A> <http://dbpedia.org/ontology/location> ?a }
+what is the lowest place of <A>;select ?a where { <A> <http://dbpedia.org/ontology/lowestPlace> ?a }
+what is the management place of <A>;select ?a where { <A> <http://dbpedia.org/ontology/managementPlace> ?a }
+what is the municipality of <A>;select ?a where { <A> <http://dbpedia.org/ontology/municipality> ?a }
+what is the nearest city of <A>;select ?a where { <A> <http://dbpedia.org/ontology/nearestCity> ?a }
+what is the origin of <A>;select ?a where { <A> <http://dbpedia.org/ontology/origin> ?a }
+what is the region of <A>;select ?a where { <A> <http://dbpedia.org/ontology/region> ?a }
+what is the source place of <A>;select ?a where { <A> <http://dbpedia.org/ontology/sourcePlace> ?a }
+what is the source region of <A>;select ?a where { <A> <http://dbpedia.org/ontology/sourceRegion> ?a }
+what is the start point of <A>;select ?a where { <A> <http://dbpedia.org/ontology/startPoint> ?a }
+what is the state of <A>;select ?a where { <A> <http://dbpedia.org/ontology/state> ?a }
+what is the subregion of <A>;select ?a where { <A> <http://dbpedia.org/ontology/subregion> ?a }
+where is the county of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/county ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the end point of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/endPoint ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the highest place of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/highestPlace ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the intercommunality of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/intercommunality ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the located in area of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/locatedInArea ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the lowest place of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/lowestPlace ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the management place of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/managementPlace ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the municipality of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/municipality ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the nearest city of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/nearestCity ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the origin of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/origin ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the source place of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/sourcePlace ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the source region of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/sourceRegion ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the start point of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/startPoint ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the state of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/state ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the subregion of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/subregion ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the district of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/district ?b . ?b <http://dbpedia.org/ontology/location> ?a }
+where is the region of <A> located in;select ?a where { <A> http://dbpedia.org/ontology/region ?b . ?b <http://dbpedia.org/ontology/location> ?a }
