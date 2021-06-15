@@ -5,8 +5,11 @@ from flask import request
 from flask import make_response
 import re
 from generator_utils import normalize_predicates,query_dbpedia
+from func_call import two_entity,one_entity
 
 app=Flask(__name__)
+
+#This function get hits when the person hits the post request in webhook route
 
 @app.route('/webhook',methods={'POST'})
 def webhook():
@@ -18,42 +21,10 @@ def webhook():
     r.headers['Content-Type']='application/json'
     return r
 
-def one_entity(inputq,outputq,matchedq):
-    start=matchedq.find('<A>')
-    end=matchedq.find('>')+1+(len(inputq)-len(matchedq))
-    name =inputq[start:end]
-    name=name.strip().title().replace(" ","_")
-    print(name)
-    name='dbr:'+name
-    outputq=outputq.replace("<A>",name)
-    return outputq
 
-def two_entity(inputq,outputq,matchedq):
-    S1=matchedq.split(" ")
-    S2=inputq.split(" ")
-    L=[]
-    i=0
-    while i<len(S2):
-        word=S2[i]
-        if word not in S1:
-            G=""
-            while i<len(S2) and S2[i] not in S1:
-                G+=S2[i]
-                G+=" "
-                i+=1
-            i-=1
-            if len(G):
-                L.append(G)
-        i+=1
-    L[0]='dbr:'+(L[0].strip().title().replace(" ","_"))
-    L[1]='dbr:'+(L[1].strip().title().replace(" ","_"))
-    print(L)
-    if matchedq.find('<A>') < matchedq.find('<B>'):
-        outputq=outputq.replace("<A>",L[0]).replace("<B>",L[1])
-    else:
-        outputq=outputq.replace("<A>",L[1]).replace("<B>",L[0])
-    return outputq
-
+#This function is called from webhook route to replace the tokens with entity, 
+#This function preprocess the questions and calls function one entity or two entity from Func_call file,
+#Depending on the no. of token in the question, i.e matched query.
 
 def makeWebhookResult(req):
     result=req.get("queryResult")
@@ -83,6 +54,7 @@ def makeWebhookResult(req):
             }
         ]
     }
+
 
 
 if __name__=='__main__':
