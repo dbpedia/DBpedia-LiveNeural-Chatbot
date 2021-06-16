@@ -13,7 +13,8 @@ The chatbot is based on DBQNA templates which are broken down in Factual questio
 For using DBQNA in Dialogflow we have to break down the templates in CSV format which should strictly contain two columns one for the question and the other for an answer, we use [breakdown.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/breakdown.py) file to do this.
  
 After breaking down we upload the converted CSV file to the knowledge base of Dialogflow (The max pair per document is 2000), [Tutorial to use Dialogflow knowledge base](https://youtu.be/kF33Ime0a2k), then we have our Knowledge base which contains FAQ's like this
-<img src="https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/FAQsample.png" alt="Example 1" width="500">
+
+<img src="https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/FAQsample.png" alt="Example 1" width="400">
  
 Then when we hit a question on Dialogflow *"Give me the total number of architects of the buildings whose one of the architects was Stanford white?"*
  
@@ -33,9 +34,9 @@ The final answer is then displayed in Dialogflow, check the example below.
  
  
 ## **Example**
-<img src="https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/Example2.png" alt="Example 1" width="500">
+<img src="https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/Example2.png" alt="Example 1" width="300">
  
-<img src="https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/Example1.png" alt="Example 2" width="500">
+<img src="https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/Example1.png" alt="Example 2" width="300">
  
  
 
