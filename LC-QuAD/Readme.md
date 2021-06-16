@@ -1,7 +1,7 @@
 # **BENCHMARKING-using-[LCQuad-v1-dataset](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/lcquad_qaldformat.json)**
 
 ## **[LC-QuAD](http://lc-quad.sda.tech/lcquad1.0.html)**
-    LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corresponding SPARQL query. The target knowledge base is DBpedia, specifically, the April, 2016 version. Please see our paper for details about the dataset creation process and framework.
+LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corresponding SPARQL query. The target knowledge base is DBpedia, specifically, the April, 2016 version. Please see our paper for details about the dataset creation process and framework.
 
 
 
