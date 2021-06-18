@@ -14,7 +14,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     ```
     **Code - [OnlySpotlight.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/onlyspotlight.py)**
 
-    **Process**- Here we simply use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *annotate* function to get the results and then compare with the available entity names.
+    **Process**- Here we simply use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *annotate* function to get the results and then compare with the LCQuAD benchmark answers.
 
     **Conclusion**- 
     * There are  2029/5000 samples correctly annotated
@@ -45,16 +45,16 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     recall score:  0.5939
     F-Measure score:  0.5989598544248503
     ```
-    **Code - [spotlight_&_jac1.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spotlight_%26_jac1.py)** validation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
+    **Code - [spotlight_&_jac1.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spotlight_%26_jac1.py)** validation using Entity Disambiguation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
 
     **Process**- 
-    Here we use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and validate it using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
+    Here we use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and do entity disambiguation using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
     
-    If the template has two token holders and after validation we get 2 entities we return them directly, if API+validation do not give same entity as the no. of holders in temmplate then we go for extraction by finding the suitable word comparing template and the question
+    If the template has two token holders and after validation we get 2 entities we return them directly, if API+Disambiguation do not give same entity as the no. of holders in temmplate then we go for extraction by finding the suitable word comparing template and the question
 
-    Then we validate those probable entities, extracted by comparing using same query given above. 
+    Then we again do entity disambiguation for extracted tokens by comparing using same query given above. 
     
-    Basically, we only use extraction and validation if api fails to give correct response or complete reponse. Also the template is not accurate there are 4760/5000 templates which has correct no. of Token holders as per entity in dataset. Rest may have no token holders or one in if there are two entities.
+    Basically, we only use *extraction by comparing* and *disambiguation* if *API+Disambiguation fails* to give correct response or complete reponse. Also the template is not accurate there are 4760/5000 templates which has correct no. of Token holders as per Benchmark answers in dataset. Rest may have no token holders or one in if there are two entities.
 
     **Conclusion**- 
     * There are  2504/5000 samples correctly annotated
@@ -72,14 +72,14 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     recall score:  0.624875024995001
     F-Measure score:  0.5598742721857325
     ```
-    **Code - [spotlight_&_jac2.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spotlight_%26_jac2.py)** validation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
+    **Code - [spotlight_&_jac2.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spotlight_%26_jac2.py)** validation using Entity Disambiguation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
 
     **Process**- 
-    Here we use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and validate it using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
+    Here we use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and do entity disambiguation using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
 
-    But here we don't return the value directly instead we then extract the probable entities using template. Then we validate those probable entities, and then we use match function which returns the unioun  of both predicted entities.  
+    But here we don't return the value directly instead we then extract the probable entities using template. Then we validate those probable entities using entity disambiguation, and then we use match function which returns the unioun  of both predicted entities.  
     
-    Basically, it contains unioun of entities from both *api+validation* and *extraction+validation* avoiding copies. That's why we have high recall score but low precision score in this case.
+    Basically, it contains unioun of entities from both *API + Entity Disambiguation* and *extraction + Entity Disambiguation* avoiding copies. That's why we have high recall score but low precision score in this case.
 
     **Conclusion**- 
     * There are  2220/5000 samples correctly annotated
@@ -92,29 +92,29 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     * Lastly there are 1957 samples which have no correct annotations.
 
 ## **Observation from above implementations**
-1. I noticed that in case 1 in which api+validation failed and extraction+validation worked the results of extraction was more accurate than api, this was visible in case 2 as well while we created unioun we saw extraction had a liltle better results
+1. I noticed that in case 1 in which *API + Entity Disambiguation* failed and *extraction + Entity Disambiguation* worked, The results of extraction was more accurate than api, This was visible in case 2 as well while we created unioun we saw extraction had a liltle better results
 
 2. Also after going through dataset I saw that our code annotates extra entities which is not required, like if the template is accurate than we can know how many token holders are there which will tell how many entities we require. which will improve our precision score.
 
-3. In benchmarking if the template is correct  for questions, then extraction + validation will have good score because while comparing question and template the order and words will not change.
+3. In benchmarking if the template is correct  for questions, then *extraction + Entity Disambiguation* will have good score because while comparing question and template the order and words will not change.
 
-4. Problem in template creation is because of mismatch of entity spelling or words or use of latin characters in given entity in dataset and the entity in question. template creation function is documented properly in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
+4. Problem in template creation is because of mismatch of *entity spelling or words or use of latin characters* in question with *Benchmark answers* in dataset. Template creation function is here in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
 
-5. Now thinking of all the above points I tried an approach with only entity extraction + validation in cases, in which we have correct templates which has 4768/5000 samples. Here correct templates doesn't mean that the words are same for entities, it means that in these 4768 samples the no. of token holders is same as no. of entities given in dataset, because in template creation it replaces any matching word in question with the matching word in entities provided by dataset by a token holder <> for a particular entity.
+5. Now thinking of all the above points I tried an approach with only entity *extraction + Entity Disambiguation* and only in those cases, in which we have correct templates which is 4768/5000 samples. Here correct templates doesn't mean benchmark answers and question have same entities spelling or words, it means that in these 4768 samples the no. of token holders is same as no. of entities in Benchmark answers of dataset, because in template creation it replaces any matching word in question with the matching word in entities in Benchmark answers by a token holder <> for a particular entity.
 
 6. Results of this approach is given below.
 
-## **Using only entity extraction + validation using templates**
+## **Using only Extraction + Entity Disambiguation using templates**
 1. **Case 1 [only_jac_correct_temp1.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/only_jac_correct_temp1.csv)**
     ```
     precision score:  0.6398153975246487
     recall score:  0.6396056219844766
     F-Measure score:  0.6397104925570269
     ```
-    **Code - [only_jac_correct_temp1.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/only_jac_correct_temp1.py)** validation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
+    **Code - [only_jac_correct_temp1.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/only_jac_correct_temp1.py)** validation using Entity Disambiguation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
 
     **Process**- 
-    Here we use 4768 samples only with proper templates. In this we extract probable entities by comparing question with templates and then validate it using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100 by breaking down the probable entities in words.
+    Here we use 4768 samples only with proper templates. In this we extract probable entities by comparing question with templates and then validate it by doing entity disambiguation using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100, by breaking down the probable entities in words.
     
     Also here If the template has 2 token holders and then we only extract 2 most probable entities from question by using spacy for comparing question and extracted entities. same goes for 1 token holder. This is done to avoid extra wrong annotations and improve precision score.
 
@@ -129,29 +129,29 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
 ## **Only using [Falcon](https://labs.tib.eu/falcon/)**
 1. **Case 1 [only_Falcon.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/only_Falcon.csv)**
     ```
-    precision score:  0.7962325298764421
-    recall score:  0.8615556005671461
-    F-Measure score:  0.8276070782160055
+    precision score:  0.7976466666666657
+    recall score:  0.8628
+    F-Measure score:  0.8289450758229708
     ```
     **Code - [only_Falcon.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/only_Falcon.py)**
 
-    **Process**- Here we simply use [Falcon](https://labs.tib.eu/falcon/) *Relation and Entity* function API of falcon to get the results and then compare with the available entity names.
+    **Process**- Here we simply use [Falcon](https://labs.tib.eu/falcon/) *Relation and Entity* function API of falcon to get the results and then compared them with the LCQuAD benchmark answers.
 
     **Conclusion**- 
-    * There are  3379/4938 samples correctly annotated
-    * There are 188 samples which has *2 entities* and *2 are anotated* by spotlight but only *1 is correct*. 
-    * There are 145 samples which has *2 entities* and *3 are anotated* by spotlight and *2 is correct*.
-    * There are 111 samples which has *2 entities* and *3 are annotated* by spotlight but only *1 is correct*.
+    * There are  3421/5000 samples correctly annotated
+    * There are 195 samples which has *2 entities* and *2 are anotated* by spotlight but only *1 is correct*. 
+    * There are 148 samples which has *2 entities* and *3 are anotated* by spotlight and *2 is correct*.
+    * There are 118 samples which has *2 entities* and *3 are annotated* by spotlight but only *1 is correct*.
     * There are 30 samples which has *2 entities* and *4 are annotated* by code but only *1 is correct*.
-    * There are 67 samples which has *2 entities* and *1 is annotated* by spotlight and *1 is correct*.
-    * There are 493 samples which has *1 entity* and *2 are annotated* by spotlight but only *1 is correct*.
-    * Lastly there are 436 samples which have no correct annotations.
+    * There are 71 samples which has *2 entities* and *1 is annotated* by spotlight and *1 is correct*.
+    * There are 497 samples which has *1 entity* and *2 are annotated* by spotlight but only *1 is correct*.
+    * Lastly there are 451 samples which have no correct annotations.
 
     **Observations**-
-    * Falcon takes a good amount of time to annotate, it took 7-8 hours for this dataset, so not exactly time efficient.
+    * Falcon takes a good amount of time to annotate, it took 13 hours for this dataset, so not exactly time efficient.
     * It over annotates very much which can be seen in Conclusion.
     * If we match extracted word and falcon response to find most similar or probable entity as per proper template, so this will avoid over annotation like above approach and may improve scores for falcon.
-    * Also in cases were falcon fails, we use extracted entity + validation. 
+    * Also in cases were falcon fails, we can use extracted entity + Entity disambiguation. 
     * This approach is yet to bet tested.
 
 
