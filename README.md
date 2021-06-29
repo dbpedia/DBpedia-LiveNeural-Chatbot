@@ -5,7 +5,7 @@ DBpedia Live Neural Chatbot.
  
 ## Benchmarks
 
-- [LC-QUAD](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/tree/benchmarks/LC-QuAD)
+- [LC-QUAD](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/tree/benchmarks/LC-QuAD) Version [08bc1af95fdbf7a3f6c873821f23543338315a5f](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/commit/08bc1af95fdbf7a3f6c873821f23543338315a5f)
  
 ## **[DBQNA dataset](https://github.com/AKSW/DBNQA)**
 "DBpedia Neural Question Answering (DBNQA) [Hartmann et al.] is the largest DBpedia-targeting dataset we have found so far and a superset of the Monument dataset. It is also based on English and SPARQL pairs and contains 894,499 instances in total. In terms of vocabulary, it has about 131,000 words for English and 244,900 tokens for SPARQL without any reduction. A large number of generic templates are extracted from the concrete examples of two existing datasets LC-QUAD and QALD-7-Train [18] by replacing the entities with placeholders.
