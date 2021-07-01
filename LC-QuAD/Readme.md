@@ -4,8 +4,10 @@
 LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corresponding SPARQL query. The target knowledge base is DBpedia, specifically, the April, 2016 version. Please see our paper for details about the dataset creation process and framework.
 
 
+## Check this Google [Doc](https://docs.google.com/document/d/19ZblsgnzQ8AKhv738hIwBurzbpXm5h5wqM6eekutUsM/edit?usp=sharing) for problems of approches mentioned below and ongoing discussions.
 
-## **Only using [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api)**
+
+## **Only using [DBpedia-Spotlight](https://www.dbpedia-spotlight.org/api)**
 1. **Case 1 [OnlySpotlight.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/onlySpotlight.csv)**
     ```
     precision score:  0.5462900000000006
@@ -14,7 +16,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     ```
     **Code - [OnlySpotlight.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/onlyspotlight.py)**
 
-    **Process**- Here we simply use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *annotate* function to get the results and then compare with the LCQuAD benchmark answers.
+    **Process**- Here we simply use [DBpedia-Spotlight](https://www.dbpedia-spotlight.org/api) *annotate* function to get the results and then compare with the LCQuAD benchmark answers.
 
     **Conclusion**- 
     * There are  2029/5000 samples correctly annotated
@@ -32,13 +34,13 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     F-Measure score:  0.5367795777223314
     ```
 
-    **Process**- Everything is same as Case 1 but Here we simply use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *Candidate* function to get the results.
+    **Process**- Everything is same as Case 1 but Here we simply use [DBpedia-Spotlight](https://www.dbpedia-spotlight.org/api) *Candidate* function to get the results.
 
     **Conclusion**- 
     * Conclusion is almost same as **Case 1**
 
 
-## **Using [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) and entity extraction using templates (spotlight+jaccard)**
+## **Using [DBpedia-Spotlight](https://www.dbpedia-spotlight.org/api) and entity extraction using templates (spotlight+jaccard)**
 1. **Case 1 [spotlight_&_jac1.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spotlight_%26_jac1.csv)**
     ```
     precision score:  0.604106666666667
@@ -48,7 +50,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     **Code - [spotlight_&_jac1.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spotlight_%26_jac1.py)** validation using Entity Disambiguation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
 
     **Process**- 
-    Here we use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and do entity disambiguation using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
+    Here we use [DBpedia-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and do entity disambiguation using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
     
     If the template has two token holders and after validation we get 2 entities we return them directly, if API+Disambiguation do not give same entity as the no. of holders in temmplate then we go for extraction by finding the suitable word comparing template and the question
 
@@ -75,7 +77,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     **Code - [spotlight_&_jac2.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spotlight_%26_jac2.py)** validation using Entity Disambiguation and comparison function imported can be found in **[convert.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/convert.py)**
 
     **Process**- 
-    Here we use [DBpedai-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and do entity disambiguation using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
+    Here we use [DBpedia-Spotlight](https://www.dbpedia-spotlight.org/api) *candidate* function to get the results as tokens then we breakdown the token and do entity disambiguation using *"SELECT ?uri ?label WHERE { ?uri rdfs:label ?label . ?label bif:contains "'''+i+'''" } limit 100"* this query with limit 100.
 
     But here we don't return the value directly instead we then extract the probable entities using template. Then we validate those probable entities using entity disambiguation, and then we use match function which returns the unioun  of both predicted entities.  
     
@@ -154,6 +156,22 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     * Also in cases were falcon fails, we can use extracted entity + Entity disambiguation. 
     * This approach is yet to bet tested.
 
+## **Using (Extraction by comparing with templates) + [Dbpedia lookup](https://lookup.dbpedia.org/) + Entity Disambiguation(different)**
+1. **Case 1 [entityextract_lookup_Test1.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup_Test1.csv)**
+    ```
+    precision score:  0.7232011747430249
+    recall score:  0.7230962869729389
+    F-Measure score:  0.7231487270546688
+    ```
+    **Code - [entityextract_lookup.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup.py)** validation using Entity Disambiguation and comparison function imported can be found in the same file.
+
+    **Process**- 
+    I tried disambiguation using DBpedia lookup which takes candidate entity directly like “bill finger” and returns an [XML file](https://lookup.dbpedia.org/api/search?query=bill%20finger) which we then convert into JSON and from the list of the candidates related to bill finger we match and select and one entity.
+    Now for matching/disambiguation, we match the question and entity in the returned list and find out the intersection of words between the question and entity and divide it by the number of words in the entity and if the score is the same for more than one entity then we select the one with more no. of intersection with the question. Now, this disambiguation approach is one of the main reasons for the increase in scores this is taken from Jaccard where we divide intersection by questionlength+ entitylength - intersection.
+    But our’s is a bit different, here the intersection of words is divided by entity length. We have tried with Jaccard,  Levenshtein but this gives a better score. 
+
+    Now after matching we select a single entity from the lookup list and compare it with entities in the benchmark.
+
 
 ## **Papers**
  
@@ -178,5 +196,15 @@ This paper explains how the Falcon works.
   title = {Old is Gold: Linguistic Driven Approach for Entity and Relation Linking of Short Text.},
   url = {http://dblp.uni-trier.de/db/conf/naacl/naacl2019-1.html#SakorMSSV0A19},
   year = 2019
+}
+```
+This paper explains how the spotlight works.
+
+```@inproceedings{isem2011mendesetal,
+title = {DBpedia Spotlight: Shedding Light on the Web of Documents},
+author = {Pablo N. Mendes and Max Jakob and Andres Garcia-Silva and Christian Bizer},
+year = {2011},
+booktitle = {Proceedings of the 7th International Conference on Semantic Systems (I-Semantics)},
+abstract = {Interlinking text documents with Linked Open Data enables the Web of Data to be used as background knowledge within document-oriented applications such as search and faceted browsing. As a step towards interconnecting the Web of Documents with the Web of Data, we developed DBpedia Spotlight, a system for automatically annotating text documents with DBpedia URIs. DBpedia Spotlight allows users to configure the annotations to their specific needs through the DBpedia Ontology and quality measures such as prominence, topical pertinence, contextual ambiguity and disambiguation confidence. We compare our approach with the state of the art in disambiguation, and evaluate our results in light of three baselines and six publicly available annotation systems, demonstrating the competitiveness of our system. DBpedia Spotlight is shared as open source and deployed as a Web Service freely available for public use.}
 }
 ```
