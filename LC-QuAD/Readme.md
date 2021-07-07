@@ -167,10 +167,30 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
 
     **Process**- 
     I tried disambiguation using DBpedia lookup which takes candidate entity directly like “bill finger” and returns an [XML file](https://lookup.dbpedia.org/api/search?query=bill%20finger) which we then convert into JSON and from the list of the candidates related to bill finger we match and select and one entity.
-    Now for matching/disambiguation, we match the question and entity in the returned list and find out the intersection of words between the question and entity and divide it by the number of words in the entity and if the score is the same for more than one entity then we select the one with more no. of intersection with the question. Now, this disambiguation approach is one of the main reasons for the increase in scores this is taken from Jaccard where we divide intersection by questionlength+ entitylength - intersection.
+    Now for matching/disambiguation, we match the question and entity in the returned list and find out the intersection of words between the question and entity and divide it by the number of words in the entity **I.e. (intersection of words / length of entity)** and if the score is the same for more than one entity then we select the one with **Max no. of intersection** with the question. Now, this disambiguation approach is one of the main reasons for the increase in scores this is taken from Jaccard where **(intersection / (questionlength+ entitylength - intersection))**
     But our’s is a bit different, here the intersection of words is divided by entity length. We have tried with Jaccard,  Levenshtein but this gives a better score. 
 
-    Now after matching we select a single entity from the lookup list and compare it with entities in the benchmark.
+    **We have tried this with jaccard as well, here's the dataset we have [jac_Lookup_Test1.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/jac_Lookup_Test1.csv)**
+    ```
+    precision score:  0.5629326620516047
+    recall score:  0.5628277742815188
+    F-Measure score:  0.5628802132803338
+    ```
+    why did the score fall? 
+    
+    see this example-
+    question is - "Was winston churchill the prime minister of Selwyn Lloyd"
+    
+    our token - "winston churchill"  
+    
+    now what jaccard selects is -"Timeline of the first premiership of Winston Churchill" instead of just winston churchil why?  because question length is 9 + entity length is 8 intersection is 4 (the ,of ,winston,churchill) so the score is  4/(9+8-4)= 0.30769
+    why it didn't pick "winston churchill" because it had score of 0.2222   intersection=2 , question =9 , entity=2  so 2/(9+2-2) = 0.222
+    
+    
+    In the first approach case mentioned just above, score for "winston churchill" was 1 as it is intersection/entity length  so 2/2 =1 
+    for the "Timeline of the first premiership of Winston Churchill" it had score of 0.5 because intersection/entity length i.e.  4/8 =0.5
+
+
 
 
 ## **Papers**
