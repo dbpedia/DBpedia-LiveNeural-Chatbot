@@ -3,7 +3,7 @@ import json
 import requests
 import xmltodict
 from evaluation import read_LCQUAD
-from convert import template_convert,extract_token_value,tok_vec_similarity
+from convert import template_convert,extract_token_value,tok_vec_similarity,query_dbpedia
 
 def lookup_dbpedia(text):
     headers = {
@@ -19,6 +19,27 @@ def lookup_dbpedia(text):
     except:
         return []
 
+def matchDisambiguates(BElink):
+    Disambglist=[]
+    for Elink in BElink:
+        Disambglist.append(Elink)
+        t='''SELECT ?wikiPageDisambiguates WHERE { <'''+Elink+'''> <http://dbpedia.org/ontology/wikiPageDisambiguates> ?wikiPageDisambiguates. }'''
+        j=query_dbpedia(t)
+        l=j.get('results').get('bindings')
+        l=[i['wikiPageDisambiguates']['value'] for i in l]
+        Disambglist.extend(l)
+    return Disambglist
+
+def matchRedirects(BElink):
+    Redireclist=[]
+    for Elink in BElink:
+        Redireclist.append(Elink)
+        t='''select ?sameAs where { { <'''+Elink+'''>   <http://dbpedia.org/ontology/wikiPageRedirects> ?sameAs } UNION { ?sameAs <http://dbpedia.org/ontology/wikiPageRedirects>  <'''+Elink+'''> }}'''
+        j=query_dbpedia(t)
+        l=j.get('results').get('bindings')
+        l=[i['sameAs']['value'] for i in l]
+        Redireclist.extend(l)
+    return Redireclist
 
 def validate_ant(name,ques):
     results=lookup_dbpedia(name)
@@ -96,7 +117,8 @@ sumr=0
 Precision=0
 Recall=0
 f=0
-with open('/content/gdrive/MyDrive/entityextract_lookup_Test1.csv',  mode='w' ) as results_file:
+errc=0
+with open('Lookup_Test2.csv',  mode='w' ) as results_file:
     writer=csv.writer(results_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     for question in questions:
         #try:    
@@ -115,10 +137,16 @@ with open('/content/gdrive/MyDrive/entityextract_lookup_Test1.csv',  mode='w' ) 
 
                 print(entities)
                 coun+=1
-
-                
                 numberSystemEntities=len(question[3])
                 intersection= set(question[3]).intersection(entities)
+                if len(intersection)!=numberSystemEntities:
+                    jj=matchRedirects(question[3])
+                    intersection= set(jj).intersection(entities)
+                    if len(intersection)!=numberSystemEntities:
+                        jdis=matchDisambiguates(entities)
+                        intersection= set(jj).intersection(jdis)
+                        if len(intersection)==numberSystemEntities:
+                            errc+=1
                 if numberSystemEntities!=0 and len(entities)!=0 :
                     p_entity=len(intersection)/len(entities)
                     r_entity=len(intersection)/numberSystemEntities
@@ -146,3 +174,4 @@ f=(2 * Precision * Recall) / (Precision + Recall)
 print(" precision score: ",Precision)
 print(" recall score: ",Recall)
 print(" F-Measure score: ",f)
+print("corrected sample: ",errc)

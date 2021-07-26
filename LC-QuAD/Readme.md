@@ -157,7 +157,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     * This approach is yet to bet tested.
 
 ## **Using (Extraction by comparing with templates) + [Dbpedia lookup](https://lookup.dbpedia.org/) + Entity Disambiguation(different)**
-1. **Case 1 [entityextract_lookup_Test1.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup_Test1.csv)**
+1. **Case 1 [Lookup_Test1.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup_Test1.csv)**
     ```
     precision score:  0.7232011747430249
     recall score:  0.7230962869729389
@@ -189,6 +189,32 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     
     In the first approach case mentioned just above, score for "winston churchill" was 1 as it is intersection/entity length  so 2/2 =1 
     for the "Timeline of the first premiership of Winston Churchill" it had score of 0.5 because intersection/entity length i.e.  4/8 =0.5
+
+2. **Case 2 [Lookup_Test2.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_Test2.csv)**
+    ```
+    precision score:  0.7879169288860919
+    recall score:  0.7878120411160059
+    F-Measure score:  0.7878644815101427
+    corrected sample:  241
+    ```
+    **Code - [entityextract_lookup.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup.py)** validation using Entity Disambiguation and comparison function imported can be found in the same file.
+
+    **Process**- 
+    The process remains same as the case 1 with score of 0.72 but here we added two functions which solved two of the problems check **[Docs](https://docs.google.com/document/d/19ZblsgnzQ8AKhv738hIwBurzbpXm5h5wqM6eekutUsM/edit?usp=sharing)**.
+    What we did in this approach is we checked if the entities mentioned in benchmark had any redirect links and if the entity we selected is one of them. This was solved using a query- 
+
+    ```select ?sameAs where { { <'''+Elink+'''>   <http://dbpedia.org/ontology/wikiPageRedirects> ?sameAs } UNION { ?sameAs <http://dbpedia.org/ontology/wikiPageRedirects>  <'''+Elink+'''> }}```
+
+
+    Where Elink will be entities given in the benchmark.
+
+    second thing we did is, if the entity we selected form candidates have the benchmarked entity in their disambiguation section like the example mentioned in mentioned docs. Then we use another query to retrieve the all the links in disambiguation section of the selected entity from candidates. Query -
+
+    ```SELECT ?wikiPageDisambiguates WHERE { <'''+Elink+'''> <http://dbpedia.org/ontology/wikiPageDisambiguates> ?wikiPageDisambiguates. }```
+
+    Where Elink will be entities we selected from initial retrieved candidates from lookup.
+
+    So after this two improvement we had a score of **0.78** here is the **[Docs](https://docs.google.com/document/d/19ZblsgnzQ8AKhv738hIwBurzbpXm5h5wqM6eekutUsM/edit?usp=sharing)** which has solved problem and problem examples.
 
 
 
