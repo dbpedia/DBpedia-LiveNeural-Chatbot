@@ -163,7 +163,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     recall score:  0.7230962869729389
     F-Measure score:  0.7231487270546688
     ```
-    **Code - [entityextract_lookup.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup.py)** validation using Entity Disambiguation and comparison function imported can be found in the same file.
+    **Code - [entityextract_lookup.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/2bdade389e2d3e56d843ff19b352d8701bcb048e/LC-QuAD/entityextract_lookup.py)** validation using Entity Disambiguation and comparison function imported can be found in the same file.
 
     **Process**- 
     I tried disambiguation using DBpedia lookup which takes candidate entity directly like “bill finger” and returns an [XML file](https://lookup.dbpedia.org/api/search?query=bill%20finger) which we then convert into JSON and from the list of the candidates related to bill finger we match and select and one entity.
@@ -197,7 +197,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     F-Measure score:  0.7878644815101427
     corrected sample:  241
     ```
-    **Code - [entityextract_lookup.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup.py)** validation using Entity Disambiguation and comparison function imported can be found in the same file.
+    **Code - [entityextract_lookup.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/30cc2985e5b1975d654140bc5486ce61329721b6/LC-QuAD/entityextract_lookup.py)** validation using Entity Disambiguation and comparison function imported can be found in the same file.
 
     **Process**- 
     The process remains same as the case 1 with score of 0.72 but here we added two functions which solved two of the problems check **[Docs](https://docs.google.com/document/d/19ZblsgnzQ8AKhv738hIwBurzbpXm5h5wqM6eekutUsM/edit?usp=sharing)**.
@@ -215,6 +215,49 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     Where Elink will be entities we selected from initial retrieved candidates from lookup.
 
     So after this two improvement we had a score of **0.78** here is the **[Docs](https://docs.google.com/document/d/19ZblsgnzQ8AKhv738hIwBurzbpXm5h5wqM6eekutUsM/edit?usp=sharing)** which has solved problem and problem examples.
+
+2. **Case 3 [Lookup_Test3.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_Test3.csv)**
+    ```
+    precision score:  0.8646761377317602
+    recall score:  0.8646761377317602
+    F-Measure score:  0.8646761377317602
+    ```
+    **Code - [entityextract_lookup.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/entityextract_lookup.py)** validation using Entity Disambiguation and comparison function imported can be found in the same file.
+
+    **Process**- 
+    The process remains same as the case 1 and 2 but with further problems solved check **[Docs](https://docs.google.com/document/d/19ZblsgnzQ8AKhv738hIwBurzbpXm5h5wqM6eekutUsM/edit?usp=sharing)** for explaination of problems and solution with example.
+    
+    The 1st problem we solved was the minute spelling errors because of which while selecting entities from retrieved candidates we were choosing the wrong one.
+    Like 
+    ```
+    How many rivers are crossed by different Box Girder bridges
+    Benchmaked- ['http://dbpedia.org/resource/Box_girder_bridge']
+    We choosed- ['http://dbpedia.org/resource/Girder']
+    ```
+    With this when we were comparing the retrieved entity with the question instead of counting an exact word-match as intersection, we matched words of question and candidate entities to find a score using difflib similar function like if Bridge in a candidate was compared Bridges in question it would not be an exact match so it will not be counted as an intersection but it should be. So with difflib similar score we count any score >0.85 as an intersection. So the bridge and brides will be considered as intersection and then we can choose our correct entity from candidate even if there are minute spelling differences.
+
+    The 2nd problem we solved was the entities which can’t be fetched up lookup because it doesn’t have labels in it. so for that, we checked using query if the entity in the benchmark is retrieval or not or it has label or not. If it doesn’t have any label then we don’t count it in the evaluation.
+    Query -
+
+    ```ask { <'''+Elink+'''> rdfs:label ?label.  }```
+    Where Elink is the Benchmarked entity.
+
+    The 3rd problem we solved was that entities which are no more present. so for that, we checked using query if the entity in the benchmark is present or not. If it is not present then we don’t count it in the evaluation.
+    Query -
+
+    ```ask { <'''+Elink+'''> ?p ?o.  }```
+    Where Elink is the Benchmarked entity.    
+
+    The 4th problem we solved was like a spelling error because of the Latin character in the retrieved candidate and English character in question we were not able to match them so I converted Latin character in candidates to English alphabet so that we can match and it worked.
+
+    The 5th problem we solved was that some entities could not be retrived by lookup so we solved this by Taking candidates  from both SPARQL ENDPOINT and LOOKUP.
+
+    So after this two improvement we had a score of **0.86** here is the **[Docs](https://docs.google.com/document/d/19ZblsgnzQ8AKhv738hIwBurzbpXm5h5wqM6eekutUsM/edit?usp=sharing)** which has solved problem and problem examples.
+
+    **There are still few problems which can be solved with the correct spotting of the entity in question so that we don’t need to compare the complete question. And also we can get correct candidates with that. 
+    So currently we’re exploring Token spotting using Standford’s parser**
+
+
 
 
 
