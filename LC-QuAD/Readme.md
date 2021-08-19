@@ -258,6 +258,37 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     So currently we’re exploring Token spotting using Standford’s parser**
 
 
+## **Using [Spacy_large_model](https://spacy.io/models) for (token Extraction ) + [Dbpedia lookup](https://lookup.dbpedia.org/)+[Dbpedia Sparql endpoint](https://dbpedia.org/sparql/) for candidate selection + Entity Disambiguation**
+1. **Case 1 [Lookup_spacy_ner.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_ner_Test2.csv)**
+    ```
+    F-Measure score:  0.79
+    ```
+    **Code - [spacy_and_disambiguation.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spacy_and_disambiguation.py)** 
+
+    **Process**- 
+    All the above process were not independent as we were extracting token using templates created from already known benchmark entities. But this approach is completely independent. Here we first spot token which are probable entities, like if the question is **"Which are the major hubs of airline which operates the Menora Tunnel"** then spotted entity is  **Menora Tunnel** using a combination of spacy ner and spacy noun chunks. 
+    Then we use the token to get a candidate list form Dbpedia Lookup and Dbpedia sparql endpoint, next using entity disambiguation we select one entity from the candidate list for respective token.
+    **In this case we compare candidate entity with complete question for disambigutaion**
+
+2. **Case 2**
+    ```
+    F-Measure score:  0.76
+    ```
+    In this case everthing remains same as case 1, but while disambiguation we were only comparing extracted token with cadidate entities not the complete question.
+    we did this to test if comparing only with tokens instead of question can improve results, but that wasn't the case.
+
+## **Using [Stanford-corenlp-parser](https://stanfordnlp.github.io/CoreNLP/) + [Stanford-Stanza-Ner](https://stanfordnlp.github.io/stanza/) for (token Extraction ) + [Dbpedia lookup](https://lookup.dbpedia.org/)+[Dbpedia Sparql endpoint](https://dbpedia.org/sparql/) for candidate selection + Entity Disambiguation**
+1. **Case 1 [Lookup_spacy_ner.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_Final_parser_Test5.csv)**
+    ```
+    precision score:  0.8037643207855966
+    recall score:  0.8514729950900164
+    F-Measure score:  0.8269311077049624
+    ```
+    **Code - [Stanford_and_disambiguation.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Stanford_and_disambiguation.py)** 
+
+    **Process**- 
+    This approach is also completely independent like spacy one. Here we first spot enitity using stanfordcore nlp parser and stanford stanza ner.
+    For spotting we extract noun phrases from core nlp parser tree, we also use stanford stanza NER and then we choose a superset. Then we use the spotted token to get a candidate list form Dbpedia Lookup and Dbpedia sparql endpoint, next using entity disambiguation we select one entity from the candidate list for respective token.
 
 
 
