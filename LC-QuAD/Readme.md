@@ -280,7 +280,7 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
     we did this to test if comparing only with tokens instead of question can improve results, but that wasn't the case.
 
 ## **Using [Stanford-corenlp-parser](https://stanfordnlp.github.io/CoreNLP/) + [Stanford-Stanza-Ner](https://stanfordnlp.github.io/stanza/) for (token Extraction ) + [Dbpedia lookup](https://lookup.dbpedia.org/)+[Dbpedia Sparql endpoint](https://dbpedia.org/sparql/) for candidate selection + Entity Disambiguation**
-1. **Case 1 [Lookup_spacy_ner.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_Final_parser_Test5.csv)**
+1. **Case 1 [Lookup_Stanford_ner.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_Final_parser_Test5.csv)**
     ```
     precision score:  0.8037643207855966
     recall score:  0.8514729950900164
