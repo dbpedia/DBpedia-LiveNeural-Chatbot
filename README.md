@@ -3,6 +3,18 @@ DBpedia Live Neural Chatbot.
  
  This is a live chatbot version of the DBpedia Neural Question Answering dataset [DBNQA](https://github.com/AKSW/DBNQA) built using [Google Dialogflow](https://cloud.google.com/dialogflow/es/docs) and connected to a webhook [flask server](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/main/app.py).
  
+ This project also contains our research work on entity linking which plays major part in the project-
+ [Here](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/tree/benchmarks/LC-QuAD) you can find our work on Entity linking.
+
+## **Team**
+The GSoC-21 project was carried out by [**Ashutosh Kumar**](https://github.com/ashutosh16399).
+
+The project is supervised and supported by:
+- [**Edgard Marx**](https://github.com/edgardmarx)
+- [**Nausheen Fatma**](https://github.com/nausheenfatma)
+- [**Thiago Castro Ferreira**](https://github.com/ThiagoCF05)
+- [**Diego Moussallem**](https://github.com/DiegoMoussallem)
+
 ## **[DBQNA dataset](https://github.com/AKSW/DBNQA)**
 "DBpedia Neural Question Answering (DBNQA) [Hartmann et al.] is the largest DBpedia-targeting dataset we have found so far and a superset of the Monument dataset. It is also based on English and SPARQL pairs and contains 894,499 instances in total. In terms of vocabulary, it has about 131,000 words for English and 244,900 tokens for SPARQL without any reduction. A large number of generic templates are extracted from the concrete examples of two existing datasets LC-QUAD and QALD-7-Train [18] by replacing the entities with placeholders.
  
