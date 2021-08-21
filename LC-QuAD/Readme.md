@@ -259,9 +259,11 @@ LC-QuAD is a Question Answering dataset with 5000 pairs of question and its corr
 
 
 ## **Using [Spacy_large_model](https://spacy.io/models) for (token Extraction ) + [Dbpedia lookup](https://lookup.dbpedia.org/)+[Dbpedia Sparql endpoint](https://dbpedia.org/sparql/) for candidate selection + Entity Disambiguation**
-1. **Case 1 [Lookup_spacy_ner.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_ner_Test2.csv)**
+1. **Case 1 [Lookup_spacy_ner.csv](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/Lookup_Final_spacy_Test5.csv)**
     ```
-    F-Measure score:  0.79
+    precision score:  0.7907653910149761
+    recall score:  0.8238352745424293   
+    F-Measure score:  0.8069616678630216
     ```
     **Code - [spacy_and_disambiguation.py](https://github.com/dbpedia/DBpedia-LiveNeural-Chatbot/blob/benchmarks/LC-QuAD/spacy_and_disambiguation.py)** 
 
